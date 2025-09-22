@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-amethyst: #be52f2;
+  --color-abyss:    #3d639d;
+  --color-rose:     #ff647c;
+  --color-sun:      #ffcf5c;
+  --color-mint:     #00c48c;
+  --color-iris:     #6979f8;
+  --color-sky:      #0084f4;
+
+    /* mobile */
+  --breakpoint-mobile-xs: 23.4375rem; /* 375px */
+  --breakpoint-mobile-s: 24.375rem;   /* 390px */
+  --breakpoint-mobile-m: 25rem;       /* 400px */
+  --breakpoint-mobile-l: 25.875rem;   /* 415px */
+  --breakpoint-mobile-xl: 26.875rem;  /* 430px */
+
+  /* ipad */
+  --breakpoint-ipad-m: 48rem; /* 768px */
+  --breakpoint-ipad-l: 64rem; /* 1024px */
+
+  /* labtop */
+  --breakpoint-labtop-s: 85.375rem; /* 1366px */
+  --breakpoint-labtop-m: 90rem;     /* 1440px */
+  --breakpoint-labtop-l: 96rem;     /* 1536px */
+  --breakpoint-labtop-xl: 120rem;   /* 1920px */
+
+  /* desktop */
+  --breakpoint-desktop-2xl: 160rem; /* 2560px */
+}
+
+@layer base {
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/assets/fonts/Tajawal-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/assets/fonts/Tajawal-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/assets/fonts/Tajawal-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/assets/fonts/Tajawal-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/assets/fonts/Tajawal-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/assets/fonts/Tajawal-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/assets/fonts/Tajawal-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "Tajawal", sans-serif;
+  }
+  
+}
+ 
