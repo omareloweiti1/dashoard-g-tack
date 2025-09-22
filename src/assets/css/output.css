@@ -22,6 +22,7 @@
     --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-abyss: #3d639d;
     --color-rose: #ff647c;
     --color-sun: #ffcf5c;
     --color-sky: #0084f4;
@@ -385,6 +386,11 @@
       outline-offset: calc(2px * -1);
     }
   }
+  .focus\:outline-abyss {
+    &:focus {
+      outline-color: var(--color-abyss);
+    }
+  }
   .focus\:outline-rose {
     &:focus {
       outline-color: var(--color-rose);
@@ -399,6 +405,11 @@
   .focus-visible\:outline-offset-2 {
     &:focus-visible {
       outline-offset: 2px;
+    }
+  }
+  .focus-visible\:outline-abyss {
+    &:focus-visible {
+      outline-color: var(--color-abyss);
     }
   }
   .focus-visible\:outline-rose {
