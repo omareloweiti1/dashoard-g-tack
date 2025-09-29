@@ -2,9 +2,9 @@
   "name": "tailwind-v4-project",
   "version": "1.0.0",
   "scripts": {
-"s": "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --watch", 
-"dev":   "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --watch",
- "build":  "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --minify"
+    "s": "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --watch",
+    "dev": "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --minify"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -24,7 +24,6 @@
       "./*.html",
       "./assets/**/*.{html,js}"
     ],
-
     "plugins": [
       "@tailwindcss/forms",
       "@tailwindcss/typography",

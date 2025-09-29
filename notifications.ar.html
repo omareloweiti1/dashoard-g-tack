@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/assets/css/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/img/logo/49.png"
+      type="image/x-icon"
+    />
+    <title>جيتك - لوحة التحكم</title>
+  </head>
+  <body class="bg-white min-h-screen flex">
+    <!-- Wrapper -->
+    <div class="flex">
+      <!-- Sidebar Desktop -->
+      <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
+        <div class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl">
+          <a id="loderimg" href="index.ar.html"><img src="src/assets/img/logo.png" alt="Logo" class="mr-20 w-[152px] h-[67]"/></a>
+        </div>
+
+        <nav class="space-y-3 font-semibold p-4 pr-10">
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-active/notification.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الإشعارات
+          </a>
+        </nav>
+      </aside>
+
+      <div class="flex-1">
+        <!-- Top bar mobile -->
+        <div
+          class="lg:hidden flex items-center justify-between bg-white p-4 border-b border-bl"
+        >
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+        </div>
+
+        <aside
+          id="mobile-menu"
+          class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 lg:hidden z-50"
+        >
+          <div class="flex items-center justify-between p-4 border-b">
+            <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+            <button id="close-btn" class="text-gray-700">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          
+          <nav class="space-y-3 font-semibold p-4 pr-10">
+            <a href="index.ar.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside">
+              <span><img src="src/assets/img/icon-active/notification.png" class="w-9 h-9 mr-6" alt="" /></span>الإشعارات
+            </a>
+          </nav>
+
+        </aside>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 min-h-screen">
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between h-[135px] border-b border-bl px-6 max-w-[990px] min-w-[990px]"
+      >
+        <!-- Search -->
+        <div class="relative w-[410px] h-[55px]">
+          <span class="absolute right-3 inset-y-0 flex items-center">
+            <img
+              src="src/assets/img/search-normal.png"
+              class="w-5 h-5"
+              alt="بحث"
+            />
+          </span>
+          <input
+            type="text"
+            placeholder="ابحث عن طلب، موزع، زبون..."
+            class="w-full pr-10 pl-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+          />
+        </div>
+
+        <!-- sos -->
+        <!-- <span class="absolute top-2 right-2 block w-2 h-2 bg-red-500 rounded-full"></span> -->
+        <!-- User Section -->
+        <div class="relative flex items-center gap-4">
+          <!-- Notification Icon -->
+          <!-- غلّف زر الجرس والدروب داون داخل div relative -->
+          <div class="relative">
+            <!-- Notification Icon -->
+            <button
+              id="notifBtn"
+              class="relative flex items-center justify-center bg-sky h-14 w-14 rounded-full focus:outline-none"
+            >
+              <img
+                src="src/assets/img/icon/notification.png"
+                class="w-6 h-6"
+                alt="تنبيهات"
+              />
+            </button>
+
+            <!-- دروب داون الإشعارات -->
+            <div
+              id="notifDropdown"
+              class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+            >
+              <ul class="py-2">
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+              </ul>
+              <div
+                class="text-center flex items-center justify-center py-2 border-t border-bl"
+              >
+                <a
+                  href="notifications.ar.html"
+                  class="text-sky font-bold hover:underline"
+                  >مشاهدة جميع الإشعارات</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- User Dropdown -->
+          <div class="relative bg-backNav py-2 px-6 rounded-lg">
+            <button
+              id="userMenuBtn"
+              class="flex items-center gap-2 focus:outline-none"
+            >
+              <img
+                src="src/assets/img/Imag.png"
+                alt="User"
+                class="w-12 h-12 rounded-full border"
+              />
+
+              <div class="text-right mr-2">
+                <span class="font-extrabold text-[20px] text-[#3C3C3C] block"
+                  >محمد علي</span
+                >
+                <span class="text-sm font-extrabold text-[#6D6D6D]"
+                  >المدير العام</span
+                >
+              </div>
+
+              <svg
+                class="w-6 h-6 text-black mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="userDropdown"
+              class="hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
+            >
+              <ul class="py-2">
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/frame.png"
+                      class="w-5 h-5"
+                      alt="الملف"
+                    />
+                    <span>الملف الشخصي</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/setting-2.png"
+                      class="w-5 h-5"
+                      alt="الإعدادات"
+                    />
+                    <span>الإعدادات</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/logout.png"
+                      class="w-5 h-5"
+                      alt="خروج"
+                    />
+                    <span>تسجيل الخروج</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-sky w-full h-full">
+        <div class="pt-5 pr-5">
+         
+            <div
+            class="max-w-[100%] min-h-[700px] bg-white rounded-lg shadow-lg p-6"
+          >
+            <div class="max-w-[450px] bg-white">
+              <h2 class="text-3xl  font-extrabold mb-4">الإشعارات</h2>
+              <!-- divide-y divide-gray-200  overflow-y-auto -->
+
+              <ul id="notifications" class="">
+
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="font-medium text-2xl  ">قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="dot w-6 h-6 bg-blue-500 rounded-full"></span>
+                </li>
+
+                <li class="notif-item flex items-center justify-between px-4 py-3 rounded-lg border border-bl my-2 cursor-pointer">
+                  <span class="text-[#6C6C6C] font-medium text-2xl ">تم إغلاق الطلب رقم #12345</span>
+                  <span class="dot w-6 h-6 bg-[#D1D1D1] rounded-full"></span>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+
+    <script src="src/assets/js/relodePage.js"></script>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+      });
+    </script>
+
+    <!-- Toggle Dropdown -->
+    <script>
+      const userMenuBtn = document.getElementById("userMenuBtn");
+      const userDropdown = document.getElementById("userDropdown");
+
+      userMenuBtn.addEventListener("click", () => {
+        userDropdown.classList.toggle("hidden");
+      });
+    </script>
+
+
+    <!-- notif-item show  -->
+    <script>
+      document.querySelectorAll(".notif-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const dot = item.querySelector(".dot");
+          const text = item.querySelector("span");
+
+          if (dot.classList.contains("bg-blue-500")) {
+            dot.classList.remove("bg-blue-500");
+            dot.classList.add("bg-gray-400");
+
+            text.classList.remove("text-gray-800");
+            text.classList.add("text-gray-600");
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>

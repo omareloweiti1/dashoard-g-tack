@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
        href="src/assets/img/logo/49.png"
       type="image/x-icon"
     />
-    <title>G TACK verification</title>
+    <title>جيتك تحقق</title>
   </head>
   <body class="min-h-screen flex items-center justify-center">
     <!-- Language Dropdown  -->
@@ -20,7 +20,7 @@
           id="langBtn"
           class="inline-flex justify-center gap-x-1.5 rounded-md bg-sky/10 px-3 py-2 text-sm font-semibold text-sky inset-ring-1 inset-ring-sky/5 hover:bg-sky/20"
         >
-          language
+          اللغة
           <svg
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -70,33 +70,28 @@
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form action="#" method="POST" class="space-y-6">
             <!-- Verification Code Inputs -->
-            <div>
-              <label for="code" class="block text-sm/6 font-medium text-tep"
-                >Verification Code</label
-              >
-              <div class="mt-2 flex gap-2 justify-center">
-                <input
-                  type="text"
-                  maxlength="1"
-                  autofocus
-                  class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
-                />
-                <input
-                  type="text"
-                  maxlength="1"
-                  class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
-                />
-                <input
-                  type="text"
-                  maxlength="1"
-                  class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
-                />
-                <input
-                  type="text"
-                  maxlength="1"
-                  class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
-                />
-              </div>
+            <div class="mt-2 flex gap-2 justify-center">
+              <input
+                type="tel"
+                maxlength="1"
+                autofocus
+                class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
+              />
+              <input
+                type="tel"
+                maxlength="1"
+                class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
+              />
+              <input
+                type="tel"
+                maxlength="1"
+                class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
+              />
+              <input
+                type="tel"
+                maxlength="1"
+                class="otp-input w-12 h-12 text-center border rounded-md text-bordlight text-lg focus:outline-2 focus:outline-sun"
+              />
             </div>
 
             <!-- Verify Button -->
@@ -106,7 +101,7 @@
                 id="verifyBtn"
                 class="flex w-full justify-center rounded-md bg-sky px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-sun focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-abyss"
               >
-                Verify
+                تحقق
               </button>
             </div>
 
@@ -114,7 +109,7 @@
             <div
               class="flex justify-between text-sm text-gray-500 mt-2 items-center"
             >
-              <span>Verification code sent to your mobile</span>
+              <span>تم ارسال رمز التحقق الى رقم الجوال </span>
 
               <!-- Timer -->
               <span id="timer" class="text-sky"> </span>
@@ -125,7 +120,7 @@
                 type="button"
                 class="hidden text-sky font-semibold hover:underline"
               >
-                Send again
+                ارسال مرة اخرى
               </button>
             </div>
 
@@ -137,67 +132,30 @@
     </main>
 
     <script src="src/assets/js/main.js"></script>
-    <!-- Show saved phone number -->
+    <!-- <script>
+      document.getElementById("verifyBtn").addEventListener("click", () => {
+        window.location.href = "index.ar.html";
+      }); -->
+
     <script>
-      // Display saved phone number from localStorage
-      const savedPhone = localStorage.getItem("userPhone");
-      document.getElementById("displayNumber").textContent =
-        savedPhone || "+20 123 456 7890";
-    </script>
-
-    <!-- Countdown timer with resend button -->
-    <script>
-      let totalSeconds = 0.25 * 60;
-      const timerElement = document.getElementById("timer");
-      const resendBtn = document.getElementById("resendBtn");
-
-      const startCountdown = () => {
-        const countdown = setInterval(() => {
-          const minutes = Math.floor(totalSeconds / 60);
-          const seconds = totalSeconds % 60;
-          timerElement.textContent = `${minutes}:${
-            seconds < 10 ? "0" : ""
-          }${seconds}`;
-          totalSeconds--;
-
-          if (totalSeconds < 0) {
-            clearInterval(countdown);
-            timerElement.classList.add("hidden");
-            resendBtn.classList.remove("hidden");
-          }
-        }, 1000);
-      };
-
-      startCountdown();
-
-      resendBtn.addEventListener("click", () => {
-        totalSeconds = 0.25 * 60;
-        timerElement.classList.remove("hidden");
-        resendBtn.classList.add("hidden");
-        startCountdown();
-      });
-    </script>
-
-    <!-- OTP input auto move + auto redirect -->
-    <script>
-      const inputs = document.querySelectorAll(".otp-input");
+      const inputsd = document.querySelectorAll(".otp-input");
       const verifyBtn = document.getElementById("verifyBtn");
 
       // Function to check if all inputs are filled
       function checkAndRedirect() {
-        const allFilled = Array.from(inputs).every((inp) => inp.value !== "");
+        const allFilled = Array.from(inputsd).every((inp) => inp.value !== "");
         if (allFilled) {
           window.location.href = "index.html";
         }
       }
 
       // Event for inputs
-      inputs.forEach((input, index) => {
+      inputsd.forEach((input, index) => {
         input.addEventListener("input", () => {
           input.value = input.value.replace(/[^0-9]/g, ""); // Allow only numbers
 
-          if (input.value.length === 1 && index < inputs.length - 1) {
-            inputs[index + 1].focus();
+          if (input.value.length === 1 && index < inputsd.length - 1) {
+            inputsd[index + 1].focus();
           }
 
           checkAndRedirect(); // Auto redirect if all filled
@@ -205,7 +163,7 @@
 
         input.addEventListener("keydown", (e) => {
           if (e.key === "Backspace" && input.value === "" && index > 0) {
-            inputs[index - 1].focus();
+            inputsd[index - 1].focus();
           }
 
           // Enter key
@@ -218,6 +176,70 @@
       // Event for button click
       verifyBtn.addEventListener("click", () => {
         checkAndRedirect();
+      });
+    </script>
+
+    <script>
+      const savedPhone = localStorage.getItem("userPhone");
+      document.getElementById("displayNumber").textContent =
+        savedPhone || "+20 123 456 7890";
+    </script>
+
+    <script>
+      let totalSeconds = 0.25 * 60;
+
+      const timerElement = document.getElementById("timer");
+      const resendBtn = document.getElementById("resendBtn");
+
+      const countdown = setInterval(() => {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+
+        timerElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+
+        totalSeconds--;
+
+        if (totalSeconds < 0) {
+          clearInterval(countdown);
+          timerElement.classList.add("hidden");
+          resendBtn.classList.remove("hidden");
+        }
+      }, 500);
+
+      resendBtn.addEventListener("click", () => {
+        totalSeconds = 0.25 * 60;
+        timerElement.classList.remove("hidden");
+        resendBtn.classList.add("hidden");
+
+        setInterval(() => {
+          const minutes = Math.floor(totalSeconds / 60);
+          const seconds = totalSeconds % 60;
+          timerElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+          totalSeconds--;
+          if (totalSeconds < 0) {
+            clearInterval(this);
+            timerElement.classList.add("hidden");
+            resendBtn.classList.remove("hidden");
+          }
+        }, 500);
+      });
+    </script>
+
+    <script>
+      const inputs = document.querySelectorAll('input[type="text"]');
+
+      inputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+          if (input.value.length === 1 && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && input.value === "" && index > 0) {
+            inputs[index - 1].focus();
+          }
+        });
       });
     </script>
   </body>

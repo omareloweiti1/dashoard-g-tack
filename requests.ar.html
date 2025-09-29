@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/assets/css/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/img/logo/49.png"
+      type="image/x-icon"
+    />
+    <title>جيتك - لوحة التحكم</title>
+  </head>
+  <body class="bg-white min-h-screen flex">
+    <!-- Wrapper -->
+    <div class="flex">
+      <!-- Sidebar Desktop -->
+      <aside class="hidden lg:flex w-96 bg-white -l -bl flex-col">
+        <div
+          class="flex items-center justify-between mb-8 w-[385px] h-[135px] -b -bl"
+        >
+          <a href="index.ar.html"
+            ><img
+              src="src/assets/img/logo.png"
+              alt="Logo"
+              class="mr-20 w-[152px] h-[67]"
+          /></a>
+        </div>
+
+        <nav class="space-y-3 font-semibold p-4 pr-10">
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-active/chart-2.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >نظرة عامة
+          </a>
+
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/grid-2.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الطلبات
+          </a>
+
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/truck.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الموزعين
+          </a>
+
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/profile-2user.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الزبائن
+          </a>
+
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/map.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الخريطة
+          </a>
+
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/trend-down.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >التقارير
+          </a>
+
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/user-octagon.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >المستخدمين والصلاحيات
+          </a>
+
+          <a
+            href="index.ar.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/info-circle.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الشكاوي
+          </a>
+        </nav>
+      </aside>
+
+      <div class="flex-1">
+        <!-- Top bar mobile -->
+        <div
+          class="lg:hidden flex items-center justify-between bg-white p-4 -b -bl"
+        >
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+        </div>
+
+        <aside
+          id="mobile-menu"
+          class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 lg:hidden z-50"
+        >
+          <div class="flex items-center justify-between p-4 -b">
+            <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+            <button id="close-btn" class="text-gray-700">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav class="space-y-3 font-semibold p-4 pr-10">
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-active/chart-2.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >نظرة عامة
+            </a>
+
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-mute/grid-2.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >الطلبات
+            </a>
+
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-mute/truck.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >الموزعين
+            </a>
+
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-mute/profile-2user.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >الزبائن
+            </a>
+
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-mute/map.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >الخريطة
+            </a>
+
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-mute/trend-down.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >التقارير
+            </a>
+
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-mute/user-octagon.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >المستخدمين والصلاحيات
+            </a>
+
+            <a
+              href="index.ar.html"
+              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            >
+              <span
+                ><img
+                  src="src/assets/img/icon-mute/info-circle.png"
+                  class="w-9 h-9 mr-6"
+                  alt="" /></span
+              >الشكاوي
+            </a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 min-h-screen">
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between h-[135px] -b -bl px-6 max-w-[990px] min-w-[990px]"
+      >
+        <!-- Search -->
+        <div class="relative w-[410px] h-[55px]">
+          <span class="absolute right-3 inset-y-0 flex items-center">
+            <img
+              src="src/assets/img/search-normal.png"
+              class="w-5 h-5"
+              alt="بحث"
+            />
+          </span>
+          <input
+            type="text"
+            placeholder="ابحث عن طلب، موزع، زبون..."
+            class="w-full pr-10 pl-4 py-2 -bl rounded-lg focus:outline-sky h-full"
+          />
+        </div>
+
+        <!-- sos -->
+        <!-- <span class="absolute top-2 right-2 block w-2 h-2 bg-red-500 rounded-full"></span> -->
+        <!-- User Section -->
+        <div class="relative flex items-center gap-4">
+          <!-- Notification Icon -->
+          <div class="relative">
+            <!-- Notification Icon -->
+            <button
+              id="notifBtn"
+              class="relative flex items-center justify-center bg-sky h-14 w-14 rounded-full focus:outline-none"
+            >
+              <img
+                src="src/assets/img/icon/notification.png"
+                class="w-6 h-6"
+                alt="تنبيهات"
+              />
+            </button>
+
+            <div
+              id="notifDropdown"
+              class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+            >
+              <ul class="py-2">
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+              </ul>
+              <div
+                class="text-center flex items-center justify-center py-2 -t -bl"
+              >
+                <a
+                  href="notifications.ar.html"
+                  class="text-sky font-bold hover:underline"
+                  >مشاهدة جميع الإشعارات</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- User Dropdown -->
+          <div class="relative bg-backNav py-2 px-6 rounded-lg">
+            <button
+              id="userMenuBtn"
+              class="flex items-center gap-2 focus:outline-none"
+            >
+              <img
+                src="src/assets/img/Imag.png"
+                alt="User"
+                class="w-12 h-12 rounded-full"
+              />
+
+              <div class="text-right mr-2">
+                <span class="font-extrabold text-[20px] text-[#3C3C3C] block"
+                  >محمد علي</span
+                >
+                <span class="text-sm font-extrabold text-[#6D6D6D]"
+                  >المدير العام</span
+                >
+              </div>
+
+              <svg
+                class="w-6 h-6 text-black mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="userDropdown"
+              class="hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
+            >
+              <ul class="py-2">
+                <li>
+                  <a
+                    href="Profile.ar.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/frame.png"
+                      class="w-5 h-5"
+                      alt="الملف"
+                    />
+                    <span>الملف الشخصي</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="setting.ar.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/setting-2.png"
+                      class="w-5 h-5"
+                      alt="الإعدادات"
+                    />
+                    <span>الإعدادات</span>
+                  </a>
+                </li>
+                <a
+                  href="#"
+                  onclick="openModal()"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                >
+                  <img
+                    src="src/assets/img/icon/logout.png"
+                    class="w-5 h-5"
+                    alt="خروج"
+                  />
+                  <span>تسجيل الخروج</span>
+                </a>
+
+                <div
+                  id="logoutModal"
+                  class="hidden fixed inset-0 items-center justify-center bg-blue-200/40 z-50"
+                >
+                  <div
+                    class="bg-white rounded-lg shadow-lg p-5 w-[680px] h-[260px] relative flex flex-col"
+                  >
+                    <button
+                      onclick="closeModal()"
+                      class="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-backNav text-white"
+                    >
+                      ✕
+                    </button>
+
+                    <div class="p-4 flex justify-center mt-5">
+                      <h2 class="text-lg font-bold">تسجيل الخروج</h2>
+                    </div>
+
+                    <div class="flex-1 flex items-center justify-center">
+                      <p class="text-center text-gray-700 text-lg">
+                        هل أنت متأكد من تسجيل الخروج ؟
+                      </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        class="w-full py-3 bg-red-600 text-white rounded-lg font-medium"
+                      >
+                        تسجيل خروج
+                      </button>
+                      <button
+                        onclick="closeModal()"
+                        class="w-full py-3 bg-gray-300 rounded-lg font-medium"
+                      >
+                        إلغاء
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-sky w-full h-full">
+        <div class="max-w-[990px]">
+          <section class="bg-sky w-full min-h-screen p-4">
+            <div class="bg-white rounded-lg shadow-md p-4">
+              <!-- العنوان + الملفات + الفلتر -->
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-bold flex items-center gap-2">
+                  الطلبات
+                  <span class="text-sky">(50)</span>
+                </h2>
+
+                <div class="flex items-center gap-3">
+                  <button class="flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/document-text.png"
+                      class="w-5 h-5"
+                      alt="Excel"
+                    />
+                    ملف إكسل
+                  </button>
+                  <button class="flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/bi_file-pdf.png"
+                      class="w-5 h-5"
+                      alt="PDF"
+                    />
+                    ملف PDF
+                  </button>
+                  <select class="rounded px-2 py-1">
+                    <option>الكل</option>
+                    <option>بانتظار القبول</option>
+                    <option>طلب جديد</option>
+                    <option>قيد التعبئة</option>
+                    <option>تم التعبئة</option>
+                    <option>تم التسليم</option>
+                    <option>ملغية</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- الفلاتر -->
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <button class="text-sky font-semibold">اليوم</button>
+                  <button>هذا الأسبوع</button>
+                  <button>هذا الشهر</button>
+                  <button>هذه السنة</button>
+                  <button>محدد</button>
+                </div>
+              </div>
+
+              <!-- جدول الطلبات -->
+              <div class="overflow-x-auto">
+                <table class="w-full text-center">
+                  <thead class="bg-gray-100">
+                    <tr>
+                      <th class="p-2">رقم الطلب</th>
+                      <th class="p-2">الزبون</th>
+                      <th class="p-2">الموزع</th>
+                      <th class="p-2">حالة الطلب</th>
+                      <th class="p-2">تاريخ الطلب</th>
+                      <th class="p-2">وقت الطلب</th>
+                      <th class="p-2">إجراءات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل</td>
+                      <td class="p-2">
+                        <span class="bg-gray-200 px-2 py-1 rounded"
+                          >طلب تعبئة</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحًا</td>
+                      <td class="p-2 flex items-center justify-center gap-3">
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded"
+                          >تم قبول الطلب</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحًا</td>
+                      <td class="p-2 flex items-center justify-center gap-3">
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-blue-100 text-blue-700 px-2 py-1 rounded"
+                          >التحرك نحو العميل</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحًا</td>
+                      <td class="p-2 flex items-center justify-center gap-3">
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-orange-100 text-orange-700 px-2 py-1 rounded"
+                          >استلام الأنابيب</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحًا</td>
+                      <td class="p-2 flex items-center justify-center gap-3">
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-green-100 text-green-700 px-2 py-1 rounded"
+                          >تم تسليم الأنابيب</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحًا</td>
+                      <td class="p-2 flex items-center justify-center gap-3">
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل</td>
+                      <td class="p-2">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded"
+                          >ملغية</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحًا</td>
+                      <td class="p-2 flex items-center justify-center gap-3">
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-pink-100 text-pink-700 px-2 py-1 rounded"
+                          >مرفوضة</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحًا</td>
+                      <td class="p-2 flex items-center justify-center gap-3">
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Pagination -->
+              <!-- <div class="flex items-center justify-between mt-4">
+                <div class="flex-1 flex justify-center">
+                  <div class="flex items-center gap-2">
+                    <button class="px-3 py-1 rounded">&lt;</button>
+
+                    <button class="px-3 py-1 rounded bg-sky text-white">
+                      1
+                    </button>
+                    <button class="px-3 py-1 rounded">2</button>
+                    <button class="px-3 py-1 rounded">3</button>
+                    <button class="px-3 py-1 rounded">4</button>
+                    <button class="px-3 py-1 rounded">5</button>
+                    <span class="px-2">...</span>
+                    <button class="px-3 py-1 rounded">10</button>
+                    <button class="px-3 py-1 rounded">&gt;</button>
+                  </div>
+                </div>
+
+                <div
+                  class="flex border border-bordlight rounded-lg p-2 items-center gap-2"
+                >
+                  <span>عدد الصفوف في الصفحة:</span>
+                  <select class="rounded px-2 py-1">
+                    <option>10</option>
+                    <option>20</option>
+                    <option>50</option>
+                  </select>
+                </div>
+              </div> -->
+
+                
+
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/assets/js/relodePage.js"></script>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+      });
+    </script>
+
+    <!-- Toggle Dropdown -->
+    <script>
+      const userMenuBtn = document.getElementById("userMenuBtn");
+      const userDropdown = document.getElementById("userDropdown");
+
+      userMenuBtn.addEventListener("click", () => {
+        userDropdown.classList.toggle("hidden");
+      });
+    </script>
+
+    <script>
+      const popup = document.getElementById("popup");
+      const content = document.getElementById("popup-content");
+
+      function openPopup(type) {
+        if (type === "delete") {
+          content.innerHTML = `
+        <h2 class="text-xl font-bold mb-4">تأكيد الحذف</h2>
+        <p>هل أنت متأكد من أنك تريد حذف هذا الطلب؟</p>
+        <div class="mt-6 flex justify-end gap-3">
+          <button onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">إلغاء</button>
+          <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">حذف</button>
+        </div>
+      `;
+        } else if (type === "view") {
+          content.innerHTML = `
+        <h2 class="text-xl font-bold mb-4">تفاصيل الطلب</h2>
+        <p>هنا يمكنك عرض المزيد من التفاصيل عن الطلب.</p>
+        <div class="mt-6 flex justify-end">
+          <button onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">إغلاق</button>
+        </div>
+      `;
+        } else if (type === "edit") {
+          content.innerHTML = `
+        <h2 class="text-xl font-bold mb-4">تعديل الطلب</h2>
+        <form class="space-y-3">
+          <input type="text" placeholder="اسم الزبون" class="w-full      -gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+          <input type="text" placeholder="الموزع" class="w-full      -gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+          <div class="flex justify-end gap-3 mt-4">
+            <button type="button" onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">إلغاء</button>
+            <button type="submit" class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">حفظ</button>
+          </div>
+        </form>
+      `;
+        }
+
+        // إظهار البوب أب مع تأثير Fade-in
+        popup.classList.remove("opacity-0", "pointer-events-none");
+        setTimeout(() => {
+          popup.querySelector("div").classList.remove("scale-95");
+        }, 10);
+      }
+
+      function closePopup() {
+        popup.querySelector("div").classList.add("scale-95");
+        popup.classList.add("opacity-0", "pointer-events-none");
+      }
+    </script>
+
+    <script>
+      const notifBtn = document.getElementById("notifBtn");
+      const notifDropdown = document.getElementById("notifDropdown");
+
+      notifBtn.addEventListener("click", () => {
+        notifDropdown.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
+          notifDropdown.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <script>
+      function openModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
