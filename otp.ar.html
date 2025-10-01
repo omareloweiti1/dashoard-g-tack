@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/assets/css/output.css" />
     <link
       rel="shortcut icon"
-       href="src/assets/img/logo/49.png"
+      href="src/assets/img/logo/49.png"
       type="image/x-icon"
     />
     <title>جيتك تحقق</title>
@@ -137,19 +137,19 @@
         window.location.href = "index.ar.html";
       }); -->
 
+    <!-- Script 1: OTP Verification and Auto Redirect -->
     <script>
       const inputsd = document.querySelectorAll(".otp-input");
       const verifyBtn = document.getElementById("verifyBtn");
 
-      // Function to check if all inputs are filled
       function checkAndRedirect() {
         const allFilled = Array.from(inputsd).every((inp) => inp.value !== "");
         if (allFilled) {
-          window.location.href = "index.html";
+          window.location.href = "overview.html";
         }
       }
 
-      // Event for inputs
+      // Handle OTP input navigation and validation
       inputsd.forEach((input, index) => {
         input.addEventListener("input", () => {
           input.value = input.value.replace(/[^0-9]/g, ""); // Allow only numbers
@@ -158,7 +158,7 @@
             inputsd[index + 1].focus();
           }
 
-          checkAndRedirect(); // Auto redirect if all filled
+          checkAndRedirect(); // Auto redirect if all inputs are filled
         });
 
         input.addEventListener("keydown", (e) => {
@@ -166,25 +166,27 @@
             inputsd[index - 1].focus();
           }
 
-          // Enter key
+          // Press Enter to check and redirect
           if (e.key === "Enter") {
             checkAndRedirect();
           }
         });
       });
 
-      // Event for button click
+      // Verify button click
       verifyBtn.addEventListener("click", () => {
         checkAndRedirect();
       });
     </script>
 
+    <!-- Script 2: Display saved phone number from LocalStorage -->
     <script>
       const savedPhone = localStorage.getItem("userPhone");
       document.getElementById("displayNumber").textContent =
         savedPhone || "+20 123 456 7890";
     </script>
 
+    <!-- Script 3: Countdown Timer for OTP Resend -->
     <script>
       let totalSeconds = 0.25 * 60;
 
@@ -206,6 +208,7 @@
         }
       }, 500);
 
+      // Resend button resets timer
       resendBtn.addEventListener("click", () => {
         totalSeconds = 0.25 * 60;
         timerElement.classList.remove("hidden");
@@ -225,6 +228,7 @@
       });
     </script>
 
+    <!-- Script 4: Auto Focus and Backspace Navigation for Inputs -->
     <script>
       const inputs = document.querySelectorAll('input[type="text"]');
 
@@ -242,5 +246,6 @@
         });
       });
     </script>
+    
   </body>
 </html>
