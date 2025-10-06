@@ -51,14 +51,17 @@ loader.innerHTML = `
   </div>
 `;
 document.body.appendChild(loader);
-document.querySelectorAll("nav a").forEach((link) => {
-  link.addEventListener("click", function (e) {
+
+document.querySelectorAll(".show-loader").forEach((el) => {
+  el.addEventListener("click", function (e) {
     e.preventDefault();
     document.getElementById("loader").classList.remove("hidden");
 
-    const url = this.getAttribute("href");
-    setTimeout(() => {
-      window.location.href = url;
-    }, 500);
+    const url = this.getAttribute("href") || this.getAttribute("data-url");
+    if (url) {
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    }
   });
 });

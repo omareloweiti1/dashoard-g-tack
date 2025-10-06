@@ -32,8 +32,8 @@
     </style>
   </head>
   <body class="bg-white min-h-screen flex">
-  <!-- Wrapper -->
-<div class="flex">
+    <!-- Wrapper -->
+    <div class="flex">
       <!-- Sidebar Desktop -->
       <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
         <div
@@ -50,11 +50,11 @@
         <nav class="space-y-3 font-semibold p-4 pr-10">
           <a
             href="overview.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
           >
             <span
               ><img
-                src="src/assets/img/icon-active/chart-2.png"
+                src="src/assets/img/aside-imge/chart-4.png"
                 class="w-9 h-9 mr-6"
                 alt="" /></span
             >نظرة عامة
@@ -121,12 +121,12 @@
           </a>
 
           <a
-            href="overview.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+            href="usersPermissions.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside2"
           >
             <span
               ><img
-                src="src/assets/img/icon-mute/user-octagon.png"
+                src="src/assets/img/aside-imge/user-octagon.png"
                 class="w-9 h-9 mr-6"
                 alt="" /></span
             >المستخدمين والصلاحيات
@@ -270,7 +270,7 @@
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav"
               >
                 <span
                   ><img
@@ -306,7 +306,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
               >
                 <span
                   ><img
@@ -601,8 +601,8 @@
             >
               <div class="flex items-center justify-between mb-4">
                 <h2 class="text-lg font-bold flex items-center gap-2">
-                  الموزعين
-                  <span class="text-sky">(24)</span>
+                  المستخدمين
+                  <span class="text-sky">(10)</span>
                 </h2>
 
                 <div class="flex items-center gap-3 ml-12">
@@ -622,9 +622,11 @@
                     />
                     ملف PDF
                   </button>
+
                   <div class="relative inline-block">
                     <div class="flex items-center justify-between">
                       <button
+                        id="openCustomerModal"
                         class="flex items-center gap-2 bg-mint/20 text-mint px-4 py-2 rounded-lg"
                       >
                         <img
@@ -632,28 +634,89 @@
                           alt="إضافة"
                           class="w-5 h-5"
                         />
-                        <span>إضافة اسطوانة جديدة</span>
+                        <span>اضافة مستخدم جديد</span>
                       </button>
+
+                      <!-- البوب أب -->
+                      <div id="customerModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+                        <div class="bg-white rounded-2xl shadow-lg max-w-[674px] p-6 relative w-[674px] min-h-[662px] max-h-[662px] ">
+                          <button id="closeCustomerModal" class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl">
+                            ✕
+                          </button>
+
+                          <h2 class="text-center text-lg font-semibold mb-12">مستخدم جديد</h2>
+
+                          <form class="space-y-6 ">
+                            <div>
+                              <label class="block text-base font-medium text-black mb-1" >اسم المستخدم</label>
+                              <input type="text" placeholder=" اسم المستخدم"
+                                class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"/>
+                            </div>
+
+                            <div>
+                              <label class="block text-base font-medium text-black mb-1" >رقم الجوال</label>
+                              <input type="tel" placeholder=" رقم الجوال"
+                                class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"/>
+                            </div>
+
+                              <div>
+                              <label class="block text-base font-medium text-black mb-1" >الايميل</label>
+                              <input type="text" placeholder=" الايميل"
+                                class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"/>
+                            </div>
+
+                              <div>
+                              <label class="block text-base font-medium text-black mb-1" >المسمى الوظيفي</label>
+                              <input type="text" placeholder="المسمى الوظيفي"
+                                class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"/>
+                            </div>
+
+<div class="relative w-full">
+  <label class="block text-base font-medium text-black mb-1">الصلاحيات</label>
+
+  <div class="relative w-full">
+    <!-- السهم ثابت على اليسار -->
+    <svg class="w-6 h-6 text-black absolute left-2 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+
+    <!-- Input المزيف -->
+    <div id="permissionsInput" class="flex flex-wrap items-center gap-2 pl-8 p-2 border border-gray-300 rounded-lg cursor-pointer bg-white">
+      <span class="text-gray-400">اختر الصلاحيات</span>
+    </div>
+  </div>
+
+  <!-- قائمة الصلاحيات -->
+  <ul id="permissionsDropdown" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg hidden max-h-48 overflow-auto z-10">
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">اضافة زبون</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">تعديل الزبون</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">حذف الزبون</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">اضافة موزع</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">تعديل بيانات الموزع</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">حذف الموزع</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">التحكم في الاعدادات</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">الطلبات</li>
+    <li class="p-2 hover:bg-sky/20 cursor-pointer">التقارير</li>
+  </ul>
+</div>
+
+
+                            <button type="submit" class="w-full bg-sky text-white py-3 rounded-lg hover:bg-mint/80 transition">
+                              إضافة مستخدم
+                            </button>
+
+                          </form>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- أزرار الفلتر -->
-              <div
-                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
-              >
-                <div class="flex items-center gap-8 filter-buttons">
-                  <button class="active-filter">موزعين جدد</button>
-                  <button class="text-[#7E7E7E] font-medium">
-                    الموزعين المعتمدين
-                  </button>
-                </div>
-              </div>
-
               <div class="overflow-x-auto">
                 <table class="w-full text-right">
-                  <thead data-status="new" class="text-right">
+                  <thead class="text-right">
                     <tr>
                       <th class="p-2 pb-4">
                         <input
@@ -663,14 +726,10 @@
                         />
                       </th>
 
-                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
                       <th class="py-2 pr-2 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
+                          >اسم المستخدم</span
                         >
                         <img
                           src="src/assets/img/icon-active/arrow-up.png"
@@ -678,72 +737,10 @@
                           class="inline-block align-middle w-4 h-4 ml-1"
                         />
                       </th>
-
-                      <th class="py-2 pr-2 pb-4 max-w-24">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-4 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-6 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الجوال</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-6 text-[#7E7E7E] font-medium">
-                        إجراءات
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <thead data-status="approved" class="text-right">
-                    <tr>
-                      <th class="p-2 pb-4">
-                        <input
-                          id="selectAll"
-                          type="checkbox"
-                          class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
                       <th class="py-2 pr-1 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
+                          >المسمى الوظيفي</span
                         >
                         <img
                           src="src/assets/img/icon-active/arrow-up.png"
@@ -751,17 +748,6 @@
                           class="inline-block align-middle w-4 h-4 ml-1"
                         />
                       </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
-                      </th>
-
                       <th class="py-2 pr-1 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
@@ -772,25 +758,8 @@
                       <th class="py-2 pr-1 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >عدد الطلبات</span
+                          >الايميل</span
                         >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الوقت المستغرق</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
                       </th>
 
                       <th class="py-2 pr-1 text-[#7E7E7E] font-medium">
@@ -799,7 +768,7 @@
                     </tr>
                   </thead>
 
-                  <tbody data-status="new" class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+                  <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
                     <tr>
                       <th class="p-2">
                         <input
@@ -807,144 +776,10 @@
                           class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">طيب</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6">الشجاعية</td>
-                      <td class="p-2 text-end" dir="ltr">972 59945678</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">انا و انت</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6">الشجاعية</td>
-                      <td class="p-2 text-end" dir="ltr">972 59945678</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-
-                  <tbody data-status="approved" class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">حسين شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
+                      <td class="p-2 pr-1">محمد احمد </td>
+                      <td class="p-2 pr-1">مدير التسويق</td>
                       <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-1 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">إسماعيل شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
-                      <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
+                      <td class="p-2 pr-1">saeeds@gmail.com</td>
 
                       <td
                         class="p-2 flex items-center justify-start pr-1 gap-3"
@@ -975,47 +810,6 @@
                 </table>
               </div>
 
-              <!-- Pagination -->
-              <div
-                class="flex items-center justify-between border-t border-bl pt-2"
-              >
-                <div class="flex-1 flex justify-center mr-50">
-                  <div id="pagination" class="flex items-center"></div>
-                </div>
-
-                <div
-                  class="flex border border-bl rounded-lg p-2 items-center ml-10"
-                >
-                  <span>عدد الصفوف في الصفحة:</span>
-                  <div class="relative inline-block">
-                    <select
-                      id="rowsPerPage"
-                      class="appearance-none rounded py-1 pr-1 pl-4 text-sky cursor-pointer"
-                    >
-                      <option value="10">10</option>
-                      <option value="20">20</option>
-                      <option value="50">50</option>
-                    </select>
-
-                    <!-- سهم مخصص -->
-                    <span
-                      class="pointer-events-none absolute inset-y-0 right-6 flex items-center"
-                    >
-                      <svg
-                        class="w-4 h-4 text-tep"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
         </div>
@@ -1024,12 +818,58 @@
 
     <script src="src/assets/js/relodePage.js"></script>
 
+    <!-- Script for viewing order details and showing loader before redirect -->
+    <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
 
+        showLoader(row);
 
+        setTimeout(() => {
+          window.location.href = `customerDetails.html?id=${orderId}&status=${encodeURIComponent(status)}`;
+        }, 1200);
+      }
 
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
 
+        showLoader(row);
 
+        setTimeout(() => {
+          window.location.href = `distributorDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
+        }, 1200);
+      }
 
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
+
+        const colCount = row.children.length;
+
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
+      <td colspan="${colCount}" class="p-4 text-center">
+        <div class="flex justify-center items-center">
+          <div class="loader border-4 border-sky-400 border-t-transparent rounded-full w-6 h-6 animate-spin"></div>
+          <span class="ml-2">جاري تحميل تفاصيل الموزع...</span>
+        </div>
+      </td>
+    `;
+
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script>
 
     <!-- Script for handling mobile sidebar open/close -->
     <script>
@@ -1193,8 +1033,8 @@
     </script>
 
     <script>
-      const filterButtons = document.querySelectorAll(".flex button");
-      const allSections = document.querySelectorAll("table thead, table tbody");
+      const filterButtons = document.querySelectorAll(".filter-buttons button");
+      const allSections = document.querySelectorAll("div[data-status]");
 
       function applyFilter(filterType) {
         allSections.forEach((sec) => {
@@ -1212,8 +1052,10 @@
         filterButtons.forEach((b) => {
           if (b.textContent.trim() === filterType) {
             b.classList.add("active-filter");
+            b.classList.remove("text-[#7E7E7E]", "font-medium");
           } else {
             b.classList.remove("active-filter");
+            b.classList.add("text-[#7E7E7E]", "font-medium");
           }
         });
       }
@@ -1227,38 +1069,101 @@
       });
     </script>
 
-    <!-- Script for viewing order details and showing loader before redirect -->
+    <!-- pop up add -->
+    <script>
+      const customerModal = document.getElementById("customerModal");
+      const openCustomerModal = document.getElementById("openCustomerModal");
+      const closeCustomerModal = document.getElementById("closeCustomerModal");
+
+      openCustomerModal.addEventListener("click", () => {
+        customerModal.classList.remove("hidden");
+        customerModal.classList.add("flex");
+      });
+
+      closeCustomerModal.addEventListener("click", () => {
+        customerModal.classList.remove("flex");
+        customerModal.classList.add("hidden");
+      });
+
+      customerModal.addEventListener("click", (e) => {
+        if (e.target === customerModal) {
+          customerModal.classList.remove("flex");
+          customerModal.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <script>
+      function previewFile(event, previewId) {
+        const file = event.target.files[0];
+        const preview = document.getElementById(previewId);
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            preview.src = reader.result;
+            preview.classList.remove("hidden");
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+
+    
+
 <script>
-  function viewOrder(button) {
-    const row = button.closest("tr");
-    const orderId = row.querySelector("td").textContent.replace("#", "").trim();
+  const input = document.getElementById("permissionsInput");
+  const dropdown = document.getElementById("permissionsDropdown");
+  let selected = [];
 
-    showLoader(row);
+  input.addEventListener("click", () => {
+    dropdown.classList.toggle("hidden");
+  });
 
-    // نخلي المتصفح يرندر اللودر أول
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        window.location.href = `distributorDetails.html?id=${orderId}`;
-      }, 2000); // مدة التأخير قبل الانتقال
+  dropdown.querySelectorAll("li").forEach(item => {
+    item.addEventListener("click", (e) => {
+      const value = e.target.textContent;
+      if (!selected.includes(value)) selected.push(value);
+      renderSelected();
     });
+  });
+
+  function renderSelected() {
+    input.innerHTML = ""; 
+    let displayCount = selected.length > 3 ? 3 : selected.length;
+
+    selected.slice(0, displayCount).forEach(val => {
+      const badge = document.createElement("span");
+      badge.className = "flex items-center gap-1 bg-sky-600 text-white text-sm px-2 py-1 rounded-full";
+      badge.innerHTML = `${val} <span class="cursor-pointer bg-red-500 rounded-full px-1 text-white text-xs remove">&times;</span>`;
+      input.appendChild(badge);
+
+      badge.querySelector(".remove").addEventListener("click", () => {
+        selected = selected.filter(s => s !== val);
+        renderSelected();
+      });
+    });
+
+    if (selected.length > 3) {
+      const more = document.createElement("span");
+      more.className = "bg-gray-300 text-black text-sm px-2 py-1 rounded-full";
+      more.textContent = `+${selected.length - 3}`;
+      input.appendChild(more);
+    }
+
+    if (selected.length === 0) {
+      const placeholder = document.createElement("span");
+      placeholder.className = "text-gray-400";
+      placeholder.textContent = "اختر الصلاحيات";
+      input.appendChild(placeholder);
+    }
   }
 
-  function showLoader(row) {
-    const oldLoader = document.querySelector(".loader-row");
-    if (oldLoader) oldLoader.remove();
-
-    const loaderRow = document.createElement("tr");
-    loaderRow.classList.add("loader-row");
-    loaderRow.innerHTML = `
-      <td colspan="10" class="p-4 text-center bg-gray-50">
-        <div class="flex justify-center items-center gap-2">
-          <div class="loader"></div>
-          <span>جاري تحميل تفاصيل الموزع...</span>
-        </div>
-      </td>
-    `;
-    row.insertAdjacentElement("afterend", loaderRow);
-  }
+  document.addEventListener("click", (e) => {
+    if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add("hidden");
+    }
+  });
 </script>
+
   </body>
 </html>

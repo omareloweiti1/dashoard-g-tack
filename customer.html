@@ -32,10 +32,10 @@
     </style>
   </head>
   <body class="bg-white min-h-screen flex">
-  <!-- Wrapper -->
-<div class="flex">
+    <!-- Wrapper -->
+    <div class="flex">
       <!-- Sidebar Desktop -->
-      <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
+         <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
         <div
           class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
         >
@@ -50,11 +50,11 @@
         <nav class="space-y-3 font-semibold p-4 pr-10">
           <a
             href="overview.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav "
           >
             <span
               ><img
-                src="src/assets/img/icon-active/chart-2.png"
+                src="src/assets/img/aside-imge/chart-4.png"
                 class="w-9 h-9 mr-6"
                 alt="" /></span
             >نظرة عامة
@@ -86,11 +86,11 @@
 
           <a
             href="customer.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
           >
             <span
               ><img
-                src="src/assets/img/icon-mute/profile-2user.png"
+                src="src/assets/img/aside-imge/profile-2user.png"
                 class="w-9 h-9 mr-6"
                 alt="" /></span
             >الزبائن
@@ -270,7 +270,7 @@
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav"
               >
                 <span
                   ><img
@@ -306,7 +306,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
               >
                 <span
                   ><img
@@ -601,8 +601,8 @@
             >
               <div class="flex items-center justify-between mb-4">
                 <h2 class="text-lg font-bold flex items-center gap-2">
-                  الموزعين
-                  <span class="text-sky">(24)</span>
+                  الزبائن
+                  <span class="text-sky">(160)</span>
                 </h2>
 
                 <div class="flex items-center gap-3 ml-12">
@@ -622,9 +622,11 @@
                     />
                     ملف PDF
                   </button>
+
                   <div class="relative inline-block">
                     <div class="flex items-center justify-between">
                       <button
+                        id="openCustomerModal"
                         class="flex items-center gap-2 bg-mint/20 text-mint px-4 py-2 rounded-lg"
                       >
                         <img
@@ -632,28 +634,76 @@
                           alt="إضافة"
                           class="w-5 h-5"
                         />
-                        <span>إضافة اسطوانة جديدة</span>
+                        <span>اضافة زبون جديد</span>
                       </button>
+
+                      <!-- البوب أب -->
+                      <div
+                        id="customerModal"
+                        class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+                      >
+                        <div
+                          class="bg-white rounded-2xl shadow-lg max-w-[500px] p-6 relative w-[500px]"
+                        >
+                          <!-- زر الإغلاق -->
+                          <button
+                            id="closeCustomerModal"
+                            class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
+                          >
+                            ✕
+                          </button>
+
+                          <!-- العنوان -->
+                          <h2 class="text-center text-lg font-semibold mb-6">
+                            زبون جديد
+                          </h2>
+
+                          <!-- الفورم -->
+                          <form class="space-y-4">
+                            <!-- اسم الزبون -->
+                            <div>
+                              <label
+                                class="block text-base font-medium text-black mb-1"
+                                >اسم الزبون</label
+                              >
+                              <input
+                                type="text"
+                                placeholder="ادخل اسم الزبون"
+                                class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                              />
+                            </div>
+
+                            <!-- رقم الجوال -->
+                            <div>
+                              <label
+                                class="block text-base font-medium text-black mb-1"
+                                >رقم الجوال</label
+                              >
+                              <input
+                                type="tel"
+                                placeholder="ادخل رقم الجوال"
+                                class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                              />
+                            </div>
+
+                            <!-- زر الإرسال -->
+                            <button
+                              type="submit"
+                              class="w-full bg-sky text-white py-3 rounded-lg hover:bg-mint/80 transition"
+                            >
+                              إضافة زبون
+                            </button>
+                          </form>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- أزرار الفلتر -->
-              <div
-                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
-              >
-                <div class="flex items-center gap-8 filter-buttons">
-                  <button class="active-filter">موزعين جدد</button>
-                  <button class="text-[#7E7E7E] font-medium">
-                    الموزعين المعتمدين
-                  </button>
-                </div>
-              </div>
-
               <div class="overflow-x-auto">
                 <table class="w-full text-right">
-                  <thead data-status="new" class="text-right">
+                  <thead class="text-right">
                     <tr>
                       <th class="p-2 pb-4">
                         <input
@@ -663,103 +713,16 @@
                         />
                       </th>
 
-                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
                       <th class="py-2 pr-2 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
+                          >اسم الزبون</span
                         >
                         <img
                           src="src/assets/img/icon-active/arrow-up.png"
                           alt=""
                           class="inline-block align-middle w-4 h-4 ml-1"
                         />
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4 max-w-24">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-4 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-6 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الجوال</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-6 text-[#7E7E7E] font-medium">
-                        إجراءات
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <thead data-status="approved" class="text-right">
-                    <tr>
-                      <th class="p-2 pb-4">
-                        <input
-                          id="selectAll"
-                          type="checkbox"
-                          class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
                       </th>
 
                       <th class="py-2 pr-1 pb-4">
@@ -781,25 +744,13 @@
                         />
                       </th>
 
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الوقت المستغرق</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
                       <th class="py-2 pr-1 text-[#7E7E7E] font-medium">
                         إجراءات
                       </th>
                     </tr>
                   </thead>
 
-                  <tbody data-status="new" class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+                  <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
                     <tr>
                       <th class="p-2">
                         <input
@@ -807,144 +758,9 @@
                           class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">طيب</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6">الشجاعية</td>
-                      <td class="p-2 text-end" dir="ltr">972 59945678</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">انا و انت</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6">الشجاعية</td>
-                      <td class="p-2 text-end" dir="ltr">972 59945678</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-
-                  <tbody data-status="approved" class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">حسين شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
+                      <td class="p-2 pr-1">اسماعيل شباط</td>
                       <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-1 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">إسماعيل شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
-                      <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
+                      <td class="p-2 pr-1">15 طلب</td>
 
                       <td
                         class="p-2 flex items-center justify-start pr-1 gap-3"
@@ -1024,12 +840,58 @@
 
     <script src="src/assets/js/relodePage.js"></script>
 
+    <!-- Script for viewing order details and showing loader before redirect -->
+    <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
 
+        showLoader(row);
 
+        setTimeout(() => {
+          window.location.href = `customerDetails.html?id=${orderId}&status=${encodeURIComponent(status)}`;
+        }, 1200);
+      }
 
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
 
+        showLoader(row);
 
+        setTimeout(() => {
+          window.location.href = `distributorDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
+        }, 1200);
+      }
 
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
+
+        const colCount = row.children.length;
+
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
+      <td colspan="${colCount}" class="p-4 text-center">
+        <div class="flex justify-center items-center">
+          <div class="loader border-4 border-sky-400 border-t-transparent rounded-full w-6 h-6 animate-spin"></div>
+          <span class="ml-2">جاري تحميل تفاصيل الموزع...</span>
+        </div>
+      </td>
+    `;
+
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script>
 
     <!-- Script for handling mobile sidebar open/close -->
     <script>
@@ -1193,8 +1055,10 @@
     </script>
 
     <script>
-      const filterButtons = document.querySelectorAll(".flex button");
-      const allSections = document.querySelectorAll("table thead, table tbody");
+      // ✅ نجيب بس الأزرار داخل .filter-buttons
+
+      const filterButtons = document.querySelectorAll(".filter-buttons button");
+      const allSections = document.querySelectorAll("div[data-status]");
 
       function applyFilter(filterType) {
         allSections.forEach((sec) => {
@@ -1203,23 +1067,28 @@
             (filterType === "موزعين جدد" && status === "new") ||
             (filterType === "الموزعين المعتمدين" && status === "approved")
           ) {
-            sec.style.display = "";
+            sec.style.display = ""; // ✅ يخلي القسم يبين بوضعه الطبيعي
           } else {
-            sec.style.display = "none";
+            sec.style.display = "none"; // ✅ يخفي القسم
           }
         });
 
+        // ✅ تحديث شكل الأزرار
         filterButtons.forEach((b) => {
           if (b.textContent.trim() === filterType) {
             b.classList.add("active-filter");
+            b.classList.remove("text-[#7E7E7E]", "font-medium");
           } else {
             b.classList.remove("active-filter");
+            b.classList.add("text-[#7E7E7E]", "font-medium");
           }
         });
       }
 
+      // ✅ تشغيل أول مرة على "موزعين جدد"
       applyFilter("موزعين جدد");
 
+      // ✅ إضافة الأحداث للأزرار
       filterButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
           applyFilter(btn.textContent.trim());
@@ -1227,38 +1096,43 @@
       });
     </script>
 
-    <!-- Script for viewing order details and showing loader before redirect -->
-<script>
-  function viewOrder(button) {
-    const row = button.closest("tr");
-    const orderId = row.querySelector("td").textContent.replace("#", "").trim();
+    <!-- pop up add -->
+    <script>
+      const customerModal = document.getElementById("customerModal");
+      const openCustomerModal = document.getElementById("openCustomerModal");
+      const closeCustomerModal = document.getElementById("closeCustomerModal");
 
-    showLoader(row);
+      openCustomerModal.addEventListener("click", () => {
+        customerModal.classList.remove("hidden");
+        customerModal.classList.add("flex");
+      });
 
-    // نخلي المتصفح يرندر اللودر أول
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        window.location.href = `distributorDetails.html?id=${orderId}`;
-      }, 2000); // مدة التأخير قبل الانتقال
-    });
-  }
+      closeCustomerModal.addEventListener("click", () => {
+        customerModal.classList.remove("flex");
+        customerModal.classList.add("hidden");
+      });
 
-  function showLoader(row) {
-    const oldLoader = document.querySelector(".loader-row");
-    if (oldLoader) oldLoader.remove();
+      customerModal.addEventListener("click", (e) => {
+        if (e.target === customerModal) {
+          customerModal.classList.remove("flex");
+          customerModal.classList.add("hidden");
+        }
+      });
+    </script>
 
-    const loaderRow = document.createElement("tr");
-    loaderRow.classList.add("loader-row");
-    loaderRow.innerHTML = `
-      <td colspan="10" class="p-4 text-center bg-gray-50">
-        <div class="flex justify-center items-center gap-2">
-          <div class="loader"></div>
-          <span>جاري تحميل تفاصيل الموزع...</span>
-        </div>
-      </td>
-    `;
-    row.insertAdjacentElement("afterend", loaderRow);
-  }
-</script>
+    <script>
+      function previewFile(event, previewId) {
+        const file = event.target.files[0];
+        const preview = document.getElementById(previewId);
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            preview.src = reader.result;
+            preview.classList.remove("hidden");
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
   </body>
 </html>

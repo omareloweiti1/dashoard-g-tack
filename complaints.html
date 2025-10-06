@@ -9,7 +9,7 @@
       href="src/assets/img/logo/49.png"
       type="image/x-icon"
     />
-    <title>جيتك - الموزعين</title>
+    <title>جيتك - لوحة التحكم</title>
     <style>
       .loader {
         border: 3px solid #f3f3f3;
@@ -29,13 +29,18 @@
           transform: rotate(360deg);
         }
       }
+      /* نصوص قابلة للنقر باللون الأزرق */
+      .complaint-text,
+      .complaint-images {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body class="bg-white min-h-screen flex">
-  <!-- Wrapper -->
-<div class="flex">
+    <!-- Wrapper -->
+    <div class="flex">
       <!-- Sidebar Desktop -->
-      <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
+           <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
         <div
           class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
         >
@@ -50,11 +55,11 @@
         <nav class="space-y-3 font-semibold p-4 pr-10">
           <a
             href="overview.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
           >
             <span
               ><img
-                src="src/assets/img/icon-active/chart-2.png"
+                src="src/assets/img/aside-imge/chart-4.png"
                 class="w-9 h-9 mr-6"
                 alt="" /></span
             >نظرة عامة
@@ -74,7 +79,7 @@
 
           <a
             href="distributors.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10  aside-nav "
           >
             <span
               ><img
@@ -110,7 +115,7 @@
 
           <a
             href="reports.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10  aside-nav"
           >
             <span
               ><img
@@ -121,7 +126,7 @@
           </a>
 
           <a
-            href="overview.html"
+            href="usersPermissions.html"
             class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
           >
             <span
@@ -133,20 +138,18 @@
           </a>
 
           <a
-            href="overview.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+            href="complaints.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
           >
             <span
               ><img
-                src="src/assets/img/icon-mute/info-circle.png"
+                src="src/assets/img/aside-imge/info-circle.png"
                 class="w-9 h-9 mr-6"
                 alt="" /></span
             >الشكاوي
           </a>
         </nav>
       </aside>
-
-      <!-- <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" /> -->
     </div>
 
     <!-- Main Content -->
@@ -161,9 +164,6 @@
           <div
             class="lg:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl"
           >
-            <!-- <div class="flex items-center justify-between  w-[100px] border-b border-bl">
-          <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class=" w-[100px] "/></a>
-        </div> -->
             <button id="menu-btn" class="text-gray-700 focus:outline-none">
               <svg
                 class="w-8 h-8"
@@ -601,8 +601,8 @@
             >
               <div class="flex items-center justify-between mb-4">
                 <h2 class="text-lg font-bold flex items-center gap-2">
-                  الموزعين
-                  <span class="text-sky">(24)</span>
+                  الطلبات
+                  <span class="text-sky">(50)</span>
                 </h2>
 
                 <div class="flex items-center gap-3 ml-12">
@@ -622,38 +622,44 @@
                     />
                     ملف PDF
                   </button>
-                  <div class="relative inline-block">
-                    <div class="flex items-center justify-between">
-                      <button
-                        class="flex items-center gap-2 bg-mint/20 text-mint px-4 py-2 rounded-lg"
-                      >
-                        <img
-                          src="src/assets/img/icon/add-square-mint.png"
-                          alt="إضافة"
-                          class="w-5 h-5"
-                        />
-                        <span>إضافة اسطوانة جديدة</span>
-                      </button>
-                    </div>
-                  </div>
                 </div>
               </div>
 
-              <!-- أزرار الفلتر -->
+              <!-- Buttons to filter complaints -->
+              <div class="flex items-center pb-4 justify-between mb-1">
+                <div class="flex items-center gap-8 filter-buttons-complaints">
+                  <button
+                    data-state="customercomplaints"
+                    class="active-filter-complaints px-10 py-1.5"
+                  >
+                    شكاوي الزباين
+                  </button>
+                  <button
+                    data-state="distributorcomplaints"
+                    class="text-gray-500 font-medium px-10 py-1.5"
+                  >
+                    شكاوي الموزعين
+                  </button>
+                </div>
+              </div>
+
               <div
                 class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
               >
                 <div class="flex items-center gap-8 filter-buttons">
-                  <button class="active-filter">موزعين جدد</button>
+                  <button class="active-filter">اليوم</button>
                   <button class="text-[#7E7E7E] font-medium">
-                    الموزعين المعتمدين
+                    هذا الأسبوع
                   </button>
+                  <button class="text-[#7E7E7E] font-medium">هذا الشهر</button>
+                  <button class="text-[#7E7E7E] font-medium">هذه السنة</button>
+                  <button class="text-[#7E7E7E] font-medium">محدد</button>
                 </div>
               </div>
 
               <div class="overflow-x-auto">
                 <table class="w-full text-right">
-                  <thead data-status="new" class="text-right">
+                  <thead class="text-right">
                     <tr>
                       <th class="p-2 pb-4">
                         <input
@@ -662,15 +668,10 @@
                           class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-
                       <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
+                          >رقم الشكوى</span
                         >
                         <img
                           src="src/assets/img/icon-active/arrow-up.png"
@@ -678,11 +679,10 @@
                           class="inline-block align-middle w-4 h-4 ml-1"
                         />
                       </th>
-
-                      <th class="py-2 pr-2 pb-4 max-w-24">
+                      <th class="py-2 pr-2 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
+                          >رقم الطلب</span
                         >
                         <img
                           src="src/assets/img/icon-active/arrow-up.png"
@@ -690,22 +690,14 @@
                           class="inline-block align-middle w-4 h-4 ml-1"
                         />
                       </th>
-
-                      <th class="py-2 pr-4 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-6 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
-                      </th>
-
                       <th class="py-2 pr-2 pb-4">
                         <span
                           class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الجوال</span
+                          >نص الشكوى</span
                         >
+                      </th>
+                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
+                        الصورة المرفقة
                       </th>
 
                       <th class="py-2 pr-6 text-[#7E7E7E] font-medium">
@@ -713,266 +705,425 @@
                       </th>
                     </tr>
                   </thead>
-
-                  <thead data-status="approved" class="text-right">
-                    <tr>
-                      <th class="p-2 pb-4">
-                        <input
-                          id="selectAll"
-                          type="checkbox"
-                          class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الجوال</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >عدد الطلبات</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الوقت المستغرق</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 text-[#7E7E7E] font-medium">
-                        إجراءات
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <tbody data-status="new" class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
-                    <tr>
+                  <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+                    <tr data-state="customercomplaints">
                       <th class="p-2">
                         <input
                           type="checkbox"
                           class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">طيب</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
                       </td>
-                      <td class="p-6">الشجاعية</td>
-                      <td class="p-2 text-end" dir="ltr">972 59945678</td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
 
                       <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
                       >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
                         </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
                         </button>
                       </td>
                     </tr>
-                    <tr>
+                    <tr data-state="distributorcomplaints">
                       <th class="p-2">
                         <input
                           type="checkbox"
                           class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">انا و انت</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
                       </td>
-                      <td class="p-6">الشجاعية</td>
-                      <td class="p-2 text-end" dir="ltr">972 59945678</td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
 
                       <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
                       >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
                         </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
                         </button>
                       </td>
                     </tr>
-                  </tbody>
-
-                  <tbody data-status="approved" class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
-                    <tr>
+                    <tr data-state="customercomplaints">
                       <th class="p-2">
                         <input
                           type="checkbox"
                           class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">حسين شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
                       </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
-                      <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
 
                       <td
-                        class="p-2 flex items-center justify-start pr-1 gap-3"
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
                       >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
                         </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
                         </button>
                       </td>
                     </tr>
-                    <tr>
+                    <tr data-state="distributorcomplaints">
                       <th class="p-2">
                         <input
                           type="checkbox"
                           class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">إسماعيل شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
                       </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
-                      <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
 
                       <td
-                        class="p-2 flex items-center justify-start pr-1 gap-3"
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
                       >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
                         </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
                         </button>
+                      </td>
+                    </tr>
+                    <tr data-state="customercomplaints">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
 
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
+                      </td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
+
+                      <td
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
+                      >
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
+                        </button>
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-state="distributorcomplaints">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
+                      </td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
+
+                      <td
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
+                      >
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
+                        </button>
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-state="customercomplaints">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
+                      </td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
+
+                      <td
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
+                      >
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
+                        </button>
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-state="distributorcomplaints">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
+                      </td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
+
+                      <td
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
+                      >
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
+                        </button>
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-state="customercomplaints">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
+                      </td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
+
+                      <td
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
+                      >
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
+                        </button>
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-state="distributorcomplaints">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#2696440</td>
+                      <td class="p-2">#59253</td>
+
+                      <!-- نص الشكوى -->
+                      <td class="p-2 text-sky cursor-pointer complaint-text">
+                        نص الشكوى
+                      </td>
+
+                      <!-- الصور -->
+                      <td class="p-2 text-sky cursor-pointer complaint-images">
+                        الصور
+                      </td>
+
+                      <td
+                        class="p-2 flex items-center justify-start pr-10 gap-3"
+                      >
+                        <button
+                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
+                        >
+                          رفض الشكوى
+                        </button>
+                        <button
+                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
+                        >
+                          تم الحل
                         </button>
                       </td>
                     </tr>
                   </tbody>
                 </table>
+                <!-- pop up -->
+                <div
+                  id="complaintModal"
+                  class="hidden fixed inset-0 bg-black/40 items-center justify-center z-50"
+                >
+                  <div
+                    class="bg-white w-[674px] h-[389px] rounded-2xl shadow-lg relative p-6"
+                  >
+                    <div class="flex justify-center items-center mb-4">
+                      <h2 class="text-lg font-semibold text-black">
+                        نص الشكوى
+                      </h2>
+                    </div>
+
+                    <button
+                      id="closeComplaintModal"
+                      class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
+                    >
+                      ✕
+                    </button>
+                    <div
+                      id="complaintContent"
+                      class="text-gray-700 leading-relaxed overflow-y-auto max-h-[300px] pr-2"
+                    >
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                      توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                      هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                      الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من
+                      الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
+                      تريد، النص لن يبدو مقسماً ولا يحوي أخطاء لغوية، مولد النص
+                      العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج
+                      العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم
+                      الموقع. ومن هنا وجب على المصمم أن يضع نصوصاً مؤقتة على
+                      التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن
+                      يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع
+                      الذى يتحدث عنه التصميم فيظهر بشكل لا يليق. هذا النص يمكن
+                      أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص
+                      منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال
+                      نصاً بديلاً ومؤقتاً.
+                    </div>
+                  </div>
+                </div>
+                <!-- pop up -->
+                <div
+                  id="imagesModal"
+                  class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 overflow-auto"
+                >
+                  <div
+                    class="bg-white rounded-xl p-6 relative"
+                    style="width: 674px; height: 773px"
+                  >
+                    <h2 class="text-xl font-bold mb-4 text-center">
+                      الصور المرفقة
+                    </h2>
+                    <div
+                      id="complaintImagesContainer"
+                      class="grid grid-cols-2 gap-4"
+                    ></div>
+                    <button
+                      id="closeImagesModal"
+                      class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
               </div>
 
               <!-- Pagination -->
@@ -980,7 +1131,20 @@
                 class="flex items-center justify-between border-t border-bl pt-2"
               >
                 <div class="flex-1 flex justify-center mr-50">
-                  <div id="pagination" class="flex items-center"></div>
+                  <div id="pagination" class="flex items-center">
+                    <!-- <button onclick="changePage(currentPage - 1)" class="px-2 py-1 rounded">&lt;</button>
+
+                    <button onclick="changePage(1)" class="px-3 py-1 rounded bg-sky text-white">
+                      1
+                    </button>
+                    <button onclick="changePage(2)"  class="px-3 py-1 rounded text-[#868686]">2</button>
+                    <button onclick="changePage(3)" class="px-3 py-1 rounded text-[#868686]">3</button> 
+                    <button onclick="changePage(4)" class="px-3 py-1 rounded text-[#868686]">4</button>
+                    <button onclick="changePage(5)" class="px-3 py-1 rounded text-[#868686]">5</button>
+                    <span class="px-2 text-[#868686]">...</span>
+                    <button onclick="changePage(10)" class="px-1 py-1 text-[#868686] rounded">10</button>
+                    <button onclick="changePage(currentPage + 1)" class="px-2 py-1  rounded">&gt;</button> -->
+                  </div>
                 </div>
 
                 <div
@@ -1024,12 +1188,54 @@
 
     <script src="src/assets/js/relodePage.js"></script>
 
+    <!-- Script for viewing order details and showing loader before redirect -->
+    <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
 
+        showLoader(row);
 
+        setTimeout(() => {
+          window.location.href = `requestsDetails.html?id=${orderId}&status=${encodeURIComponent(status)}`;
+        }, 1200);
+      }
 
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
 
+        showLoader(row);
 
+        setTimeout(() => {
+          window.location.href = `requestsDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
+        }, 1200);
+      }
 
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
+
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
+      <td colspan="7" class="p-4">
+        <div class="flex justify-center items-center">
+          <div class="loader"></div>
+          <span class="ml-2">جاري تحميل تفاصيل الطلب...</span>
+        </div>
+      </td>`;
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script>
 
     <!-- Script for handling mobile sidebar open/close -->
     <script>
@@ -1054,6 +1260,56 @@
       userMenuBtn.addEventListener("click", () => {
         userDropdown.classList.toggle("hidden");
       });
+    </script>
+
+    <!-- Script for opening and closing custom popup modal -->
+    <script>
+      const popup = document.getElementById("popup");
+      const content = document.getElementById("popup-content");
+
+      function openPopup(type) {
+        if (type === "delete") {
+          content.innerHTML = `
+        <h2 class="text-xl font-bold mb-4">تأكيد الحذف</h2>
+        <p>هل أنت متأكد من أنك تريد حذف هذا الطلب؟</p>
+        <div class="mt-6 flex justify-end gap-3">
+          <button onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">إلغاء</button>
+          <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">حذف</button>
+        </div>
+      `;
+        } else if (type === "view") {
+          content.innerHTML = `
+        <h2 class="text-xl font-bold mb-4">تفاصيل الطلب</h2>
+        <p>هنا يمكنك عرض المزيد من التفاصيل عن الطلب.</p>
+        <div class="mt-6 flex justify-end">
+          <button onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">إغلاق</button>
+        </div>
+      `;
+        } else if (type === "edit") {
+          content.innerHTML = `
+        <h2 class="text-xl font-bold mb-4">تعديل الطلب</h2>
+        <form class="space-y-3">
+          <input type="text" placeholder="اسم الزبون" class="w-full      -gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+          <input type="text" placeholder="الموزع" class="w-full      -gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+          <div class="flex justify-end gap-3 mt-4">
+            <button type="button" onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">إلغاء</button>
+            <button type="submit" class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">حفظ</button>
+          </div>
+        </form>
+      `;
+        }
+
+        // Show popup with fade-in effect
+        popup.classList.remove("opacity-0", "pointer-events-none");
+        setTimeout(() => {
+          popup.querySelector("div").classList.remove("scale-95");
+        }, 10);
+      }
+
+      function closePopup() {
+        popup.querySelector("div").classList.add("scale-95");
+        popup.classList.add("opacity-0", "pointer-events-none");
+      }
     </script>
 
     <!-- Script for handling notification dropdown -->
@@ -1192,73 +1448,189 @@
       renderTable();
     </script>
 
+    <!-- <script>
+  const filterButtons = document.querySelectorAll(".filter-buttons button");
+  const statusSelect = document.querySelector(".active-stats");
+  const tableRowsvc = document.querySelectorAll("tbody tr");
+
+  const arabicMonths = {
+    يناير: 0, فبراير: 1, مارس: 2, ابريل: 3, أبريل: 3,
+    مايو: 4, يونيو: 5, يوليو: 6, أغسطس: 7, اغسطس: 7,
+    سبتمبر: 8, أكتوبر: 9, اكتوبر: 9, نوفمبر: 10, ديسمبر: 11
+  };
+
+  let selectedDateFilter = "اليوم";
+  let selectedStatusFilter = "الكل";
+
+  function parseArabicDate(dateStr) {
+    const [day, month, year] = dateStr.split(" ");
+    return new Date(year, arabicMonths[month], day);
+  }
+
+  const statusMap = {
+    "الكل": "all",
+    "بانتظار القبول": "accepted",
+    "طلب جديد": "new",
+    "قيد التعبئة": "refill",
+    "تم التعبئة": "received",
+    "تم التسليم": "delivered",
+    "ملغية": "canceled",
+    "مرفوضة": "rejected"
+  };
+
+  function applyFilters() {
+    const now = new Date();
+
+    tableRowsvc.forEach(row => {
+      const dateText = row.children[5].textContent.trim();
+      const rowDate = parseArabicDate(dateText);
+      const rowStatus = row.getAttribute("data-status"); 
+
+      let dateMatch = false;
+      switch(selectedDateFilter) {
+        case "اليوم":
+          dateMatch = rowDate.toDateString() === now.toDateString();
+          break;
+        case "هذا الأسبوع":
+          const firstDay = new Date(now);
+          firstDay.setDate(now.getDate() - now.getDay());
+          const lastDay = new Date(firstDay);
+          lastDay.setDate(firstDay.getDate() + 6);
+          dateMatch = rowDate >= firstDay && rowDate <= lastDay;
+          break;
+        case "هذا الشهر":
+          dateMatch = rowDate.getMonth() === now.getMonth() && rowDate.getFullYear() === now.getFullYear();
+          break;
+        case "هذه السنة":
+          dateMatch = rowDate.getFullYear() === now.getFullYear();
+          break;
+        case "محدد":
+          dateMatch = true;
+          break;
+      }
+
+      let statusMatch = selectedStatusFilter === "الكل" || rowStatus === statusMap[selectedStatusFilter];
+
+      row.style.display = dateMatch && statusMatch ? "" : "none";
+    });
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active-filter"));
+      btn.classList.add("active-filter");
+      selectedDateFilter = btn.textContent.trim();
+      applyFilters();
+    });
+  });
+
+  statusSelect.addEventListener("change", (e) => {
+    selectedStatusFilter = e.target.value;
+    applyFilters();
+  });
+
+  applyFilters();
+</script> -->
+
     <script>
-      const filterButtons = document.querySelectorAll(".flex button");
-      const allSections = document.querySelectorAll("table thead, table tbody");
+      const buttons = document.querySelectorAll(
+        ".filter-buttons-complaints button"
+      );
+      const rows = document.querySelectorAll("tbody tr");
 
-      function applyFilter(filterType) {
-        allSections.forEach((sec) => {
-          const status = sec.getAttribute("data-status");
-          if (
-            (filterType === "موزعين جدد" && status === "new") ||
-            (filterType === "الموزعين المعتمدين" && status === "approved")
-          ) {
-            sec.style.display = "";
+      function filterRows(state) {
+        rows.forEach((row) => {
+          if (row.getAttribute("data-state") === state) {
+            row.style.display = "";
           } else {
-            sec.style.display = "none";
-          }
-        });
-
-        filterButtons.forEach((b) => {
-          if (b.textContent.trim() === filterType) {
-            b.classList.add("active-filter");
-          } else {
-            b.classList.remove("active-filter");
+            row.style.display = "none";
           }
         });
       }
 
-      applyFilter("موزعين جدد");
-
-      filterButtons.forEach((btn) => {
+      buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
-          applyFilter(btn.textContent.trim());
+          buttons.forEach((b) =>
+            b.classList.remove("active-filter-complaints")
+          );
+          btn.classList.add("active-filter-complaints");
+
+          const state = btn.getAttribute("data-state");
+          filterRows(state);
         });
       });
+
+      filterRows("customercomplaints");
     </script>
 
-    <!-- Script for viewing order details and showing loader before redirect -->
-<script>
-  function viewOrder(button) {
-    const row = button.closest("tr");
-    const orderId = row.querySelector("td").textContent.replace("#", "").trim();
+    <script>
+      const complaintModal = document.getElementById("complaintModal");
+      const closeComplaintModal = document.getElementById(
+        "closeComplaintModal"
+      );
+      const complaintContent = document.getElementById("complaintContent");
 
-    showLoader(row);
+      document.querySelectorAll(".complaint-text").forEach((el) => {
+        el.addEventListener("click", () => {
+          complaintModal.classList.remove("hidden");
+          complaintModal.classList.add("flex");
+        });
+      });
 
-    // نخلي المتصفح يرندر اللودر أول
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        window.location.href = `distributorDetails.html?id=${orderId}`;
-      }, 2000); // مدة التأخير قبل الانتقال
-    });
-  }
+      closeComplaintModal.addEventListener("click", () => {
+        complaintModal.classList.add("hidden");
+        complaintModal.classList.remove("flex");
+      });
 
-  function showLoader(row) {
-    const oldLoader = document.querySelector(".loader-row");
-    if (oldLoader) oldLoader.remove();
+      complaintModal.addEventListener("click", (e) => {
+        if (e.target === complaintModal) {
+          complaintModal.classList.add("hidden");
+          complaintModal.classList.remove("flex");
+        }
+      });
 
-    const loaderRow = document.createElement("tr");
-    loaderRow.classList.add("loader-row");
-    loaderRow.innerHTML = `
-      <td colspan="10" class="p-4 text-center bg-gray-50">
-        <div class="flex justify-center items-center gap-2">
-          <div class="loader"></div>
-          <span>جاري تحميل تفاصيل الموزع...</span>
-        </div>
-      </td>
-    `;
-    row.insertAdjacentElement("afterend", loaderRow);
-  }
-</script>
+      const imagesModal = document.getElementById("imagesModal");
+      const closeImagesModal = document.getElementById("closeImagesModal");
+      const imagesContainer = document.getElementById(
+        "complaintImagesContainer"
+      );
+
+      document.querySelectorAll(".complaint-images").forEach((el) => {
+        el.addEventListener("click", () => {
+          const images = [
+            "src/assets/img/v.png",
+            "src/assets/img/v.png",
+            "src/assets/img/v.png",
+            "src/assets/img/v.png",
+          ];
+
+          imagesContainer.innerHTML = "";
+          images.forEach((src) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.style.width = "300px";
+            img.style.height = "300px";
+            img.style.objectFit = "cover";
+            img.style.borderRadius = "16px";
+            imagesContainer.appendChild(img);
+          });
+
+          imagesModal.classList.remove("hidden");
+          imagesModal.classList.add("flex");
+        });
+      });
+
+      closeImagesModal.addEventListener("click", () => {
+        imagesModal.classList.add("hidden");
+        imagesModal.classList.remove("flex");
+      });
+
+      imagesModal.addEventListener("click", (e) => {
+        if (e.target === imagesModal) {
+          imagesModal.classList.add("hidden");
+          imagesModal.classList.remove("flex");
+        }
+      });
+    </script>
   </body>
 </html>

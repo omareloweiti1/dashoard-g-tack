@@ -12,96 +12,121 @@
     <title>جيتك - الملف الشخصي</title>
   </head>
   <body class="bg-white min-h-screen flex">
-    <!-- Wrapper -->
-    <div class="flex">
+  <!-- Wrapper -->
+<div class="flex">
       <!-- Sidebar Desktop -->
       <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
         <div
           class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
         >
-          <a href="index.ar.html"
+          <a href="overview.html"
             ><img
               src="src/assets/img/logo.png"
               alt="Logo"
-              class="mr-20 w-[152px] h-[67]"
+              class="mr-20 w-[152px] h-[67px]"
           /></a>
         </div>
 
         <nav class="space-y-3 font-semibold p-4 pr-10">
           <a
-            href="index.ar.html"
+            href="overview.html"
             class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
           >
             <span
               ><img
-                src="src/assets/img/icon/frame.png"
+                src="src/assets/img/icon-active/chart-2.png"
                 class="w-9 h-9 mr-6"
                 alt="" /></span
-            >الملف الشخصي
+            >نظرة عامة
+          </a>
+
+          <a
+            href="requests.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/grid-2.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الطلبات
+          </a>
+
+          <a
+            href="distributors.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/truck.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الموزعين
+          </a>
+
+          <a
+            href="customer.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/profile-2user.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الزبائن
+          </a>
+
+          <a
+            href="map.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/map.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الخريطة
+          </a>
+
+          <a
+            href="reports.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/trend-down.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >التقارير
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/user-octagon.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >المستخدمين والصلاحيات
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/info-circle.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الشكاوي
           </a>
         </nav>
       </aside>
 
-      <div class="flex-1">
-        <!-- Top bar mobile -->
-        <div
-          class="lg:hidden flex items-center justify-between bg-white p-4 border-b border-bl"
-        >
-          <button id="menu-btn" class="text-gray-700 focus:outline-none">
-            <svg
-              class="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-          <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
-        </div>
-
-        <aside
-          id="mobile-menu"
-          class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 lg:hidden z-50"
-        >
-          <div class="flex items-center justify-between p-4 border-b">
-            <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
-            <button id="close-btn" class="text-gray-700">
-              <svg
-                class="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <nav class="space-y-3 font-semibold p-4 pr-10">
-            <a
-              href="index.ar.html"
-              class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
-            >
-              <span
-                ><img
-                  src="src/assets/img/icon/frame.png"
-                  class="w-9 h-9 mr-6"
-                  alt="" /></span
-              >الملف الشخصي
-            </a>
-          </nav>
-        </aside>
-      </div>
+      <!-- <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" /> -->
     </div>
 
     <!-- Main Content -->

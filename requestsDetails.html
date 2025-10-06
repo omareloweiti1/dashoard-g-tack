@@ -12,87 +12,572 @@
     <title>جيتك - تفاصيل الطلب</title>
   </head>
   <body class="bg-white min-h-screen flex">
-    <!-- Sidebar -->
-    <aside class="hidden lg:flex w-96 bg-white flex-col border-l">
-      <div
-        class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b"
-      >
-        <a href="overview.html">
-          <img
-            src="src/assets/img/logo.png"
-            alt="Logo"
-            class="mr-20 w-[152px]"
-          />
-        </a>
-      </div>
+  <!-- Wrapper -->
+<div class="flex">
+      <!-- Sidebar Desktop -->
+      <aside class="hidden lg:flex w-96 bg-white -l -bl flex-col">
+        <div
+          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
+        >
+          <a href="overview.html"
+            ><img
+              src="src/assets/img/logo.png"
+              alt="Logo"
+              class="mr-20 w-[152px] h-[67px]"
+          /></a>
+        </div>
 
-      <nav class="space-y-3 font-semibold p-4 pr-10">
-        <a
-          href="overview.html"
-          class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
-        >
-          <img
-            src="src/assets/img/icon-active/chart-2.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-          نظرة عامة
-        </a>
-        <a
-          href="requests.html"
-          class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
-        >
-          <img
-            src="src/assets/img/icon-mute/grid-2.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-          الطلبات
-        </a>
-        <a
-          href="distributors.html"
-          class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
-        >
-          <img
-            src="src/assets/img/icon-mute/truck.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-          الموزعين
-        </a>
-      </nav>
-    </aside>
+        <nav class="space-y-3 font-semibold p-4 pr-10">
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/aside-imge/chart-4.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >نظرة عامة
+          </a>
+
+          <a
+            href="requests.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+          >
+            <span
+              ><img
+                src="src/assets/img/aside-imge/grid-2.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الطلبات
+          </a>
+
+          <a
+            href="distributors.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/truck.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الموزعين
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/profile-2user.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الزبائن
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/map.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الخريطة
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/trend-down.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >التقارير
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/user-octagon.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >المستخدمين والصلاحيات
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/info-circle.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الشكاوي
+          </a>
+        </nav>
+      </aside>
+
+      <!-- <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" /> -->
+    </div>
 
     <!-- Main -->
     <main class="flex-1 min-h-screen">
-      <!-- Header -->
+    <!-- Header -->
       <header
-        class="flex items-center justify-between h-[135px] border-b px-6 max-w-[990px] mx-auto"
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 lg:max-w-[990px] lg:min-w-[990px]"
       >
-        <h1 class="font-bold text-xl">تفاصيل الطلب</h1>
-        <div class="flex items-center gap-4">
-          <button
-            class="relative flex items-center justify-center bg-sky h-12 w-12 rounded-full"
+        <div class="flex-1 block lg:hidden">
+          <!-- Top bar mobile -->
+
+          <div
+            class="lg:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl"
           >
+            <!-- <div class="flex items-center justify-between  w-[100px] border-b border-bl">
+          <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class=" w-[100px] "/></a>
+        </div> -->
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <aside
+            id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 lg:hidden z-50"
+          >
+            <div
+              class="flex items-center justify-between p-4 border-b border-bl"
+            >
+              <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+
+              <button id="close-btn" class="text-gray-700">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Search -->
+            <div class="block lg:hideen p-2 relative lg:w-[410px] h-[55px]">
+              <span class="absolute right-3 inset-y-0 flex items-center">
+                <img
+                  src="src/assets/img/search-normal.png"
+                  class="w-5 h-5"
+                  alt="بحث"
+                />
+              </span>
+              <input
+                type="text"
+                placeholder="ابحث عن طلب، موزع، زبون..."
+                class="w-full pr-10 pl-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+              />
+            </div>
+
+            <div class="relative">
+              <button
+                id="notifBtn"
+                class="relative flex items-center w-[90%] mx-auto justify-center bg-sky h-14 lg:w-14 rounded-lg focus:outline-none"
+              >
+                <img
+                  src="src/assets/img/icon/notification.png"
+                  class="w-6 h-6"
+                  alt="تنبيهات"
+                />
+              </button>
+
+              <div
+                id="notifDropdown"
+                class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+              >
+                <ul class="py-2">
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span
+                      class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                    ></span>
+                  </li>
+                </ul>
+
+                <div
+                  class="text-center flex items-center justify-center py-2 border-t border-bl"
+                >
+                  <a
+                    href="notifications.ar.html"
+                    class="text-sky font-bold hover:underline"
+                    >مشاهدة جميع الإشعارات</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <nav class="space-y-3 font-semibold p-4 pr-10">
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-active/chart-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >نظرة عامة
+              </a>
+
+              <a
+                href="requests.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الطلبات
+              </a>
+
+              <a
+                href="distributors.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الموزعين
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الزبائن
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الخريطة
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/trend-down.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >التقارير
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >المستخدمين والصلاحيات
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الشكاوي
+              </a>
+            </nav>
+          </aside>
+        </div>
+
+        <!-- Search -->
+        <div class="hidden lg:block relative w-[410px] h-[55px]">
+          <span class="absolute right-3 inset-y-0 flex items-center">
             <img
-              src="src/assets/img/icon/notification.png"
-              class="w-6 h-6"
-              alt="تنبيهات"
+              src="src/assets/img/search-normal.png"
+              class="w-5 h-5"
+              alt="بحث"
             />
-          </button>
-          <img
-            src="src/assets/img/Imag.png"
-            class="w-12 h-12 rounded-full border"
-            alt="User"
+          </span>
+          <input
+            type="text"
+            placeholder="ابحث عن طلب، موزع، زبون..."
+            class="w-full pr-10 pl-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
           />
+        </div>
+
+        <!-- sos -->
+        <!-- <span class="absolute top-2 right-2 block w-2 h-2 bg-red-500 rounded-full"></span> -->
+
+        <!-- User Section -->
+        <div class="relative flex items-center gap-4">
+          <!-- Notification Icon -->
+          <div class="relative hidden lg:block">
+            <!-- Notification Icon -->
+            <button
+              id="notifBtn"
+              class="relative flex items-center justify-center bg-sky h-14 w-14 rounded-full focus:outline-none"
+            >
+              <img
+                src="src/assets/img/icon/notification.png"
+                class="w-6 h-6"
+                alt="تنبيهات"
+              />
+            </button>
+
+            <div
+              id="notifDropdown"
+              class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+            >
+              <ul class="py-2">
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+              </ul>
+
+              <div
+                class="text-center flex items-center justify-center py-2 border-t border-bl"
+              >
+                <a
+                  href="notifications.ar.html"
+                  class="text-sky font-bold hover:underline"
+                  >مشاهدة جميع الإشعارات</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- User Dropdown -->
+          <div class="relative bg-backNav py-2 px-6 rounded-lg">
+            <button
+              id="userMenuBtn"
+              class="flex items-center lg:gap-2 focus:outline-none"
+            >
+              <img
+                src="src/assets/img/Imag.png"
+                alt="User"
+                class="w-12 h-12 rounded-full border"
+              />
+
+              <div class="text-right mr-2">
+                <span
+                  class="hidden lg:block font-extrabold text-[20px] text-[#3C3C3C]"
+                  >محمد علي</span
+                >
+                <span
+                  class="hidden lg:block text-sm font-extrabold text-[#6D6D6D]"
+                  >المدير العام</span
+                >
+              </div>
+
+              <svg
+                class="w-6 h-6 text-black mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="userDropdown"
+              class="hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
+            >
+              <ul class="py-2">
+                <li>
+                  <a
+                    href="Profile.ar.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/frame.png"
+                      class="w-5 h-5"
+                      alt="الملف"
+                    />
+                    <span>الملف الشخصي</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="setting.ar.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/setting-2.png"
+                      class="w-5 h-5"
+                      alt="الإعدادات"
+                    />
+                    <span>الإعدادات</span>
+                  </a>
+                </li>
+                <a
+                  href="#"
+                  onclick="openModal()"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                >
+                  <img
+                    src="src/assets/img/icon/logout.png"
+                    class="w-5 h-5"
+                    alt="خروج"
+                  />
+                  <span>تسجيل الخروج</span>
+                </a>
+
+                <div
+                  id="logoutModal"
+                  class="hidden fixed inset-0 items-center justify-center bg-blue-200/40 z-50"
+                >
+                  <div
+                    class="bg-white rounded-lg shadow-lg p-5 w-[680px] h-[260px] relative flex flex-col"
+                  >
+                    <button
+                      onclick="closeModal()"
+                      class="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-backNav text-white"
+                    >
+                      ✕
+                    </button>
+
+                    <div class="p-4 flex justify-center mt-5">
+                      <h2 class="text-lg font-bold">تسجيل الخروج</h2>
+                    </div>
+
+                    <div class="flex-1 flex items-center justify-center">
+                      <p class="text-center text-gray-700 text-lg">
+                        هل أنت متأكد من تسجيل الخروج ؟
+                      </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        onclick="logout()"
+                        class="w-full py-3 bg-red-600 text-white rounded-lg font-medium"
+                      >
+                        تسجيل خروج
+                      </button>
+                      <button
+                        onclick="closeModal()"
+                        class="w-full py-3 bg-gray-300 rounded-lg font-medium"
+                      >
+                        إلغاء
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
         </div>
       </header>
 
       <!-- Order Details -->
-      <section class="bg-sky-50 min-h-screen p-6">
+      <section class="bg-sky min-h-screen p-6">
         <div class="max-w-[990px] mx-auto bg-white shadow rounded-lg p-6">
           <!-- الهيدر -->
-          <div class="flex items-center justify-between border-b pb-3 mb-4">
+          <!-- <div class="flex items-center justify-between border-b pb-3 mb-4">
             <h2 class="font-bold text-lg">
               تفاصيل الطلب <span class="text-gray-500">#78415</span>
             </h2>
@@ -110,10 +595,10 @@
                 حذف الطلب
               </button>
             </div>
-          </div>
+          </div> -->
 
           <!-- الحالة: طلب تعبئة -->
-          <div id="refill" class="hidden">
+          <!-- <div id="refill" class="hidden">
             <div class="flex items-center justify-between mb-4">
               <p class="text-gray-600">حالة الطلب</p>
               <span
@@ -147,10 +632,178 @@
                 </p>
               </div>
             </div>
+          </div> -->
+          
+          <!-- Order Details Section -->
+          <div id="refill" class="hidden p-2  rounded-xl ">
+            <!-- Header -->
+            <div class="flex justify-between items-center border-b border-bl pb-4 mb-4">
+              <!-- Breadcrumb -->
+              <div class="flex items-center gap-2 text-gray-600">
+                <a href="requests.html" class="hover:text-blue-600">الطلبات</a>
+                <span class="text-[#292D32]">&gt;</span>
+                <span class="text-gray-900 font-semibold">الطلب 78415#</span>
+              </div>
+                <div class="flex gap-2">
+                  <button onclick="openEditModal()" class="flex items-center gap-2 text-orange-600 bg-orange-100 py-2 px-4 rounded-lg">
+                    <img src="src/assets/img/icon-row/edit.png" alt="" /> تعديل
+                  </button>
+
+             <button onclick="openDeleteModal('78415')" class="flex items-center gap-2 text-rose-600 bg-rose-100 py-2 px-4 rounded-lg">
+                <img src="src/assets/img/icon-row/trash.png" alt="" />
+                حذف الطلب
+              </button>
+
+
+            </div>
+             
+            </div>
+
+            <!-- Order Info -->
+            <div
+              class="grid md:grid-cols-6 sm:grid-cols-2 gap-4 mb-6 bg-[#F5FBFF] p-4 rounded-lg"
+            >
+              <div>
+                <p class="text-gray-500 pb-4">رقم الطلب</p>
+                <p class="font-medium">#78415</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">الزبون</p>
+                <p class="font-medium">علي حجي</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">الموزع</p>
+                <p class="font-medium">إسماعيل شلش</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">حالة الطلب</p>
+                <span class="px-3 py-1 rounded-lg font-normal   bg-gray-200 text-base">
+                  طلب تعبئة
+                </span>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">تاريخ الطلب</p>
+                <p class="font-medium">15 مارس 2023</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">وقت الطلب</p>
+                <p class="font-medium">08:35 صباحاً</p>
+              </div>
+            </div>
+
+            <!-- Order + Address Section -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 bg-[#F5FBFF] rounded-lg mb-6"
+            >
+              <!-- Order Details -->
+              <div class="p-4">
+                <h3 class="text-base font-semibold mb-3">تفاصيل الطلب</h3>
+                <ul class="pr-4 space-y-2 text-gray-700">
+                  <li class="flex justify-between">
+                   <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">1</span>
+                    <span class="text-black" >اسطوانة 12 كيلو</span>
+                  </span>
+
+                    <span class="text-gray-600"><span class="text-black font-medium" >70</span> شيكل</span>
+                  </li>
+                  <li class="flex justify-between">
+                     <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">2</span>
+                    <span class="text-black">اسطوانة 2.5 كيلو</span>
+                  </span>
+                    <span class="text-gray-600"><span class="text-black font-medium">30</span> شيكل</span>
+                  </li>
+                </ul>
+
+                <p class="mt-3 font-medium flex justify-between">
+                  <span>المجموع</span>
+                  <span class="text-gray-600"><span class="text-sky">100</span> شيكل</span>
+                </p>
+              </div>
+
+              <!-- Address Details -->
+              <div class="p-4">
+                <h3 class="text-base font-semibold mb-3">تفاصيل العنوان</h3>
+                <p class="text-gray-700 font-medium">عنوان الاستلام والتسليم</p>
+                <p class="text-gray-600 mb-3">غزة الشجاعية، بجوار أبوعمار</p>
+
+                <p class="text-gray-700 font-medium">العنوان بالتفصيل</p>
+                <p class="text-gray-600">
+                 حي الرمال الجنوبي,
+                  أنصار, بجوار منزل
+                   أبوعمار, عمارة الندى الطابق 
+                   الأرضي الشقة  رقم 2حي الرمال الجنوبي, 
+                 أنصار, بجوار منزل أبوعمار, 
+                 عمارة الندى الطابق الأرضي الشقة  رقم 2
+                </p>
+              </div>
+
+              
+            </div>
+
+            <!-- Order History -->
+            <div class="rounded-xl p-4 bg-[#F5FBFF]">
+              <h3 class="text-base font-semibold mb-4">تفاصيل تاريخ الطلب</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="text-gray-600 text-right">
+                      <th class="p-2">
+                        <span class="inline-block align-middle">التاريخ</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">الوقت</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">الحالة</span>
+                        <!-- <img src="src/assets/img/icon-active/arrow-up.png" alt="" class="inline-block align-middle w-3 h-3 ml-1"> -->
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">المنفذ</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحاً</td>
+                      <td class="p-2">
+                        <span
+                          class="px-2 py-1 rounded bg-gray-300 text-gray-800"
+                          >طلب تعبئة</span
+                        >
+                      </td>
+                      <td class="p-2">علي حجي</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
           </div>
 
           <!-- الحالة: تم قبول الطلب -->
-          <div id="accepted" class="hidden">
+          <!-- <div id="accepted" class="hidden">
             <div class="flex items-center justify-between mb-4">
               <p class="text-gray-600">حالة الطلب</p>
               <span
@@ -184,10 +837,10 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- الحالة: التحرك نحو العميل -->
-          <div id="moving" class="hidden">
+          <!-- <div id="moving" class="hidden">
             <div class="flex items-center justify-between mb-4">
               <p class="text-gray-600">حالة الطلب</p>
               <span
@@ -221,10 +874,10 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- الحالة: استلام الأنابيب -->
-          <div id="received" class="hidden">
+          <!-- <div id="received" class="hidden">
             <div class="flex items-center justify-between mb-4">
               <p class="text-gray-600">حالة الطلب</p>
               <span
@@ -258,7 +911,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
 
            <!-- <div id="delivered" class="hidden">
             <div class="flex items-center justify-between mb-4">
@@ -307,11 +960,17 @@
                 <span class="text-[#292D32]">&gt;</span>
                 <span class="text-gray-900 font-semibold">الطلب 78415#</span>
               </div>
-              <button
-                class="flex items-center gap-2 text-rose bg-rose/10 py-2 px-4 rounded-lg"
-              >
-                <img src="src/assets/img/icon-row/trash.png" alt="" />حذف الطلب
+            <div class="flex gap-2">
+
+             <button onclick="openDeleteModal('78415')" class="flex items-center gap-2 text-rose-600 bg-rose-100 py-2 px-4 rounded-lg">
+                <img src="src/assets/img/icon-row/trash.png" alt="" />
+                حذف الطلب
               </button>
+
+              
+            </div>
+
+           
             </div>
 
             <!-- Order Info -->
@@ -491,10 +1150,11 @@
                 </table>
               </div>
             </div>
+            
           </div>
 
           <!-- الحالة: ملغاة -->
-          <div id="canceled" class="hidden">
+          <!-- <div id="canceled" class="hidden">
             <div class="flex items-center justify-between mb-4">
               <p class="text-gray-600">حالة الطلب</p>
               <span
@@ -528,10 +1188,179 @@
                 </p>
               </div>
             </div>
+          </div> -->
+          <div id="canceled" class="hidden p-2  rounded-xl ">
+            <!-- Header -->
+            <div class="flex justify-between items-center border-b border-bl pb-4 mb-4">
+              <!-- Breadcrumb -->
+              <div class="flex items-center gap-2 text-gray-600">
+                <a href="requests.html" class="hover:text-blue-600">الطلبات</a>
+                <span class="text-[#292D32]">&gt;</span>
+                <span class="text-gray-900 font-semibold">الطلب 78415#</span>
+              </div>
+                <div class="flex gap-2">
+            
+             <button
+  onclick="openDeleteModal('78415')"
+  class="flex items-center gap-2 text-rose-600 bg-rose-100 py-2 px-4 rounded-lg"
+>
+  <img src="src/assets/img/icon-row/trash.png" alt="" />
+  حذف الطلب
+</button>
+
+
+            </div>
+             
+            </div>
+
+            <!-- Order Info -->
+            <div class="grid md:grid-cols-6 sm:grid-cols-2 gap-4 mb-4 bg-[#F5FBFF] p-4 rounded-lg">
+              <div>
+                <p class="text-gray-500 pb-4">رقم الطلب</p>
+                <p class="font-medium">#78415</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">الزبون</p>
+                <p class="font-medium">علي حجي</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">الموزع</p>
+                <p class="font-medium">إسماعيل شلش</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">حالة الطلب</p>
+                <span class="px-3 py-1 rounded-lg font-normal  text-rose  bg-rose/10 text-base">
+                  ملغية
+                </span>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">تاريخ الطلب</p>
+                <p class="font-medium">15 مارس 2023</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">وقت الطلب</p>
+                <p class="font-medium">08:35 صباحاً</p>
+              </div>
+            </div>
+
+            <!-- Order + Address Section -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 bg-[#F5FBFF] rounded-lg mb-4"
+            >
+              <!-- Order Details -->
+              <div class="p-4">
+                <h3 class="text-base font-semibold mb-3">تفاصيل الطلب</h3>
+                <ul class="pr-4 space-y-2 text-gray-700">
+                  <li class="flex justify-between">
+                   <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">1</span>
+                    <span class="text-black" >اسطوانة 12 كيلو</span>
+                  </span>
+
+                    <span class="text-gray-600"><span class="text-black font-medium" >70</span> شيكل</span>
+                  </li>
+                  <li class="flex justify-between">
+                     <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">2</span>
+                    <span class="text-black">اسطوانة 2.5 كيلو</span>
+                  </span>
+                    <span class="text-gray-600"><span class="text-black font-medium">30</span> شيكل</span>
+                  </li>
+                </ul>
+
+                <p class="mt-3 font-medium flex justify-between">
+                  <span>المجموع</span>
+                  <span class="text-gray-600"><span class="text-sky">100</span> شيكل</span>
+                </p>
+              </div>
+
+              <!-- Address Details -->
+              <div class="p-4">
+                <h3 class="text-base font-semibold mb-3">تفاصيل العنوان</h3>
+                <p class="text-gray-700 font-medium">عنوان الاستلام والتسليم</p>
+                <p class="text-gray-600 mb-3">غزة الشجاعية، بجوار أبوعمار</p>
+
+                <p class="text-gray-700 font-medium">العنوان بالتفصيل</p>
+                <p class="text-gray-600">
+                 حي الرمال الجنوبي,
+                  أنصار, بجوار منزل
+                   أبوعمار, عمارة الندى الطابق 
+                   الأرضي الشقة  رقم 2حي الرمال الجنوبي, 
+                 أنصار, بجوار منزل أبوعمار, 
+                 عمارة الندى الطابق الأرضي الشقة  رقم 2
+                </p>
+              </div>
+            </div>
+
+            <!-- Order History -->
+            <div class="rounded-xl p-4 bg-[#F5FBFF] mb-4">
+              <h3 class="text-base font-semibold mb-4">تفاصيل تاريخ الطلب</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="text-gray-600 text-right">
+                      <th class="p-2">
+                        <span class="inline-block align-middle">التاريخ</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">الوقت</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">الحالة</span>
+                        <!-- <img src="src/assets/img/icon-active/arrow-up.png" alt="" class="inline-block align-middle w-3 h-3 ml-1"> -->
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">المنفذ</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحاً</td>
+                      <td class="p-2">
+                        <span
+                          class="px-2 py-1 rounded bg-rose/10 text-rose"
+                          >ملغية</span
+                        >
+                      </td>
+                      <td class="p-2">علي حجي</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+             <div class="rounded-xl p-4 bg-[#F5FBFF] ">
+              <h3 class="text-base font-semibold mb-4">سبب الالغاء</h3>
+              <div class="overflow-x-auto">
+             <h2 class="font-medium text-base" >هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص</h2>
+              </div>
+            </div>
+            
           </div>
 
           <!-- الحالة: مرفوضة -->
-          <div id="rejected" class="hidden">
+          <!-- <div id="rejected" class="hidden">
             <div class="flex items-center justify-between mb-4">
               <p class="text-gray-600">حالة الطلب</p>
               <span
@@ -563,39 +1392,519 @@
                 <p class="text-gray-600">الطلب مرفوض بسبب مشكلة في البيانات.</p>
               </div>
             </div>
+          </div> -->
+            <div id="rejected" class="hidden p-2  rounded-xl ">
+            <!-- Header -->
+            <div class="flex justify-between items-center border-b border-bl pb-4 mb-4">
+              <!-- Breadcrumb -->
+              <div class="flex items-center gap-2 text-gray-600">
+                <a href="requests.html" class="hover:text-blue-600">الطلبات</a>
+                <span class="text-[#292D32]">&gt;</span>
+                <span class="text-gray-900 font-semibold">الطلب 78415#</span>
+              </div>
+                <div class="flex gap-2">
+            
+           <!-- زر الحذف -->
+<button
+  onclick="openDeleteModal('78415')"
+  class="flex items-center gap-2 text-rose-600 bg-rose-100 py-2 px-4 rounded-lg"
+>
+  <img src="src/assets/img/icon-row/trash.png" alt="" />
+  حذف الطلب
+</button>
+
+
+
+
+            </div>
+             
+            </div>
+
+            <!-- Order Info -->
+            <div class="grid md:grid-cols-6 sm:grid-cols-2 gap-4 mb-4 bg-[#F5FBFF] p-4 rounded-lg">
+              <div>
+                <p class="text-gray-500 pb-4">رقم الطلب</p>
+                <p class="font-medium">#78415</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">الزبون</p>
+                <p class="font-medium">علي حجي</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">الموزع</p>
+                <p class="font-medium">إسماعيل شلش</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">حالة الطلب</p>
+                <span class="px-3 py-1 rounded-lg font-normal  text-rose  bg-rose/10 text-base">
+                  مرفوضة
+                </span>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">تاريخ الطلب</p>
+                <p class="font-medium">15 مارس 2023</p>
+              </div>
+              <div>
+                <p class="text-gray-500 pb-4">وقت الطلب</p>
+                <p class="font-medium">08:35 صباحاً</p>
+              </div>
+            </div>
+
+            <!-- Order + Address Section -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 bg-[#F5FBFF] rounded-lg mb-4"
+            >
+              <!-- Order Details -->
+              <div class="p-4">
+                <h3 class="text-base font-semibold mb-3">تفاصيل الطلب</h3>
+                <ul class="pr-4 space-y-2 text-gray-700">
+                  <li class="flex justify-between">
+                   <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">1</span>
+                    <span class="text-black" >اسطوانة 12 كيلو</span>
+                  </span>
+
+                    <span class="text-gray-600"><span class="text-black font-medium" >70</span> شيكل</span>
+                  </li>
+                  <li class="flex justify-between">
+                     <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">2</span>
+                    <span class="text-black">اسطوانة 2.5 كيلو</span>
+                  </span>
+                    <span class="text-gray-600"><span class="text-black font-medium">30</span> شيكل</span>
+                  </li>
+                </ul>
+
+                <p class="mt-3 font-medium flex justify-between">
+                  <span>المجموع</span>
+                  <span class="text-gray-600"><span class="text-sky">100</span> شيكل</span>
+                </p>
+              </div>
+
+              <!-- Address Details -->
+              <div class="p-4">
+                <h3 class="text-base font-semibold mb-3">تفاصيل العنوان</h3>
+                <p class="text-gray-700 font-medium">عنوان الاستلام والتسليم</p>
+                <p class="text-gray-600 mb-3">غزة الشجاعية، بجوار أبوعمار</p>
+
+                <p class="text-gray-700 font-medium">العنوان بالتفصيل</p>
+                <p class="text-gray-600">
+                 حي الرمال الجنوبي,
+                  أنصار, بجوار منزل
+                   أبوعمار, عمارة الندى الطابق 
+                   الأرضي الشقة  رقم 2حي الرمال الجنوبي, 
+                 أنصار, بجوار منزل أبوعمار, 
+                 عمارة الندى الطابق الأرضي الشقة  رقم 2
+                </p>
+              </div>
+            </div>
+
+            <!-- Order History -->
+            <div class="rounded-xl p-4 bg-[#F5FBFF] mb-4">
+              <h3 class="text-base font-semibold mb-4">تفاصيل تاريخ الطلب</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="text-gray-600 text-right">
+                      <th class="p-2">
+                        <span class="inline-block align-middle">التاريخ</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">الوقت</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">الحالة</span>
+                        <!-- <img src="src/assets/img/icon-active/arrow-up.png" alt="" class="inline-block align-middle w-3 h-3 ml-1"> -->
+                      </th>
+                      <th class="p-2">
+                        <span class="inline-block align-middle">المنفذ</span>
+                        <img
+                          src="src/assets/img/icon-active/arrow-up.png"
+                          alt=""
+                          class="inline-block align-middle w-3 h-3 ml-1"
+                        />
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">08:35 صباحاً</td>
+                      <td class="p-2">
+                        <span
+                          class="px-2 py-1 rounded bg-rose/10 text-rose"
+                          >مرفوضة</span
+                        >
+                      </td>
+                      <td class="p-2">علي حجي</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+             <div class="rounded-xl p-4 bg-[#F5FBFF] ">
+              <h3 class="text-base font-semibold mb-4">سبب الرفض</h3>
+              <div class="overflow-x-auto">
+             <h2 class="font-medium text-base" >هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص</h2>
+              </div>
+            </div>
+            
           </div>
+
         </div>
+                                <!-- pop up -->
+                  <div id="editModal" class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50">
+                    <div class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative">
+                      <!-- زر اغلاق -->
+                      <button
+                        onclick="closeEditModal()"
+                        class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"> ✕
+                      </button>
+                    
+                      <!-- العنوان -->
+                      <h2 class="text-lg font-bold mb-4 text-gray-800 text-center">تعديل الطلب</h2>
+                    
+                      <!-- عنوان التسليم -->
+                      <label class="block text-black font-medium text-xl mb-2">عنوان التسليم</label>
+                      <div class="relative mb-4">
+                        <input
+                          type="text"
+                          class="w-full border border-bl rounded-lg p-3 pl-28"
+                          placeholder="غزة, أنصار, بجوار أبوعمار"
+                        />
+                        <button
+                          class="absolute left-2 top-1/2 -translate-y-1/2  text-sky-600 px-3 py-1 rounded-md text-sm font-medium"
+                        >
+                          تغيير من الخريطة
+                        </button>
+                      </div>
+                    
+                      <!-- العنوان بالتفصيل -->
+                      <label class="block text-black font-medium text-xl mb-2">العنوان بالتفصيل</label>
+                      <textarea
+                        class="w-full border border-bl rounded-lg p-3 mb-4"
+                        rows="2"
+                        placeholder="أدخل عنوانك بالتفصيل ( الحي, العمارة, الشقة,.. )"
+                      ></textarea>
+                    
+                      <!-- فاصل -->
+                      <div class="border-b border-bl my-4"></div>
+                    
+                      <!-- الموزع -->
+                      <div class="flex items-center  mb-4">
+                        <span class="text-gray-500">الموزع: </span>
+                        <span class="text-black font-semibold"> إسماعيل شابط </span>
+                      </div>
+                    
+                      <!-- فاصل -->
+                      <div class="border-b border-bl my-4"></div>
+                    
+                      <!-- تفاصيل الطلب -->
+                      <h3 class="text-black font-medium text-xl mb-2">تفاصيل الطلب</h3>
+                      <ul class="mb-4 space-y-2">
+                        <li class="flex justify-between items-center">
+                          <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">1</span>
+                    <span class="text-black" >اسطوانة 12 كيلو</span>
+                  </span>
+                          <span class="text-gray-600"><span class="text-black font-medium" >70</span> شيكل</span>
+                        </li>
+                          <li class="flex justify-between">
+                     <span class="flex items-center gap-2">
+                     <span class="w-1.5 h-1.5 bg-black rounded-full inline-block"></span>
+                     <span class="text-sky">2</span>
+                    <span class="text-black">اسطوانة 2.5 كيلو</span>
+                  </span>
+                    <span class="text-gray-600"><span class="text-black font-medium">30</span> شيكل</span>
+                  </li>
+                      </ul>
+
+
+                      </ul>
+                    
+                      <!-- المجموع -->
+                      <div class="flex justify-between items-center font-semibold text-gray-800 text-lg">
+                        <span>المجموع</span>
+                         <span class="text-gray-600"><span class="text-sky">100</span> شيكل</span>
+                      </div>
+                    
+                      <!-- زر الحفظ -->
+                      <div class="mt-6">
+                        <button
+                          onclick="saveEdit()"
+                          class="w-full py-3 bg-sky text-white rounded-lg hover:bg-sky-700"
+                        >
+                          حفظ التعديلات
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+
+              <!-- pop up -->
+              <div id="deleteModal" class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50">
+                <div class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative">
+                 <button
+                onclick="closeDeleteModal()"
+                class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
+              >
+                ✕
+              </button>
+
+
+                  <h2 class="text-lg font-bold mb-2 text-gray-800 text-center py-2">حذف الطلب</h2>
+
+                  <p class="text-gray-700 mb-1 text-center py-2">
+                    هل أنت متأكد من حذف الطلب <span id="orderIdText" class="font-semibold text-sky">#</span> ؟
+                  </p>
+                  <p class="text-sm  mb-6 text-center py-2">
+                    في حال قمت بحذف الطلب لن تستطيع إرجاعه مرة أخرى
+                  </p>
+                
+                  <div class="flex justify-between gap-3">
+                      <button
+                      onclick="confirmDelete()"
+                      class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
+                    >
+                      حذف الطلب
+                    </button>
+                    <button
+                      onclick="closeDeleteModal()"
+                      class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
+                    >إلغاء
+                    </button>
+                  
+                  </div>
+                </div>
+              </div>
       </section>
     </main>
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const status = params.get("status");
 
-      if (status) {
-        switch (status) {
-          case "refill":
-            document.getElementById("refill").classList.remove("hidden");
-            break;
-          case "accepted":
-            document.getElementById("accepted").classList.remove("hidden");
-            break;
-          case "moving":
-            document.getElementById("moving").classList.remove("hidden");
-            break;
-          case "received":
-            document.getElementById("received").classList.remove("hidden");
-            break;
-          case "delivered":
-            document.getElementById("delivered").classList.remove("hidden");
-            break;
-          case "canceled":
-            document.getElementById("canceled").classList.remove("hidden");
-            break;
-          case "rejected":
-            document.getElementById("rejected").classList.remove("hidden");
-            break;
-        }
-      }
-    </script>
+<!--  Script for opening and closing edit/delete modals and updating order ID display -->
+<script>
+  function openEditModal() {
+    document.getElementById("editModal").classList.remove("hidden");
+  }
+
+  function openDeleteModal(orderId) {
+    const modal = document.getElementById("deleteModal");
+    modal.classList.remove("hidden");
+    document.getElementById("orderIdText").textContent = "#" + orderId;
+  }
+
+  function closeDeleteModal() {
+    document.getElementById("deleteModal").classList.add("hidden");
+  }
+</script>
+
+<!-- Script for showing specific order status sections based on URL parameter (commented out original version) -->
+<!-- <script>
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+
+  if (status) {
+    switch (status) {
+      case "refill":
+        document.getElementById("refill").classList.remove("hidden");
+        break;
+      case "accepted":
+        document.getElementById("accepted").classList.remove("hidden");
+        break;
+      case "moving":
+        document.getElementById("moving").classList.remove("hidden");
+        break;
+      case "received":
+        document.getElementById("received").classList.remove("hidden");
+        break;
+      case "delivered":
+        document.getElementById("delivered").classList.remove("hidden");
+        break;
+      case "canceled":
+        document.getElementById("canceled").classList.remove("hidden");
+        break;
+      case "rejected":
+        document.getElementById("rejected").classList.remove("hidden");
+        break;
+    }
+  }
+</script>
+-->
+
+<!-- Script for handling URL parameters to show order status sections and open modals based on action -->
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+  const action = params.get("action");
+  const orderId = params.get("id");
+
+  if (status) {
+    switch (status) {
+      case "refill":
+        document.getElementById("refill").classList.remove("hidden");
+        break;
+      case "accepted":
+        document.getElementById("accepted").classList.remove("hidden");
+        break;
+      case "moving":
+        document.getElementById("moving").classList.remove("hidden");
+        break;
+      case "received":
+        document.getElementById("received").classList.remove("hidden");
+        break;
+      case "delivered":
+        document.getElementById("delivered").classList.remove("hidden");
+        break;
+      case "canceled":
+        document.getElementById("canceled").classList.remove("hidden");
+        break;
+      case "rejected":
+        document.getElementById("rejected").classList.remove("hidden");
+        break;
+    }
+  }
+
+  if (action === "edit" && status === "refill") {
+    openEditModal(); 
+  }
+  if (action === "delete") {
+    openDeleteModal(orderId);
+  }
+</script>
+
+<!-- Script for handling opening, closing, and saving changes in the edit modal -->
+<script>
+  function openEditModal() {
+    document.getElementById("editModal").classList.remove("hidden");
+    document.getElementById("editModal").classList.add("flex");
+  }
+  function closeEditModal() {
+    document.getElementById("editModal").classList.add("hidden");
+    document.getElementById("editModal").classList.remove("flex");
+  }
+  function saveEdit() {
+    alert("تم حفظ التعديلات ✅");
+    closeEditModal();
+  }
+</script>
+
+<!-- Script for getting query parameters from URL and opening modals based on action -->
+<script>
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  window.onload = function () {
+    const action = getQueryParam("action");
+    const orderId = getQueryParam("id");
+
+    if (action === "edit") {
+      openEditModal();   
+    } else if (action === "delete") {
+      openDeleteModal(orderId); 
+    }
+  };
+</script>
+
+<!-- Script for managing delete/edit modals and showing order sections dynamically -->
+<script>
+  let currentOrderId = null;
+
+  // Open delete modal and display order ID
+  function openDeleteModal(orderId) {
+    currentOrderId = orderId;
+    document.getElementById("orderIdText").textContent = "#" + orderId;
+    const modal = document.getElementById("deleteModal");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  // Close delete modal
+  function closeDeleteModal() {
+    const modal = document.getElementById("deleteModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  // Confirm deletion
+  function confirmDelete() {
+    alert("🚮 تم حذف الطلب رقم " + currentOrderId);
+    closeDeleteModal();
+  }
+
+  // Open edit modal
+  function openEditModal() {
+    const modal = document.getElementById("editModal");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  // Close edit modal
+  function closeEditModal() {
+    const modal = document.getElementById("editModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  // Save edits
+  function saveEdit() {
+    alert("✅ تم حفظ التعديلات");
+    closeEditModal();
+  }
+
+  // Show the correct order status section
+  function showOrderSection(status) {
+    if (status) {
+      const sections = ["refill","accepted","moving","received","delivered","canceled","rejected"];
+      sections.forEach(s => {
+        const div = document.getElementById(s);
+        if (div) div.classList.add("hidden");
+      });
+      const active = document.getElementById(status);
+      if (active) active.classList.remove("hidden");
+    }
+  }
+
+  // Handle URL parameters on page load
+  window.onload = function () {
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+    const action = params.get("action");
+    const orderId = params.get("id");
+
+    showOrderSection(status);
+
+    // Open edit modal only if status is refill
+    if (action === "edit" && status === "refill") {
+      openEditModal();
+    }
+
+    // Open delete modal for any action
+    if (action === "delete") {
+      openDeleteModal(orderId);
+    }
+  };
+</script>
+
+
+
+
+
   </body>
 </html>

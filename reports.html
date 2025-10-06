@@ -1,0 +1,3087 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/assets/css/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/img/logo/49.png"
+      type="image/x-icon"
+    />
+    <title>جيتك - الموزعين</title>
+    <style>
+      .loader {
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #38bdf8;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 0.8s linear infinite;
+        margin: auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen flex">
+     <!-- Wrapper -->
+<div class="flex">
+      <!-- Sidebar Desktop -->
+        <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
+        <div
+          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
+        >
+          <a href="overview.html"
+            ><img
+              src="src/assets/img/logo.png"
+              alt="Logo"
+              class="mr-20 w-[152px] h-[67px]"
+          /></a>
+        </div>
+
+        <nav class="space-y-3 font-semibold p-4 pr-10">
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav "
+          >
+            <span
+              ><img
+                src="src/assets/img/aside-imge/chart-4.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >نظرة عامة
+          </a>
+
+          <a
+            href="requests.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/grid-2.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الطلبات
+          </a>
+
+          <a
+            href="distributors.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav "
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/truck.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الموزعين
+          </a>
+
+          <a
+            href="customer.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/profile-2user.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الزبائن
+          </a>
+
+          <a
+            href="map.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/map.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الخريطة
+          </a>
+
+          <a
+            href="reports.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside "
+          >
+            <span
+              ><img
+                src="src/assets/img/aside-imge/trend-down.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >التقارير
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/user-octagon.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >المستخدمين والصلاحيات
+          </a>
+
+          <a
+            href="overview.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/info-circle.png"
+                class="w-9 h-9 mr-6"
+                alt="" /></span
+            >الشكاوي
+          </a>
+        </nav>
+      </aside>
+
+      <!-- <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" /> -->
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 min-h-screen">
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 lg:max-w-[990px] lg:min-w-[990px]"
+      >
+        <div class="flex-1 block lg:hidden">
+          <!-- Top bar mobile -->
+
+          <div
+            class="lg:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl"
+          >
+            <!-- <div class="flex items-center justify-between  w-[100px] border-b border-bl">
+          <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class=" w-[100px] "/></a>
+        </div> -->
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <aside
+            id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 lg:hidden z-50"
+          >
+            <div
+              class="flex items-center justify-between p-4 border-b border-bl"
+            >
+              <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+
+              <button id="close-btn" class="text-gray-700">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Search -->
+            <div class="block lg:hidden p-2 relative lg:w-[410px] h-[55px]">
+              <span class="absolute right-3 inset-y-0 flex items-center">
+                <img
+                  src="src/assets/img/search-normal.png"
+                  class="w-5 h-5"
+                  alt="بحث"
+                />
+              </span>
+              <input
+                type="text"
+                placeholder="ابحث عن طلب، موزع، زبون..."
+                class="w-full pr-10 pl-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+              />
+            </div>
+
+            <div class="relative">
+              <button
+                id="notifBtn"
+                class="relative flex items-center w-[90%] mx-auto justify-center bg-sky h-14 lg:w-14 rounded-lg focus:outline-none"
+              >
+                <img
+                  src="src/assets/img/icon/notification.png"
+                  class="w-6 h-6"
+                  alt="تنبيهات"
+                />
+              </button>
+
+              <div
+                id="notifDropdown"
+                class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+              >
+                <ul class="py-2">
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span
+                      class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                    ></span>
+                  </li>
+                </ul>
+
+                <div
+                  class="text-center flex items-center justify-center py-2 border-t border-bl"
+                >
+                  <a
+                    href="notifications.ar.html"
+                    class="text-sky font-bold hover:underline"
+                    >مشاهدة جميع الإشعارات</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <nav class="space-y-3 font-semibold p-4 pr-10">
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-active/chart-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >نظرة عامة
+              </a>
+
+              <a
+                href="requests.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الطلبات
+              </a>
+
+              <a
+                href="distributors.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الموزعين
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الزبائن
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الخريطة
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/trend-down.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >التقارير
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >المستخدمين والصلاحيات
+              </a>
+
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الشكاوي
+              </a>
+            </nav>
+          </aside>
+        </div>
+
+        <!-- Search -->
+        <div class="hidden lg:block relative w-[410px] h-[55px]">
+          <span class="absolute right-3 inset-y-0 flex items-center">
+            <img
+              src="src/assets/img/search-normal.png"
+              class="w-5 h-5"
+              alt="بحث"
+            />
+          </span>
+          <input
+            type="text"
+            placeholder="ابحث عن طلب، موزع، زبون..."
+            class="w-full pr-10 pl-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+          />
+        </div>
+
+        <!-- sos -->
+        <!-- <span class="absolute top-2 right-2 block w-2 h-2 bg-red-500 rounded-full"></span> -->
+
+        <!-- User Section -->
+        <div class="relative flex items-center gap-4">
+          <!-- Notification Icon -->
+          <div class="relative hidden lg:block">
+            <!-- Notification Icon -->
+            <button
+              id="notifBtn"
+              class="relative flex items-center justify-center bg-sky h-14 w-14 rounded-full focus:outline-none"
+            >
+              <img
+                src="src/assets/img/icon/notification.png"
+                class="w-6 h-6"
+                alt="تنبيهات"
+              />
+            </button>
+
+            <div
+              id="notifDropdown"
+              class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+            >
+              <ul class="py-2">
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>قام علي حجي بطلب تعبئة جديد</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+              </ul>
+
+              <div
+                class="text-center flex items-center justify-center py-2 border-t border-bl"
+              >
+                <a
+                  href="notifications.ar.html"
+                  class="text-sky font-bold hover:underline"
+                  >مشاهدة جميع الإشعارات</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- User Dropdown -->
+          <div class="relative bg-backNav py-2 px-6 rounded-lg">
+            <button
+              id="userMenuBtn"
+              class="flex items-center lg:gap-2 focus:outline-none"
+            >
+              <img
+                src="src/assets/img/Imag.png"
+                alt="User"
+                class="w-12 h-12 rounded-full border"
+              />
+
+              <div class="text-right mr-2">
+                <span
+                  class="hidden lg:block font-extrabold text-[20px] text-[#3C3C3C]"
+                  >محمد علي</span
+                >
+                <span
+                  class="hidden lg:block text-sm font-extrabold text-[#6D6D6D]"
+                  >المدير العام</span
+                >
+              </div>
+
+              <svg
+                class="w-6 h-6 text-black mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="userDropdown"
+              class="hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
+            >
+              <ul class="py-2">
+                <li>
+                  <a
+                    href="Profile.ar.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/frame.png"
+                      class="w-5 h-5"
+                      alt="الملف"
+                    />
+                    <span>الملف الشخصي</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="setting.ar.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/setting-2.png"
+                      class="w-5 h-5"
+                      alt="الإعدادات"
+                    />
+                    <span>الإعدادات</span>
+                  </a>
+                </li>
+                <a
+                  href="#"
+                  onclick="openModal()"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                >
+                  <img
+                    src="src/assets/img/icon/logout.png"
+                    class="w-5 h-5"
+                    alt="خروج"
+                  />
+                  <span>تسجيل الخروج</span>
+                </a>
+
+                <div
+                  id="logoutModal"
+                  class="hidden fixed inset-0 items-center justify-center bg-blue-200/40 z-50"
+                >
+                  <div
+                    class="bg-white rounded-lg shadow-lg p-5 w-[680px] h-[260px] relative flex flex-col"
+                  >
+                    <button
+                      onclick="closeModal()"
+                      class="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-backNav text-white"
+                    >
+                      ✕
+                    </button>
+
+                    <div class="p-4 flex justify-center mt-5">
+                      <h2 class="text-lg font-bold">تسجيل الخروج</h2>
+                    </div>
+
+                    <div class="flex-1 flex items-center justify-center">
+                      <p class="text-center text-gray-700 text-lg">
+                        هل أنت متأكد من تسجيل الخروج ؟
+                      </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        onclick="logout()"
+                        class="w-full py-3 bg-red-600 text-white rounded-lg font-medium"
+                      >
+                        تسجيل خروج
+                      </button>
+                      <button
+                        onclick="closeModal()"
+                        class="w-full py-3 bg-gray-300 rounded-lg font-medium"
+                      >
+                        إلغاء
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-sky w-full h-full">
+        <div class="min-w-[1030px] max-w-[1056px]">
+          <section class="bg-sky w-full min-h-screen pt-6 pr-6">
+            <div
+              class="bg-white rounded-tr-lg rounded-br-lg shadow-md p-4 pl-0"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-bold flex items-center gap-2">
+                  التقارير
+                  <!-- <span class="text-sky">(24)</span> -->
+                </h2>
+
+                <div class="flex items-center gap-3 ml-12">
+                  <button class="flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/document-text.png"
+                      class="w-5 h-5"
+                      alt="Excel"
+                    />
+                    ملف إكسل
+                  </button>
+                  <button class="flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/bi_file-pdf.png"
+                      class="w-5 h-5"
+                      alt="PDF"
+                    />
+                    ملف PDF
+                  </button>
+
+                  <!-- <div class="relative inline-block">
+                    <div class="flex items-center justify-between">
+                      <button
+                        id="openDistributorModal"
+                        class="flex items-center gap-2 bg-mint/20 text-mint px-4 py-2 rounded-lg"
+                      >
+                        <img
+                          src="src/assets/img/icon/add-square-mint.png"
+                          alt="إضافة"
+                          class="w-5 h-5"
+                        />
+                        <span>إضافة اسطوانة جديدة</span>
+                      </button>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+
+              <div
+                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+              >
+                <div class="flex items-center gap-8 filter-buttons">
+                  <button
+                    data-state="distributors"
+                    class="active-filter-reports px-10 py-1.5"
+                  >
+                    تقارير الموزعين
+                  </button>
+                  <button
+                    data-state="clients"
+                    class="text-black font-medium px-10 py-1.5"
+                  >
+                    تقارير الزباين
+                  </button>
+                  <button
+                    data-state="sales"
+                    class="text-black font-medium px-10 py-1.5"
+                  >
+                    تقارير المبيعات
+                  </button>
+                </div>
+              </div>
+
+              <div data-content="distributors" class="hidden">
+                <!-- Cards section 1-->
+                <section
+                  class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white lg:max-w-[975px] lg:min-w-[975px]"
+                >
+                  <!-- card 1 -->
+                  <div
+                    dir="rtl"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1 lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[340px]"
+                  >
+                    <div class="flex items-start p-6">
+                      <div
+                        class="flex items-center justify-center bg-sun/20 h-[90px] w-[90px] rounded-full"
+                      >
+                        <img
+                          src="src/assets/img/icon-active/truck-sun.png"
+                          class="w-[42px] h-[42px]"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="flex flex-col items-start">
+                        <p class="text-3xl font-semibold pr-5">
+                          <span class="text-3xl font-semibold text-sun">12</span
+                          >&nbsp;موزع
+                        </p>
+                        <span class="text-3xl font-medium pr-5 mt-3"
+                          >الموزعين الجدد</span
+                        >
+                      </div>
+                    </div>
+
+                    <ul class="space-y-3 p-4 pb-0">
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة غزة</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-sun font-semibold">5 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة خانيونس</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-sun font-semibold">2 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة رفح</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-sun font-semibold">1 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الشمال</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-sun font-semibold">0 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الوسطى</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-sun font-semibold">4 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- card 2 -->
+                  <div
+                    dir="rtl"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1 lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[350px]"
+                  >
+                    <div class="flex items-start p-6">
+                      <div
+                        class="flex items-center justify-center bg-mint/20 h-[90px] w-[90px] rounded-full"
+                      >
+                        <img
+                          src="src/assets/img/icon-active/truck.png"
+                          class="w-[42px] h-[42px]"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="flex flex-col items-start">
+                        <p class="text-3xl font-semibold pr-5">
+                          <span class="text-3xl font-semibold text-mint"
+                            >24</span
+                          >&nbsp;موزع
+                        </p>
+                        <span class="text-3xl font-medium pr-5 mt-3"
+                          >الموزعين المعتمدين</span
+                        >
+                      </div>
+                    </div>
+
+                    <ul class="space-y-3 p-4 pb-0">
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة غزة</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">5 </span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة خانيونس</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">2 </span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة رفح</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">1 </span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الشمال</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">0 </span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الوسطى</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">4 </span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <div class="flex items-center justify-between mb-4">
+                  <h2 class="text-lg font-bold flex items-center gap-2">
+                    الموزعين
+                    <span class="text-sky">(24)</span>
+                  </h2>
+
+                  <div class="flex items-center gap-3 ml-12">
+                    <button class="flex items-center gap-2">
+                      <img
+                        src="src/assets/img/requests/document-text.png"
+                        class="w-5 h-5"
+                        alt="Excel"
+                      />
+                      ملف إكسل
+                    </button>
+                    <button class="flex items-center gap-2">
+                      <img
+                        src="src/assets/img/requests/bi_file-pdf.png"
+                        class="w-5 h-5"
+                        alt="PDF"
+                      />
+                      ملف PDF
+                    </button>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 mb-6">
+                  <!-- المدينة -->
+                  <div class="relative">
+                    <select
+                      id="cityFilter"
+                      class="appearance-none border border-gray-300 rounded-lg py-2 pr-3 pl-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+                    >
+                      <option value="">المدينة</option>
+                      <option value="غزة">غزة</option>
+                      <option value="الوسطى">الوسطى</option>
+                      <option value="خانيونس">خانيونس</option>
+                      <option value="رفح">رفح</option>
+                      <option value="الشمال">الشمال</option>
+                    </select>
+                    <span
+                      class="pointer-events-none absolute inset-y-0 left-2 flex items-center"
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <!-- الحي -->
+                  <div class="relative">
+                    <select
+                      id="districtFilter"
+                      class="appearance-none border border-gray-300 rounded-lg py-2 pr-3 pl-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+                    >
+                      <option value="">الحي</option>
+                      <option value="الرمال">الرمال</option>
+                      <option value="تل الهوا">تل الهوا</option>
+                      <option value="الشجاعية">الشجاعية</option>
+                      <option value="الزيتون">الزيتون</option>
+                    </select>
+                    <span
+                      class="pointer-events-none absolute inset-y-0 left-2 flex items-center"
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <!-- موزعين -->
+                  <div class="relative">
+                    <select
+                      id="typeFilter"
+                      class="appearance-none border border-gray-300 rounded-lg py-2 pr-3 pl-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+                    >
+                      <option value="">موزعين</option>
+                      <option value="معتمدين">معتمدين</option>
+                      <option value="جدد">جدد</option>
+                    </select>
+                    <span
+                      class="pointer-events-none absolute inset-y-0 left-2 flex items-center"
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <!-- عدد الطلبات -->
+                  <div class="relative">
+                    <select
+                      id="ordersFilter"
+                      class="appearance-none border border-gray-300 rounded-lg py-2 pr-3 pl-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+                    >
+                      <option value="">عدد الطلبات</option>
+                      <option value="high">الأعلى طلباً</option>
+                      <option value="low">الأقل طلباً</option>
+                    </select>
+                    <span
+                      class="pointer-events-none absolute inset-y-0 left-2 flex items-center"
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+                >
+                  <div class="flex items-center gap-8 date-filter-buttons">
+                    <button class="active-filter" data-date="اليوم">
+                      اليوم
+                    </button>
+                    <button class="text-base" data-date="هذا الأسبوع">
+                      هذا الأسبوع
+                    </button>
+                    <button class="text-base" data-date="هذا الشهر">
+                      هذا الشهر
+                    </button>
+                    <button class="text-base" data-date="هذه السنة">
+                      هذه السنة
+                    </button>
+                    <button class="text-base" data-date="محدد">محدد</button>
+                  </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full text-right">
+                    <thead class="text-right">
+                      <tr>
+                        <th class="p-2 pb-4">
+                          <input
+                            id="selectAll"
+                            type="checkbox"
+                            class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
+                          رقم الموزع
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >اسم الموزع</span
+                          >
+                          <img
+                            src="src/assets/img/icon-active/arrow-up.png"
+                            alt=""
+                            class="inline-block align-middle w-4 h-4 ml-1"
+                          />
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >الاسم التجاري</span
+                          >
+                          <img
+                            src="src/assets/img/icon-active/arrow-up.png"
+                            alt=""
+                            class="inline-block align-middle w-4 h-4 ml-1"
+                          />
+                        </th>
+
+                        <th class="py-2 pr-4 pb-4 text-[#7E7E7E] font-medium">
+                          المدينة
+                        </th>
+
+                        <th class="py-2 pr-6 pb-4">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >الحي</span
+                          >
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >رقم الجوال</span
+                          >
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4 max-w-24">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >عدد الطلبات</span
+                          >
+                          <img
+                            src="src/assets/img/icon-active/arrow-up.png"
+                            alt=""
+                            class="inline-block align-middle w-4 h-4 ml-1"
+                          />
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4 max-w-24">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >تاريخ البدا</span
+                          >
+                          <img
+                            src="src/assets/img/icon-active/arrow-up.png"
+                            alt=""
+                            class="inline-block align-middle w-4 h-4 ml-1"
+                          />
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+                      <tr data-type="approved">
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">#001</td>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2">غاز الندى</td>
+                        <td class="p-4">
+                          <span class="px-2 py-1 rounded">غزة</span>
+                        </td>
+                        <td class="p-6">الشجاعية</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td class="p-4">3 اكتوبر 2025</td>
+                      </tr>
+
+                      <tr data-type="approved">
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">#001</td>
+                        <td class="p-2">أحمد خليل</td>
+                        <td class="p-2">غاز الندى</td>
+                        <td class="p-4">
+                          <span class="px-2 py-1 rounded">غزة</span>
+                        </td>
+                        <td class="p-6">الشجاعية</td>
+                        <td class="p-2 text-end" dir="ltr">972 599123456</td>
+                        <td class="p-6">15 طلب</td>
+                        <td class="p-4">3 اكتوبر 2025</td>
+                      </tr>
+
+                      <tr data-type="new">
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">#002</td>
+                        <td class="p-2">محمود سالم</td>
+                        <td class="p-2">شركة الوطن</td>
+                        <td class="p-4">
+                          <span class="px-2 py-1 rounded">رفح</span>
+                        </td>
+                        <td class="p-6">حي البرازيل</td>
+                        <td class="p-2 text-end" dir="ltr">972 599654321</td>
+                        <td class="p-6">5 طلبات</td>
+                        <td class="p-4">1 اكتوبر 2025</td>
+                      </tr>
+
+                      <tr data-type="approved">
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">#003</td>
+                        <td class="p-2">ليلى عابد</td>
+                        <td class="p-2">الشرق للغاز</td>
+                        <td class="p-4">
+                          <span class="px-2 py-1 rounded">خانيونس</span>
+                        </td>
+                        <td class="p-6">حي الأمل</td>
+                        <td class="p-2 text-end" dir="ltr">972 597888222</td>
+                        <td class="p-6">28 طلب</td>
+                        <td class="p-4">28 سبتمبر 2025</td>
+                      </tr>
+
+                      <tr data-type="new">
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">#004</td>
+                        <td class="p-2">سارة يوسف</td>
+                        <td class="p-2">غاز المستقبل</td>
+                        <td class="p-4">
+                          <span class="px-2 py-1 rounded">الوسطى</span>
+                        </td>
+                        <td class="p-6">النصيرات</td>
+                        <td class="p-2 text-end" dir="ltr">972 598333444</td>
+                        <td class="p-6">3 طلبات</td>
+                        <td class="p-4">25 سبتمبر 2025</td>
+                      </tr>
+
+                      <tr data-type="approved">
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">#005</td>
+                        <td class="p-2">يوسف حميد</td>
+                        <td class="p-2">السلام غاز</td>
+                        <td class="p-4">
+                          <span class="px-2 py-1 rounded">الشمال</span>
+                        </td>
+                        <td class="p-6">بيت لاهيا</td>
+                        <td class="p-2 text-end" dir="ltr">972 599999111</td>
+                        <td class="p-6">40 طلب</td>
+                        <td class="p-4">20 سبتمبر 2025</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pagination -->
+                <div
+                  class="flex items-center justify-between border-t border-bl pt-2"
+                >
+                  <div class="flex-1 flex justify-center mr-50">
+                    <div id="pagination" class="flex items-center"></div>
+                  </div>
+
+                  <div
+                    class="flex border border-bl rounded-lg p-2 items-center ml-10"
+                  >
+                    <span>عدد الصفوف في الصفحة:</span>
+                    <div class="relative inline-block">
+                      <select
+                        id="rowsPerPage"
+                        class="appearance-none rounded py-1 pr-1 pl-4 text-sky cursor-pointer"
+                      >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                      </select>
+
+                      <!-- سهم مخصص -->
+                      <span
+                        class="pointer-events-none absolute inset-y-0 right-6 flex items-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-tep"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div data-content="sales" class="hidden">
+                <!-- Cards section 1-->
+                <section
+                  class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white lg:max-w-[975px] lg:min-w-[975px]"
+                >
+                  <!-- card 1 -->
+                  <div
+                    dir="rtl"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1 lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[340px]"
+                  >
+                    <div class="flex items-start p-6">
+                      <div
+                        class="flex items-center justify-center bg-mint/20 h-[90px] w-[90px] rounded-full"
+                      >
+                        <img
+                          src="src/assets/img/icon/grid-2.png"
+                          class="w-[42px] h-[42px]"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="flex flex-col items-start">
+                        <p class="text-3xl font-semibold pr-5">
+                          <span class="text-3xl font-semibold text-mint"
+                            >240</span
+                          >&nbsp;طلب
+                        </p>
+                        <span class="text-3xl font-medium pr-5 mt-3"
+                          >الطلبات</span
+                        >
+                      </div>
+                    </div>
+
+                    <ul class="space-y-3 p-4 pb-0">
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة غزة</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">5 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة خانيونس</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">2 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة رفح</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">1 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الشمال</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">0 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الوسطى</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-mint font-semibold">4 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- card 2 -->
+                  <div
+                    dir="rtl"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1 lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[350px]"
+                  >
+                    <div class="flex items-start p-6">
+                      <div
+                        class="flex items-center justify-center bg-abys/20 h-[90px] w-[90px] rounded-full"
+                      >
+                        <img
+                          src="src/assets/img/icon-active/grid-2.png"
+                          class="w-[42px] h-[42px]"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="flex flex-col items-start">
+                        <p class="text-3xl font-semibold pr-5">
+                          <span class="text-3xl font-semibold text-abys"
+                            >16,000</span
+                          >&nbsp;موزع
+                        </p>
+                        <span class="text-3xl font-medium pr-5 mt-3"
+                          >الموزعين المعتمدين</span
+                        >
+                      </div>
+                    </div>
+
+                    <ul class="space-y-3 p-4 pb-0">
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة غزة</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-abys font-semibold">560</span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة خانيونس</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-abys font-semibold">560</span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة رفح</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-abys font-semibold">560</span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الشمال</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-abys font-semibold">560</span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الوسطى</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-abys font-semibold">560 </span
+                          >&nbsp;زبون
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <div
+                  class="flex items-center border-2 border-bl p-4 rounded-tr-lg justify-between mb-1 mr-5"
+                >
+                  <div class="flex items-center gap-8 filter-buttons">
+                    <button class="active-filter">اليوم</button>
+                    <button class="text-[#7E7E7E] font-medium">
+                      هذا الأسبوع
+                    </button>
+                    <button class="text-[#7E7E7E] font-medium">
+                      هذا الشهر
+                    </button>
+                    <button class="text-[#7E7E7E] font-medium">
+                      هذه السنة
+                    </button>
+                    <button class="text-[#7E7E7E] font-medium">محدد</button>
+                  </div>
+                </div>
+
+                <!-- Cards section 1-->
+                <section
+                  class="flex flex-col gap-6 text-white lg:max-w-[975px] lg:min-w-[975px] mx-auto mt-8"
+                >
+                  <div class="grid grid-cols-2 gap-6">
+                    <!-- card 1 -->
+                    <div
+                      class="bg-white text-gray-800 rounded-lg shadow min-h-[350px]"
+                    >
+                      <div class="flex items-start p-6">
+                        <div
+                          class="flex items-center justify-center bg-mint/20 h-[90px] w-[90px] rounded-full"
+                        >
+                          <img
+                            src="src/assets/img/icon/grid-2.png"
+                            class="w-[42px] h-[42px]"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="flex flex-col items-start">
+                          <p class="text-3xl font-semibold pr-5">
+                            <span class="text-3xl font-semibold text-mint"
+                              >20</span
+                            >&nbsp;طلب
+                          </p>
+                          <span class="text-3xl font-medium pr-5 mt-3"
+                            >الطلبات</span
+                          >
+                        </div>
+                      </div>
+
+                      <ul class="space-y-3 p-4 pb-0">
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة غزة</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-mint font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة خانيونس</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-mint font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة رفح</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-mint font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الشمال</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-mint font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الوسطى</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-mint font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div
+                      class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]"
+                    >
+                      <div class="flex items-start p-6">
+                        <div
+                          class="flex items-center justify-center bg-abys/20 h-[90px] w-[90px] rounded-full"
+                        >
+                          <img
+                            src="src/assets/img/icon-active/grid-2.png"
+                            class="w-[42px] h-[42px]"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="flex flex-col items-start">
+                          <p class="text-3xl font-semibold pr-5">
+                            <span class="text-3xl font-semibold text-abys"
+                              >2,200</span
+                            >&nbsp;شيكل
+                          </p>
+                          <span class="text-3xl font-medium pr-5 mt-3"
+                            >المبيعات</span
+                          >
+                        </div>
+                      </div>
+
+                      <ul class="space-y-3 p-4 pb-0">
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة غزة</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-abys font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة خانيونس</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-abys font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة رفح</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-abys font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الشمال</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-abys font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-6">
+                    <!-- card 3 -->
+                    <div
+                      class="bg-white text-gray-800 rounded-lg shadow min-h-[350px] max-h-[350px]"
+                    >
+                      <div class="flex items-start p-6">
+                        <div class="flex flex-col items-start">
+                          <p class="text-3xl font-semibold">الطلبات</p>
+                          <span class="text-3xl font-medium mt-3"
+                            >حسب المدينة</span
+                          >
+                        </div>
+                      </div>
+
+                      <ul class="space-y-3 p-4 pb-0">
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة غزة</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">5 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة خانيونس</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">2 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة رفح</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">1 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الشمال</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">0 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الوسطى</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">4 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div
+                      class="bg-white text-gray-800 rounded-lg shadow min-h-[391px] max-h-[391px] mt-[-40px]"
+                    >
+                      <div class="flex items-start p-6">
+                        <div class="flex flex-col items-start">
+                          <p class="text-3xl font-semibold">الطلبات</p>
+                          <span class="text-3xl font-medium mt-3"
+                            >حسب الحي</span
+                          >
+                        </div>
+                      </div>
+
+                      <ul class="space-y-3 p-4 pb-0">
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة غزة</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة غزة</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة غزة</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة خانيونس</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة رفح</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الشمال</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">560</span
+                            >&nbsp;زبون
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- card 5 -->
+                    <div
+                      class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]"
+                    >
+                      <div class="flex items-start p-6">
+                        <div class="flex flex-col items-start">
+                          <p class="text-3xl font-semibold">الطلبات</p>
+                          <span class="text-3xl font-medium mt-3"
+                            >حسب الإسطوانة</span
+                          >
+                        </div>
+                      </div>
+
+                      <ul class="space-y-3 p-4 pb-0">
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة غزة</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">5 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة خانيونس</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">2 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الشمال</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">0 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الوسطى</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">4 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- card 6 -->
+                    <div
+                      class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]"
+                    >
+                      <div class="flex items-start p-6">
+                        <div class="flex flex-col items-start">
+                          <p class="text-3xl font-semibold">الطلبات</p>
+                          <span class="text-3xl font-medium mt-3"
+                            >الموزعين الأكثر بيعاً</span
+                          >
+                        </div>
+                      </div>
+
+                      <ul class="space-y-3 p-4 pb-0">
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة خانيونس</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">2 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة رفح</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">1 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الشمال</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">0 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الوسطى</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">4 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- card 7 -->
+                    <div
+                      class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]"
+                    >
+                      <div class="flex items-start p-6">
+                        <div class="flex flex-col items-start">
+                          <p class="text-3xl font-semibold">الطلبات</p>
+                          <span class="text-3xl font-medium mt-3"
+                            >الزبائن الأكثر شراءاً</span
+                          >
+                        </div>
+                      </div>
+
+                      <ul class="space-y-3 p-4 pb-0">
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة خانيونس</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">2 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة رفح</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">1 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الشمال</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">0 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+
+                        <li class="flex justify-between items-center">
+                          <span
+                            class="text-[16px] font-semibold"
+                            style="color: #616161"
+                            >مدينة الوسطى</span
+                          >
+                          <p class="text-[16px] font-semibold">
+                            <span class="text-sky font-semibold">4 </span
+                            >&nbsp;طلب
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div data-content="clients" class="hidden">
+                <!-- Cards section 1-->
+                <section
+                  class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white lg:max-w-[975px] lg:min-w-[975px]"
+                >
+                  <!-- card 1 -->
+                  <div
+                    dir="rtl"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1 lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[340px]"
+                  >
+                    <div class="flex items-start p-6">
+                      <div
+                        class="flex items-center justify-center bg-iris/20 h-[90px] w-[90px] rounded-full"
+                      >
+                        <img
+                          src="src/assets/img/icon/profile-2user.png"
+                          class="w-[42px] h-[42px]"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="flex flex-col items-start">
+                        <p class="text-3xl font-semibold pr-5">
+                          <span class="text-3xl font-semibold text-iris"
+                            >160</span
+                          >&nbsp;زبون
+                        </p>
+                        <span class="text-3xl font-medium pr-5 mt-3"
+                          >الزبائن</span
+                        >
+                      </div>
+                    </div>
+
+                    <ul class="space-y-3 p-4 pb-0">
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة غزة</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-iris font-semibold">5 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة خانيونس</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-iris font-semibold">2 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة رفح</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-iris font-semibold">1 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الشمال</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-iris font-semibold">0 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+
+                      <li class="flex justify-between items-center">
+                        <span
+                          class="text-[16px] font-semibold"
+                          style="color: #616161"
+                          >مدينة الوسطى</span
+                        >
+                        <p class="text-[16px] font-semibold">
+                          <span class="text-iris font-semibold">4 </span
+                          >&nbsp;طلب
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <div
+                  class="flex items-center justify-between mb-4 border border-bl rounded-tr-lg p-4"
+                >
+                  <h2 class="text-lg font-bold flex items-center gap-2">
+                    الموزعين
+                    <span class="text-sky">(24)</span>
+                  </h2>
+
+                  <div class="flex items-center gap-3 ml-12">
+                    <button class="flex items-center gap-2">
+                      <img
+                        src="src/assets/img/requests/document-text.png"
+                        class="w-5 h-5"
+                        alt="Excel"
+                      />
+                      ملف إكسل
+                    </button>
+                    <button class="flex items-center gap-2">
+                      <img
+                        src="src/assets/img/requests/bi_file-pdf.png"
+                        class="w-5 h-5"
+                        alt="PDF"
+                      />
+                      ملف PDF
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+                >
+                  <div class="flex items-center gap-8 date-filter-buttons">
+                    <button class="active-filter">اليوم</button>
+                    <button class="text-base">هذا الأسبوع</button>
+                    <button class="text-base">هذا الشهر</button>
+                    <button class="text-base">هذه السنة</button>
+                    <button class="text-base">محدد</button>
+                  </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full text-right">
+                    <thead class="text-right">
+                      <tr>
+                        <th class="p-2 pb-4">
+                          <input
+                            id="selectAll"
+                            type="checkbox"
+                            class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >اسم الزبون</span
+                          >
+                          <img
+                            src="src/assets/img/icon-active/arrow-up.png"
+                            alt=""
+                            class="inline-block align-middle w-4 h-4 ml-1"
+                          />
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >رقم الجوال</span
+                          >
+                        </th>
+
+                        <th class="py-2 pr-2 pb-4 max-w-24">
+                          <span
+                            class="inline-block align-middle text-[#7E7E7E] font-medium"
+                            >عدد الطلبات</span
+                          >
+                          <img
+                            src="src/assets/img/icon-active/arrow-up.png"
+                            alt=""
+                            class="inline-block align-middle w-4 h-4 ml-1"
+                          />
+                        </th>
+
+                        <th class="py-2 pr-6 text-[#7E7E7E] font-medium">
+                          إجراءات
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th class="p-2">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-6">15 طلب</td>
+                        <td
+                          class="p-2 flex items-center justify-start pr-10 gap-3"
+                        >
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pagination -->
+                <div
+                  class="flex items-center justify-between border-t border-bl pt-2"
+                >
+                  <div class="flex-1 flex justify-center mr-50">
+                    <div id="pagination" class="flex items-center"></div>
+                  </div>
+
+                  <div
+                    class="flex border border-bl rounded-lg p-2 items-center ml-10"
+                  >
+                    <span>عدد الصفوف في الصفحة:</span>
+                    <div class="relative inline-block">
+                      <select
+                        id="rowsPerPage"
+                        class="appearance-none rounded py-1 pr-1 pl-4 text-sky cursor-pointer"
+                      >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                      </select>
+
+                      <!-- سهم مخصص -->
+                      <span
+                        class="pointer-events-none absolute inset-y-0 right-6 flex items-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-tep"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/assets/js/relodePage.js"></script>
+
+    <!-- Script for viewing order details and showing loader before redirect -->
+    <!-- <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `distributorDetails.html?id=${orderId}&status=${encodeURIComponent(status)}`;
+        }, 1200);
+      }
+
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `distributorDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
+        }, 1200);
+      }
+
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
+
+        const colCount = row.children.length;
+
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
+      <td colspan="${colCount}" class="p-4 text-center">
+        <div class="flex justify-center items-center">
+          <div class="loader border-4 border-sky-400 border-t-transparent rounded-full w-6 h-6 animate-spin"></div>
+          <span class="ml-2">جاري تحميل تفاصيل الموزع...</span>
+        </div>
+      </td>
+    `;
+
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script> -->
+    <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+
+        const parentTableWrapper = button.closest("div[data-status]");
+        const tableStatus = parentTableWrapper.getAttribute("data-status");
+
+        let targetPage =
+          tableStatus === "approved"
+            ? "accreditedDetails.html"
+            : "distributorDetails.html";
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(tableStatus)}`;
+        }, 1200);
+      }
+
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+
+        const parentTableWrapper = button.closest("div[data-status]");
+        const tableStatus = parentTableWrapper.getAttribute("data-status");
+
+        let targetPage =
+          tableStatus === "approved"
+            ? "accreditedDetails.html"
+            : "distributorDetails.html";
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(
+            tableStatus
+          )}&action=${action}`;
+        }, 1200);
+      }
+
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
+
+        const colCount = row.children.length;
+
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
+      <td colspan="${colCount}" class="p-4 text-center">
+        <div class="flex justify-center items-center">
+          <div class="loader border-4 border-sky-400 border-t-transparent rounded-full w-6 h-6 animate-spin"></div>
+          <span class="ml-2">جاري تحميل تفاصيل الموزع...</span>
+        </div>
+      </td>
+    `;
+
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script>
+
+    <!-- Script for handling mobile sidebar open/close -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+      });
+    </script>
+
+    <!-- Script for toggling user dropdown menu -->
+    <script>
+      const userMenuBtn = document.getElementById("userMenuBtn");
+      const userDropdown = document.getElementById("userDropdown");
+
+      userMenuBtn.addEventListener("click", () => {
+        userDropdown.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Script for handling notification dropdown -->
+    <script>
+      const notifBtn = document.getElementById("notifBtn");
+      const notifDropdown = document.getElementById("notifDropdown");
+
+      notifBtn.addEventListener("click", () => {
+        notifDropdown.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
+          notifDropdown.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <!-- Script for handling logout modal -->
+    <script>
+      function openModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+    </script>
+
+    <!-- Script for select all checkbox functionality -->
+    <script>
+      const selectAll = document.getElementById("selectAll");
+
+      const checkboxes = document.querySelectorAll(".rowCheckbox");
+
+      selectAll.addEventListener("change", function () {
+        checkboxes.forEach((cb) => (cb.checked = selectAll.checked));
+      });
+
+      checkboxes.forEach((cb) => {
+        cb.addEventListener("change", function () {
+          selectAll.checked = [...checkboxes].every((c) => c.checked);
+        });
+      });
+    </script>
+
+    <!-- Script for pagination and rows per page handling -->
+    <script>
+      const rowsPerPageSelect = document.getElementById("rowsPerPage");
+      const tableRows = document.querySelectorAll("tbody tr");
+      const pagination = document.getElementById("pagination");
+
+      let currentPage = 1;
+      let rowsPerPage = parseInt(rowsPerPageSelect?.value || 10);
+
+      function renderTable() {
+        const start = (currentPage - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+
+        tableRows.forEach((row, index) => {
+          row.style.display = index >= start && index < end ? "" : "none";
+        });
+
+        renderPagination();
+      }
+
+      function renderPagination() {
+        const totalPages = Math.ceil(tableRows.length / rowsPerPage);
+        pagination.innerHTML = "";
+
+        const prevBtn = document.createElement("button");
+        prevBtn.textContent = "<";
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.className = "px-2 py-1 rounded";
+        prevBtn.onclick = () => changePage(currentPage - 1);
+        pagination.appendChild(prevBtn);
+
+        const windowSize = 5;
+        let startPage = Math.max(1, currentPage - 2);
+        let endPage = Math.min(totalPages, startPage + windowSize - 1);
+
+        if (endPage - startPage < windowSize - 1) {
+          startPage = Math.max(1, endPage - windowSize + 1);
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+          const btn = document.createElement("button");
+          btn.textContent = i;
+          btn.className =
+            i === currentPage
+              ? "px-3 py-1 rounded bg-sky text-white"
+              : "px-3 py-1 rounded text-[#868686]";
+          btn.onclick = () => changePage(i);
+          pagination.appendChild(btn);
+        }
+
+        if (endPage < totalPages) {
+          const dots = document.createElement("span");
+          dots.textContent = "...";
+          dots.className = "px-2 text-[#868686]";
+          pagination.appendChild(dots);
+
+          const lastBtn = document.createElement("button");
+          lastBtn.textContent = totalPages;
+          lastBtn.className =
+            currentPage === totalPages
+              ? "px-3 py-1 rounded bg-sky text-white"
+              : "px-3 py-1 rounded text-[#868686]";
+          lastBtn.onclick = () => changePage(totalPages);
+          pagination.appendChild(lastBtn);
+        }
+
+        const nextBtn = document.createElement("button");
+        nextBtn.textContent = ">";
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.className = "px-2 py-1 rounded";
+        nextBtn.onclick = () => changePage(currentPage + 1);
+        pagination.appendChild(nextBtn);
+      }
+
+      function changePage(page) {
+        currentPage = page;
+        renderTable();
+      }
+
+      rowsPerPageSelect?.addEventListener("change", () => {
+        rowsPerPage = parseInt(rowsPerPageSelect.value);
+        currentPage = 1;
+        renderTable();
+      });
+
+      renderTable();
+    </script>
+
+    <!-- pop up add -->
+    <script>
+      const distributorModal = document.getElementById("distributorModal");
+      const openDistributorModal = document.getElementById(
+        "openDistributorModal"
+      );
+      const closeDistributorModal = document.getElementById(
+        "closeDistributorModal"
+      );
+
+      openDistributorModal.addEventListener("click", () => {
+        distributorModal.classList.remove("hidden");
+        distributorModal.classList.add("flex");
+      });
+
+      closeDistributorModal.addEventListener("click", () => {
+        distributorModal.classList.remove("flex");
+        distributorModal.classList.add("hidden");
+      });
+
+      distributorModal.addEventListener("click", (e) => {
+        if (e.target === distributorModal) {
+          distributorModal.classList.remove("flex");
+          distributorModal.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <script>
+      function previewFile(event, previewId) {
+        const file = event.target.files[0];
+        const preview = document.getElementById(previewId);
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            preview.src = reader.result;
+            preview.classList.remove("hidden");
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+
+    <script>
+      const filters = {
+        city: "",
+        district: "",
+        type: "",
+        orders: "",
+        date: "اليوم",
+      };
+
+      function applyFilters() {
+        const rows = document.querySelectorAll("tbody tr");
+
+        rows.forEach((row) => {
+          const city =
+            row.querySelector("td:nth-child(5)")?.innerText.trim() || "";
+          const district =
+            row.querySelector("td:nth-child(6)")?.innerText.trim() || "";
+          const type = row.getAttribute("data-type") || "";
+          const ordersText =
+            row.querySelector("td:nth-child(8)")?.innerText || "0";
+          const orders = parseInt(ordersText.replace(/\D/g, "")) || 0;
+          const dateText =
+            row.querySelector("td:nth-child(9)")?.innerText || "";
+          const rowDate = parseDate(dateText);
+
+          let show = true;
+
+          if (filters.city && filters.city !== city) show = false;
+
+          if (filters.district && filters.district !== district) show = false;
+
+          if (filters.type && filters.type !== type) show = false;
+
+          if (filters.orders === "high" && orders < 10) show = false;
+          if (filters.orders === "low" && orders >= 10) show = false;
+
+          if (filters.date && rowDate) {
+            const now = new Date();
+            if (filters.date === "اليوم" && !isSameDay(now, rowDate))
+              show = false;
+            if (filters.date === "هذا الأسبوع" && !isSameWeek(now, rowDate))
+              show = false;
+            if (filters.date === "هذا الشهر" && !isSameMonth(now, rowDate))
+              show = false;
+            if (filters.date === "هذه السنة" && !isSameYear(now, rowDate))
+              show = false;
+          }
+
+          row.style.display = show ? "" : "none";
+        });
+
+        if (filters.orders) {
+          sortTableByOrders(filters.orders === "high");
+        }
+      }
+      document
+        .querySelectorAll(".date-filter-buttons button")
+        .forEach((btn) => {
+          btn.addEventListener("click", () => {
+            btn.parentElement
+              .querySelectorAll("button")
+              .forEach((b) => b.classList.remove("active-filter"));
+
+            btn.classList.add("active-filter");
+
+            filters.date = btn.dataset.date;
+            applyFilters();
+          });
+        });
+
+      function parseDate(text) {
+        const months = {
+          يناير: 0,
+          فبراير: 1,
+          مارس: 2,
+          ابريل: 3,
+          أبريل: 3,
+          مايو: 4,
+          يونيو: 5,
+          يوليو: 6,
+          أغسطس: 7,
+          اغسطس: 7,
+          سبتمبر: 8,
+          أكتوبر: 9,
+          اكتوبر: 9,
+          نوفمبر: 10,
+          ديسمبر: 11,
+        };
+        const parts = text.split(" ");
+        if (parts.length < 3) return null;
+        const day = parseInt(parts[0]);
+        const month = months[parts[1]] ?? 0;
+        const year = parseInt(parts[2]);
+        return new Date(year, month, day);
+      }
+
+      function isSameDay(d1, d2) {
+        return (
+          d1.getDate() === d2.getDate() &&
+          d1.getMonth() === d2.getMonth() &&
+          d1.getFullYear() === d2.getFullYear()
+        );
+      }
+
+      function isSameWeek(d1, d2) {
+        const startOfWeek = (d) => {
+          const date = new Date(d);
+          const day = date.getDay();
+          const diff = date.getDate() - day + (day === 0 ? -6 : 1);
+          return new Date(date.setDate(diff));
+        };
+        const s1 = startOfWeek(d1);
+        const s2 = startOfWeek(d2);
+        return isSameDay(s1, s2);
+      }
+
+      function isSameMonth(d1, d2) {
+        return (
+          d1.getMonth() === d2.getMonth() &&
+          d1.getFullYear() === d2.getFullYear()
+        );
+      }
+
+      function isSameYear(d1, d2) {
+        return d1.getFullYear() === d2.getFullYear();
+      }
+
+      function sortTableByOrders(desc = true) {
+        const tbody = document.querySelector("tbody");
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+
+        rows.sort((a, b) => {
+          const aOrders = parseInt(
+            a.querySelector("td:nth-child(8)")?.innerText.replace(/\D/g, "") ||
+              0
+          );
+          const bOrders = parseInt(
+            b.querySelector("td:nth-child(8)")?.innerText.replace(/\D/g, "") ||
+              0
+          );
+          return desc ? bOrders - aOrders : aOrders - bOrders;
+        });
+
+        rows.forEach((row) => tbody.appendChild(row));
+      }
+
+      document.querySelectorAll("select").forEach((select) => {
+        select.addEventListener("change", (e) => {
+          const id = e.target.id;
+          if (id === "cityFilter") filters.city = e.target.value;
+          if (id === "districtFilter") filters.district = e.target.value;
+          if (id === "typeFilter") filters.type = e.target.value;
+          if (id === "ordersFilter") filters.orders = e.target.value;
+          applyFilters();
+        });
+      });
+
+      document.querySelectorAll(".filter-buttons button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-buttons button")
+            .forEach((b) => b.classList.remove("active-filter"));
+
+          btn.classList.add("active-filter");
+
+          filters.date = btn.dataset.date;
+          applyFilters();
+        });
+      });
+
+      applyFilters();
+    </script>
+
+    <script>
+      const buttons = document.querySelectorAll(".filter-buttons button");
+      const contents = document.querySelectorAll("[data-content]");
+
+      function activateButton(state) {
+        buttons.forEach((btn) => {
+          btn.classList.remove("active-filter-reports");
+          btn.classList.add("text-black", "font-medium");
+        });
+
+        const activeBtn = Array.from(buttons).find(
+          (btn) => btn.getAttribute("data-state") === state
+        );
+        if (activeBtn) {
+          activeBtn.classList.add("active-filter-reports");
+          activeBtn.classList.remove("text-black", "font-medium");
+        }
+
+        contents.forEach((content) => {
+          content.classList.toggle(
+            "hidden",
+            content.getAttribute("data-content") !== state
+          );
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        activateButton("distributors");
+      });
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const state = button.getAttribute("data-state");
+          activateButton(state);
+        });
+      });
+    </script>
+    
+  </body>
+</html>

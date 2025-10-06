@@ -3,9 +3,10 @@
 @theme {
   --color-amethyst: #be52f2;
   --color-abyss: #3d639d;
+  --color-abys: #3d639d;
   --color-rose: #ff647c;
   --color-sun: #ffcf5c;
-  --color-orang: #F2994A;
+  --color-orang: #f2994a;
   --color-mint: #00c48c;
   --color-iris: #6979f8;
   --color-sky: #0084f4;
@@ -13,6 +14,7 @@
   --color-bl: #f2f2f2;
   --color-tep: #616161;
   --color-backNav: #1f90f33a;
+  --color-backSec: #f5fbff;
   --color-textNav: #585858ff;
 
   /* mobile */
@@ -95,12 +97,24 @@
   .active-nav-aside {
     @apply text-sky text-2xl font-medium bg-backNav;
   }
-.active-filter{
-  @apply text-sky bg-backNav px-2 py-1.5 rounded-lg font-semibold ;
-}
-.active-stats{
-  @apply text-mint bg-mint/10 ;
-}
+  .active-nav-aside2 {
+    @apply text-sky text-[22px] font-medium bg-backNav;
+  }
+  .active-filter {
+    @apply text-sky bg-backNav px-2 py-1.5 rounded-lg font-semibold;
+  }
+  .mute-filter {
+    @apply text-gray-600  px-2 py-1.5 rounded-lg font-semibold;
+  }
+  .active-filter-reports {
+    @apply text-white bg-sky px-2 py-1.5 rounded-lg font-semibold;
+  }
+  .active-filter-complaints {
+    @apply text-sky bg-backNav px-2 py-1.5 rounded-lg font-semibold;
+  }
+  .active-stats {
+    @apply text-mint bg-mint/10;
+  }
   .aside-nav {
     @apply text-textNav text-2xl font-medium;
   }
