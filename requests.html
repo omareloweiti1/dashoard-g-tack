@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.css"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/assets/css/output.css" />
     <link
@@ -29,35 +30,261 @@
           transform: rotate(360deg);
         }
       }
+
+      /* .dt-column-order::before,
+      .dt-column-order::after {
+        display: none !important;
+      } */
+      .dt-column-order::before,
+      .dt-column-order::after {
+        content: none !important;
+      }
+      .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      th.dt-ordering-asc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        margin-right: 20px;
+      }
+
+      th.dt-ordering-desc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up2.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        margin-right: 20px;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.current,
+      div.dt-container .dt-paging .dt-paging-button.current:hover {
+        color: white !important;
+        border: 0px !important;
+      }
+      .dt-paging-button.current {
+        background-color: var(--color-sky-500) !important;
+        width: 32px !important;
+        height: 32px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        border-radius: 4px !important;
+        color: white !important;
+      }
+      .div.dt-container .dt-paging .dt-paging-button {
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        cursor: pointer;
+        color: #868686 !important;
+        border: 0px !important;
+        border-radius: 8px !important;
+        background: transparent;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        box-sizing: border-box;
+        display: inline-block;
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        margin: 0.25rem;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        color: #686868 !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button:hover {
+        color: white !important;
+        border: 0px !important;
+        background-color: #8d8d8dc0;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, #8d8d8dc0),
+          color-stop(#8d8d8dc0)
+        ) !important;
+        background: -webkit-linear-gradient(
+          top,
+          #8d8d8dc0,
+          #8d8d8dc0
+        ) !important;
+        background: -moz-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: -ms-linear-gradient(top, #8d8d8dc0, #8d8d8dc0);
+        background: -o-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: linear-gradient(to bottom, #8d8d8dc0, #8d8d8dc0) !important;
+      }
+
+      .dt-paging-button.previous,
+      .dt-paging-button.first,
+      .dt-paging-button.next,
+      .dt-paging-button.last {
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        background-color: #e9e7e781 !important;
+        color: black !important;
+        margin: 0.25rem;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+      div.dt-container .dt-paging .dt-paging-button.disabled:active {
+        color: white !important;
+        border: 0px !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button.disabled {
+        color: black !important;
+        border: 0px !important;
+      }
+      .dt-length {
+        border: 2px solid var(--color-bl) !important;
+        border-radius: 8px !important;
+        padding: 5px 10px;
+        margin-right: 60px;
+      }
+      div.dt-container .dt-input {
+        border: 0px !important;
+        border-radius: 0px !important;
+        padding: 5px;
+      }
+
+      div.dt-container div.dt-layout-row {
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+        order: 2;
+        display: flex;
+        justify-content: center !important;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+        order: 1;
+        display: flex;
+        justify-content: flex-start !important;
+        margin-right: 380px !important;
+      }
+      @media (max-width: 1024px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-right: 300px !important;
+        }
+      }
+      @media (min-width: 1023px) and (max-width: 1024px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-right: 60px;
+        }
+      }
+      @media (max-width: 768px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-right: 100px !important;
+        }
+      }
+      @media (min-width: 767px) and (max-width: 768px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-right: 60px;
+        }
+      }
+      @media (max-width: 450px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 0px;
+          margin-right: 85px;
+        }
+      }
+      @media (max-width: 768px) {
+        .dt-column-order,
+        th.dt-ordering-asc .dt-column-order,
+        th.dt-ordering-desc .dt-column-order {
+          margin-right: 0px;
+        }
+      }
+      /* @media (max-width: 768px) {
+  #myTable thead th:first-child {
+    width: auto !important;
+    min-width: auto !important;
+  }
+
+  #myTable thead th:nth-child(2) {
+    width: 100px !important;
+    min-width: 100px !important;
+  }
+
+  #myTable thead th:nth-child(n+3) {
+    width: 80px !important;
+    min-width: 80px !important;
+  }
+  #myTable thead th:nth-child(8) {
+    background-color: yellow;
+    width: 90px !important;
+    min-width: 90px !important;
+  }
+} */
+
+      /* .dataTables_wrapper {
+  overflow-x: hidden !important;
+}
+
+@media (max-width: 992px) {
+  #myTable thead th:nth-child(5),
+  #myTable thead th:nth-child(6),
+  #myTable thead th:nth-child(7) {
+    white-space: nowrap;
+  }
+} */
     </style>
   </head>
   <body class="bg-white min-h-screen flex">
+
     <!-- Wrapper -->
     <div class="flex">
       <!-- Sidebar Desktop -->
-      <aside class="hidden lg:flex w-96 bg-white -l -bl flex-col">
-        <div
-          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
-        >
-          <a href="overview.html"
-            ><img
-              src="src/assets/img/logo.png"
-              alt="Logo"
-              class="mr-20 w-[152px] h-[67px]"
-          /></a>
+      <aside class="hidden lg:flex w-[340px] bg-white border-l border-bl  flex-col">
+        
+        <div class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl">
+          <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class="mr-20 w-[152px] h-[67px]"/></a>
         </div>
 
         <nav class="space-y-3 font-semibold p-4 pr-10">
-          <a
-            href="overview.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
-          >
-            <span
-              ><img
-                src="src/assets/img/aside-imge/chart-4.png"
-                class="w-9 h-9 mr-6"
-                alt="" /></span
-            >نظرة عامة
+          <a href="overview.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav">
+            <span><img src="src/assets/img/aside-imge/chart-4.png" class="w-9 h-9 mr-6" alt="" /></span>نظرة عامة
           </a>
 
           <a
@@ -144,15 +371,14 @@
             >الشكاوي
           </a>
         </nav>
+
       </aside>
     </div>
 
     <!-- Main Content -->
     <main class="flex-1 min-h-screen">
       <!-- Header -->
-      <header
-        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 lg:max-w-[990px] lg:min-w-[990px]"
-      >
+      <header class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 lg:max-w-[990px] lg:min-w-[990px]">
         <div class="flex-1 block lg:hidden">
           <!-- Top bar mobile -->
 
@@ -179,7 +405,7 @@
             </button>
           </div>
 
-           <aside
+          <aside
             id="mobile-menu"
             class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 lg:hidden z-50"
           >
@@ -264,7 +490,53 @@
                 </div>
               </div>
             </div>
+            <div class="items-center gap-3 mx-6 flex lg:hidden">
+              <button class="flex items-center gap-2">
+                <img
+                  src="src/assets/img/requests/document-text.png"
+                  class="w-5 h-5"
+                  alt="Excel"
+                />
+                ملف إكسل
+              </button>
+              <button class="flex items-center gap-2">
+                <img
+                  src="src/assets/img/requests/bi_file-pdf.png"
+                  class="w-5 h-5"
+                  alt="PDF"
+                />
+                ملف PDF
+              </button>
+              <div class="relative inline-block">
+                <select
+                  class="appearance-none rounded active-stats w-24 px-3 py-1 border border-mint/30 cursor-pointer font-medium focus:outline-none focus:ring-0"
+                >
+                  <option class="active-stats">الكل</option>
+                  <option>بانتظار القبول</option>
+                  <option>طلب جديد</option>
+                  <option>قيد التعبئة</option>
+                  <option>تم التعبئة</option>
+                  <option>تم التسليم</option>
+                  <option>ملغية</option>
+                </select>
 
+                <span
+                  class="pointer-events-none absolute inset-y-0 left-2 flex items-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-[#292D32]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
@@ -280,7 +552,7 @@
 
               <a
                 href="requests.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10  active-nav-aside  show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
               >
                 <span
                   ><img
@@ -292,7 +564,7 @@
 
               <a
                 href="distributors.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -304,7 +576,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -316,7 +588,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -328,7 +600,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -340,7 +612,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
               >
                 <span
                   ><img
@@ -352,7 +624,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -362,7 +634,6 @@
                 >الشكاوي
               </a>
             </nav>
-
           </aside>
         </div>
 
@@ -593,15 +864,20 @@
       </header>
 
       <section class="bg-sky w-full h-full">
-        <div class=" mx-auto lg:mx-0 min-w-[95%] max-w-[95%] lg:min-w-[1030px] lg:max-w-[1056px] 2xl:min-w-[1320px] 2xl:max-w-[1320px]  labtop-xl:min-w-[1750px] labtop-xl:max-w-[1750px] ">
-          <section class="bg-sky w-full min-h-screen lg:pt-6 lg:pr-6">
-            <div class="bg-white rounded-tr-lg rounded-br-lg shadow-md p-4 pl-0">
-              
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] labtop-s:min-w-[100%] labtop-s:lg:max-w-[1056px]
+          2xl:min-w-[1320px] 2xl:max-w-[1320px] labtop-xl:min-w-[1750px] labtop-xl:max-w-[1750px]"
+        >
+          <section class="bg-sky w-full  min-h-screen lg:pt-6 lg:pr-6">
+            <div
+              class="bg-white lg:rounded-tr-lg lg:rounded-br-lg shadow-md p-4 pl-0"
+            >
               <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-bold flex items-center gap-2">
+                  الطلبات<span class="text-sky">(50)</span>
+                </h2>
 
-                <h2 class="text-lg font-bold flex items-center gap-2">الطلبات<span class="text-sky">(50)</span></h2>
-
-                <div class="flex items-center gap-3 ml-12">
+                <div class="items-center gap-3 ml-12 hidden lg:flex">
                   <button class="flex items-center gap-2">
                     <img
                       src="src/assets/img/requests/document-text.png"
@@ -650,104 +926,86 @@
                 </div>
               </div>
 
-              <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
-                <div class="flex items-center gap-8  filter-buttons ">
+              <div
+                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1 pl-4"
+              >
+                <div class="flex items-center gap-4 lg:gap-8 filter-buttons">
                   <button class="active-filter">اليوم</button>
-                  <button class="text-[#7E7E7E] font-medium">هذا الأسبوع</button>
+                  <button class="text-[#7E7E7E] font-medium">
+                    هذا الأسبوع
+                  </button>
                   <button class="text-[#7E7E7E] font-medium">هذا الشهر</button>
                   <button class="text-[#7E7E7E] font-medium">هذه السنة</button>
                   <button class="text-[#7E7E7E] font-medium">محدد</button>
                 </div>
               </div>
 
-              <div class="overflow-x-auto  ">
-                <table class="w-full text-right">
+              <div class="overflow-x-auto display">
+                <table id="myTable" class="w-full text-right">
                   <thead class="text-right">
-                    <tr>
-                      <th class="p-2 pb-4">
-                        <input
-                          id="selectAll"
-                          type="checkbox"
-                          class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الطلب
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الزبون</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الموزع</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        حالة الطلب
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >تاريخ الطلب</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >وقت الطلب</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-                      <th class="py-2 pr-6 text-[#7E7E7E] font-medium">
-                        إجراءات
-                      </th>
-                    </tr>
+                    <!-- <tr> -->
+                    <th class="p-2 pb-4">
+                      <input
+                        id="selectAll"
+                        type="checkbox"
+                        class="w-4 h-4 lg:mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                      />
+                    </th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] font-medium">
+                      رقم الطلب
+                    </th>
+                    <th class="py-2 pr-2 pb-4">
+                      <span
+                        class="inline-block align-middle text-[#7E7E7E] font-medium"
+                        >الزبون</span
+                      >
+                    </th>
+
+                    <th class="py-2 pr-2 pb-4">
+                      <span
+                        class="inline-block align-middle text-[#7E7E7E] font-medium"
+                        >الموزع</span
+                      >
+                    </th>
+                    <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
+                      حالة الطلب
+                    </th>
+                    <th class="py-2 lg:pr-2 pb-4">
+                      <span
+                        class="inline-block align-middle text-[#7E7E7E] font-medium"
+                        >تاريخ الطلب</span
+                      >
+                    </th>
+                    <th class="py-2 pr-2 pb-4">
+                      <span
+                        class="inline-block align-middle text-[#7E7E7E] font-medium"
+                        >وقت الطلب</span
+                      >
+                    </th>
+                    <th class="pb-2 pr-2 lg:pr-6 text-[#7E7E7E] font-medium">
+                      إجراءات
+                    </th>
+                    <!-- </tr> -->
                   </thead>
-                  <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+                  <tbody class="text-right [&>tr>td]:py-3 [&>tr>th]:py-3">
                     <tr data-status="refill">
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78415</td>
-                      <td class="p-2">علي حجي</td>
-                      <td class="p-2">إسماعيل شباط</td>
+                      <td class="p-2 pr-0 lg:pr-2">علي حجي</td>
+                      <td class="p-2 pr-0 lg:pr-2">إسماعيل شباط</td>
                       <td class="p-2">
                         <span class="bg-gray-200 px-2 py-1 rounded"
                           >طلب تعبئة</span
                         >
                       </td>
-
-                      <td class="p-2">4 اكتوبر 2025</td>
+                      <td class="p-2">13 اكتوبر 2025</td>
                       <td class="p-2">08:35 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -771,11 +1029,11 @@
                       </td>
                     </tr>
 
-                    <tr data-status="accepted">
+                    <tr data-status="refill">
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78416</td>
@@ -786,11 +1044,9 @@
                           >تم قبول الطلب</span
                         >
                       </td>
-                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">12 اكتوبر 2025</td>
                       <td class="p-2">08:40 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -816,11 +1072,11 @@
                       </td>
                     </tr>
 
-                    <tr data-status="moving">
+                    <tr data-status="accepted">
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78417</td>
@@ -831,130 +1087,9 @@
                           >التحرك نحو العميل</span
                         >
                       </td>
-                      <td class="p-2">15 مارس 2023</td>
+                      <td class="p-2">12 اكتوبر 2025</td>
                       <td class="p-2">08:45 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                        <button>
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr data-status="received">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#78418</td>
-                      <td class="p-2">علي حجي</td>
-                      <td class="p-2">إسماعيل شباط</td>
-                      <td class="p-2">
-                        <span
-                          class="bg-orange-100 text-orange-700 px-2 py-1 rounded"
-                          >استلام الأنابيب</span
-                        >
-                      </td>
-                      <td class="p-2">15 مارس 2023</td>
-                      <td class="p-2">08:50 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                        <button>
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr data-status="delivered">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#78419</td>
-                      <td class="p-2">علي حجي</td>
-                      <td class="p-2">إسماعيل شباط</td>
-                      <td class="p-2">
-                        <span class="bg-mint/10 text-mint px-2 py-1 rounded"
-                          >تم تسليم الأنابيب</span
-                        >
-                      </td>
-                      <td class="p-2">15 مارس 2025</td>
-                      <td class="p-2">08:55 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr data-status="canceled">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#78420</td>
-                      <td class="p-2">علي حجي</td>
-                      <td class="p-2">إسماعيل شباط</td>
-                      <td class="p-2">
-                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded"
-                          >ملغية</span
-                        >
-                      </td>
-                      <td class="p-2">15 مارس 2025</td>
-                      <td class="p-2">09:00 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -980,7 +1115,120 @@
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#78418</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل شباط</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-orange-100 text-orange-700 px-2 py-1 rounded"
+                          >استلام الأنابيب</span
+                        >
+                      </td>
+                      <td class="p-2">12 اكتوبر 2025</td>
+                      <td class="p-2">08:50 صباحًا</td>
+                      <td class="p-2 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="delivered">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#78419</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل شباط</td>
+                      <td class="p-2">
+                        <span class="bg-mint/10 text-mint px-2 py-1 rounded"
+                          >تم تسليم الأنابيب</span
+                        >
+                      </td>
+                      <td class="p-2">15 مارس 2025</td>
+                      <td class="p-2">08:55 صباحًا</td>
+                      <td class="p-2 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="canceled">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#78420</td>
+                      <td class="p-2">علي حجي</td>
+                      <td class="p-2">إسماعيل شباط</td>
+                      <td class="p-2">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded"
+                          >ملغية</span
+                        >
+                      </td>
+                      <td class="p-2">12 اكتوبر 2025</td>
+                      <td class="p-2">09:00 صباحًا</td>
+                      <td class="p-2 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="rejected">
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78421</td>
@@ -994,9 +1242,7 @@
                       </td>
                       <td class="p-2">15 مارس 2025</td>
                       <td class="p-2">09:05 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -1022,7 +1268,7 @@
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78419</td>
@@ -1035,9 +1281,7 @@
                       </td>
                       <td class="p-2">15 مارس 2023</td>
                       <td class="p-2">08:55 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -1058,7 +1302,7 @@
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78420</td>
@@ -1071,9 +1315,7 @@
                       </td>
                       <td class="p-2">15 مارس 2025</td>
                       <td class="p-2">09:00 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -1095,11 +1337,11 @@
                       </td>
                     </tr>
 
-                      <tr data-status="canceled">
+                    <tr data-status="canceled">
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78420</td>
@@ -1112,9 +1354,7 @@
                       </td>
                       <td class="p-2">3 اكتوبر 2025</td>
                       <td class="p-2">09:00 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -1140,7 +1380,7 @@
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#78421</td>
@@ -1154,9 +1394,7 @@
                       </td>
                       <td class="p-2">3 أكتوبر 2025</td>
                       <td class="p-2">09:05 صباحًا</td>
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
                           <img
                             src="src/assets/img/icon-row/eye.png"
@@ -1177,93 +1415,17 @@
                         </button>
                       </td>
                     </tr>
-
-
-
-
-                      <!-- اليوم -->
-  <tr data-status="canceled">
-    <th class="p-2">
-      <input type="checkbox" class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer" />
-    </th>
-    <td class="p-2">#78430</td>
-    <td class="p-2">علي حجي</td>
-    <td class="p-2">إسماعيل شباط</td>
-    <td class="p-2"><span class="bg-red-100 text-red-700 px-2 py-1 rounded">ملغية</span></td>
-    <td class="p-2">2 اكتوبر 2025</td>
-    <td class="p-2">09:00 صباحًا</td>
-    <td class="p-2 flex items-center justify-start pr-10 gap-3">
-      <button onclick="viewOrder(this)"><img src="src/assets/img/icon-row/eye.png" class="w-5 h-5" /></button>
-      <button><img src="src/assets/img/icon-row/edit.png" class="w-5 h-5" /></button>
-      <button onclick="viewOrderAction(this, 'delete')"><img src="src/assets/img/icon-row/trash.png" class="w-5 h-5" /></button>
-    </td>
-  </tr>
-
-  <!-- هذا الأسبوع -->
-  <tr data-status="canceled">
-    <th class="p-2">
-      <input type="checkbox" class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer" />
-    </th>
-    <td class="p-2">#78431</td>
-    <td class="p-2">محمد</td>
-    <td class="p-2">سارة علي</td>
-    <td class="p-2"><span class="bg-red-100 text-red-700 px-2 py-1 rounded">ملغية</span></td>
-    <td class="p-2">30 سبتمبر 2025</td>
-    <td class="p-2">10:15 صباحًا</td>
-    <td class="p-2 flex items-center justify-start pr-10 gap-3">
-      <button onclick="viewOrder(this)"><img src="src/assets/img/icon-row/eye.png" class="w-5 h-5" /></button>
-      <button><img src="src/assets/img/icon-row/edit.png" class="w-5 h-5" /></button>
-      <button onclick="viewOrderAction(this, 'delete')"><img src="src/assets/img/icon-row/trash.png" class="w-5 h-5" /></button>
-    </td>
-  </tr>
-
-  <!-- هذا الشهر -->
-  <tr data-status="canceled">
-    <th class="p-2">
-      <input type="checkbox" class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer" />
-    </th>
-    <td class="p-2">#78432</td>
-    <td class="p-2">سارة</td>
-    <td class="p-2">يوسف علي</td>
-    <td class="p-2"><span class="bg-red-100 text-red-700 px-2 py-1 rounded">ملغية</span></td>
-    <td class="p-2">10 اكتوبر 2025</td>
-    <td class="p-2">11:30 صباحًا</td>
-    <td class="p-2 flex items-center justify-start pr-10 gap-3">
-      <button onclick="viewOrder(this)"><img src="src/assets/img/icon-row/eye.png" class="w-5 h-5" /></button>
-      <button><img src="src/assets/img/icon-row/edit.png" class="w-5 h-5" /></button>
-      <button onclick="viewOrderAction(this, 'delete')"><img src="src/assets/img/icon-row/trash.png" class="w-5 h-5" /></button>
-    </td>
-  </tr>
-
-  <!-- هذه السنة -->
-  <tr data-status="canceled">
-    <th class="p-2">
-      <input type="checkbox" class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer" />
-    </th>
-    <td class="p-2">#78433</td>
-    <td class="p-2">يوسف</td>
-    <td class="p-2">علي محمد</td>
-    <td class="p-2"><span class="bg-red-100 text-red-700 px-2 py-1 rounded">ملغية</span></td>
-    <td class="p-2">15 يناير 2025</td>
-    <td class="p-2">08:45 صباحًا</td>
-    <td class="p-2 flex items-center justify-start pr-10 gap-3">
-      <button onclick="viewOrder(this)"><img src="src/assets/img/icon-row/eye.png" class="w-5 h-5" /></button>
-      <button><img src="src/assets/img/icon-row/edit.png" class="w-5 h-5" /></button>
-      <button onclick="viewOrderAction(this, 'delete')"><img src="src/assets/img/icon-row/trash.png" class="w-5 h-5" /></button>
-    </td>
-  </tr>
-
                   </tbody>
                 </table>
               </div>
 
               <!-- Pagination -->
-              <div
+              <!-- <div
                 class="flex items-center justify-between border-t border-bl pt-2"
               >
                 <div class="flex-1 flex justify-center mr-50">
                   <div id="pagination" class="flex items-center">
-                    <!-- <button onclick="changePage(currentPage - 1)" class="px-2 py-1 rounded">&lt;</button>
+                    <button onclick="changePage(currentPage - 1)" class="px-2 py-1 rounded">&lt;</button>
 
                     <button onclick="changePage(1)" class="px-3 py-1 rounded bg-sky text-white">
                       1
@@ -1274,50 +1436,43 @@
                     <button onclick="changePage(5)" class="px-3 py-1 rounded text-[#868686]">5</button>
                     <span class="px-2 text-[#868686]">...</span>
                     <button onclick="changePage(10)" class="px-1 py-1 text-[#868686] rounded">10</button>
-                    <button onclick="changePage(currentPage + 1)" class="px-2 py-1  rounded">&gt;</button> -->
+                    <button onclick="changePage(currentPage + 1)" class="px-2 py-1  rounded">&gt;</button>
                   </div>
                 </div>
 
-                <div
-                  class="flex border border-bl rounded-lg p-2 items-center ml-10"
-                >
+                <div class="flex border border-bl rounded-lg p-2 items-center ml-10">
                   <span>عدد الصفوف في الصفحة:</span>
                   <div class="relative inline-block">
-                    <select
-                      id="rowsPerPage"
-                      class="appearance-none rounded py-1 pr-1 pl-4 text-sky cursor-pointer"
-                    >
+                    
+                    <select id="rowsPerPage" class="appearance-none rounded py-1 pr-1 pl-4 text-sky cursor-pointer">
                       <option value="10">10</option>
                       <option value="20">20</option>
                       <option value="50">50</option>
                     </select>
 
-                    <!-- سهم مخصص -->
-                    <span
-                      class="pointer-events-none absolute inset-y-0 right-6 flex items-center"
-                    >
-                      <svg
-                        class="w-4 h-4 text-tep"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd"
-                        />
+                    <span class="pointer-events-none absolute inset-y-0 right-6 flex items-center">
+                      <svg class="w-4 h-4 text-tep" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                       </svg>
                     </span>
-                  </div>
-                </div>
-              </div>
 
+                  </div>
+
+                </div>
+              </div> -->
             </div>
           </section>
         </div>
       </section>
     </main>
 
+    <!-- ✅ jQuery  -->
+    <script src="src/assets/js/jquery.min.js"></script>
+    <!-- ✅ JS الأساسي لـ DataTables -->
+    <script src="src/assets/js/dataTables.min.js"></script>
+    <!-- ✅ JS الخاص بإضافة Responsive -->
+    <script src="src/assets/js/dataTables.responsive.min.js"></script>
+    <!-- ✅ سكربت الصفحة أو الأكواد المخصصة -->
     <script src="src/assets/js/relodePage.js"></script>
 
     <!-- Script for viewing order details and showing loader before redirect -->
@@ -1508,7 +1663,7 @@
     </script>
 
     <!-- Script for select all checkbox functionality -->
-    <script>
+    <!-- <script>
       const selectAll = document.getElementById("selectAll");
 
       const checkboxes = document.querySelectorAll(".rowCheckbox");
@@ -1522,10 +1677,10 @@
           selectAll.checked = [...checkboxes].every((c) => c.checked);
         });
       });
-    </script>
+    </script> -->
 
     <!-- Script for pagination and rows per page handling -->
-    <script>
+    <!-- <script>
       const rowsPerPageSelect = document.getElementById("rowsPerPage");
       const tableRows = document.querySelectorAll("tbody tr");
       const pagination = document.getElementById("pagination");
@@ -1610,10 +1765,9 @@
       });
 
       renderTable();
-    </script>
+    </script> -->
 
-
-<!-- <script>
+  <!-- <script>
   const filterButtons = document.querySelectorAll(".filter-buttons button");
   const tableRowse = document.querySelectorAll("tbody tr");
 
@@ -1678,7 +1832,7 @@
   filterRows("اليوم");
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   const statusSelect = document.querySelector(".active-stats"); // الـ select
   const tableRowsv = document.querySelectorAll("tbody tr");
 
@@ -1702,91 +1856,369 @@
   filterByStatus("الكل");
 </script> -->
 
-<script>
-  const filterButtons = document.querySelectorAll(".filter-buttons button");
-  const statusSelect = document.querySelector(".active-stats");
-  const tableRowsvc = document.querySelectorAll("tbody tr");
+    <!-- This script handles dynamic filtering of the DataTable rows based on:
+  1. Date range (Today, This Week, This Month, This Year, Custom)
+  2. Order status (e.g., New, Accepted, Delivered, etc.)
+  It parses Arabic date strings, compares them with the current date, 
+  and updates the visible table rows accordingly.
+-->
+    <!-- <script>
+      const filterButtons = document.querySelectorAll(".filter-buttons button");
+      const statusSelect = document.querySelector(".active-stats");
+      const tableRowsvc = document.querySelectorAll("tbody tr");
 
-  const arabicMonths = {
-    يناير: 0, فبراير: 1, مارس: 2, ابريل: 3, أبريل: 3,
-    مايو: 4, يونيو: 5, يوليو: 6, أغسطس: 7, اغسطس: 7,
-    سبتمبر: 8, أكتوبر: 9, اكتوبر: 9, نوفمبر: 10, ديسمبر: 11
-  };
+      const arabicMonths = {
+        يناير: 0,
+        فبراير: 1,
+        مارس: 2,
+        ابريل: 3,
+        أبريل: 3,
+        مايو: 4,
+        يونيو: 5,
+        يوليو: 6,
+        أغسطس: 7,
+        اغسطس: 7,
+        سبتمبر: 8,
+        أكتوبر: 9,
+        اكتوبر: 9,
+        نوفمبر: 10,
+        ديسمبر: 11,
+      };
 
-  let selectedDateFilter = "اليوم";
-  let selectedStatusFilter = "الكل";
+      let selectedDateFilter = "اليوم";
+      let selectedStatusFilter = "الكل";
 
-  function parseArabicDate(dateStr) {
-    const [day, month, year] = dateStr.split(" ");
-    return new Date(year, arabicMonths[month], day);
-  }
-
-  const statusMap = {
-    "الكل": "all",
-    "بانتظار القبول": "accepted",
-    "طلب جديد": "new",
-    "قيد التعبئة": "refill",
-    "تم التعبئة": "received",
-    "تم التسليم": "delivered",
-    "ملغية": "canceled",
-    "مرفوضة": "rejected"
-  };
-
-  function applyFilters() {
-    const now = new Date();
-
-    tableRowsvc.forEach(row => {
-      const dateText = row.children[5].textContent.trim();
-      const rowDate = parseArabicDate(dateText);
-      const rowStatus = row.getAttribute("data-status"); 
-
-      let dateMatch = false;
-      switch(selectedDateFilter) {
-        case "اليوم":
-          dateMatch = rowDate.toDateString() === now.toDateString();
-          break;
-        case "هذا الأسبوع":
-          const firstDay = new Date(now);
-          firstDay.setDate(now.getDate() - now.getDay());
-          const lastDay = new Date(firstDay);
-          lastDay.setDate(firstDay.getDate() + 6);
-          dateMatch = rowDate >= firstDay && rowDate <= lastDay;
-          break;
-        case "هذا الشهر":
-          dateMatch = rowDate.getMonth() === now.getMonth() && rowDate.getFullYear() === now.getFullYear();
-          break;
-        case "هذه السنة":
-          dateMatch = rowDate.getFullYear() === now.getFullYear();
-          break;
-        case "محدد":
-          dateMatch = true;
-          break;
+      function parseArabicDate(dateStr) {
+        const [day, month, year] = dateStr.split(" ");
+        return new Date(year, arabicMonths[month], day);
       }
 
-      let statusMatch = selectedStatusFilter === "الكل" || rowStatus === statusMap[selectedStatusFilter];
+      const statusMap = {
+        الكل: "all",
+        "بانتظار القبول": "accepted",
+        "طلب جديد": "new",
+        "قيد التعبئة": "refill",
+        "تم التعبئة": "received",
+        "تم التسليم": "delivered",
+        ملغية: "canceled",
+        مرفوضة: "rejected",
+      };
 
-      row.style.display = dateMatch && statusMatch ? "" : "none";
-    });
-  }
+      function applyFilters() {
+        const now = new Date();
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterButtons.forEach(b => b.classList.remove("active-filter"));
-      btn.classList.add("active-filter");
-      selectedDateFilter = btn.textContent.trim();
+        tableRowsvc.forEach((row) => {
+          const dateText = row.children[5].textContent.trim();
+          const rowDate = parseArabicDate(dateText);
+          const rowStatus = row.getAttribute("data-status");
+
+          let dateMatch = false;
+          switch (selectedDateFilter) {
+            case "اليوم":
+              dateMatch = rowDate.toDateString() === now.toDateString();
+              break;
+            case "هذا الأسبوع":
+              const firstDay = new Date(now);
+              firstDay.setDate(now.getDate() - now.getDay());
+              const lastDay = new Date(firstDay);
+              lastDay.setDate(firstDay.getDate() + 6);
+              dateMatch = rowDate >= firstDay && rowDate <= lastDay;
+              break;
+            case "هذا الشهر":
+              dateMatch =
+                rowDate.getMonth() === now.getMonth() &&
+                rowDate.getFullYear() === now.getFullYear();
+              break;
+            case "هذه السنة":
+              dateMatch = rowDate.getFullYear() === now.getFullYear();
+              break;
+            case "محدد":
+              dateMatch = true;
+              break;
+          }
+
+          let statusMatch =
+            selectedStatusFilter === "الكل" ||
+            rowStatus === statusMap[selectedStatusFilter];
+
+          row.style.display = dateMatch && statusMatch ? "" : "none";
+        });
+      }
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active-filter"));
+          btn.classList.add("active-filter");
+          selectedDateFilter = btn.textContent.trim();
+          applyFilters();
+        });
+      });
+
+      statusSelect.addEventListener("change", (e) => {
+        selectedStatusFilter = e.target.value;
+        applyFilters();
+      });
+
       applyFilters();
+    </script> -->
+
+    <!-- <script>
+      $(document).ready(function () {
+        const table = new DataTable("#myTable", {
+          responsive: true,
+          info: false,
+          searching: false,
+          paging: true,
+          lengthChange: true,
+         columnDefs: [
+      { orderable: false, targets: [0, 3, 6, 7] },
+
+      { responsivePriority: 1, targets: 0 },  
+      { responsivePriority: 2, targets: 1 },   
+      { responsivePriority: 4, targets: 7 },  
+
+      { responsivePriority: 10001, targets: [2,3,4,5,6] },
+    ],
+          language: {
+            lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+          },
+          layout: {
+            topStart: null,
+            bottomStart: "paging",
+            bottomEnd: "pageLength",
+          },
+        });
+        setTimeout(() => {
+          const disabledCols = [0, 3, 6, 7];
+          disabledCols.forEach((i) => {
+            const th = $(`#myTable thead th:eq(${i})`);
+            th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+            th.find(".dt-column-order").remove();
+          });
+        }, 1);
+      });
+    </script> -->
+
+<!-- <script>
+  $(document).ready(function () {
+    const table = new DataTable("#myTable", {
+      responsive: {
+        details: {
+          type: "inline", // أو "column" لو بتحب المنسدلة تظهر كأيقونة
+          target: "tr"
+        }
+      },
+      info: false,
+      searching: false,
+      paging: true,
+      lengthChange: true,
+
+      columnDefs: [
+        { orderable: false, targets: [0, 3, 6, 7] },
+
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: 1 },
+        { responsivePriority: 3, targets: 4 },
+        { responsivePriority: 4, targets: 7 },
+
+        { className: "none", targets: [ 2, 3, 5, 6] },
+      ],
+      language: {
+        lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+      },
+      layout: {
+        topStart: null,
+        bottomStart: "paging",
+        bottomEnd: "pageLength",
+      },
     });
+    setTimeout(() => {
+      const disabledCols = [0, 3, 6, 7];
+      disabledCols.forEach((i) => {
+        const th = $(`#myTable thead th:eq(${i})`);
+        th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+        th.find(".dt-column-order").remove();
+      });
+    }, 1);
   });
+</script> -->
 
-  statusSelect.addEventListener("change", (e) => {
-    selectedStatusFilter = e.target.value;
-    applyFilters();
+<script>
+  $(document).ready(function () {
+    const table = new DataTable("#myTable", {
+      responsive: {
+        details: {
+          type: "inline",
+          target: "tr",
+        },
+        breakpoints: [
+          { name: "desktop", width: Infinity },
+          { name: "laptop", width: 1200 },
+          { name: "tablet", width: 992 },
+          { name: "mobile", width: 768 },
+          { name: "smallmobile", width: 480 },
+        ],
+      },
+      info: false,
+      searching: false,
+      paging: true,
+      lengthChange: true,
+
+      columnDefs: [
+        { orderable: false, targets: [0, 3, 6, 7] },
+
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: 1 },
+        { responsivePriority: 3, targets: 4 },
+        { responsivePriority: 4, targets: 7 },
+
+        {
+          targets: [2, 3, 5, 6],
+          className: "min-desktop", 
+        },
+      ],
+
+      language: {
+        lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+      },
+
+      layout: {
+        topStart: null,
+        bottomStart: "paging",
+        bottomEnd: "pageLength",
+      },
+    });
+
+    setTimeout(() => {
+      const disabledCols = [0, 3, 6, 7];
+      disabledCols.forEach((i) => {
+        const th = $(`#myTable thead th:eq(${i})`);
+        th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+        th.find(".dt-column-order").remove();
+      });
+    }, 1);
   });
-
-  applyFilters();
 </script>
 
 
 
+    <!-- <script>
+  $(document).ready(function () {
+    const table = new DataTable("#myTable", {
+      responsive: {
+        details: {
+          type: "inline", 
+          target: "tr"
+        }
+      },
+      info: false,
+      searching: false,
+      paging: true,
+      lengthChange: true,
+
+      columnDefs: [
+        { orderable: false, targets: [0, 3, 6, 7] },
+
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: 1 },
+        { responsivePriority: 3, targets: 2 },
+        { responsivePriority: 4, targets: 3 },
+
+        { responsivePriority: 10001, targets: [4, 5, 6, 7] },
+      ],
+
+      language: {
+        lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+      },
+
+      layout: {
+        topStart: null,
+        bottomStart: "paging",
+        bottomEnd: "pageLength",
+      },
+    });
+
+    setTimeout(() => {
+      const disabledCols = [0, 3, 6, 7];
+      disabledCols.forEach((i) => {
+        const th = $(`#myTable thead th:eq(${i})`);
+        th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+        th.find(".dt-column-order").remove();
+      });
+    }, 1);
+  });
+</script> -->
+
+    <!-- <script>
+$(document).ready(function () {
+  console.log("🚀 بدأ تهيئة DataTable...");
+
+  const table = new DataTable("#myTable", {
+    responsive: {
+      details: false, // ما بدنا تفاصيل إضافية تظهر أسفل الصف
+      breakpoints: [
+        { name: "desktop", width: Infinity },
+        { name: "tablet", width: 1024 },
+        { name: "mobile", width: 768 }, // 👈 لما العرض ≤ 768 يخفي الأعمدة ذات أولوية منخفضة
+      ],
+    },
+    info: false,
+    searching: false,
+    paging: true,
+    lengthChange: true,
+
+    columnDefs: [
+      { orderable: false, targets: [0, 3, 6, 7] },
+
+      // الأعمدة اللي تظل ظاهرة في الموبايل
+      { responsivePriority: 1, targets: 0 }, // تحديد
+      { responsivePriority: 2, targets: 1 }, // رقم الطلب
+      { responsivePriority: 3, targets: 2 }, // العميل
+      { responsivePriority: 4, targets: 7 }, // الإجراءات
+
+      // الأعمدة اللي تختفي على الموبايل
+      { responsivePriority: 10001, targets: [3, 4, 5, 6] },
+    ],
+
+    language: {
+      lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+    },
+    layout: {
+      topStart: null,
+      bottomStart: "paging",
+      bottomEnd: "pageLength",
+    },
+  });
+
+  // 🩵 إزالة الأيقونات من الأعمدة المحددة
+  setTimeout(() => {
+    const disabledCols = [0, 3, 6, 7];
+    disabledCols.forEach((i) => {
+      const th = $(`#myTable thead th:eq(${i})`);
+      th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+      th.find(".dt-column-order").remove();
+    });
+  }, 1);
+
+  // 🧩 تحديث الـ Responsive بعد التحميل الكامل
+  setTimeout(() => {
+    console.log("🔁 تحديث Responsive بعد التحميل...");
+    table.columns.adjust().responsive.recalc();
+
+    // فحص حالة الأعمدة بعد التحديث
+    table.columns().every(function (index) {
+      const visible = this.visible();
+      console.log(
+        `📊 العمود ${index}: ${visible ? "ظاهر ✅" : "مخفي ❌"}`
+      );
+    });
+  }, 800);
+
+  // 📱 فحص عند تغيير حجم الشاشة
+  $(window).on("resize", function () {
+    table.columns.adjust().responsive.recalc();
+  });
+});
+</script> -->
   </body>
 </html>

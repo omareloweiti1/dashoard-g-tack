@@ -29,52 +29,249 @@
           transform: rotate(360deg);
         }
       }
+      .dt-column-order::before,
+      .dt-column-order::after {
+        content: none !important;
+      }
+      .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      th.dt-ordering-asc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        margin-right: 10px;
+      }
+
+      th.dt-ordering-desc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up2.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        margin-right: 10px;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.current,
+      div.dt-container .dt-paging .dt-paging-button.current:hover {
+        color: white !important;
+        border: 0px !important;
+      }
+      .dt-paging-button.current {
+        background-color: var(--color-sky-500) !important;
+        width: 32px !important;
+        height: 32px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        border-radius: 4px !important;
+        color: white !important;
+      }
+      .div.dt-container .dt-paging .dt-paging-button {
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        cursor: pointer;
+        color: #868686 !important;
+        border: 0px !important;
+        border-radius: 8px !important;
+        background: transparent;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        box-sizing: border-box;
+        display: inline-block;
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        margin: 0.25rem;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        color: #686868 !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button:hover {
+        color: white !important;
+        border: 0px !important;
+        background-color: #8d8d8dc0;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, #8d8d8dc0),
+          color-stop(#8d8d8dc0)
+        ) !important;
+        background: -webkit-linear-gradient(
+          top,
+          #8d8d8dc0,
+          #8d8d8dc0
+        ) !important;
+        background: -moz-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: -ms-linear-gradient(top, #8d8d8dc0, #8d8d8dc0);
+        background: -o-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: linear-gradient(to bottom, #8d8d8dc0, #8d8d8dc0) !important;
+      }
+
+      .dt-paging-button.previous,
+      .dt-paging-button.first,
+      .dt-paging-button.next,
+      .dt-paging-button.last {
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        background-color: #e9e7e781 !important;
+        color: black !important;
+        margin: 0.25rem;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+      div.dt-container .dt-paging .dt-paging-button.disabled:active {
+        color: white !important;
+        border: 0px !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button.disabled {
+        color: black !important;
+        border: 0px !important;
+      }
+      .dt-length {
+        border: 2px solid var(--color-bl) !important;
+        border-radius: 8px !important;
+        padding: 5px 10px;
+        margin-right: 60px;
+      }
+      div.dt-container .dt-input {
+        border: 0px !important;
+        border-radius: 0px !important;
+        padding: 5px;
+      }
+
+      div.dt-container div.dt-layout-row {
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+        order: 2;
+        display: flex;
+        justify-content: center !important;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+        order: 1;
+        display: flex;
+        justify-content: flex-start !important;
+        margin-right: 380px !important;
+      }
+      @media (max-width: 1024px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-right: 300px !important;
+        }
+      }
+      @media (min-width: 1023px) and (max-width: 1024px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-right: 60px;
+        }
+      }
+      @media (max-width: 768px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-right: 100px !important;
+        }
+      }
+      @media (min-width: 767px) and (max-width: 768px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-right: 60px;
+        }
+      }
+      @media (max-width: 450px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 0px;
+          margin-right: 85px;
+        }
+      }
+      @media (max-width: 768px) {
+        .dt-column-order,
+        th.dt-ordering-asc .dt-column-order,
+        th.dt-ordering-desc .dt-column-order {
+          margin-right: 0px;
+        }
+      }
+
+      /* لودر صغير على الزر */
+      .loader-btn {
+        border: 2px solid var(--color-sky);
+        border-top-color: transparent;
+        border-radius: 50%;
+        width: 16px;  
+        height: 16px;  
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
   </head>
   <body class="bg-white min-h-screen flex">
-  <!-- Wrapper -->
-<div class="flex">
+    <!-- Wrapper -->
+    <div class="flex">
       <!-- Sidebar Desktop -->
-          <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
-        <div
-          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
-        >
-          <a href="overview.html"
-            ><img
-              src="src/assets/img/logo.png"
-              alt="Logo"
-              class="mr-20 w-[152px] h-[67px]"
-          /></a>
+      <aside class="hidden lg:flex w-[290px] max-w-[290px]  bg-white border-l border-bl flex-col">
+        <div class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl">
+          <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class="mr-20 w-[152px] h-[67px]"/></a>
         </div>
 
         <nav class="space-y-3 font-semibold p-4 pr-10">
-          <a
-            href="overview.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav "
-          >
-            <span
-              ><img
-                src="src/assets/img/aside-imge/chart-4.png"
-                class="w-9 h-9 mr-6"
-                alt="" /></span
-            >نظرة عامة
+          <a href="overview.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav">
+            <span><img src="src/assets/img/aside-imge/chart-4.png" class="w-9 h-9 mr-6" alt="" /></span>نظرة عامة
           </a>
 
-          <a
-            href="requests.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
-          >
-            <span
-              ><img
-                src="src/assets/img/icon-mute/grid-2.png"
-                class="w-9 h-9 mr-6"
-                alt="" /></span
-            >الطلبات
+          <a href="requests.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav">
+            <span><img src="src/assets/img/icon-mute/grid-2.png" class="w-9 h-9 mr-6" alt="" /></span>الطلبات
           </a>
 
           <a
             href="distributors.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside "
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
           >
             <span
               ><img
@@ -266,7 +463,18 @@
                 </div>
               </div>
             </div>
+             <div class=" flex lg:hidden items-center justify-between mb-4">
+                <div class="flex items-center gap-3 mx-auto mt-5">
+                  <button class="flex items-center gap-2">
+                    <img src="src/assets/img/requests/document-text.png" class="w-5 h-5" alt="Excel"/>ملف إكسل
+                  </button>
+                  
+                  <button class="flex items-center gap-2">
+                    <img src="src/assets/img/requests/bi_file-pdf.png" class="w-5 h-5" alt="PDF"/>ملف PDF
+                  </button>
 
+                </div>
+              </div>
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
@@ -594,9 +802,13 @@
       </header>
 
       <section class="bg-sky w-full h-full">
-        <div class="min-w-[1030px] max-w-[1056px]">
-          <section class="bg-sky w-full min-h-screen pt-6 pr-6">
-            <div class="bg-white rounded-tr-lg rounded-br-lg shadow-md p-4 pl-0">
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
+          labtop-s:min-w-[100%] labtop-s:lg:max-w-[1060px] 2xl:min-w-[1320px] 2xl:max-w-[1320px] labtop-xl:min-w-[1750px] labtop-xl:max-w-[1750px]"
+        >
+          <section class="bg-sky w-full min-h-screen lg:pt-6 lg:pr-6">
+            <div class="bg-white lg:rounded-tr-lg lg:rounded-br-lg shadow-md p-4 pl-0">
+             
               <div class="flex items-center justify-between mb-4">
                 <h2 class="text-lg font-bold flex items-center gap-2">
                   الموزعين
@@ -604,7 +816,7 @@
                 </h2>
 
                 <div class="flex items-center gap-3 ml-12">
-                  <button class="flex items-center gap-2">
+                  <button class=" hidden lg:flex items-center gap-2">
                     <img
                       src="src/assets/img/requests/document-text.png"
                       class="w-5 h-5"
@@ -612,7 +824,7 @@
                     />
                     ملف إكسل
                   </button>
-                  <button class="flex items-center gap-2">
+                  <button class=" hidden lg:flex items-center gap-2">
                     <img
                       src="src/assets/img/requests/bi_file-pdf.png"
                       class="w-5 h-5"
@@ -623,171 +835,284 @@
 
                   <div class="relative inline-block">
                     <div class="flex items-center justify-between">
-                      <button id="openDistributorModal" class="flex items-center gap-2 bg-mint/20 text-mint px-4 py-2 rounded-lg">
-                        <img src="src/assets/img/icon/add-square-mint.png" alt="إضافة" class="w-5 h-5"/>
+                      <button
+                        id="openDistributorModal"
+                        class="flex items-center gap-2 bg-mint/20 text-mint px-4 py-2 rounded-lg"
+                      >
+                        <img
+                          src="src/assets/img/icon/add-square-mint.png"
+                          alt="إضافة"
+                          class="w-5 h-5"
+                        />
                         <span>إضافة اسطوانة جديدة</span>
                       </button>
-
-                     
-
-
                     </div>
                   </div>
 
+                  <!-- البوب أب -->
+                  <div
+                    id="distributorModal"
+                    class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+                  >
+                    <div
+                      class="bg-white rounded-2xl shadow-lg max-w-[674px] p-6 relative w-[674px] h-[1000px]"
+                    >
+                      <!-- زر الإغلاق -->
+                      <button
+                        id="closeDistributorModal"
+                        class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
+                      >
+                        ✕
+                      </button>
 
-                   <!-- البوب أب -->
-                      <div id="distributorModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 ">
-                        <div class="bg-white rounded-2xl shadow-lg  max-w-[674px] p-6 relative w-[674px] h-[1000px]">
-                          <!-- زر الإغلاق -->
-                          <button id="closeDistributorModal" class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl">
-                            ✕
-                          </button>
+                      <!-- العنوان -->
+                      <h2 class="text-center text-lg font-semibold mb-10">
+                        موزع جديد
+                      </h2>
 
-                          <!-- العنوان -->
-                          <h2 class="text-center text-lg font-semibold mb-10">موزع جديد</h2>
-
-                          <!-- الفورم -->
-                          <form class="space-y-4">
-                            <div class="grid grid-cols-2 gap-4">
-                              <div>
-                                <label class="block text-base font-medium text-black mb-1" >اسم الموزع</label>
-                                <input type="text" placeholder="اسم الموزع"
-                                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
-                                />
-                              </div>
-                              <div>
-                                <label class="block text-base font-medium text-black mb-1" >الاسم التجاري للموزع</label>
-                                <input type="text" placeholder="الاسم التجاري للموزع"
-                                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
-                                />
-                              </div>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-4">
-                              <!-- المدينة -->
-                              <div class="relative">
-                                <label class="block text-base font-medium text-black mb-1">المدينة</label>
-                                <select class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white">
-                                  <option value="">اختر المدينة</option>
-                                  <option value="غزة">غزة</option>
-                                  <option value="خانيونس">خانيونس</option>
-                                  <option value="رفح">رفح</option>
-                                  <option value="الشمال">الشمال</option>
-                                  <option value="الوسطى">الوسطى</option>
-                                </select>
-
-                              </div>
-                          
-                              <!-- الحي -->
-                              <div class="relative">
-                                <label class="block text-base font-medium text-black mb-1">الحي</label>
-                                <select class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white">
-                                  <option value="">اختر الحي</option>
-                                  <option value="الرمال">الرمال</option>
-                                  <option value="الشجاعية">الشجاعية</option>
-                                  <option value="الزيتون">الزيتون</option>
-                                  <option value="الشاطئ">الشاطئ</option>
-                                  <option value="تل الهوا">تل الهوا</option>
-                                </select>
-                            
-                              </div>
-                            </div>
-
-
-                            <div class="grid grid-cols-2 gap-4">
-                              <div>
-                                <label class="block text-base font-medium text-black mb-1" >رقم الجوال</label>
-                                <input type="text" placeholder="رقم الجوال"
-                                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
-                                />
-                              </div>
-                             <div>
-                              <label class="block text-base font-medium text-black mb-1">
-                                عدد الإسطوانات في الحمولة
-                              </label>
-                              <div class="flex items-center border border-gray-300 rounded-lg p-2 focus-within:ring focus-within:ring-sky-200">
-                                <input 
-                                  type="number" 
-                                  placeholder="0"
-                                  class="w-full outline-none text-black font-medium"
-                                />
-                                <span class="ml-2 text-black font-medium">أسطوانة</span>
-                              </div>
-                            </div>
-                            
-                            </div>
-
-                           <h3 class="font-medium text-gray-700 mt-6">الأوراق الثبوتية</h3>
-
-                            <div class="grid grid-cols-2 gap-4">
-                              <!-- الهوية -->
-                              <div class="w-full">
-                                <label class="block text-base font-medium text-black mb-2">الهوية الشخصية</label>
-                                <label class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center">
-                                  <input type="file" accept="image/*" class="hidden" onchange="previewFile(event, 'idPreview')" />
-                                  <span class="w-full text-center">رفع الهوية الشخصية</span>
-                                  <img id="idPreview" class="mt-2 hidden w-full h-16 object-cover rounded-md" />
-                                </label>
-                              </div>
-                        
-                              <!-- رخصة القيادة -->
-                              <div class="w-full">
-                                <label class="block text-base font-medium text-black mb-2">رخصة القيادة</label>
-                                <label class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center">
-                                  <input type="file" accept="image/*" class="hidden" onchange="previewFile(event, 'driverPreview')" />
-                                  <span class="w-full text-center">رفع رخصة القيادة</span>
-                                  <img id="driverPreview" class="mt-2 hidden w-full h-16 object-cover rounded-md" />
-                                </label>
-                              </div>
-                        
-                              <!-- رخصة العمل -->
-                              <div class="w-full">
-                                <label class="block text-base font-medium text-black mb-2">رخصة العمل</label>
-                                <label class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center">
-                                  <input type="file" accept="image/*" class="hidden" onchange="previewFile(event, 'workPreview')" />
-                                  <span class="w-full text-center">رفع رخصة العمل</span>
-                                  <img id="workPreview" class="mt-2 hidden w-full h-16 object-cover rounded-md" />
-                                </label>
-                              </div>
-                        
-                              <!-- رخصة الدفاع المدني -->
-                              <div class="w-full">
-                                <label class="block text-base font-medium text-black mb-2">رخصة الدفاع المدني</label>
-                                <label class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center">
-                                  <input type="file" accept="image/*" class="hidden" onchange="previewFile(event, 'civilPreview')" />
-                                  <span class="w-full text-center">رفع رخصة الدفاع المدني</span>
-                                  <img id="civilPreview" class="mt-2 hidden w-full h-16 object-cover rounded-md" />
-                                </label>
-                              </div>
-                        
-                              <!-- رخصة هيئة البترول -->
-                              <div class="w-full">
-                                <label class="block text-base font-medium text-black mb-2">رخصة هيئة البترول</label>
-                                <label class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center">
-                                  <input type="file" accept="image/*" class="hidden" onchange="previewFile(event, 'petrolPreview')" />
-                                  <span class="w-full text-center">رفع رخصة هيئة البترول</span>
-                                  <img id="petrolPreview" class="mt-2 hidden w-full h-16 object-cover rounded-md" />
-                                </label>
-                              </div>
-                            </div>
-
-
-
-                            <!-- زر الإرسال -->
-                            <button type="submit" class="w-full bg-sky-500 text-white py-3 rounded-lg hover:bg-sky-600 transition">إضافة الموزع</button>
-
-                          </form>
-
+                      <!-- الفورم -->
+                      <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                          <div>
+                            <label
+                              class="block text-base font-medium text-black mb-1"
+                              >اسم الموزع</label
+                            >
+                            <input
+                              type="text"
+                              placeholder="اسم الموزع"
+                              class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                            />
+                          </div>
+                          <div>
+                            <label
+                              class="block text-base font-medium text-black mb-1"
+                              >الاسم التجاري للموزع</label
+                            >
+                            <input
+                              type="text"
+                              placeholder="الاسم التجاري للموزع"
+                              class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                            />
+                          </div>
                         </div>
-                      </div>
 
+                        <div class="grid grid-cols-2 gap-4">
+                          <!-- المدينة -->
+                          <div class="relative">
+                            <label
+                              class="block text-base font-medium text-black mb-1"
+                              >المدينة</label
+                            >
+                            <select
+                              class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white"
+                            >
+                              <option value="">اختر المدينة</option>
+                              <option value="غزة">غزة</option>
+                              <option value="خانيونس">خانيونس</option>
+                              <option value="رفح">رفح</option>
+                              <option value="الشمال">الشمال</option>
+                              <option value="الوسطى">الوسطى</option>
+                            </select>
+                          </div>
 
+                          <!-- الحي -->
+                          <div class="relative">
+                            <label
+                              class="block text-base font-medium text-black mb-1"
+                              >الحي</label
+                            >
+                            <select
+                              class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white"
+                            >
+                              <option value="">اختر الحي</option>
+                              <option value="الرمال">الرمال</option>
+                              <option value="الشجاعية">الشجاعية</option>
+                              <option value="الزيتون">الزيتون</option>
+                              <option value="الشاطئ">الشاطئ</option>
+                              <option value="تل الهوا">تل الهوا</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                          <div>
+                            <label
+                              class="block text-base font-medium text-black mb-1"
+                              >رقم الجوال</label
+                            >
+                            <input
+                              type="text"
+                              placeholder="رقم الجوال"
+                              class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                            />
+                          </div>
+                          <div>
+                            <label
+                              class="block text-base font-medium text-black mb-1"
+                            >
+                              عدد الإسطوانات في الحمولة
+                            </label>
+                            <div
+                              class="flex items-center border border-gray-300 rounded-lg p-2 focus-within:ring focus-within:ring-sky-200"
+                            >
+                              <input
+                                type="number"
+                                placeholder="0"
+                                class="w-full outline-none text-black font-medium"
+                              />
+                              <span class="ml-2 text-black font-medium"
+                                >أسطوانة</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+
+                        <h3 class="font-medium text-gray-700 mt-6">
+                          الأوراق الثبوتية
+                        </h3>
+
+                        <div class="grid grid-cols-2 gap-4">
+                          <!-- الهوية -->
+                          <div class="w-full">
+                            <label
+                              class="block text-base font-medium text-black mb-2"
+                              >الهوية الشخصية</label
+                            >
+                            <label
+                              class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                            >
+                              <input
+                                type="file"
+                                accept="image/*"
+                                class="hidden"
+                                onchange="previewFile(event, 'idPreview')"
+                              />
+                              <span class="w-full text-center"
+                                >رفع الهوية الشخصية</span
+                              >
+                              <img
+                                id="idPreview"
+                                class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                              />
+                            </label>
+                          </div>
+
+                          <!-- رخصة القيادة -->
+                          <div class="w-full">
+                            <label
+                              class="block text-base font-medium text-black mb-2"
+                              >رخصة القيادة</label
+                            >
+                            <label
+                              class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                            >
+                              <input
+                                type="file"
+                                accept="image/*"
+                                class="hidden"
+                                onchange="previewFile(event, 'driverPreview')"
+                              />
+                              <span class="w-full text-center"
+                                >رفع رخصة القيادة</span
+                              >
+                              <img
+                                id="driverPreview"
+                                class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                              />
+                            </label>
+                          </div>
+
+                          <!-- رخصة العمل -->
+                          <div class="w-full">
+                            <label
+                              class="block text-base font-medium text-black mb-2"
+                              >رخصة العمل</label
+                            >
+                            <label
+                              class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                            >
+                              <input
+                                type="file"
+                                accept="image/*"
+                                class="hidden"
+                                onchange="previewFile(event, 'workPreview')"
+                              />
+                              <span class="w-full text-center"
+                                >رفع رخصة العمل</span
+                              >
+                              <img
+                                id="workPreview"
+                                class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                              />
+                            </label>
+                          </div>
+
+                          <!-- رخصة الدفاع المدني -->
+                          <div class="w-full">
+                            <label
+                              class="block text-base font-medium text-black mb-2"
+                              >رخصة الدفاع المدني</label
+                            >
+                            <label
+                              class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                            >
+                              <input
+                                type="file"
+                                accept="image/*"
+                                class="hidden"
+                                onchange="previewFile(event, 'civilPreview')"
+                              />
+                              <span class="w-full text-center"
+                                >رفع رخصة الدفاع المدني</span
+                              >
+                              <img
+                                id="civilPreview"
+                                class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                              />
+                            </label>
+                          </div>
+
+                          <!-- رخصة هيئة البترول -->
+                          <div class="w-full">
+                            <label
+                              class="block text-base font-medium text-black mb-2"
+                              >رخصة هيئة البترول</label
+                            >
+                            <label
+                              class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                            >
+                              <input
+                                type="file"
+                                accept="image/*"
+                                class="hidden"
+                                onchange="previewFile(event, 'petrolPreview')"
+                              />
+                              <span class="w-full text-center"
+                                >رفع رخصة هيئة البترول</span
+                              >
+                              <img
+                                id="petrolPreview"
+                                class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                              />
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- زر الإرسال -->
+                        <button
+                          type="submit"
+                          class="w-full bg-sky-500 text-white py-3 rounded-lg hover:bg-sky-600 transition"
+                        >
+                          إضافة الموزع
+                        </button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div
-                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
-              >
+              <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
                 <div class="flex items-center gap-8 filter-buttons">
                   <button class="active-filter">موزعين جدد</button>
                   <button class="text-[#7E7E7E] font-medium">
@@ -796,336 +1121,123 @@
                 </div>
               </div>
 
-              <div data-status="new" class="overflow-x-auto">
-                <table class="w-full text-right">
+              <div data-status="new" class="overflow-x-auto display">
+                <table id="myTableNew" class="w-full text-right">
                   <thead class="text-right">
                     <tr>
-                      <th class="p-2 pb-4">
-                        <input
-                          id="selectAll"
-                          type="checkbox"
-                          class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4 max-w-24">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-4 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-6 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الجوال</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-6 text-[#7E7E7E] font-medium">
-                        إجراءات
-                      </th>
+                    <th class="p-2">
+                      <input id="selectAll" type="checkbox"
+                        class="w-4 h-4  rounded appearance-none bg-[#1C375A29] border border-[#1C375A29]
+                        checked:bg-sky checked:border-sky cursor-pointer"
+                      />
+                    </th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">رقم الموزع</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">اسم الموزع</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">الاسم التجاري</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">المدينة</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">الحي</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">رقم الجوال</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">إجراءات</th>
                     </tr>
-                  </thead>
-
-                  <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+                  </thead> 
+                  <tbody class="text-right  [&>tr>td]:py-3 [&>tr>th]:py-3">
                     <tr>
                       <th class="p-2">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">طيب</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6">الشجاعية</td>
+                      <td class="p-2">#78415</td>
+                      <td class="p-2 pr-0 lg:pr-2">إسماعيل شباط</td>
+                      <td class="p-2 pr-0 lg:pr-2">غاز الندى</td>
+                      <td class="p-2 pr-0 lg:pr-2">غزة</td>
+                      <td class="p-2 pr-0 lg:pr-2">الشجاعية</td>
                       <td class="p-2 text-end" dir="ltr">972 59945678</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
-                      >
+                      <td class="p-2 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
+                          <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5"/>
                         </button>
 
                         <button onclick="viewOrderAction(this, 'edit')">
                           <img
                             src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
+                            class=" min-w-5 w-5 h-5"
                           />
                         </button>
 
                         <button onclick="viewOrderAction(this, 'delete')">
                           <img
                             src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
+                            class="min-w-5 w-5 h-5"
                           />
                         </button>
                       </td>
                     </tr>
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#001</td>
-                      <td class="p-2">انا و انت</td>
-                      <td class="p-2">غاز الندى</td>
-                      <td class="p-4">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6">الشجاعية</td>
-                      <td class="p-2 text-end" dir="ltr">972 59945678</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-6 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
+                   
                   </tbody>
                 </table>
               </div>
 
-              <div data-status="approved" class="overflow-x-auto">
-                <table class="w-full text-right">
+              <div data-status="approved" class="overflow-x-auto display">
+                <table id="myTableApproved" class="w-full text-right">
                   <thead class="text-right">
                     <tr>
-                      <th class="p-2 pb-4">
-                        <input
-                          id="selectAll"
-                          type="checkbox"
-                          class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        رقم الموزع
-                      </th>
-
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >اسم الموزع</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الاسم التجاري</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
-                        المدينة
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الحي</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الجوال</span
-                        >
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >عدد الطلبات</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >الوقت المستغرق</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-
-                      <th class="py-2 pr-1 text-[#7E7E7E] font-medium">
-                        إجراءات
-                      </th>
+                    <th class="p-2">
+                      <input id="selectAll" type="checkbox"
+                        class="w-4 h-4  rounded appearance-none bg-[#1C375A29] border border-[#1C375A29]
+                        checked:bg-sky checked:border-sky cursor-pointer"
+                      />
+                    </th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">رقم الموزع</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">اسم الموزع</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">الاسم التجاري</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">المدينة</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">الحي</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">رقم الجوال</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">عدد الطلبات</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">الوقت المستغرق</th>
+                    <th class="py-2 lg:pr-0 pb-4 text-[#7E7E7E] font-medium">إجراءات</th>
                     </tr>
-                  </thead>
-
-                  <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
-                    <tr>
-                      <th class="p-2">
+                  </thead> 
+                  <tbody class="text-right [&>tr>td]:py-3 [&>tr>th]:py-3">
+                    <tr class="" >
+                      <th class="p-2 ">
                         <input
                           type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          class="w-4 h-4  rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">حسين شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
-                      <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-1 gap-3"
-                      >
+                      <td class="p-2 lg:pr-0">#78415</td>
+                      <td class="p-2 lg:pr-0 ">  شباط إسماعيل  </td>
+                      <td class="p-2 lg:pr-0 ">غاز الندى</td>
+                      <td class="p-2 lg:pr-0 ">غزة</td>
+                      <td class="p-2 lg:pr-0 ">الشجاعية</td>
+                      <td class="p-2 lg:pr-0 text-end" dir="ltr">972 59945678</td>
+                      <td class="p-2 lg:pr-0">15 طلب</td>
+                      <td class="p-2 lg:pr-0">4 ساعات</td>
+                      <td class="p-2 lg:pr-0 flex items-center justify-start gap-3">
                         <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
+                          <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5"/>
                         </button>
-
                         <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
+                          <img src="src/assets/img/icon-row/edit.png" class="min-w-5  w-5 h-5"/>
                         </button>
-
                         <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
+                          <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5"/>
                         </button>
                       </td>
                     </tr>
-                    <tr>
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2 pr-1">#001</td>
-                      <td class="p-2 pr-2">إسماعيل شباط</td>
-                      <td class="p-2 pr-1">غاز الندى</td>
-                      <td class="p-4 pr-1">
-                        <span class="px-2 py-1 rounded">غزة</span>
-                      </td>
-                      <td class="p-6 pr-2">الشجاعية</td>
-                      <td class="p-2 pr-1 text-end" dir="ltr">972 59945678</td>
-                      <td class="p-6 pr-1">15 طلب</td>
-                      <td class="p-6 pr-1">4 ساعات</td>
 
-                      <td
-                        class="p-2 flex items-center justify-start pr-1 gap-3"
-                      >
-                        <button onclick="viewOrder(this)">
-                          <img
-                            src="src/assets/img/icon-row/eye.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
 
-                        <button onclick="viewOrderAction(this, 'edit')">
-                          <img
-                            src="src/assets/img/icon-row/edit.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-
-                        <button onclick="viewOrderAction(this, 'delete')">
-                          <img
-                            src="src/assets/img/icon-row/trash.png"
-                            class="w-5 h-5"
-                          />
-                        </button>
-                      </td>
-                    </tr>
+ 
+ 
                   </tbody>
                 </table>
               </div>
 
               <!-- Pagination -->
-              <div
+              <!-- <div
                 class="flex items-center justify-between border-t border-bl pt-2"
               >
                 <div class="flex-1 flex justify-center mr-50">
@@ -1146,7 +1258,6 @@
                       <option value="50">50</option>
                     </select>
 
-                    <!-- سهم مخصص -->
                     <span
                       class="pointer-events-none absolute inset-y-0 right-6 flex items-center"
                     >
@@ -1164,13 +1275,20 @@
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </section>
         </div>
       </section>
     </main>
 
+    <!-- ✅ jQuery  -->
+    <script src="src/assets/js/jquery.min.js"></script>
+    <!-- ✅ JS الأساسي لـ DataTables -->
+    <script src="src/assets/js/dataTables.min.js"></script>
+    <!-- ✅ JS الخاص بإضافة Responsive -->
+    <script src="src/assets/js/dataTables.responsive.min.js"></script>
+    <!-- ✅ سكربت الصفحة أو الأكواد المخصصة -->
     <script src="src/assets/js/relodePage.js"></script>
 
     <!-- Script for viewing order details and showing loader before redirect -->
@@ -1225,65 +1343,65 @@
         row.insertAdjacentElement("afterend", loaderRow);
       }
     </script> -->
-<script>
-  function viewOrder(button) {
-    const row = button.closest("tr");
-    const orderId = row
-      .querySelector("td")
-      .textContent.replace("#", "")
-      .trim();
+    <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
 
-    // نجيب حالة الجدول من ال div الأب
-    const parentTableWrapper = button.closest("div[data-status]");
-    const tableStatus = parentTableWrapper.getAttribute("data-status");
+        // نجيب حالة الجدول من ال div الأب
+        const parentTableWrapper = button.closest("div[data-status]");
+        const tableStatus = parentTableWrapper.getAttribute("data-status");
 
-    // تحديد الصفحة بناءً على الحالة
-    let targetPage =
-      tableStatus === "approved"
-        ? "accreditedDetails.html"
-        : "distributorDetails.html";
+        // تحديد الصفحة بناءً على الحالة
+        let targetPage =
+          tableStatus === "approved"
+            ? "accreditedDetails.html"
+            : "distributorDetails.html";
 
-    showLoader(row);
+        showLoader(row);
 
-    setTimeout(() => {
-      window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(tableStatus)}`;
-    }, 1200);
-  }
+        setTimeout(() => {
+          window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(tableStatus)}`;
+        }, 1200);
+      }
 
-  function viewOrderAction(button, action) {
-    const row = button.closest("tr");
-    const orderId = row
-      .querySelector("td")
-      .textContent.replace("#", "")
-      .trim();
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
 
-    const parentTableWrapper = button.closest("div[data-status]");
-    const tableStatus = parentTableWrapper.getAttribute("data-status");
+        const parentTableWrapper = button.closest("div[data-status]");
+        const tableStatus = parentTableWrapper.getAttribute("data-status");
 
-    // نفس الفكرة للـ Action
-    let targetPage =
-      tableStatus === "approved"
-        ? "accreditedDetails.html"
-        : "distributorDetails.html";
+        // نفس الفكرة للـ Action
+        let targetPage =
+          tableStatus === "approved"
+            ? "accreditedDetails.html"
+            : "distributorDetails.html";
 
-    showLoader(row);
+        showLoader(row);
 
-    setTimeout(() => {
-      window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(
-        tableStatus
-      )}&action=${action}`;
-    }, 1200);
-  }
+        setTimeout(() => {
+          window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(
+            tableStatus
+          )}&action=${action}`;
+        }, 1200);
+      }
 
-  function showLoader(row) {
-    const oldLoader = document.querySelector(".loader-row");
-    if (oldLoader) oldLoader.remove();
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
 
-    const colCount = row.children.length;
+        const colCount = row.children.length;
 
-    const loaderRow = document.createElement("tr");
-    loaderRow.classList.add("loader-row");
-    loaderRow.innerHTML = `
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
       <td colspan="${colCount}" class="p-4 text-center">
         <div class="flex justify-center items-center">
           <div class="loader border-4 border-sky-400 border-t-transparent rounded-full w-6 h-6 animate-spin"></div>
@@ -1292,9 +1410,9 @@
       </td>
     `;
 
-    row.insertAdjacentElement("afterend", loaderRow);
-  }
-</script>
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script>
 
     <!-- Script for handling mobile sidebar open/close -->
     <script>
@@ -1370,7 +1488,7 @@
     </script>
 
     <!-- Script for pagination and rows per page handling -->
-    <script>
+    <!-- <script>
       const rowsPerPageSelect = document.getElementById("rowsPerPage");
       const tableRows = document.querySelectorAll("tbody tr");
       const pagination = document.getElementById("pagination");
@@ -1455,9 +1573,9 @@
       });
 
       renderTable();
-    </script>
+    </script> -->
 
-    <script>
+    <!-- <script>
       // ✅ نجيب بس الأزرار داخل .filter-buttons
 
       const filterButtons = document.querySelectorAll(".filter-buttons button");
@@ -1497,47 +1615,220 @@
           applyFilter(btn.textContent.trim());
         });
       });
+    </script> -->
+
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-buttons button");
+      const allSections = document.querySelectorAll("div[data-status]");
+
+      function applyFilter(filterType, clickedButton) {
+        // ✅ نحتفظ بالنص الأصلي للزر
+        const originalText = clickedButton.textContent;
+
+        // ✅ نضيف لودر صغير بجانب النص
+        clickedButton.innerHTML = `
+  <span class="loader-btn w-4 h-4 rounded-full  mx-2"></span>
+  <span class="btn-text">${originalText}</span>
+`;
+        clickedButton.style.display = "flex";
+        clickedButton.style.alignItems = "center"; // ✅ توسيط عمودي
+
+        setTimeout(() => {
+          // ✅ عرض الأقسام المناسبة
+          allSections.forEach((sec) => {
+            const status = sec.getAttribute("data-status");
+            if (
+              (filterType === "موزعين جدد" && status === "new") ||
+              (filterType === "الموزعين المعتمدين" && status === "approved")
+            ) {
+              sec.style.display = "";
+            } else {
+              sec.style.display = "none";
+            }
+          });
+
+          // ✅ تحديث شكل الأزرار
+          filterButtons.forEach((b) => {
+            if (b === clickedButton) {
+              b.classList.add("active-filter");
+              b.classList.remove("text-[#7E7E7E]", "font-medium");
+            } else {
+              b.classList.remove("active-filter");
+              b.classList.add("text-[#7E7E7E]", "font-medium");
+            }
+          });
+
+          // ✅ إعادة النص الأصلي بعد انتهاء الفلتر
+          clickedButton.innerHTML = originalText;
+        }, 1000); // مدة اللودر
+      }
+
+      applyFilter("موزعين جدد", filterButtons[0]);
+      // applyFilter("الموزعين المعتمدين", filterButtons[1]);
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          applyFilter(btn.textContent.trim(), btn);
+        });
+      });
     </script>
 
     <!-- pop up add -->
-<script>
-  const distributorModal = document.getElementById("distributorModal");
-  const openDistributorModal = document.getElementById("openDistributorModal");
-  const closeDistributorModal = document.getElementById("closeDistributorModal");
+    <script>
+      const distributorModal = document.getElementById("distributorModal");
+      const openDistributorModal = document.getElementById(
+        "openDistributorModal"
+      );
+      const closeDistributorModal = document.getElementById(
+        "closeDistributorModal"
+      );
 
-  openDistributorModal.addEventListener("click", () => {
-    distributorModal.classList.remove("hidden");
-    distributorModal.classList.add("flex");
-  });
+      openDistributorModal.addEventListener("click", () => {
+        distributorModal.classList.remove("hidden");
+        distributorModal.classList.add("flex");
+      });
 
-  closeDistributorModal.addEventListener("click", () => {
-    distributorModal.classList.remove("flex");
-    distributorModal.classList.add("hidden");
-  });
+      closeDistributorModal.addEventListener("click", () => {
+        distributorModal.classList.remove("flex");
+        distributorModal.classList.add("hidden");
+      });
 
-  distributorModal.addEventListener("click", (e) => {
-    if (e.target === distributorModal) {
-      distributorModal.classList.remove("flex");
-      distributorModal.classList.add("hidden");
-    }
-  });
-</script>
+      distributorModal.addEventListener("click", (e) => {
+        if (e.target === distributorModal) {
+          distributorModal.classList.remove("flex");
+          distributorModal.classList.add("hidden");
+        }
+      });
+    </script>
 
-  <script>
-  function previewFile(event, previewId) {
-    const file = event.target.files[0];
-    const preview = document.getElementById(previewId);
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        preview.src = reader.result;
-        preview.classList.remove("hidden");
-      };
-      reader.readAsDataURL(file);
-    }
-  }
-</script>
+    <script>
+      function previewFile(event, previewId) {
+        const file = event.target.files[0];
+        const preview = document.getElementById(previewId);
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            preview.src = reader.result;
+            preview.classList.remove("hidden");
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
 
-</body>
+      <script>
+        $(document).ready(function () {
+          const table = new DataTable("#myTableNew", {
+            responsive: {
+              details: {
+                type: "inline",
+                target: "tr",
+              },
+              breakpoints: [
+                { name: "desktop", width: Infinity },
+                { name: "laptop", width: 1200 },
+                { name: "tablet", width: 992 },
+                { name: "mobile", width: 768 },
+                { name: "smallmobile", width: 480 },
+              ],
+            },
+            info: false,
+            searching: false,
+            paging: true,
+            lengthChange: true,
 
+            columnDefs: [
+              { orderable: false, targets: [0, 1, 4, 5, 6, 7] },
+
+              { responsivePriority: 1, targets: 0 },
+              { responsivePriority: 2, targets: 1 },
+              { responsivePriority: 3, targets: 2 },
+              { responsivePriority: 4, targets: 7 },
+
+              {
+                targets: [ 3, 4, 5, 6],
+                className: "min-desktop",
+              },
+            ],
+
+            language: {
+              lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+            },
+
+            layout: {
+              topStart: null,
+              bottomStart: "paging",
+              bottomEnd: "pageLength",
+            },
+          });
+
+          setTimeout(() => {
+            const disabledCols = [0, 1, 4, 5, 6, 7];
+            disabledCols.forEach((i) => {
+              const th = $(`#myTableNew thead th:eq(${i})`);
+              th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+              th.find(".dt-column-order").remove();
+            });
+          }, 1);
+        });
+      </script>
+
+    <script>
+      $(document).ready(function () {
+        const table = new DataTable("#myTableApproved", {
+          responsive: {
+            details: {
+              type: "inline",
+              target: "tr",
+            },
+            breakpoints: [
+              { name: "desktop", width: Infinity },
+              { name: "laptop", width: 1200 },
+              { name: "tablet", width: 992 },
+              { name: "mobile", width: 768 },
+              { name: "smallmobile", width: 480 },
+            ],
+          },
+          info: false,
+          searching: false,
+          paging: true,
+          lengthChange: true,
+
+          columnDefs: [
+            { orderable: false, targets: [0, 1, 4, 5, 6, 9] },
+
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: 1 },
+            // { responsivePriority: 3, targets: 4 },
+            { responsivePriority: 4, targets: 2 },
+            { responsivePriority: 5, targets: 9 },
+
+            {
+              targets: [3, 4, 5, 6, 7, 8],
+              className: "min-desktop",
+            },
+          ],
+
+          language: {
+            lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+          },
+
+          layout: {
+            topStart: null,
+            bottomStart: "paging",
+            bottomEnd: "pageLength",
+          },
+        });
+
+        setTimeout(() => {
+          const disabledCols = [0, 1, 4, 5, 6, 9];
+          disabledCols.forEach((i) => {
+            const th = $(`#myTableApproved thead th:eq(${i})`);
+            th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+            th.find(".dt-column-order").remove();
+          });
+        }, 1);
+      });
+    </script>
+  </body>
 </html>

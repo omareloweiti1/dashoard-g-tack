@@ -29,10 +29,225 @@
           transform: rotate(360deg);
         }
       }
-      /* نصوص قابلة للنقر باللون الأزرق */
-      .complaint-text,
-      .complaint-images {
-        text-decoration: underline;
+      .dt-column-order::before,
+      .dt-column-order::after {
+        content: none !important;
+      }
+      .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      th.dt-ordering-asc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        margin-right: 10px;
+      }
+
+      th.dt-ordering-desc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up2.png") !important;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 14px 14px;
+        margin-right: 10px;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.current,
+      div.dt-container .dt-paging .dt-paging-button.current:hover {
+        color: white !important;
+        border: 0px !important;
+      }
+      .dt-paging-button.current {
+        background-color: var(--color-sky-500) !important;
+        width: 32px !important;
+        height: 32px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        border-radius: 4px !important;
+        color: white !important;
+      }
+      .div.dt-container .dt-paging .dt-paging-button {
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        cursor: pointer;
+        color: #868686 !important;
+        border: 0px !important;
+        border-radius: 8px !important;
+        background: transparent;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        box-sizing: border-box;
+        display: inline-block;
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        margin: 0.25rem;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        color: #686868 !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button:hover {
+        color: white !important;
+        border: 0px !important;
+        background-color: #8d8d8dc0;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, #8d8d8dc0),
+          color-stop(#8d8d8dc0)
+        ) !important;
+        background: -webkit-linear-gradient(
+          top,
+          #8d8d8dc0,
+          #8d8d8dc0
+        ) !important;
+        background: -moz-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: -ms-linear-gradient(top, #8d8d8dc0, #8d8d8dc0);
+        background: -o-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: linear-gradient(to bottom, #8d8d8dc0, #8d8d8dc0) !important;
+      }
+
+      .dt-paging-button.previous,
+      .dt-paging-button.first,
+      .dt-paging-button.next,
+      .dt-paging-button.last {
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        background-color: #e9e7e781 !important;
+        color: black !important;
+        margin: 0.25rem;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+      div.dt-container .dt-paging .dt-paging-button.disabled:active {
+        color: white !important;
+        border: 0px !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button.disabled {
+        color: black !important;
+        border: 0px !important;
+      }
+      .dt-length {
+        border: 2px solid var(--color-bl) !important;
+        border-radius: 8px !important;
+        padding: 5px 10px;
+        margin-right: 60px;
+      }
+      div.dt-container .dt-input {
+        border: 0px !important;
+        border-radius: 0px !important;
+        padding: 5px;
+      }
+
+      div.dt-container div.dt-layout-row {
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+        order: 2;
+        display: flex;
+        justify-content: center !important;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+        order: 1;
+        display: flex;
+        justify-content: flex-start !important;
+        margin-right: 380px !important;
+      }
+      @media (max-width: 1024px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-right: 300px !important;
+        }
+      }
+      @media (min-width: 1023px) and (max-width: 1024px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-right: 60px;
+        }
+      }
+      @media (max-width: 768px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-right: 100px !important;
+        }
+      }
+      @media (min-width: 767px) and (max-width: 768px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-right: 60px;
+        }
+      }
+      @media (max-width: 450px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 0px;
+          margin-right: 85px;
+        }
+      }
+      @media (max-width: 768px) {
+        .dt-column-order,
+        th.dt-ordering-asc .dt-column-order,
+        th.dt-ordering-desc .dt-column-order {
+          margin-right: 0px;
+        }
+      }
+
+      /* لودر صغير على الزر */
+      .loader-btn {
+        border: 2px solid var(--color-sky);
+        border-top-color: transparent;
+        border-radius: 50%;
+        width: 16px;  
+        height: 16px;  
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
   </head>
@@ -40,7 +255,7 @@
     <!-- Wrapper -->
     <div class="flex">
       <!-- Sidebar Desktop -->
-           <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
+           <aside class="hidden lg:flex max-w-[340px] bg-white border-l border-bl flex-col">
         <div
           class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
         >
@@ -594,10 +809,13 @@
       </header>
 
       <section class="bg-sky w-full h-full">
-        <div class="min-w-[1030px] max-w-[1056px]">
-          <section class="bg-sky w-full min-h-screen pt-6 pr-6">
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] labtop-s:min-w-[100%] labtop-s:lg:max-w-[1056px]
+          2xl:min-w-[1320px] 2xl:max-w-[1320px] labtop-xl:min-w-[1750px] labtop-xl:max-w-[1750px]"
+        >
+          <section class="bg-sky w-full min-h-screen lg:pt-6 lg:pr-6">
             <div
-              class="bg-white rounded-tr-lg rounded-br-lg shadow-md p-4 pl-0"
+              class="bg-white lg:rounded-tr-lg lg:rounded-br-lg shadow-md p-4 pl-0"
             >
               <div class="flex items-center justify-between mb-4">
                 <h2 class="text-lg font-bold flex items-center gap-2">
@@ -626,462 +844,111 @@
               </div>
 
               <!-- Buttons to filter complaints -->
-              <div class="flex items-center pb-4 justify-between mb-1">
-                <div class="flex items-center gap-8 filter-buttons-complaints">
-                  <button
-                    data-state="customercomplaints"
-                    class="active-filter-complaints px-10 py-1.5"
-                  >
-                    شكاوي الزباين
-                  </button>
-                  <button
-                    data-state="distributorcomplaints"
-                    class="text-gray-500 font-medium px-10 py-1.5"
-                  >
-                    شكاوي الموزعين
+              <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
+                <div class="flex items-center gap-8 filter-buttons">
+                  <button class="active-filter">شكاوي الزباين</button>
+                  <button class="text-[#7E7E7E] font-medium">
+                 شكاوي الموزعين
                   </button>
                 </div>
               </div>
 
-              <div
-                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
-              >
-                <div class="flex items-center gap-8 filter-buttons">
-                  <button class="active-filter">اليوم</button>
-                  <button class="text-[#7E7E7E] font-medium">
-                    هذا الأسبوع
-                  </button>
+              <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
+                <div class="flex items-center gap-8 filter-button">
+                  <button class="active-filter-sc">اليوم</button>
+                  <button class="text-[#7E7E7E] font-medium"> هذا الأسبوع</button>
                   <button class="text-[#7E7E7E] font-medium">هذا الشهر</button>
                   <button class="text-[#7E7E7E] font-medium">هذه السنة</button>
                   <button class="text-[#7E7E7E] font-medium">محدد</button>
                 </div>
               </div>
 
-              <div class="overflow-x-auto">
-                <table class="w-full text-right">
+
+              <div data-status="new" class="overflow-x-auto display">
+                <table id="myTableNew" class="w-full text-right">
                   <thead class="text-right">
                     <tr>
-                      <th class="p-2 pb-4">
-                        <input
-                          id="selectAll"
-                          type="checkbox"
-                          class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الشكوى</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >رقم الطلب</span
-                        >
-                        <img
-                          src="src/assets/img/icon-active/arrow-up.png"
-                          alt=""
-                          class="inline-block align-middle w-4 h-4 ml-1"
-                        />
-                      </th>
-                      <th class="py-2 pr-2 pb-4">
-                        <span
-                          class="inline-block align-middle text-[#7E7E7E] font-medium"
-                          >نص الشكوى</span
-                        >
-                      </th>
-                      <th class="py-2 pr-2 pb-4 text-[#7E7E7E] font-medium">
-                        الصورة المرفقة
-                      </th>
-
-                      <th class="py-2 pr-6 text-[#7E7E7E] font-medium">
-                        إجراءات
-                      </th>
+                    <th class="p-2">
+                      <input id="selectAll" type="checkbox"
+                        class="w-4 h-4  rounded appearance-none bg-[#1C375A29] border border-[#1C375A29]
+                        checked:bg-sky checked:border-sky cursor-pointer"
+                      />
+                    </th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] font-medium">رقم الشكوى</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">رقم الطلب</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] font-medium">نص الشكوى</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] font-medium">الصور المرفقة</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] min-w-[220px] font-medium">إجراءات</th>
                     </tr>
-                  </thead>
-                  <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
-                    <tr data-state="customercomplaints">
+                  </thead> 
+                  <tbody class="text-right  [&>tr>td]:py-3 [&>tr>th]:py-3">
+                    <tr>
                       <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        <input type="checkbox"
+                          class="w-4 h-4  rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
                         />
                       </th>
                       <td class="p-2">#2696440</td>
                       <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="distributorcomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="customercomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="distributorcomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="customercomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="distributorcomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="customercomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="distributorcomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="customercomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
-                      </td>
-                    </tr>
-                    <tr data-state="distributorcomplaints">
-                      <th class="p-2">
-                        <input
-                          type="checkbox"
-                          class="w-4 h-4 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                        />
-                      </th>
-                      <td class="p-2">#2696440</td>
-                      <td class="p-2">#59253</td>
-
-                      <!-- نص الشكوى -->
-                      <td class="p-2 text-sky cursor-pointer complaint-text">
-                        نص الشكوى
-                      </td>
-
-                      <!-- الصور -->
-                      <td class="p-2 text-sky cursor-pointer complaint-images">
-                        الصور
-                      </td>
-
-                      <td
-                        class="p-2 flex items-center justify-start pr-10 gap-3"
-                      >
-                        <button
-                          class="bg-rose/10 text-rose font-medium px-4 py-2 rounded-lg"
-                        >
-                          رفض الشكوى
-                        </button>
-                        <button
-                          class="bg-mint/10 text-mint font-medium px-4 py-2 rounded-lg"
-                        >
-                          تم الحل
-                        </button>
+                      <td class="p-2 text-sky cursor-pointer complaint-text"> نص الشكوى</td>
+                      <td class="p-2 text-sky cursor-pointer complaint-images"> الصور</td>
+                      <td class="p-2 flex items-center justify-start gap-3">
+                        <button class="bg-rose/10 text-rose font-medium min-w-[120px] px-2 py-2 rounded-lg">رفض الشكوى</button>
+                        <button class="bg-mint/10 text-mint font-medium min-w-[120px] px-2 py-2 rounded-lg">تم الحل</button>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <!-- pop up -->
-                <div
-                  id="complaintModal"
-                  class="hidden fixed inset-0 bg-black/40 items-center justify-center z-50"
-                >
-                  <div
-                    class="bg-white w-[674px] h-[389px] rounded-2xl shadow-lg relative p-6"
-                  >
-                    <div class="flex justify-center items-center mb-4">
-                      <h2 class="text-lg font-semibold text-black">
-                        نص الشكوى
-                      </h2>
-                    </div>
+              </div>
 
-                    <button
-                      id="closeComplaintModal"
-                      class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
-                    >
+              <div data-status="approved" class="overflow-x-auto display">
+                <table id="myTableApproved" class="w-full text-right">
+                  <thead class="text-right">
+                    <tr>
+                    <th class="p-2">
+                      <input id="selectAll" type="checkbox"
+                        class="w-4 h-4  rounded appearance-none bg-[#1C375A29] border border-[#1C375A29]
+                        checked:bg-sky checked:border-sky cursor-pointer"
+                      />
+                    </th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] font-medium">رقم الشكوى</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">رقم الطلب</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] font-medium">نص الشكوى</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] font-medium">الصور المرفقة</th>
+                    <th class="py-2 lg:pr-2 pb-4 text-[#7E7E7E] min-w-[220px] font-medium">إجراءات</th>
+                    </tr>
+                  </thead> 
+                  <tbody class="text-right  [&>tr>td]:py-3 [&>tr>th]:py-3">
+                    <tr>
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4  rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2">#cdcdcdcda</td>
+                      <td class="p-2">#fbgfgbfgb</td>
+                      <td class="p-2 text-sky cursor-pointer complaint-text"> نص الشكوى</td>
+                      <td class="p-2 text-sky cursor-pointer complaint-images"> الصور</td>
+                      <td class="p-2 flex items-center justify-start gap-3">
+                        <button class="bg-rose/10 text-rose font-medium min-w-[120px] px-2 py-2 rounded-lg">رفض الشكوى</button>
+                        <button class="bg-mint/10 text-mint font-medium min-w-[120px] px-2 py-2 rounded-lg">تم الحل</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <!-- pop up -->
+                <div id="complaintModal" class="hidden fixed inset-0 bg-black/40 items-center justify-center z-50">
+                  <div class="bg-white w-[674px] h-[389px] rounded-2xl shadow-lg relative p-6">
+                    <div class="flex justify-center items-center mb-4">
+                      <h2 class="text-lg font-semibold text-black"> نص الشكوى</h2>
+                    </div>
+                    <button id="closeComplaintModal" class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl">
                       ✕
                     </button>
-                    <div
-                      id="complaintContent"
-                      class="text-gray-700 leading-relaxed overflow-y-auto max-h-[300px] pr-2"
-                    >
+                    <div id="complaintContent" class="text-gray-700 leading-relaxed overflow-y-auto max-h-[300px] pr-2">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
                       توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
                       هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
@@ -1101,91 +968,29 @@
                   </div>
                 </div>
                 <!-- pop up -->
-                <div
-                  id="imagesModal"
-                  class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 overflow-auto"
-                >
-                  <div
-                    class="bg-white rounded-xl p-6 relative"
-                    style="width: 674px; height: 773px"
-                  >
-                    <h2 class="text-xl font-bold mb-4 text-center">
-                      الصور المرفقة
-                    </h2>
-                    <div
-                      id="complaintImagesContainer"
-                      class="grid grid-cols-2 gap-4"
-                    ></div>
-                    <button
-                      id="closeImagesModal"
-                      class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
-                    >
+                <div id="imagesModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 overflow-auto">
+                  <div class="bg-white rounded-xl p-6 relative" style="width: 674px; height: 773px">
+                    <h2 class="text-xl font-bold mb-4 text-center">الصور المرفقة</h2>
+                    <div id="complaintImagesContainer" class="grid grid-cols-2 gap-4"></div>
+                    <button id="closeImagesModal" class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl">
                       ✕
                     </button>
                   </div>
                 </div>
-              </div>
-
-              <!-- Pagination -->
-              <div
-                class="flex items-center justify-between border-t border-bl pt-2"
-              >
-                <div class="flex-1 flex justify-center mr-50">
-                  <div id="pagination" class="flex items-center">
-                    <!-- <button onclick="changePage(currentPage - 1)" class="px-2 py-1 rounded">&lt;</button>
-
-                    <button onclick="changePage(1)" class="px-3 py-1 rounded bg-sky text-white">
-                      1
-                    </button>
-                    <button onclick="changePage(2)"  class="px-3 py-1 rounded text-[#868686]">2</button>
-                    <button onclick="changePage(3)" class="px-3 py-1 rounded text-[#868686]">3</button> 
-                    <button onclick="changePage(4)" class="px-3 py-1 rounded text-[#868686]">4</button>
-                    <button onclick="changePage(5)" class="px-3 py-1 rounded text-[#868686]">5</button>
-                    <span class="px-2 text-[#868686]">...</span>
-                    <button onclick="changePage(10)" class="px-1 py-1 text-[#868686] rounded">10</button>
-                    <button onclick="changePage(currentPage + 1)" class="px-2 py-1  rounded">&gt;</button> -->
-                  </div>
-                </div>
-
-                <div
-                  class="flex border border-bl rounded-lg p-2 items-center ml-10"
-                >
-                  <span>عدد الصفوف في الصفحة:</span>
-                  <div class="relative inline-block">
-                    <select
-                      id="rowsPerPage"
-                      class="appearance-none rounded py-1 pr-1 pl-4 text-sky cursor-pointer"
-                    >
-                      <option value="10">10</option>
-                      <option value="20">20</option>
-                      <option value="50">50</option>
-                    </select>
-
-                    <!-- سهم مخصص -->
-                    <span
-                      class="pointer-events-none absolute inset-y-0 right-6 flex items-center"
-                    >
-                      <svg
-                        class="w-4 h-4 text-tep"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
+    
             </div>
           </section>
         </div>
       </section>
     </main>
-
+    
+    <!-- ✅ jQuery  -->
+    <script src="src/assets/js/jquery.min.js"></script>
+    <!-- ✅ JS الأساسي لـ DataTables -->
+    <script src="src/assets/js/dataTables.min.js"></script>
+    <!-- ✅ JS الخاص بإضافة Responsive -->
+    <script src="src/assets/js/dataTables.responsive.min.js"></script>
+    <!-- ✅ سكربت الصفحة أو الأكواد المخصصة -->
     <script src="src/assets/js/relodePage.js"></script>
 
     <!-- Script for viewing order details and showing loader before redirect -->
@@ -1360,96 +1165,10 @@
       });
     </script>
 
-    <!-- Script for pagination and rows per page handling -->
-    <script>
-      const rowsPerPageSelect = document.getElementById("rowsPerPage");
-      const tableRows = document.querySelectorAll("tbody tr");
-      const pagination = document.getElementById("pagination");
-
-      let currentPage = 1;
-      let rowsPerPage = parseInt(rowsPerPageSelect?.value || 10);
-
-      function renderTable() {
-        const start = (currentPage - 1) * rowsPerPage;
-        const end = start + rowsPerPage;
-
-        tableRows.forEach((row, index) => {
-          row.style.display = index >= start && index < end ? "" : "none";
-        });
-
-        renderPagination();
-      }
-
-      function renderPagination() {
-        const totalPages = Math.ceil(tableRows.length / rowsPerPage);
-        pagination.innerHTML = "";
-
-        const prevBtn = document.createElement("button");
-        prevBtn.textContent = "<";
-        prevBtn.disabled = currentPage === 1;
-        prevBtn.className = "px-2 py-1 rounded";
-        prevBtn.onclick = () => changePage(currentPage - 1);
-        pagination.appendChild(prevBtn);
-
-        const windowSize = 5;
-        let startPage = Math.max(1, currentPage - 2);
-        let endPage = Math.min(totalPages, startPage + windowSize - 1);
-
-        if (endPage - startPage < windowSize - 1) {
-          startPage = Math.max(1, endPage - windowSize + 1);
-        }
-
-        for (let i = startPage; i <= endPage; i++) {
-          const btn = document.createElement("button");
-          btn.textContent = i;
-          btn.className =
-            i === currentPage
-              ? "px-3 py-1 rounded bg-sky text-white"
-              : "px-3 py-1 rounded text-[#868686]";
-          btn.onclick = () => changePage(i);
-          pagination.appendChild(btn);
-        }
-
-        if (endPage < totalPages) {
-          const dots = document.createElement("span");
-          dots.textContent = "...";
-          dots.className = "px-2 text-[#868686]";
-          pagination.appendChild(dots);
-
-          const lastBtn = document.createElement("button");
-          lastBtn.textContent = totalPages;
-          lastBtn.className =
-            currentPage === totalPages
-              ? "px-3 py-1 rounded bg-sky text-white"
-              : "px-3 py-1 rounded text-[#868686]";
-          lastBtn.onclick = () => changePage(totalPages);
-          pagination.appendChild(lastBtn);
-        }
-
-        const nextBtn = document.createElement("button");
-        nextBtn.textContent = ">";
-        nextBtn.disabled = currentPage === totalPages;
-        nextBtn.className = "px-2 py-1 rounded";
-        nextBtn.onclick = () => changePage(currentPage + 1);
-        pagination.appendChild(nextBtn);
-      }
-
-      function changePage(page) {
-        currentPage = page;
-        renderTable();
-      }
-
-      rowsPerPageSelect?.addEventListener("change", () => {
-        rowsPerPage = parseInt(rowsPerPageSelect.value);
-        currentPage = 1;
-        renderTable();
-      });
-
-      renderTable();
-    </script>
+  
 
     <!-- <script>
-  const filterButtons = document.querySelectorAll(".filter-buttons button");
+  const filterButtons = document.querySelectorAll(".filter-button button");
   const statusSelect = document.querySelector(".active-stats");
   const tableRowsvc = document.querySelectorAll("tbody tr");
 
@@ -1532,36 +1251,7 @@
   applyFilters();
 </script> -->
 
-    <script>
-      const buttons = document.querySelectorAll(
-        ".filter-buttons-complaints button"
-      );
-      const rows = document.querySelectorAll("tbody tr");
-
-      function filterRows(state) {
-        rows.forEach((row) => {
-          if (row.getAttribute("data-state") === state) {
-            row.style.display = "";
-          } else {
-            row.style.display = "none";
-          }
-        });
-      }
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          buttons.forEach((b) =>
-            b.classList.remove("active-filter-complaints")
-          );
-          btn.classList.add("active-filter-complaints");
-
-          const state = btn.getAttribute("data-state");
-          filterRows(state);
-        });
-      });
-
-      filterRows("customercomplaints");
-    </script>
+  
 
     <script>
       const complaintModal = document.getElementById("complaintModal");
@@ -1632,5 +1322,189 @@
         }
       });
     </script>
+
+          <script>
+        $(document).ready(function () {
+          const table = new DataTable("#myTableNew", {
+            responsive: {
+              details: {
+                type: "inline",
+                target: "tr",
+              },
+              breakpoints: [
+                { name: "desktop", width: Infinity },
+                { name: "laptop", width: 1200 },
+                { name: "tablet", width: 992 },
+                { name: "mobile", width: 768 },
+                { name: "smallmobile", width: 480 },
+              ],
+            },
+            info: false,
+            searching: false,
+            paging: true,
+            lengthChange: true,
+
+            columnDefs: [
+              { orderable: false, targets: [0, 3, 4, 5] },
+
+              { responsivePriority: 1, targets: 0 },
+              { responsivePriority: 2, targets: 1 },
+              { responsivePriority: 3, targets: 5 },
+
+              {
+                targets: [ 2, 3, 4],
+                className: "min-desktop",
+              },
+            ],
+
+            language: {
+              lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+            },
+
+            layout: {
+              topStart: null,
+              bottomStart: "paging",
+              bottomEnd: "pageLength",
+            },
+          });
+
+          setTimeout(() => {
+            const disabledCols = [0, 3, 4, 5];
+            disabledCols.forEach((i) => {
+              const th = $(`#myTableNew thead th:eq(${i})`);
+              th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+              th.find(".dt-column-order").remove();
+            });
+          }, 1);
+        });
+      </script>
+
+    <script>
+      $(document).ready(function () {
+        const table = new DataTable("#myTableApproved", {
+          responsive: {
+            details: {
+              type: "inline",
+              target: "tr",
+            },
+            breakpoints: [
+              { name: "desktop", width: Infinity },
+              { name: "laptop", width: 1200 },
+              { name: "tablet", width: 992 },
+              { name: "mobile", width: 768 },
+              { name: "smallmobile", width: 480 },
+            ],
+          },
+          info: false,
+          searching: false,
+          paging: true,
+          lengthChange: true,
+
+         columnDefs: [
+              { orderable: false, targets: [0, 3, 4, 5] },
+
+              { responsivePriority: 1, targets: 0 },
+              { responsivePriority: 2, targets: 1 },
+              { responsivePriority: 3, targets: 5 },
+
+              {
+                targets: [ 2, 3, 4],
+                className: "min-desktop",
+              },
+            ],
+
+          language: {
+            lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+          },
+
+          layout: {
+            topStart: null,
+            bottomStart: "paging",
+            bottomEnd: "pageLength",
+          },
+        });
+
+        setTimeout(() => {
+          const disabledCols = [0, 3, 4, 5];
+          disabledCols.forEach((i) => {
+            const th = $(`#myTableApproved thead th:eq(${i})`);
+            th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+            th.find(".dt-column-order").remove();
+          });
+        }, 1);
+      });
+    </script>
+
+      <script>
+      const filterButtons = document.querySelectorAll(".filter-buttons button");
+      const allSections = document.querySelectorAll("div[data-status]");
+
+      function applyFilter(filterType, clickedButton) {
+        // ✅ نحتفظ بالنص الأصلي للزر
+        const originalText = clickedButton.textContent;
+
+        // ✅ نضيف لودر صغير بجانب النص
+        clickedButton.innerHTML = `
+  <span class="loader-btn w-4 h-4 rounded-full  mx-2"></span>
+  <span class="btn-text">${originalText}</span>
+`;
+        clickedButton.style.display = "flex";
+        clickedButton.style.alignItems = "center"; // ✅ توسيط عمودي
+
+        setTimeout(() => {
+          // ✅ عرض الأقسام المناسبة
+          allSections.forEach((sec) => {
+            const status = sec.getAttribute("data-status");
+            if (
+              (filterType === "شكاوي الزباين" && status === "new") ||
+              (filterType === "شكاوي الموزعين" && status === "approved")
+            ) {
+              sec.style.display = "";
+            } else {
+              sec.style.display = "none";
+            }
+          });
+
+          // ✅ تحديث شكل الأزرار
+          filterButtons.forEach((b) => {
+            if (b === clickedButton) {
+              b.classList.add("active-filter");
+              b.classList.remove("text-[#7E7E7E]", "font-medium");
+            } else {
+              b.classList.remove("active-filter");
+              b.classList.add("text-[#7E7E7E]", "font-medium");
+            }
+          });
+
+          // ✅ إعادة النص الأصلي بعد انتهاء الفلتر
+          clickedButton.innerHTML = originalText;
+        }, 1000); // مدة اللودر
+      }
+
+      applyFilter("شكاوي الزباين", filterButtons[0]);
+      // applyFilter("شكاوي الموزعين", filterButtons[1]);
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          applyFilter(btn.textContent.trim(), btn);
+        });
+      });
+    </script>
+
+        <script>
+      function previewFile(event, previewId) {
+        const file = event.target.files[0];
+        const preview = document.getElementById(previewId);
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            preview.src = reader.result;
+            preview.classList.remove("hidden");
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
   </body>
 </html>
+

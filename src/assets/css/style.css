@@ -103,6 +103,9 @@
   .active-filter {
     @apply text-sky bg-backNav px-2 py-1.5 rounded-lg font-semibold;
   }
+  .active-filter-sc {
+    @apply text-sky bg-backNav px-2 py-1.5 rounded-lg font-semibold;
+  }
   .mute-filter {
     @apply text-gray-600  px-2 py-1.5 rounded-lg font-semibold;
   }
@@ -120,5 +123,8 @@
   }
   .aside-nav2 {
     @apply text-textNav text-[22px] font-medium;
+  }
+  .minMax {
+    @apply min-w-[100px] max-w-[100px] lg:min-w-[150px] lg:max-w-[150px];
   }
 }
