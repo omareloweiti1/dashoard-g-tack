@@ -12,13 +12,10 @@
     <title>جيتك - الملف الشخصي</title>
   </head>
   <body class="bg-white min-h-screen flex">
-  <!-- Wrapper -->
-<div class="flex">
-      <!-- Sidebar Desktop -->
-      <aside class="hidden lg:flex w-96 bg-white border-l border-bl flex-col">
-        <div
-          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
-        >
+    <div class="flex">
+      <aside class="hidden xl:flex w-[340px] bg-white border-l border-bl flex-col">
+        
+        <div class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl">
           <a href="overview.html"
             ><img
               src="src/assets/img/logo.png"
@@ -133,10 +130,222 @@
     <main class="flex-1 min-h-screen">
       <!-- Header -->
       <header
-        class="flex items-center justify-between h-[135px] border-b border-bl px-6 max-w-[990px] min-w-[990px]"
+        class="flex items-center justify-between h-[135px] border-b border-bl px-6 lg:max-w-[990px]
+         lg:min-w-[990px] labtop-s:min-w-[1010px] labtop-s:max-w-[1010px] labtop-m:min-w-[1085px] labtop-m:max-w-[1085px]  xl:min-w-[1140px] labtop-xl:min-w-[1570px] desktop-2xl:min-w-[2200px]"
       >
+              <div class="flex-1 block xl:hidden">
+          <!-- Top bar mobile -->
+
+          <div
+            class="xl:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl"
+          >
+            <!-- <div class="flex items-center justify-between  w-[100px] border-b border-bl">
+                    <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class=" w-[100px] "/></a>
+                  </div> -->
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <aside
+            id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 xl:hidden z-50"
+          >
+            <div
+              class="flex items-center justify-between p-4 border-b border-bl"
+            >
+              <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+
+              <button id="close-btn" class="text-gray-700">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Search -->
+            <div class="block lg:hideen p-2 relative lg:w-[410px] h-[55px]">
+              <span class="absolute right-3 inset-y-0 flex items-center">
+                <img
+                  src="src/assets/img/search-normal.png"
+                  class="w-5 h-5"
+                  alt="بحث"
+                />
+              </span>
+              <input
+                type="text"
+                placeholder="ابحث عن طلب، موزع، زبون..."
+                class="w-full pr-10 pl-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+              />
+            </div>
+
+            <div class="relative">
+              <button
+                id="notifBtn"
+                class="relative flex items-center w-[90%] mx-auto justify-center bg-sky h-14 xl:w-14 rounded-lg focus:outline-none"
+              >
+                <img
+                  src="src/assets/img/icon/notification.png"
+                  class="w-6 h-6"
+                  alt="تنبيهات"
+                />
+              </button>
+
+              <div
+                id="notifDropdown"
+                class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+              >
+                <ul class="py-2">
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span
+                      class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                    ></span>
+                  </li>
+                </ul>
+
+                <div
+                  class="text-center flex items-center justify-center py-2 border-t border-bl"
+                >
+                  <a
+                    href="notifications.ar.html"
+                    class="text-sky font-bold hover:underline"
+                    >مشاهدة جميع الإشعارات</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <nav class="space-y-3 font-semibold p-4 pr-10">
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-active/chart-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >نظرة عامة
+              </a>
+
+              <a
+                href="requests.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الطلبات
+              </a>
+
+              <a
+                href="distributors.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الموزعين
+              </a>
+
+              <a
+                href="customer.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الزبائن
+              </a>
+
+              <a
+                href="map.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الخريطة
+              </a>
+
+              <a
+                href="reports.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/trend-down.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >التقارير
+              </a>
+
+              <a
+                href="usersPermissions.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >المستخدمين والصلاحيات
+              </a>
+
+              <a
+                href="complaints.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الشكاوي
+              </a>
+            </nav>
+          </aside>
+        </div>
         <!-- Search -->
-        <div class="relative w-[410px] h-[55px]">
+        <div class="hidden lg:block relative w-[410px] h-[55px]">
           <span class="absolute right-3 inset-y-0 flex items-center">
             <img
               src="src/assets/img/search-normal.png"
@@ -156,8 +365,7 @@
         <!-- User Section -->
         <div class="relative flex items-center gap-4">
           <!-- Notification Icon -->
-          <!-- غلّف زر الجرس والدروب داون داخل div relative -->
-          <div class="relative">
+          <div class="relative hidden xl:block">
             <!-- Notification Icon -->
             <button
               id="notifBtn"
@@ -170,7 +378,6 @@
               />
             </button>
 
-            <!-- دروب داون الإشعارات -->
             <div
               id="notifDropdown"
               class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
@@ -219,6 +426,7 @@
                   ></span>
                 </li>
               </ul>
+
               <div
                 class="text-center flex items-center justify-center py-2 border-t border-bl"
               >
@@ -321,8 +529,11 @@
       </header>
 
       <section class="bg-sky w-full h-full">
-        <div class="pt-5 pr-5">
-          <section class="bg-white rounded-xl shadow p-6 space-y-10">
+          <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1000px] lg:max-w-[1000px] labtop-s:min-w-[1010px] labtop-s:max-w-[1010px]
+          2xl:min-w-[1120px] 2xl:max-w-[1120px] labtop-m:min-w-[1085px] labtop-m:max-w-[1085px] labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2200px] desktop-2xl:max-w-[2200px] lg:pr-6 lg:pt-6 "
+        >
+          <section class="bg-white lg:rounded-xl shadow p-2 mobile-m:p-6 space-y-10">
             <!-- العنوان -->
             <div class="flex items-center justify-between border-b pb-4">
               <h2 class="text-2xl font-bold">إعدادات التطبيق</h2>
@@ -332,43 +543,27 @@
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <h3 class="text-xl font-semibold">الأسطوانات</h3>
-                <button
-                  class="flex items-center gap-2 bg-sky/20 text-sky px-4 py-2 rounded-lg"
-                >
-                  <img
-                    src="src/assets/img/setting/add-square.png"
-                    alt="إضافة"
-                    class="w-5 h-5"
-                  />
+                <button class="flex items-center gap-2 bg-sky/20 text-sky px-4 py-2 rounded-lg">
+                  <img src="src/assets/img/setting/add-square.png" alt="إضافة" class="w-5 h-5"/>
                   <span>إضافة اسطوانة جديدة</span>
                 </button>
               </div>
 
               <!-- شبكة الكروت -->
-              <div
-                class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
-              >
+              <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                 <!-- كرت اسطوانة -->
                 <div class="border rounded-lg p-4 shadow-sm flex flex-col">
                   <!-- المحتوى العلوي -->
                   <div class="flex items-center mb-4">
-                    <img
-                      src="src/assets/img/setting/image 1.png"
-                      alt="اسطوانة"
-                      class="w-[104px] h-[116px] ml-4"
-                    />
+                    <img src="src/assets/img/setting/image 1.png" alt="اسطوانة" class="w-[104px] h-[116px] ml-4"/>
                     <div class="flex-1">
                       <h4 class="font-semibold">اسطوانة 12 كغ</h4>
                       <p class="text-gray-500 text-sm">السعر: 70 شيكل</p>
                     </div>
                     <label class="inline-flex items-center cursor-pointer">
                       <input type="checkbox" checked class="sr-only peer" />
-                      <div
-                        class="w-11 h-6 bg-gray-200 peer-checked:bg-sky rounded-full relative"
-                      >
-                        <div
-                          class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5"
-                        ></div>
+                      <div class="w-11 h-6 bg-gray-200 peer-checked:bg-sky rounded-full relative">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5"></div>
                       </div>
                     </label>
                   </div>
@@ -380,7 +575,7 @@
                 </div>
 
                 <!-- كرت اسطوانة -->
-                <div class="border rounded-lg p-4 shadow-sm flex flex-col ">
+                <div class="border rounded-lg p-4 shadow-sm flex flex-col">
                   <!-- المحتوى العلوي -->
                   <div class="flex items-center mb-4">
                     <img
@@ -411,7 +606,7 @@
                 </div>
 
                 <!-- كرت اسطوانة -->
-                <div class="border rounded-lg p-4 shadow-sm flex flex-col ">
+                <div class="border rounded-lg p-4 shadow-sm flex flex-col">
                   <!-- المحتوى العلوي -->
                   <div class="flex items-center mb-4">
                     <img
@@ -436,13 +631,13 @@
                   </div>
 
                   <!-- زر تعديل -->
-                  <button class="w-full bg-sky text-white py-2 rounded-lg ">
+                  <button class="w-full bg-sky text-white py-2 rounded-lg">
                     تعديل
                   </button>
                 </div>
 
                 <!-- كرت اسطوانة -->
-                <div class="border rounded-lg p-4 shadow-sm flex flex-col ">
+                <div class="border rounded-lg p-4 shadow-sm flex flex-col">
                   <!-- المحتوى العلوي -->
                   <div class="flex items-center mb-4">
                     <img
@@ -467,19 +662,20 @@
                   </div>
 
                   <!-- زر تعديل -->
-                  <button class="w-full bg-sky text-white py-2 rounded-lg ">
+                  <button class="w-full bg-sky text-white py-2 rounded-lg">
                     تعديل
                   </button>
                 </div>
+
               </div>
             </div>
 
             <!-- المدن -->
-            <div class="rounded-lg p-6">
+            <div class="rounded-lg p-2 mobile-m:p-6">
               <h3 class="text-2xl font-extrabold mb-6">المدن</h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <button
-                  class="border border-sky text-start ps-10 text-lg rounded-xl py-5:bg-sky hover:text-white transition"
+                  class="border border-sky text-start ps-10 text-lg rounded-xl py-5 hover:bg-sky hover:text-white transition"
                 >
                   مدينة غزة
                 </button>
@@ -511,34 +707,32 @@
               <h3 class="text-xl font-semibold">
                 الشاشات الترحيبية لتطبيق الزبون
               </h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-6">
-                <!-- كارد إضافة شاشة جديدة -->
-
-                <!-- باقي الصور -->
-                <div class="border border-sky rounded-xl shadow-sm text-center">
+              <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-6">
+                <div class="border border-sky rounded-2xl desktop-2xl:rounded-3xl  shadow-sm text-center">
                   <img
                     src="src/assets/img/setting/image 5-1.png"
-                    class="mx-auto w-32 h-[280px]"
+                    class="mx-auto w-[179px] h-[320px]  md:w-[162px] lg:w-[166px] md:h-[340px] desktop-2xl:w-[283px] desktop-2xl:h-[520px] labtop-xl:w-[195px] labtop-xl:h-[420px] "
                     alt=""
                   />
                 </div>
-                <div class="border border-sky rounded-xl shadow-sm text-center">
+                <div class="border border-sky rounded-2xl desktop-2xl:rounded-3xl shadow-sm text-center">
                   <img
                     src="src/assets/img/setting/image 6-1.png"
-                    class="mx-auto w-32 h-[280px]"
+                    class="mx-auto w-[179px] h-[320px] md:w-[162px] lg:w-[166px] md:h-[340px] desktop-2xl:w-[283px] desktop-2xl:h-[520px]  labtop-xl:w-[195px] labtop-xl:h-[420px]"
                     alt=""
                   />
                 </div>
-                <div class="border border-sky rounded-xl shadow-sm text-center">
+                <div class="border border-sky rounded-2xl desktop-2xl:rounded-3xl shadow-sm text-center">
                   <img
                     src="src/assets/img/setting/image 7-1.png"
-                    class="mx-auto w-32 h-[280px]"
+                    class="mx-auto w-[179px] h-[320px] md:w-[162px] lg:w-[166px] md:h-[340px] desktop-2xl:w-[283px] desktop-2xl:h-[520px] labtop-xl:w-[195px] labtop-xl:h-[420px]"
                     alt=""
                   />
                 </div>
 
                 <div
-                  class="border-2 border-dashed border-sky-500 rounded-xl shadow-sm flex flex-col items-center justify-center h-[280px] cursor-pointer"
+                  class="border-2 border-dashed border-sky-500 rounded-2xl desktop-2xl:rounded-3xl shadow-sm flex flex-col items-center 
+                  justify-center desktop-2xl:h-[520px] labtop-xl:h-[420px] md:h-[340px] h-[320px]  cursor-pointer"
                 >
                   <div class="">
                     <img
@@ -551,6 +745,7 @@
                     إضافة شاشة جديدة
                   </p>
                 </div>
+                
               </div>
             </div>
 
@@ -559,31 +754,32 @@
               <h3 class="text-xl font-semibold">
                 الشاشات الترحيبية لتطبيق الموزع
               </h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-6">
-                <div class="border border-sky rounded-xl shadow-sm text-center">
+              <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-6">
+                <div class="border border-sky rounded-2xl desktop-2xl:rounded-3xl shadow-sm text-center">
                   <img
                     src="src/assets/img/setting/image 5-1.png"
-                    class="mx-auto w-32 h-[280px]"
+                    class="mx-auto w-[179px] h-[320px] md:w-[162px] lg:w-[166px] md:h-[340px] desktop-2xl:w-[283px] desktop-2xl:h-[520px] labtop-xl:w-[195px] labtop-xl:h-[420px] "
                     alt=""
                   />
                 </div>
-                <div class="border border-sky rounded-xl shadow-sm text-center">
+                <div class="border border-sky rounded-2xl desktop-2xl:rounded-3xl shadow-sm text-center">
                   <img
                     src="src/assets/img/setting/image 6-1.png"
-                    class="mx-auto w-32 h-[280px]"
+                    class="mx-auto w-[179px] h-[320px] md:w-[162px] lg:w-[166px] md:h-[340px] desktop-2xl:w-[283px] desktop-2xl:h-[520px] labtop-xl:w-[195px] labtop-xl:h-[420px] "
                     alt=""
                   />
                 </div>
-                <div class="border border-sky rounded-xl shadow-sm text-center">
+                <div class="border border-sky rounded-2xl desktop-2xl:rounded-3xl shadow-sm text-center">
                   <img
                     src="src/assets/img/setting/image 7-1.png"
-                    class="mx-auto w-32 h-[280px]"
+                    class="mx-auto w-[179px] h-[320px] md:w-[162px] lg:w-[166px] md:h-[340px] desktop-2xl:w-[283px] desktop-2xl:h-[520px] labtop-xl:w-[195px] labtop-xl:h-[420px] "
                     alt=""
                   />
                 </div>
 
                 <div
-                  class="border-2 border-dashed border-sky-500 rounded-xl shadow-sm flex flex-col items-center justify-center h-[280px] cursor-pointer"
+                  class="border-2 border-dashed border-sky-500 rounded-2xl desktop-2xl:rounded-3xl  shadow-sm flex flex-col items-center justify-center md:h-[340px] 
+                   desktop-2xl:h-[520px] labtop-xl:h-[420px] h-[320px] cursor-pointer"
                 >
                   <div class="">
                     <img
@@ -653,14 +849,22 @@
             <!-- الشروط وسياسة الخصوصية -->
             <div class="space-y-2 border-b border-bordlight pb-4 mb-0">
               <div class="flex items-center justify-start">
-                <h3 class="text-xl font-semibold"> شروط الاستخدام وسياسة الخصوصية</h3>
-               
-                <button onclick="openPopup('privacyPopup')" class="p-2 rounded hover:bg-gray-100">
-                  <img src="src/assets/img/setting/edit.png" alt="تعديل" class="w-5 h-5"/>
-                </button>
+                <h3 class="text-xl font-semibold">
+                  شروط الاستخدام وسياسة الخصوصية
+                </h3>
 
-            </div>
-            <p class="text-gray-600 text-sm leading-6">
+                <button
+                  onclick="openPopup('privacyPopup')"
+                  class="p-2 rounded hover:bg-gray-100"
+                >
+                  <img
+                    src="src/assets/img/setting/edit.png"
+                    alt="تعديل"
+                    class="w-5 h-5"
+                  />
+                </button>
+              </div>
+              <p class="text-gray-600 text-sm leading-6">
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
                 هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
                 العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
@@ -674,8 +878,7 @@
                 يتحدث عنه التصميم فيظهر بشكل لا يليق.هذا النص يمكن أن يتم تركيبه
                 على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير
                 منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
-            </p>
-
+              </p>
             </div>
 
             <!--     إرسال إشعار لتحديث بيانات الموزعين -->
