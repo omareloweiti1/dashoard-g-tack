@@ -2444,6 +2444,11 @@
       max-width: 626px;
     }
   }
+  .lg\:max-w-\[927px\] {
+    @media (width >= 64rem) {
+      max-width: 927px;
+    }
+  }
   .lg\:max-w-\[975px\] {
     @media (width >= 64rem) {
       max-width: 975px;
@@ -2492,6 +2497,11 @@
   .lg\:min-w-\[626px\] {
     @media (width >= 64rem) {
       min-width: 626px;
+    }
+  }
+  .lg\:min-w-\[927px\] {
+    @media (width >= 64rem) {
+      min-width: 927px;
     }
   }
   .lg\:min-w-\[975px\] {
@@ -2658,6 +2668,21 @@
   .xl\:grid-cols-7 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+  }
+  .xl\:rounded-lg {
+    @media (width >= 80rem) {
+      border-radius: var(--radius-lg);
+    }
+  }
+  .xl\:rounded-tr-lg {
+    @media (width >= 80rem) {
+      border-top-right-radius: var(--radius-lg);
+    }
+  }
+  .xl\:rounded-br-lg {
+    @media (width >= 80rem) {
+      border-bottom-right-radius: var(--radius-lg);
     }
   }
   .xl\:pt-6 {
@@ -2963,6 +2988,16 @@
       max-width: 1220px;
     }
   }
+  .\32 xl\:max-w-\[1230px\] {
+    @media (width >= 96rem) {
+      max-width: 1230px;
+    }
+  }
+  .\32 xl\:max-w-\[1240px\] {
+    @media (width >= 96rem) {
+      max-width: 1240px;
+    }
+  }
   .\32 xl\:max-w-\[1320px\] {
     @media (width >= 96rem) {
       max-width: 1320px;
@@ -3013,6 +3048,11 @@
       min-width: 1220px;
     }
   }
+  .\32 xl\:min-w-\[1230px\] {
+    @media (width >= 96rem) {
+      min-width: 1230px;
+    }
+  }
   .\32 xl\:min-w-\[1320px\] {
     @media (width >= 96rem) {
       min-width: 1320px;
@@ -3031,6 +3071,11 @@
   .labtop-xl\:w-\[195px\] {
     @media (width >= 120rem) {
       width: 195px;
+    }
+  }
+  .labtop-xl\:max-w-\[1465px\] {
+    @media (width >= 120rem) {
+      max-width: 1465px;
     }
   }
   .labtop-xl\:max-w-\[1500px\] {
@@ -3073,6 +3118,21 @@
       max-width: 1600px;
     }
   }
+  .labtop-xl\:max-w-\[1610px\] {
+    @media (width >= 120rem) {
+      max-width: 1610px;
+    }
+  }
+  .labtop-xl\:max-w-\[1615px\] {
+    @media (width >= 120rem) {
+      max-width: 1615px;
+    }
+  }
+  .labtop-xl\:max-w-\[1620px\] {
+    @media (width >= 120rem) {
+      max-width: 1620px;
+    }
+  }
   .labtop-xl\:max-w-\[1650px\] {
     @media (width >= 120rem) {
       max-width: 1650px;
@@ -3106,6 +3166,11 @@
   .labtop-xl\:min-w-\[1440px\] {
     @media (width >= 120rem) {
       min-width: 1440px;
+    }
+  }
+  .labtop-xl\:min-w-\[1465px\] {
+    @media (width >= 120rem) {
+      min-width: 1465px;
     }
   }
   .labtop-xl\:min-w-\[1540px\] {
@@ -3146,6 +3211,21 @@
   .labtop-xl\:min-w-\[1600px\] {
     @media (width >= 120rem) {
       min-width: 1600px;
+    }
+  }
+  .labtop-xl\:min-w-\[1610px\] {
+    @media (width >= 120rem) {
+      min-width: 1610px;
+    }
+  }
+  .labtop-xl\:min-w-\[1615px\] {
+    @media (width >= 120rem) {
+      min-width: 1615px;
+    }
+  }
+  .labtop-xl\:min-w-\[1620px\] {
+    @media (width >= 120rem) {
+      min-width: 1620px;
     }
   }
   .labtop-xl\:min-w-\[1650px\] {
@@ -3203,6 +3283,11 @@
       max-width: 1650px;
     }
   }
+  .desktop-2xl\:max-w-\[2005px\] {
+    @media (width >= 160rem) {
+      max-width: 2005px;
+    }
+  }
   .desktop-2xl\:max-w-\[2180px\] {
     @media (width >= 160rem) {
       max-width: 2180px;
@@ -3223,9 +3308,19 @@
       max-width: 2250px;
     }
   }
+  .desktop-2xl\:max-w-\[2255px\] {
+    @media (width >= 160rem) {
+      max-width: 2255px;
+    }
+  }
   .desktop-2xl\:max-w-\[2300px\] {
     @media (width >= 160rem) {
       max-width: 2300px;
+    }
+  }
+  .desktop-2xl\:max-w-\[22550px\] {
+    @media (width >= 160rem) {
+      max-width: 22550px;
     }
   }
   .desktop-2xl\:min-w-\[600px\] {
@@ -3253,6 +3348,11 @@
       min-width: 1890px;
     }
   }
+  .desktop-2xl\:min-w-\[2005px\] {
+    @media (width >= 160rem) {
+      min-width: 2005px;
+    }
+  }
   .desktop-2xl\:min-w-\[2180px\] {
     @media (width >= 160rem) {
       min-width: 2180px;
@@ -3273,9 +3373,19 @@
       min-width: 2250px;
     }
   }
+  .desktop-2xl\:min-w-\[2255px\] {
+    @media (width >= 160rem) {
+      min-width: 2255px;
+    }
+  }
   .desktop-2xl\:min-w-\[2300px\] {
     @media (width >= 160rem) {
       min-width: 2300px;
+    }
+  }
+  .desktop-2xl\:min-w-\[22550px\] {
+    @media (width >= 160rem) {
+      min-width: 22550px;
     }
   }
   .desktop-2xl\:rounded-3xl {
