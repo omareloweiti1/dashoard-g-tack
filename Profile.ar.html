@@ -15,7 +15,7 @@
   <!-- Wrapper -->
 <div class="flex">
       <!-- Sidebar Desktop -->
-      <aside class="hidden lg:flex w-[340px] bg-white border-l border-bl flex-col">
+      <aside class="hidden xl:flex w-[340px] bg-white border-l border-bl flex-col">
         <div
           class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
         >
@@ -133,10 +133,221 @@
     <main class="flex-1 min-h-screen">
       <!-- Header -->
       <header
-        class="flex items-center justify-between h-[135px] border-b border-bl px-6 max-w-[990px] min-w-[990px]"
+        class="flex items-center justify-between h-[135px] border-b border-bl px-6 lg:max-w-[990px]
+        lg:min-w-[990px] labtop-s:min-w-[1010px] labtop-s:max-w-[1010px] labtop-m:min-w-[1085px]
+        labtop-m:max-w-[1085px]  xl:min-w-[1140px] labtop-xl:min-w-[1560px] desktop-2xl:min-w-[2200px]"
       >
+          <div class="flex-1 block xl:hidden">
+          <!-- Top bar mobile -->
+
+          <div class="xl:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl">
+            <!-- <div class="flex items-center justify-between  w-[100px] border-b border-bl">
+                    <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class=" w-[100px] "/></a>
+                  </div> -->
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <aside
+            id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 xl:hidden z-50"
+          >
+            <div
+              class="flex items-center justify-between p-4 border-b border-bl"
+            >
+              <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" />
+
+              <button id="close-btn" class="text-gray-700">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Search -->
+            <div class="block lg:hideen p-2 relative lg:w-[410px] h-[55px]">
+              <span class="absolute right-3 inset-y-0 flex items-center">
+                <img
+                  src="src/assets/img/search-normal.png"
+                  class="w-5 h-5"
+                  alt="بحث"
+                />
+              </span>
+              <input
+                type="text"
+                placeholder="ابحث عن طلب، موزع، زبون..."
+                class="w-full pr-10 pl-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+              />
+            </div>
+
+            <div class="relative">
+              <button
+                id="notifBtn"
+                class="relative flex items-center w-[90%] mx-auto justify-center bg-sky h-14 xl:w-14 rounded-lg focus:outline-none"
+              >
+                <img
+                  src="src/assets/img/icon/notification.png"
+                  class="w-6 h-6"
+                  alt="تنبيهات"
+                />
+              </button>
+
+              <div
+                id="notifDropdown"
+                class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+              >
+                <ul class="py-2">
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>قام علي حجي بطلب تعبئة جديد</span>
+                    <span
+                      class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                    ></span>
+                  </li>
+                </ul>
+
+                <div
+                  class="text-center flex items-center justify-center py-2 border-t border-bl"
+                >
+                  <a
+                    href="notifications.ar.html"
+                    class="text-sky font-bold hover:underline"
+                    >مشاهدة جميع الإشعارات</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <nav class="space-y-3 font-semibold p-4 pr-10">
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-active/chart-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >نظرة عامة
+              </a>
+
+              <a
+                href="requests.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الطلبات
+              </a>
+
+              <a
+                href="distributors.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الموزعين
+              </a>
+
+              <a
+                href="customer.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الزبائن
+              </a>
+
+              <a
+                href="map.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الخريطة
+              </a>
+
+              <a
+                href="reports.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/trend-down.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >التقارير
+              </a>
+
+              <a
+                href="usersPermissions.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >المستخدمين والصلاحيات
+              </a>
+
+              <a
+                href="complaints.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span
+                  ><img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 mr-6"
+                    alt="" /></span
+                >الشكاوي
+              </a>
+            </nav>
+          </aside>
+        </div>
         <!-- Search -->
-        <div class="relative w-[410px] h-[55px]">
+        <div class="hidden lg:block relative w-[410px] h-[55px]">
           <span class="absolute right-3 inset-y-0 flex items-center">
             <img
               src="src/assets/img/search-normal.png"
@@ -156,8 +367,7 @@
         <!-- User Section -->
         <div class="relative flex items-center gap-4">
           <!-- Notification Icon -->
-          <!-- غلّف زر الجرس والدروب داون داخل div relative -->
-          <div class="relative">
+          <div class="relative hidden xl:block">
             <!-- Notification Icon -->
             <button
               id="notifBtn"
@@ -170,7 +380,6 @@
               />
             </button>
 
-            <!-- دروب داون الإشعارات -->
             <div
               id="notifDropdown"
               class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
@@ -219,6 +428,7 @@
                   ></span>
                 </li>
               </ul>
+
               <div
                 class="text-center flex items-center justify-center py-2 border-t border-bl"
               >
@@ -321,10 +531,17 @@
       </header>
 
       <section class="bg-sky w-full h-full">
-        <div class="pt-5 pr-5">
-         
-            <!-- Main Profile Content -->
-          <section class="bg-white p-6 max-w-[990px] min-w-[990px] mx-auto">
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1000px] lg:max-w-[1000px] labtop-s:min-w-[850px] labtop-s:max-w-[850px]
+          2xl:min-w-[1120px] 2xl:max-w-[1120px] labtop-m:min-w-[1085px] labtop-m:max-w-[1085px] 
+          labtop-xl:min-w-[1540px] labtop-xl:max-w-[1540px] desktop-2xl:min-w-[2200px] desktop-2xl:max-w-[2200px] xl:pr-6 xl:pt-6 "
+        >
+        
+          <!-- Main Profile Content -->
+          <section class="bg-white p-6 mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1024px]
+          lg:max-w-[1024px] labtop-s:min-w-[985px] labtop-s:max-w-[985px]
+          2xl:min-w-[1155px] 2xl:max-w-[1155px] labtop-m:min-w-[1060px] labtop-m:max-w-[1060px] 
+          labtop-xl:min-w-[1540px] labtop-xl:max-w-[1540px] desktop-2xl:min-w-[2180px] desktop-2xl:max-w-[2180px]">
             <div class="rounded-lg p-6">
               <h2 class="text-2xl font-extrabold mb-6">البيانات الشخصية</h2>
               <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-semibold">
