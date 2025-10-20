@@ -12,19 +12,13 @@
     <title>جيتك - تفاصيل الطلب</title>
   </head>
   <body class="bg-white min-h-screen flex">
-  <!-- Wrapper -->
-<div class="flex">
+    <!-- Wrapper -->
+    <div class="flex">
       <!-- Sidebar Desktop -->
-      <aside class="hidden lg:flex w-96 bg-white -l -bl flex-col">
-        <div
-          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
-        >
-          <a href="overview.html"
-            ><img
-              src="src/assets/img/logo.png"
-              alt="Logo"
-              class="mr-20 w-[152px] h-[67px]"
-          /></a>
+      <aside class="hidden xl:flex w-[340px] bg-white border-l border-bl  flex-col">
+        
+        <div class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl">
+          <a href="overview.html"><img src="src/assets/img/logo.png" alt="Logo" class="mr-20 w-[152px] h-[67px]"/></a>
         </div>
 
             <nav class="space-y-3 font-semibold p-4 pr-10">
@@ -124,17 +118,17 @@
                 >الشكاوي
               </a>
             </nav>
-      </aside>
 
-      <!-- <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" /> -->
+      </aside>
     </div>
 
     <!-- Main -->
     <main class="flex-1 min-h-screen">
-    <!-- Header -->
-      <header
-        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 lg:max-w-[990px] lg:min-w-[990px]"
-      >
+      <!-- Header -->
+      <header class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 
+      lg:px-6 min-w-[100%] max-w-[100%] lg:min-w-[1024px] lg:max-w-[1024px] labtop-s:min-w-[950px] labtop-s:lg:max-w-[950px]
+          2xl:min-w-[1155px] 2xl:max-w-[1155px] labtop-m:lg:min-w-[1060px] labtop-xl:min-w-[1540px] labtop-xl:max-w-[1540px] 
+          desktop-2xl:min-w-[2180px] desktop-2xl:max-w-[2180px]">
         <div class="flex-1 block lg:hidden">
           <!-- Top bar mobile -->
 
@@ -191,7 +185,7 @@
               <span class="absolute right-3 inset-y-0 flex items-center">
                 <img
                   src="src/assets/img/search-normal.png"
-                  class="w-5 h-5"
+                  class="min-w-5 w-5 h-5"
                   alt="بحث"
                 />
               </span>
@@ -246,15 +240,61 @@
                 </div>
               </div>
             </div>
+            <div class="items-center gap-3 mx-6 flex lg:hidden">
+              <button class="flex items-center gap-2">
+                <img
+                  src="src/assets/img/requests/document-text.png"
+                  class="min-w-5 w-5 h-5"
+                  alt="Excel"
+                />
+                ملف إكسل
+              </button>
+              <button class="flex items-center gap-2">
+                <img
+                  src="src/assets/img/requests/bi_file-pdf.png"
+                  class="min-w-5 w-5 h-5"
+                  alt="PDF"
+                />
+                ملف PDF
+              </button>
+              <div class="relative inline-block">
+                <select
+                  class="appearance-none rounded active-stats w-24 px-3 py-1 border border-mint/30 cursor-pointer font-medium focus:outline-none focus:ring-0"
+                >
+                  <option class="active-stats">الكل</option>
+                  <option>بانتظار القبول</option>
+                  <option>طلب جديد</option>
+                  <option>قيد التعبئة</option>
+                  <option>تم التعبئة</option>
+                  <option>تم التسليم</option>
+                  <option>ملغية</option>
+                </select>
 
+                <span
+                  class="pointer-events-none absolute inset-y-0 left-2 flex items-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-[#292D32]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-active/chart-2.png"
+                    src="src/assets/img/aside-imge/chart-4.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >نظرة عامة
@@ -262,11 +302,11 @@
 
               <a
                 href="requests.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-mute/grid-2.png"
+                    src="src/assets/img/aside-imge/grid-2.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >الطلبات
@@ -274,7 +314,7 @@
 
               <a
                 href="distributors.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -286,7 +326,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -298,7 +338,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -310,7 +350,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -322,7 +362,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
               >
                 <span
                   ><img
@@ -334,7 +374,7 @@
 
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
@@ -352,7 +392,7 @@
           <span class="absolute right-3 inset-y-0 flex items-center">
             <img
               src="src/assets/img/search-normal.png"
-              class="w-5 h-5"
+              class="min-w-5 w-5 h-5"
               alt="بحث"
             />
           </span>
@@ -494,7 +534,7 @@
                   >
                     <img
                       src="src/assets/img/icon/frame.png"
-                      class="w-5 h-5"
+                      class="min-w-5 w-5 h-5"
                       alt="الملف"
                     />
                     <span>الملف الشخصي</span>
@@ -508,7 +548,7 @@
                   >
                     <img
                       src="src/assets/img/icon/setting-2.png"
-                      class="w-5 h-5"
+                      class="min-w-5 w-5 h-5"
                       alt="الإعدادات"
                     />
                     <span>الإعدادات</span>
@@ -521,7 +561,7 @@
                 >
                   <img
                     src="src/assets/img/icon/logout.png"
-                    class="w-5 h-5"
+                    class="min-w-5 w-5 h-5"
                     alt="خروج"
                   />
                   <span>تسجيل الخروج</span>
@@ -574,8 +614,15 @@
       </header>
 
       <!-- Order Details -->
-      <section class="bg-sky min-h-screen p-6">
-        <div class="max-w-[990px] mx-auto bg-white shadow rounded-lg p-6">
+      <section class="bg-sky min-h-screen xl:pr-6 xl:pt-6">
+         
+          <div
+          class="mx-auto bg-white shadow rounded-br-lg rounded-tr-lg p-6
+          lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1024px] lg:max-w-[1024px] 
+          labtop-s:min-w-[985px] labtop-s:lg:max-w-[985px] labtop-m:lg:min-w-[1060px]
+          2xl:min-w-[1155px] 2xl:max-w-[1155px] labtop-xl:min-w-[1540px] labtop-xl:max-w-[1540px] 
+          desktop-2xl:min-w-[2180px] desktop-2xl:max-w-[2180px]"
+        >
           <!-- الهيدر -->
           <!-- <div class="flex items-center justify-between border-b pb-3 mb-4">
             <h2 class="font-bold text-lg">
@@ -660,9 +707,7 @@
             </div>
 
             <!-- Order Info -->
-            <div
-              class="grid md:grid-cols-6 sm:grid-cols-2 gap-4 mb-6 bg-[#F5FBFF] p-4 rounded-lg"
-            >
+            <div class="grid md:grid-cols-6 sm:grid-cols-2 gap-4 mb-6 bg-[#F5FBFF] p-4 rounded-lg">
               <div>
                 <p class="text-gray-500 pb-4">رقم الطلب</p>
                 <p class="font-medium">#78415</p>
@@ -1567,7 +1612,7 @@
           </div>
 
         </div>
-                                <!-- pop up -->
+                  <!-- pop up -->
                   <div id="editModal" class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50">
                     <div class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative">
                       <!-- زر اغلاق -->
