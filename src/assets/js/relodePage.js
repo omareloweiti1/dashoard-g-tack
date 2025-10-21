@@ -1,7 +1,7 @@
 const loader = document.createElement("div");
 loader.id = "loader";
 loader.className =
-  "fixed inset-0 flex items-center justify-center bg-[#0084f4] z-50 hidden";
+  "fixed inset-0 flex items-center justify-center bg-[#0084f4] z-[65164165164161] hidden";
 loader.innerHTML = `
   <style>
     .spinner {
