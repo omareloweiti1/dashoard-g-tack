@@ -251,11 +251,11 @@
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav  show-loader"
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-active/chart-2.png"
+                    src="src/assets/img/aside-imge/chart-4.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >نظرة عامة
@@ -323,11 +323,11 @@
 
               <a
                 href="usersPermissions.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside2 show-loader "
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-mute/user-octagon.png"
+                    src="src/assets/img/aside-imge/user-octagon.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >المستخدمين والصلاحيات
@@ -1027,7 +1027,7 @@
         showLoader(row);
 
         setTimeout(() => {
-          window.location.href = `customerDetails.html?id=${orderId}&status=${encodeURIComponent(status)}`;
+          window.location.href = `usersPermissionsDetails.html?id=${orderId}&status=${encodeURIComponent(status)}`;
         }, 1200);
       }
 
@@ -1042,7 +1042,7 @@
         showLoader(row);
 
         setTimeout(() => {
-          window.location.href = `distributorDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
+          window.location.href = `usersPermissionsDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
         }, 1200);
       }
 

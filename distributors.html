@@ -263,11 +263,11 @@
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10  aside-nav show-loader"
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-active/chart-2.png"
+                    src="src/assets/img/aside-imge/chart-4.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >نظرة عامة
@@ -287,11 +287,11 @@
 
               <a
                 href="distributors.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader "
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-mute/truck.png"
+                    src="src/assets/img/aside-imge/truck.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >الموزعين
@@ -864,7 +864,7 @@
                           alt="إضافة"
                           class="w-5 h-5"
                         />
-                        <span>إضافة اسطوانة جديدة</span>
+                        <span>إضافة موزع جديدة</span>
                       </button>
                     </div>
                   </div>
@@ -872,10 +872,10 @@
                   <!-- البوب أب -->
                   <div
                     id="distributorModal"
-                    class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+                    class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 "
                   >
                     <div
-                      class="bg-white rounded-2xl shadow-lg max-w-[674px] p-6 relative w-[674px] h-[1000px]"
+                      class="bg-white rounded-2xl shadow-lg max-w-[674px] p-6 relative w-[674px] max-h-[90vh] overflow-y-auto  "
                     >
                       <!-- زر الإغلاق -->
                       <button
@@ -1169,7 +1169,7 @@
                         />
                       </th>
                       <td class="p-2">#78415</td>
-                      <td class="p-2 pr-0 lg:pr-2">إسماعيل شباط</td>
+                      <td class="p-2 pr-0 lg:pr-2 order-name">إسماعيل شباط</td>
                       <td class="p-2 pr-0 lg:pr-2">غاز الندى</td>
                       <td class="p-2 pr-0 lg:pr-2">غزة</td>
                       <td class="p-2 pr-0 lg:pr-2">الشجاعية</td>
@@ -1186,7 +1186,7 @@
                           />
                         </button>
 
-                        <button onclick="viewOrderAction(this, 'delete')">
+                        <button class="btn-delete">
                           <img
                             src="src/assets/img/icon-row/trash.png"
                             class="min-w-5 w-5 h-5"
@@ -1255,6 +1255,33 @@
                   </tbody>
                 </table>
               </div>
+
+              <div  id="deleteOrderModal" class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50">
+  <div class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative">
+    <button onclick="closeDeleteModal()" class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700">
+      ✕
+    </button>
+
+    <h2 class="text-lg font-bold mb-2 text-gray-800 text-center py-2">حذف الموزع</h2>
+
+    <p class="text-gray-700 mb-1 text-center py-2">
+      هل أنت متأكد من حذف الموزع
+      <span>(</span>
+      <span id="orderCodeText" class="font-semibold text-sky">سماعيل شابط</span>
+      ؟
+      <span>)</span>
+    </p>
+
+    <p class="text-sm mb-6 text-center py-2">
+      في حال قمت بحذف الموزع لن تستطيع استعادته مرة أخرى.
+    </p>
+
+    <div class="flex justify-between gap-3">
+      <button onclick="confirmDelete()" class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700">حذف الموزع</button>
+      <button onclick="closeDeleteModal()" class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100">إلغاء</button>
+    </div>
+  </div>
+</div>
 
               <!-- Pagination -->
               <!-- <div
@@ -1850,5 +1877,29 @@
         }, 1);
       });
     </script>
+
+<script>
+function viewOrderDelete(button) {
+  const row = button.closest("tr");
+  
+  const distributorName = row.querySelector(".order-name").textContent.trim();
+  document.getElementById("orderCodeText").textContent = distributorName;
+
+  const modal = document.getElementById("deleteOrderModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+function closeDeleteModal() {
+  const modal = document.getElementById("deleteOrderModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+document.querySelectorAll(".btn-delete").forEach(btn => {
+  btn.addEventListener("click", () => viewOrderDelete(btn));
+});
+</script>
+
+
   </body>
 </html>

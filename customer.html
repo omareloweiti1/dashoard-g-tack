@@ -251,11 +251,11 @@
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-active/chart-2.png"
+                    src="src/assets/img/aside-imge/chart-4.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >نظرة عامة
@@ -287,11 +287,11 @@
 
               <a
                 href="customer.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader "
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside  show-loader "
               >
                 <span
                   ><img
-                    src="src/assets/img/icon-mute/profile-2user.png"
+                    src="src/assets/img/aside-imge/profile-2user.png"
                     class="w-9 h-9 mr-6"
                     alt="" /></span
                 >الزبائن
@@ -1061,7 +1061,7 @@
         showLoader(row);
 
         setTimeout(() => {
-          window.location.href = `distributorDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
+          window.location.href = `customerDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
         }, 1200);
       }
 
@@ -1077,7 +1077,7 @@
       <td colspan="${colCount}" class="p-4 text-center">
         <div class="flex justify-center items-center">
           <div class="loader border-4 border-sky-400 border-t-transparent rounded-full w-6 h-6 animate-spin"></div>
-          <span class="ml-2">جاري تحميل تفاصيل الموزع...</span>
+          <span class="ml-2">جاري تحميل تفاصيل الزبون...</span>
         </div>
       </td>
     `;
@@ -1247,47 +1247,7 @@
       renderTable();
     </script> -->
 
-    <script>
-      // ✅ نجيب بس الأزرار داخل .filter-buttons
-
-      const filterButtons = document.querySelectorAll(".filter-buttons button");
-      const allSections = document.querySelectorAll("div[data-status]");
-
-      function applyFilter(filterType) {
-        allSections.forEach((sec) => {
-          const status = sec.getAttribute("data-status");
-          if (
-            (filterType === "موزعين جدد" && status === "new") ||
-            (filterType === "الموزعين المعتمدين" && status === "approved")
-          ) {
-            sec.style.display = "";
-          } else {
-            sec.style.display = "none"; 
-          }
-        });
-
-        // ✅ تحديث شكل الأزرار
-        filterButtons.forEach((b) => {
-          if (b.textContent.trim() === filterType) {
-            b.classList.add("active-filter");
-            b.classList.remove("text-[#7E7E7E]", "font-medium");
-          } else {
-            b.classList.remove("active-filter");
-            b.classList.add("text-[#7E7E7E]", "font-medium");
-          }
-        });
-      }
-
-      // ✅ تشغيل أول مرة على "موزعين جدد"
-      applyFilter("موزعين جدد");
-
-      // ✅ إضافة الأحداث للأزرار
-      filterButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          applyFilter(btn.textContent.trim());
-        });
-      });
-    </script>
+ 
 
     <!-- pop up add -->
     <script>
