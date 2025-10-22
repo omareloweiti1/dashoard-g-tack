@@ -131,13 +131,9 @@
 
     <!-- Main Content -->
     <main class="flex-1 min-h-screen">
-     <!-- Header -->
+      <!-- Header -->
       <header
-        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 
-        lg:px-6 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
-        labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 
-        2xl:max-w-[1180px] labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] 
-        desktop-2xl:max-w-[2205px]"
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] desktop-2xl:max-w-[2205px]"
       >
         <div class="flex-1 block lg:hidden">
           <!-- Top bar mobile -->
@@ -297,27 +293,27 @@
                 </span>
               </div>
             </div>
-                <div class="flex items-center gap-2">
-                <label
-                  class=" flex  lg:hidden mx-auto mt-5 items-center gap-2 cursor-pointer bg-bordlight px-3 py-2 rounded-lg"
-                >
-                  <span class="text-black">تفعيل الموزع</span>
-                  <div class="relative">
-                    <input
-                      type="checkbox"
-                      id="toggle"
-                      class="sr-only peer"
-                      checked
-                    />
-                    <div
-                      class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-sky-500 transition-colors"
-                    ></div>
-                    <div
-                      class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md peer-checked:translate-x-5 transition-transform"
-                    ></div>
-                  </div>
-                </label>
-              </div>
+            <div class="flex items-center gap-2">
+              <label
+                class="flex lg:hidden mx-auto mt-5 items-center gap-2 cursor-pointer bg-bordlight px-3 py-2 rounded-lg"
+              >
+                <span class="text-black">تفعيل الموزع</span>
+                <div class="relative">
+                  <input
+                    type="checkbox"
+                    id="toggle"
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-sky-500 transition-colors"
+                  ></div>
+                  <div
+                    class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md peer-checked:translate-x-5 transition-transform"
+                  ></div>
+                </div>
+              </label>
+            </div>
             <nav class="space-y-3 font-semibold p-4 pr-10">
               <a
                 href="overview.html"
@@ -644,14 +640,12 @@
         </div>
       </header>
 
-      <section class="bg-sky w-full h-full ">
-                <div
-          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
-          labtop-s:min-w-[100%] labtop-s:max-w-[1066px]   2xl:min-w-[1190px] 2xl:max-w-[1190px] 
-          labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px] xl:pr-6 xl:pt-6  "
+      <section class="bg-sky w-full h-full">
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] labtop-s:min-w-[100%] labtop-s:max-w-[1066px] 2xl:min-w-[1190px] 2xl:max-w-[1190px] labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px] xl:pr-6 xl:pt-6"
         >
           <!-- Main Profile Content -->
-          <section class="bg-white p-6  xl:rounded-tr-lg xl:rounded-br-lg">
+          <section class="bg-white p-6 xl:rounded-tr-lg xl:rounded-br-lg">
             <div
               class="flex justify-between items-center mb-6 border-b border-bl pb-4"
             >
@@ -664,7 +658,7 @@
 
               <div class="flex items-center gap-2">
                 <label
-                  class=" hidden lg:flex items-center gap-2 cursor-pointer bg-bordlight px-3 py-2 rounded-lg"
+                  class="hidden lg:flex items-center gap-2 cursor-pointer bg-bordlight px-3 py-2 rounded-lg"
                 >
                   <span class="text-black">تفعيل الموزع</span>
                   <div class="relative">
@@ -714,7 +708,10 @@
                   ✕
                 </button>
 
-                <h2 id="customerModalTitle" class="text-center text-lg font-semibold mb-12">
+                <h2
+                  id="customerModalTitle"
+                  class="text-center text-lg font-semibold mb-12"
+                >
                   مستخدم جديد
                 </h2>
 
@@ -834,57 +831,57 @@
               </div>
             </div>
 
-              <!-- pop up -->
-                <div
-                  id="deleteModal"
-                  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
+            <!-- pop up -->
+            <div
+              id="deleteModal"
+              class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
+            >
+              <div
+                class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
+              >
+                <button
+                  onclick="closeDeleteModal()"
+                  class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
                 >
-                  <div
-                    class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
+                  ✕
+                </button>
+
+                <h2
+                  class="text-lg font-bold mb-2 text-gray-800 text-center py-2"
+                >
+                  حذف الزبون
+                </h2>
+
+                <p class="text-gray-700 mb-1 text-center py-2">
+                  هل أنت متأكد من حذف الطلب
+                  <span id="orderIdText" class="font-semibold text-sky"
+                    >اسماعيل شباط</span
                   >
-                    <button
-                      onclick="closeDeleteModal()"
-                      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
-                    >
-                      ✕
-                    </button>
+                  ؟
+                </p>
+                <p class="text-sm mb-6 text-center py-2">
+                  في حال قمت بحذف الزبون لن تستطيع إرجاعه مرة أخرى
+                </p>
 
-                    <h2
-                      class="text-lg font-bold mb-2 text-gray-800 text-center py-2"
-                    >
-                      حذف الزبون
-                    </h2>
-
-                    <p class="text-gray-700 mb-1 text-center py-2">
-                      هل أنت متأكد من حذف الطلب
-                      <span id="orderIdText" class="font-semibold text-sky"
-                        >اسماعيل شباط</span
-                      >
-                      ؟
-                    </p>
-                    <p class="text-sm mb-6 text-center py-2">
-                      في حال قمت بحذف الزبون لن تستطيع إرجاعه مرة أخرى
-                    </p>
-
-                    <div class="flex justify-between gap-3">
-                      <button
-                        onclick="confirmDelete()"
-                        class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
-                      >
-                        حذف الزبون
-                      </button>
-                      <button
-                        onclick="closeDeleteModal()"
-                        class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
-                      >
-                        إلغاء
-                      </button>
-                    </div>
-                  </div>
+                <div class="flex justify-between gap-3">
+                  <button
+                    onclick="confirmDelete()"
+                    class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
+                  >
+                    حذف الزبون
+                  </button>
+                  <button
+                    onclick="closeDeleteModal()"
+                    class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
+                  >
+                    إلغاء
+                  </button>
                 </div>
+              </div>
+            </div>
 
             <div class="rounded-lg p-6">
-              <h2  class="text-2xl font-extrabold mb-6">البيانات الشخصية</h2>
+              <h2 class="text-2xl font-extrabold mb-6">البيانات الشخصية</h2>
               <div
                 class="grid grid-cols-2 md:grid-cols-4 gap-6 font-semibold bg-backSec p-6 rounded-lg"
               >
@@ -1078,25 +1075,24 @@
     </script>
 
     <script>
-  const deleteModal = document.getElementById("deleteModal");
-  const orderIdText = document.getElementById("orderIdText");
+      const deleteModal = document.getElementById("deleteModal");
+      const orderIdText = document.getElementById("orderIdText");
 
-  function openDeleteModal(nameOrId) {
-    orderIdText.textContent = nameOrId; 
-    deleteModal.classList.remove("hidden");
-    deleteModal.classList.add("flex");
-  }
+      function openDeleteModal(nameOrId) {
+        orderIdText.textContent = nameOrId;
+        deleteModal.classList.remove("hidden");
+        deleteModal.classList.add("flex");
+      }
 
-  function closeDeleteModal() {
-    deleteModal.classList.add("hidden");
-    deleteModal.classList.remove("flex");
-  }
+      function closeDeleteModal() {
+        deleteModal.classList.add("hidden");
+        deleteModal.classList.remove("flex");
+      }
 
-  function confirmDelete() {
-    alert("تم حذف: " + orderIdText.textContent);
-    closeDeleteModal();
-  }
-</script>
-
+      function confirmDelete() {
+        alert("تم حذف: " + orderIdText.textContent);
+        closeDeleteModal();
+      }
+    </script>
   </body>
 </html>
