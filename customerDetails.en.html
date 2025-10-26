@@ -1,0 +1,2124 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/assets/css/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/img/logo/49.png"
+      type="image/x-icon"
+    />
+    <title>G tack - Distributors</title>
+    <style>
+      .loader {
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #38bdf8;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 0.8s linear infinite;
+        margin: auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .dt-column-order::before,
+      .dt-column-order::after {
+        content: none !important;
+      }
+      .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 14px 14px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      th.dt-ordering-asc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 14px 14px;
+        margin-left: 10px;
+      }
+
+      th.dt-ordering-desc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up2.png") !important;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 14px 14px;
+        margin-left: 10px;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.current,
+      div.dt-container .dt-paging .dt-paging-button.current:hover {
+        color: white !important;
+        border: 0px !important;
+      }
+      .dt-paging-button.current {
+        background-color: var(--color-sky-500) !important;
+        width: 32px !important;
+        height: 32px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        border-radius: 4px !important;
+        color: white !important;
+      }
+      .div.dt-container .dt-paging .dt-paging-button {
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        cursor: pointer;
+        color: #868686 !important;
+        border: 0px !important;
+        border-radius: 8px !important;
+        background: transparent;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        box-sizing: border-box;
+        display: inline-block;
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        margin: 0.25rem;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        color: #686868 !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button:hover {
+        color: white !important;
+        border: 0px !important;
+        background-color: #8d8d8dc0;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, #8d8d8dc0),
+          color-stop(#8d8d8dc0)
+        ) !important;
+        background: -webkit-linear-gradient(
+          top,
+          #8d8d8dc0,
+          #8d8d8dc0
+        ) !important;
+        background: -moz-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: -ms-linear-gradient(top, #8d8d8dc0, #8d8d8dc0);
+        background: -o-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: linear-gradient(to bottom, #8d8d8dc0, #8d8d8dc0) !important;
+      }
+
+      .dt-paging-button.previous,
+      .dt-paging-button.first,
+      .dt-paging-button.next,
+      .dt-paging-button.last {
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        background-color: #e9e7e781 !important;
+        color: black !important;
+        margin: 0.25rem;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+      div.dt-container .dt-paging .dt-paging-button.disabled:active {
+        color: white !important;
+        border: 0px !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button.disabled {
+        color: black !important;
+        border: 0px !important;
+      }
+      .dt-length {
+        border: 2px solid var(--color-bl) !important;
+        border-radius: 8px !important;
+        padding: 5px 10px;
+        margin-left: 60px;
+      }
+      div.dt-container .dt-input {
+        border: 0px !important;
+        border-radius: 0px !important;
+        padding: 5px;
+      }
+
+      div.dt-container div.dt-layout-row {
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+        order: 2;
+        display: flex;
+        justify-content: center !important;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+        order: 1;
+        display: flex;
+        justify-content: flex-start !important;
+        margin-left: 380px !important;
+      }
+      @media (max-width: 1024px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-left: 300px !important;
+        }
+      }
+      @media (min-width: 1023px) and (max-width: 1024px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-left: 60px;
+        }
+      }
+      @media (max-width: 768px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-left: 100px !important;
+        }
+      }
+      @media (min-width: 767px) and (max-width: 768px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-left: 60px;
+        }
+      }
+      @media (max-width: 450px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 0px;
+          margin-left: 85px;
+        }
+      }
+      @media (max-width: 768px) {
+        .dt-column-order,
+        th.dt-ordering-asc .dt-column-order,
+        th.dt-ordering-desc .dt-column-order {
+          margin-left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen flex">
+    <!-- Wrapper -->
+    <div class="flex">
+      <!-- Sidebar Desktop -->
+      <aside
+        class="hidden xl:flex max-w-[340px] bg-white border-l border-bl flex-col"
+      >
+        <div
+          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
+        >
+          <a href="overview.en.html" class="show-loader"
+            ><img
+              src="src/assets/img/logo.png"
+              alt="Logo"
+              class="ml-20 w-[152px] h-[67px]"
+          /></a>
+        </div>
+
+        <nav class="space-y-3 font-semibold p-4 pr-10">
+          <a
+            href="overview.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/aside-imge/chart-4.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Overview
+          </a>
+
+          <a
+            href="requests.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/grid-2.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Orders
+          </a>
+
+          <a
+            href="distributors.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/truck.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Distributors
+          </a>
+
+          <a
+            href="customer.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/aside-imge/profile-2user.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Customers
+          </a>
+
+          <a
+            href="map.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/map.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Map
+          </a>
+
+          <a
+            href="reports.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/trend-down.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Reports
+          </a>
+
+          <a
+            href="usersPermissions.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/user-octagon.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Users & Permissions
+          </a>
+
+          <a
+            href="complaints.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/info-circle.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+            /></span>
+            Complaints
+          </a>
+        </nav>
+      </aside>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 min-h-screen">
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 lg:max-w-[990px] lg:min-w-[990px] labtop-xl:min-w-[1440px] desktop-2xl:min-w-[1890px]"
+      >
+        <div class="flex-1 block xl:hidden">
+          <!-- Top bar mobile -->
+          <div
+            class="xl:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl"
+          >
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <aside
+            id="mobile-menu"
+            class="fixed top-0 left-0 h-full w-80 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 xl:hidden z-50"
+          >
+            <div
+              class="flex items-center justify-between p-4 border-b border-bl"
+            >
+              <img
+                src="src/assets/img/logoen.png"
+                alt="Logo"
+                class="w-32 h-14"
+              />
+
+              <button id="close-btn" class="text-gray-700">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Search -->
+            <div class="block lg:hidden p-2 relative lg:w-[410px] h-[55px]">
+              <input
+                type="text"
+                placeholder="Find an order, distributor, customer..."
+                class="w-full pl-10 pr-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+              />
+              <span class="absolute left-3 inset-y-0 flex items-center">
+                <img
+                  src="src/assets/img/search-normal.png"
+                  class="w-5 h-5"
+                  alt="Search"
+                />
+              </span>
+            </div>
+
+            <div class="relative">
+              <button
+                id="notifBtn"
+                class="relative flex items-center w-[90%] mx-auto justify-center bg-sky h-14 xl:w-14 rounded-lg focus:outline-none"
+              >
+                <img
+                  src="src/assets/img/icon/notification.png"
+                  class="w-6 h-6"
+                  alt="Notifications"
+                />
+              </button>
+
+              <div
+                id="notifDropdown"
+                class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+              >
+                <ul class="py-2">
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span
+                      class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                    ></span>
+                  </li>
+                </ul>
+
+                <div
+                  class="text-center flex items-center justify-center py-2 border-t border-bl"
+                >
+                  <a
+                    href="notifications.en.html"
+                    class="text-sky font-bold hover:underline"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <nav class="space-y-3 font-semibold p-4 pl-10">
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-active/chart-2.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Overview
+              </a>
+
+              <a
+                href="requests.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Requests
+              </a>
+
+              <a
+                href="distributors.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Distributors
+              </a>
+
+              <a
+                href="customer.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Customers
+              </a>
+
+              <a
+                href="map.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Map
+              </a>
+
+              <a
+                href="reports.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/trend-down.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Reports
+              </a>
+
+              <a
+                href="usersPermissions.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Users & Permissions
+              </a>
+
+              <a
+                href="complaints.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Complaints
+              </a>
+            </nav>
+          </aside>
+        </div>
+
+        <!-- Search -->
+        <div class="hidden lg:block relative w-[410px] h-[55px]">
+          <input
+            type="text"
+            placeholder="Find an order, distributor, customer..."
+            class="w-full pl-10 pr-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+          />
+          <span class="absolute left-3 inset-y-0 flex items-center">
+            <img
+              src="src/assets/img/search-normal.png"
+              class="w-5 h-5"
+              alt="بحث"
+            />
+          </span>
+        </div>
+
+        <!-- User Section -->
+        <div class="relative flex items-center gap-4">
+          <!-- Notification Icon -->
+          <div class="relative hidden xl:block">
+            <!-- Notification Icon -->
+            <button
+              id="notifBtn"
+              class="relative flex items-center justify-center bg-sky h-14 w-14 rounded-full focus:outline-none"
+            >
+              <img
+                src="src/assets/img/icon/notification.png"
+                class="w-6 h-6"
+                alt="Notifications"
+              />
+            </button>
+
+            <div
+              id="notifDropdown"
+              class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+            >
+              <ul class="py-2">
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+              </ul>
+
+              <div
+                class="text-center flex items-center justify-center py-2 border-t border-bl"
+              >
+                <a
+                  href="notifications.en.html"
+                  class="text-sky font-bold hover:underline"
+                  >View all notifications</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- User Dropdown -->
+          <div class="relative bg-backNav py-2 px-6 rounded-lg">
+            <button
+              id="userMenuBtn"
+              class="flex items-center lg:gap-2 focus:outline-none"
+            >
+              <img
+                src="src/assets/img/Imag.png"
+                alt="User"
+                class="w-12 h-12 rounded-full border"
+              />
+
+              <div class="text-left ml-2">
+                <span
+                  class="hidden lg:block font-extrabold text-[20px] text-[#3C3C3C]"
+                  >Mohamed Ali</span
+                >
+                <span
+                  class="hidden lg:block text-sm font-extrabold text-[#6D6D6D]"
+                  >General Manager</span
+                >
+              </div>
+
+              <svg
+                class="w-6 h-6 text-black ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="userDropdown"
+              class="hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-[95625]"
+            >
+              <ul class="py-2">
+                <li>
+                  <a
+                    href="profile.en.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/frame.png"
+                      class="w-5 h-5"
+                      alt="Profile"
+                    />
+                    <span>Profile</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="setting.en.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/setting-2.png"
+                      class="w-5 h-5"
+                      alt="Settings"
+                    />
+                    <span>Settings</span>
+                  </a>
+                </li>
+                <a
+                  href="#"
+                  onclick="openModal()"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                >
+                  <img
+                    src="src/assets/img/icon/logout.png"
+                    class="w-5 h-5"
+                    alt="Logout"
+                  />
+                  <span>Logout</span>
+                </a>
+
+                <div
+                  id="logoutModal"
+                  class="hidden fixed inset-0 items-center justify-center bg-blue-200/40 z-50"
+                >
+                  <div
+                    class="bg-white rounded-lg shadow-lg p-5 w-[680px] h-[260px] relative flex flex-col"
+                  >
+                    <button
+                      onclick="closeModal()"
+                      class="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-backNav text-white"
+                    >
+                      ✕
+                    </button>
+
+                    <div class="p-4 flex justify-center mt-5">
+                      <h2 class="text-lg font-bold">Logout</h2>
+                    </div>
+
+                    <div class="flex-1 flex items-center justify-center">
+                      <p class="text-center text-gray-700 text-lg">
+                        Are you sure you want to log out?
+                      </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        onclick="logout()"
+                        class="w-full py-3 bg-red-600 text-white rounded-lg font-medium"
+                      >
+                        Logout
+                      </button>
+                      <button
+                        onclick="closeModal()"
+                        class="w-full py-3 bg-gray-300 rounded-lg font-medium"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-sky w-full h-full">
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1024px] lg:max-w-[1024px] labtop-s:min-w-[100%] labtop-s:lg:max-w-[1060px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:max-w-[2220px]"
+        >
+          <section class="bg-sky w-full min-h-screen xl:pt-6 xl:pl-6">
+            <div class="mx-auto bg-white shadow xl:rounded-tl-lg p-6">
+              <div
+                class="flex justify-between items-center mb-6 border-b border-bl pb-4"
+              >
+                <!-- breadcrumb -->
+                <div class="flex items-center gap-2 text-gray-500 text-base">
+                  <span>Customers</span>
+                  <span class="text-gray-400">&gt;</span>
+                  <span class="font-semibold text-black">Customer Details</span>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-2">
+                  <label
+                    class="flex items-center gap-2 cursor-pointer bg-bordlight px-3 py-2 rounded-lg"
+                  >
+                    <span class="text-black">Activate Distributor</span>
+                    <div class="relative">
+                      <input
+                        type="checkbox"
+                        id="toggle"
+                        class="sr-only peer"
+                        checked
+                      />
+                      <div
+                        class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-sky-500 transition-colors"
+                      ></div>
+                      <div
+                        class="absolute top-0.5 left-0.5 min-w-5 w-5 h-5 bg-white rounded-full shadow-md peer-checked:translate-x-5 transition-transform"
+                      ></div>
+                    </div>
+                  </label>
+
+                  <button
+                    onclick="openEditModal('Ahmed Mohamed', '0599999999')"
+                    class="hidden lg:flex items-center gap-2 text-orange-600 bg-orange-100 py-2 px-4 rounded-lg"
+                  >
+                    <img src="src/assets/img/icon-row/edit.png" alt="" /> Edit
+                  </button>
+
+                  <button
+                    onclick="openDeleteModal('#78430')"
+                    class="hidden lg:flex items-center gap-2 text-rose-600 bg-rose-100 py-2 px-4 rounded-lg"
+                  >
+                    <img src="src/assets/img/icon-row/trash.png" alt="" />
+                    Delete
+                  </button>
+                </div>
+
+                <!-- pop up -->
+                <div
+                  id="ban"
+                  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
+                >
+                  <div
+                    class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
+                  >
+                    <button
+                      onclick="closeBanModal()"
+                      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
+
+                    <h2
+                      id="banTitle"
+                      class="text-lg font-bold mb-2 text-gray-800 text-center py-2"
+                    >
+                      Ban Distributor
+                    </h2>
+
+                    <p
+                      id="banMessage"
+                      class="text-gray-700 mb-4 text-center py-2"
+                    >
+                      Are you sure you want to ban
+                      <span id="orderIdText" class="font-semibold text-sky"
+                        >Ismail Shabat</span
+                      >
+                      ?
+                    </p>
+
+                    <div class="flex justify-between gap-3">
+                      <button
+                        id="confirmBanBtn"
+                        onclick="confirmBan()"
+                        class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
+                      >
+                        Ban Distributor
+                      </button>
+                      <button
+                        onclick="closeBanModal()"
+                        class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Edit pop up -->
+                <div
+                  id="editModal"
+                  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
+                >
+                  <div
+                    class="bg-white rounded-xl shadow-lg w-full max-w-lg p-6 relative"
+                  >
+                    <!-- Close button -->
+                    <button
+                      onclick="closeEditModal()"
+                      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
+
+                    <!-- Title -->
+                    <h2
+                      class="text-lg font-bold mb-6 text-gray-800 text-center"
+                    >
+                      Edit Customer Information
+                    </h2>
+
+                    <!-- Form -->
+                    <form class="space-y-4">
+                      <!-- Customer Name -->
+                      <div>
+                        <label
+                          class="block text-base font-medium text-black mb-1"
+                          >Customer Name</label
+                        >
+                        <input
+                          id="editCustomerName"
+                          type="text"
+                          class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-orange-200"
+                        />
+                      </div>
+
+                      <!-- Phone Number -->
+                      <div>
+                        <label
+                          class="block text-base font-medium text-black mb-1"
+                          >Phone Number</label
+                        >
+                        <input
+                          id="editCustomerPhone"
+                          type="tel"
+                          class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-orange-200"
+                        />
+                      </div>
+
+                      <!-- Save Button -->
+                      <button
+                        type="button"
+                        onclick="saveCustomerChanges()"
+                        class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
+                      >
+                        Save Changes
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Delete pop up -->
+                <div
+                  id="deleteModal"
+                  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
+                >
+                  <div
+                    class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
+                  >
+                    <button
+                      onclick="closeDeleteModal()"
+                      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
+
+                    <h2
+                      class="text-lg font-bold mb-2 text-gray-800 text-center py-2"
+                    >
+                      Delete Customer
+                    </h2>
+
+                    <p class="text-gray-700 mb-1 text-center py-2">
+                      Are you sure you want to delete
+                      <span id="orderIdText" class="font-semibold text-sky"
+                        >Ismail Shabat</span
+                      >?
+                    </p>
+                    <p class="text-sm mb-6 text-center py-2">
+                      Once deleted, you will not be able to restore this
+                      customer.
+                    </p>
+
+                    <div class="flex justify-between gap-3">
+                      <button
+                        onclick="confirmDelete()"
+                        class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
+                      >
+                        Delete Customer
+                      </button>
+                      <button
+                        onclick="closeDeleteModal()"
+                        class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="shortContent" class="p-4 bg-backSec">
+                <div class="grid grid-cols-2 gap-8">
+                  <div>
+                    <h2 class="text-xl font-medium mb-3">
+                      Personal Information
+                    </h2>
+                    <div class="space-y-4 text-left">
+                      <div class="flex justify-between">
+                        <p class="text-gray-600 font-medium">Customer Name</p>
+                        <p class="text-black font-medium pl-2">Ismail Shabat</p>
+                      </div>
+                      <div class="flex justify-between">
+                        <p class="text-gray-700 font-medium">Phone Number</p>
+                        <p class="text-black font-medium" dir="ltr">
+                          972 59913456
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white shadow-md p-4 pr-0">
+              <div
+                class="flex items-center justify-between mb-4 border border-l-0 border-bl p-4 rounded-tr-lg"
+              >
+                <div class="flex gap-6">
+                  <h2 class="text-lg font-bold flex items-center gap-2">
+                    Orders
+                    <span class="text-sky">(50)</span>
+                  </h2>
+                </div>
+
+                <div class="flex items-center gap-3 mr-12">
+                  <button class="hidden lg:flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/document-text.png"
+                      class="min-w-5 w-5 h-5"
+                      alt="Excel"
+                    />Excel File
+                  </button>
+
+                  <button class="hidden lg:flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/bi_file-pdf.png"
+                      class="min-w-5 w-5 h-5"
+                      alt="PDF"
+                    />PDF File
+                  </button>
+
+                  <div class="relative inline-block">
+                    <select
+                      class="appearance-none rounded active-stats w-36 px-3 py-1 border border-mint/30 cursor-pointer font-medium focus:outline-none focus:ring-0"
+                    >
+                      <option class="active-stats">All</option>
+                      <option>Pending Approval</option>
+                      <option>New Order</option>
+                      <option>Being Packed</option>
+                      <option>Packed</option>
+                      <option>Delivered</option>
+                      <option>Canceled</option>
+                    </select>
+
+                    <span
+                      class="pointer-events-none absolute inset-y-0 right-2 flex items-center"
+                    >
+                      <svg
+                        class="w-6 h-6 text-[#292D32]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1 px-1"
+              >
+                <div class="flex items-center gap-4 lg:gap-8 filter-buttons">
+                  <button class="active-filter">Today</button>
+                  <button class="text-[#7E7E7E] font-medium">This Week</button>
+                  <button class="text-[#7E7E7E] font-medium">This Month</button>
+                  <button class="text-[#7E7E7E] font-medium">This Year</button>
+                  <button class="text-[#7E7E7E] font-medium">Custom</button>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto display">
+                <table
+                  id="myTable"
+                  class="w-full text-left labtop-xl:border-collapse labtop-xl:table-fixed"
+                >
+                  <thead class="text-left">
+                    <tr>
+                      <th class="p-2 pl-0">
+                        <input
+                          id="selectAll"
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Number
+                      </th>
+                      <th
+                        class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium"
+                      >
+                        Distributor
+                      </th>
+                      <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Status
+                      </th>
+                      <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Price
+                      </th>
+                      <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Date
+                      </th>
+                      <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Time
+                      </th>
+                      <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="text-left [&>tr>td]:py-3 [&>tr>th]:py-3">
+                    <tr data-status="refill">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78415</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-gray-200 px-2 py-1 rounded"
+                          >Refill Order</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 13, 2025</td>
+                      <td class="p-2 pl-0">08:35 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+
+                        <button onclick="viewOrderAction(this, 'edit')">
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="refill">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78416</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-sun/10 text-sun px-2 py-1 rounded"
+                          >Order Accepted</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">08:40 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="accepted">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78417</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-iris/10 text-iris px-2 py-1 rounded"
+                          >Heading to Client</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">08:45 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="rejected">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78418</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span
+                          class="bg-orange-100 text-orange-700 px-2 py-1 rounded"
+                          >Cylinder Pickup</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">08:50 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="delivered">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78419</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-mint/10 text-mint px-2 py-1 rounded"
+                          >Cylinders Delivered</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">March 15, 2025</td>
+                      <td class="p-2 pl-0">08:55 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="canceled">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78420</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded"
+                          >Canceled</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">09:00 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="rejected">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78421</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span
+                          class="bg-pink-100 text-pink-700 px-2 py-1 rounded"
+                          >Rejected</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">March 15, 2025</td>
+                      <td class="p-2 pl-0">09:05 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-status="delivered">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78419</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-mint/10 text-mint px-2 py-1 rounded"
+                          >Cylinders Delivered</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">March 15, 2023</td>
+                      <td class="p-2 pl-0">08:55 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="canceled">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78420</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded"
+                          >Canceled</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">March 15, 2025</td>
+                      <td class="p-2 pl-0">09:00 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="canceled">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78420</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded"
+                          >Canceled</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 3, 2025</td>
+                      <td class="p-2 pl-0">09:00 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr data-status="rejected">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78421</td>
+                      <td class="p-2 pl-0">Ismail Shabat</td>
+                      <td class="p-2 pl-0">
+                        <span
+                          class="bg-pink-100 text-pink-700 px-2 py-1 rounded"
+                          >Rejected</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 3, 2025</td>
+                      <td class="p-2 pl-0">09:05 AM</td>
+                      <td class="p-2 pl-0 flex items-center justify-start gap-3">
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-bl-lg shadow-md p-4 pr-0 pt-4">
+<div
+  class="flex items-center justify-between mb-4 border border-l-0 border-bl p-4 rounded-tr-lg"
+>
+  <div class="flex gap-6">
+    <h2 class="text-lg font-bold flex items-center gap-2">
+      Ratings
+      <span class="text-sky">(30)</span>
+    </h2>
+  </div>
+
+  <div class="flex items-center gap-3 ml-12">
+    <button class="hidden lg:flex items-center gap-2">
+      <img
+        src="src/assets/img/requests/document-text.png"
+        class="min-w-5 w-5 h-5"
+        alt="Excel"
+      />Excel File
+    </button>
+
+    <button class="hidden lg:flex items-center gap-2">
+      <img
+        src="src/assets/img/requests/bi_file-pdf.png"
+        class="min-w-5 w-5 h-5"
+        alt="PDF"
+      />PDF File
+    </button>
+  </div>
+</div>
+
+
+<div class="mb-4">
+  <select
+    id="ratingFilter"
+    class="border border-bl p-2 px-4 rounded"
+  >
+    <option value="none">None</option>
+    <option value="desc">Highest to Lowest</option>
+    <option value="asc">Lowest to Highest</option>
+  </select>
+</div>
+
+
+<div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1 px-1">
+  <div class="flex items-center gap-4 lg:gap-8 filter-buttons-rating">
+    <button class="active-filter">Today</button>
+    <button class="text-[#7E7E7E] font-medium">This Week</button>
+    <button class="text-[#7E7E7E] font-medium">This Month</button>
+    <button class="text-[#7E7E7E] font-medium">This Year</button>
+    <button class="text-[#7E7E7E] font-medium">Custom</button>
+  </div>
+</div>
+
+
+<div class="overflow-x-auto display">
+  <table
+    id="myTablerating"
+    class="w-full text-left labtop-xl:border-collapse labtop-xl:table-fixed"
+  >
+    <thead class="text-left">
+      <tr>
+        <th class="p-2 pl-0">
+          <input
+            id="selectAll"
+            type="checkbox"
+            class="w-4 h-4  lg:ml-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">Distributor ID</th>
+        <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">Distributor</th>
+        <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium">Rating Date</th>
+        <th class="py-2 lg:pl-0 pb-4 text-[#7E7E7E] font-medium">Rating</th>
+      </tr>
+    </thead>
+    <tbody class="text-left [&>tr>td]:py-3 [&>tr>th]:py-3">
+      <tr>
+        <th class="p-2 pl-0">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">#78415</td>
+        <td class="p-2 pl-0">Ismail Shabat</td>
+        <td class="p-2 pl-0">13 October 2025</td>
+        <td class="p-2 pl-0 flex rating">
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+        </td>
+      </tr>
+      <tr>
+        <th class="p-2 pl-0">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">#78416</td>
+        <td class="p-2 pl-0 ">Ismail Shabat</td>
+        <td class="p-2 pl-0">13 October 2025</td>
+        <td class="p-2 pl-0 flex rating">
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+        </td>
+      </tr>
+      <tr>
+        <th class="p-2 pl-0">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">#78417</td>
+        <td class="p-2 pl-0 ">Ismail Shabat</td>
+        <td class="p-2 pl-0">13 October 2025</td>
+        <td class="p-2 pl-0 flex rating">
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+        </td>
+      </tr>
+      <tr>
+        <th class="p-2 pl-0">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">#78418</td>
+        <td class="p-2 pl-0 ">Ismail Shabat</td>
+        <td class="p-2 pl-0">13 October 2025</td>
+        <td class="p-2 pl-0 flex rating">
+          <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+          <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+            </div>
+
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- ✅ jQuery  -->
+    <script src="src/assets/js/jquery.min.js"></script>
+    <!-- ✅ JS الأساسي لـ DataTables -->
+    <script src="src/assets/js/dataTables.min.js"></script>
+    <!-- ✅ JS الخاص بإضافة Responsive -->
+    <script src="src/assets/js/dataTables.responsive.min.js"></script>
+    <!-- ✅ سكربت الصفحة أو الأكواد المخصصة -->
+    <script src="src/assets/js/relodePage.js"></script>
+    <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `requestsDetails.html?id=${orderId}&status=${encodeURIComponent(status)}`;
+        }, 1200);
+      }
+
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+        const status = row.getAttribute("data-status");
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `requestsDetails.html?id=${orderId}&status=${encodeURIComponent(status)}&action=${action}`;
+        }, 1200);
+      }
+
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
+
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
+      <td colspan="7" class="p-4">
+        <div class="flex justify-center items-center">
+          <div class="loader"></div>
+         <span class="ml-2">Loading order details...</span>
+        </div>
+      </td>`;
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script>
+
+    <!-- Script for handling mobile sidebar open/close -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("-translate-x-full");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+      });
+    </script>
+
+    <!-- Script for toggling user dropdown menu -->
+    <script>
+      const userMenuBtn = document.getElementById("userMenuBtn");
+      const userDropdown = document.getElementById("userDropdown");
+
+      userMenuBtn.addEventListener("click", () => {
+        userDropdown.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Script for opening and closing custom popup modal -->
+    <script>
+      const popup = document.getElementById("popup");
+      const content = document.getElementById("popup-content");
+
+      function openPopup(type) {
+        if (type === "delete") {
+          content.innerHTML = `
+        <h2 class="text-xl font-bold mb-4">Delete Confirmation</h2>
+<p>Are you sure you want to delete this order?</p>
+<div class="mt-6 flex justify-end gap-3">
+  <button onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Cancel</button>
+  <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>
+</div>
+
+      `;
+        } else if (type === "view") {
+          content.innerHTML = `
+<h2 class="text-xl font-bold mb-4">Order Details</h2>
+<p>Here you can view more details about the order.</p>
+<div class="mt-6 flex justify-end">
+  <button onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Close</button>
+</div>
+
+      `;
+        } else if (type === "edit") {
+          content.innerHTML = `
+<h2 class="text-xl font-bold mb-4">Edit Order</h2>
+<form class="space-y-3">
+  <input type="text" placeholder="Customer Name" class="w-full bg-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+  <input type="text" placeholder="Distributor" class="w-full bg-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+  <div class="flex justify-end gap-3 mt-4">
+    <button type="button" onclick="closePopup()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Cancel</button>
+    <button type="submit" class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Save</button>
+  </div>
+</form>
+
+      `;
+        }
+
+        // Show popup with fade-in effect
+        popup.classList.remove("opacity-0", "pointer-events-none");
+        setTimeout(() => {
+          popup.querySelector("div").classList.remove("scale-95");
+        }, 10);
+      }
+
+      function closePopup() {
+        popup.querySelector("div").classList.add("scale-95");
+        popup.classList.add("opacity-0", "pointer-events-none");
+      }
+    </script>
+
+    <!-- Script for handling notification dropdown -->
+    <script>
+      const notifBtns = document.querySelectorAll("#notifBtn");
+      const notifDropdowns = document.querySelectorAll("#notifDropdown");
+
+      notifBtns.forEach((btn, index) => {
+        const dropdown = notifDropdowns[index];
+
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // إغلاق جميع القوائم عند النقر خارجها
+      document.addEventListener("click", (e) => {
+        notifBtns.forEach((btn, index) => {
+          const dropdown = notifDropdowns[index];
+          if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+
+    <!-- Script for handling logout modal -->
+    <script>
+      function openModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+    </script>
+
+    <!-- Script for select all checkbox functionality -->
+    <script>
+      const selectAll = document.getElementById("selectAll");
+
+      const checkboxes = document.querySelectorAll(".rowCheckbox");
+
+      selectAll.addEventListener("change", function () {
+        checkboxes.forEach((cb) => (cb.checked = selectAll.checked));
+      });
+
+      checkboxes.forEach((cb) => {
+        cb.addEventListener("change", function () {
+          selectAll.checked = [...checkboxes].every((c) => c.checked);
+        });
+      });
+    </script>
+
+    <script>
+      const editModal = document.getElementById("editModal");
+      const editNameInput = document.getElementById("editCustomerName");
+      const editPhoneInput = document.getElementById("editCustomerPhone");
+
+      function openEditModal(name, phone) {
+        editNameInput.value = name;
+        editPhoneInput.value = phone;
+
+        editModal.classList.remove("hidden");
+        editModal.classList.add("flex");
+      }
+
+      function closeEditModal() {
+        editModal.classList.remove("flex");
+        editModal.classList.add("hidden");
+      }
+
+      function saveCustomerChanges() {
+        const updatedName = editNameInput.value;
+        const updatedPhone = editPhoneInput.value;
+
+        console.log("تم حفظ:", updatedName, updatedPhone);
+
+        closeEditModal();
+      }
+
+      editModal.addEventListener("click", (e) => {
+        if (e.target === editModal) {
+          closeEditModal();
+        }
+      });
+    </script>
+
+    <script>
+      const deleteModal = document.getElementById("deleteModal");
+      const orderIdText = document.getElementById("orderIdText");
+
+      function openDeleteModal(orderId) {
+        orderIdText.textContent = orderId;
+        deleteModal.classList.remove("hidden");
+        deleteModal.classList.add("flex");
+      }
+
+      function closeDeleteModal() {
+        deleteModal.classList.remove("flex");
+        deleteModal.classList.add("hidden");
+      }
+
+      function confirmDelete() {
+        const orderId = orderIdText.textContent;
+        console.log("تم حذف الطلب:", orderId);
+        closeDeleteModal();
+      }
+
+      deleteModal.addEventListener("click", (e) => {
+        if (e.target === deleteModal) {
+          closeDeleteModal();
+        }
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const table = new DataTable("#myTable", {
+          responsive: {
+            details: {
+              type: "inline",
+              target: "tr",
+            },
+            breakpoints: [
+              { name: "desktop", width: Infinity },
+              { name: "laptop", width: 1200 },
+              { name: "tablet", width: 992 },
+              { name: "mobile", width: 768 },
+              { name: "smallmobile", width: 480 },
+            ],
+          },
+          info: false,
+          searching: false,
+          paging: true,
+          lengthChange: true,
+
+          columnDefs: [
+            { orderable: false, targets: [0, 1, 3, 7] },
+
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: 1 },
+            { responsivePriority: 3, targets: 4 },
+            { responsivePriority: 4, targets: 7 },
+
+            {
+              targets: [2, 3, 5, 6],
+              className: "min-desktop",
+            },
+          ],
+
+          language: {
+            lengthMenu: "Rows per page _MENU_",
+
+          },
+
+          layout: {
+            topStart: null,
+            bottomStart: "paging",
+            bottomEnd: "pageLength",
+          },
+        });
+
+        setTimeout(() => {
+          const disabledCols = [0, 1, 3, 7];
+          disabledCols.forEach((i) => {
+            const th = $(`#myTable thead th:eq(${i})`);
+            th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+            th.find(".dt-column-order").remove();
+          });
+        }, 1);
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const table = new DataTable("#myTablerating", {
+          responsive: {
+            details: {
+              type: "inline",
+              target: "tr",
+            },
+            breakpoints: [
+              { name: "desktop", width: Infinity },
+              { name: "laptop", width: 1200 },
+              { name: "tablet", width: 992 },
+              { name: "mobile", width: 768 },
+              { name: "smallmobile", width: 480 },
+            ],
+          },
+          info: false,
+          searching: false,
+          paging: true,
+          lengthChange: true,
+
+          columnDefs: [
+            { orderable: false, targets: [0] },
+
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: 1 },
+            { responsivePriority: 3, targets: 4 },
+
+            {
+              targets: [2, 3],
+              className: "min-desktop",
+            },
+          ],
+
+          language: {
+            lengthMenu: "Rows per page _MENU_",
+
+          },
+
+          layout: {
+            topStart: null,
+            bottomStart: "paging",
+            bottomEnd: "pageLength",
+          },
+        });
+
+        setTimeout(() => {
+          const disabledCols = [0];
+          disabledCols.forEach((i) => {
+            const th = $(`#myTablerating thead th:eq(${i})`);
+            th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+            th.find(".dt-column-order").remove();
+          });
+        }, 1);
+      });
+    </script>
+  </body>
+</html>

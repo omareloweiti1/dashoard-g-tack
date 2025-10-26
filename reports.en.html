@@ -1,0 +1,2198 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/assets/css/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/img/logo/49.png"
+      type="image/x-icon"
+    />
+    <title>G tack - Distributors</title>
+
+    <style>
+      .loader {
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #38bdf8;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 0.8s linear infinite;
+        margin: auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .dt-column-order::before,
+      .dt-column-order::after {
+        content: none !important;
+      }
+      .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 14px 14px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      th.dt-ordering-asc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up.png") !important;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 14px 14px;
+        margin-left: 10px;
+      }
+
+      th.dt-ordering-desc .dt-column-order {
+        background-image: url("src/assets/img/icon-active/arrow-up2.png") !important;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 14px 14px;
+        margin-left: 10px;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.current,
+      div.dt-container .dt-paging .dt-paging-button.current:hover {
+        color: white !important;
+        border: 0px !important;
+      }
+      .dt-paging-button.current {
+        background-color: var(--color-sky-500) !important;
+        width: 32px !important;
+        height: 32px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        border-radius: 4px !important;
+        color: white !important;
+      }
+      .div.dt-container .dt-paging .dt-paging-button {
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        cursor: pointer;
+        color: #868686 !important;
+        border: 0px !important;
+        border-radius: 8px !important;
+        background: transparent;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        box-sizing: border-box;
+        display: inline-block;
+        min-width: 32px !important;
+        max-width: 32px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        padding: 4px 12px !important;
+        margin-left: 0px !important;
+        margin: 0.25rem;
+      }
+      div.dt-container .dt-paging .dt-paging-button {
+        color: #686868 !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button:hover {
+        color: white !important;
+        border: 0px !important;
+        background-color: #8d8d8dc0;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, #8d8d8dc0),
+          color-stop(#8d8d8dc0)
+        ) !important;
+        background: -webkit-linear-gradient(
+          top,
+          #8d8d8dc0,
+          #8d8d8dc0
+        ) !important;
+        background: -moz-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: -ms-linear-gradient(top, #8d8d8dc0, #8d8d8dc0);
+        background: -o-linear-gradient(top, #8d8d8dc0, #8d8d8dc0) !important;
+        background: linear-gradient(to bottom, #8d8d8dc0, #8d8d8dc0) !important;
+      }
+
+      .dt-paging-button.previous,
+      .dt-paging-button.first,
+      .dt-paging-button.next,
+      .dt-paging-button.last {
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        background-color: #e9e7e781 !important;
+        color: black !important;
+        margin: 0.25rem;
+      }
+
+      div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+      div.dt-container .dt-paging .dt-paging-button.disabled:active {
+        color: white !important;
+        border: 0px !important;
+      }
+      div.dt-container .dt-paging .dt-paging-button.disabled {
+        color: black !important;
+        border: 0px !important;
+      }
+      .dt-length {
+        border: 2px solid var(--color-bl) !important;
+        border-radius: 8px !important;
+        padding: 5px 10px;
+        margin-left: 60px;
+      }
+      div.dt-container .dt-input {
+        border: 0px !important;
+        border-radius: 0px !important;
+        padding: 5px;
+      }
+
+      div.dt-container div.dt-layout-row {
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+        order: 2;
+        display: flex;
+        justify-content: center !important;
+      }
+
+      div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+        order: 1;
+        display: flex;
+        justify-content: flex-start !important;
+        margin-left: 380px !important;
+      }
+      @media (max-width: 1024px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-left: 300px !important;
+        }
+      }
+      @media (min-width: 1023px) and (max-width: 1024px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-left: 60px;
+        }
+      }
+      @media (max-width: 768px) {
+        div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+          order: 1;
+          display: flex;
+          justify-content: flex-start !important;
+          margin-top: 50px;
+          margin-left: 100px !important;
+        }
+      }
+      @media (min-width: 767px) and (max-width: 768px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 50px;
+          margin-left: 60px;
+        }
+      }
+      @media (max-width: 450px) {
+        .dt-length {
+          border: 2px solid var(--color-bl) !important;
+          border-radius: 8px !important;
+          padding: 5px 10px;
+          margin-top: 0px;
+          margin-left: 85px;
+        }
+      }
+      @media (max-width: 768px) {
+        .dt-column-order,
+        th.dt-ordering-asc .dt-column-order,
+        th.dt-ordering-desc .dt-column-order {
+          margin-left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen flex">
+    <!-- Wrapper -->
+    <div class="flex">
+      <!-- Sidebar Desktop -->
+   <aside
+    class="hidden lg:flex w-[330px] bg-white border-l border-bl flex-col"
+>
+    <div
+        class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
+    >
+        <a href="overview.en.html" class="show-loader">
+            <img
+                src="src/assets/img/logo.png"
+                alt="Logo"
+                class="ml-20 w-[152px] h-[67px]"
+            />
+        </a>
+    </div>
+
+    <nav class="space-y-3 font-semibold p-4 pr-10">
+        <a
+            href="overview.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/aside-imge/chart-4.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Overview
+        </a>
+
+        <a
+            href="requests.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Orders
+        </a>
+
+        <a
+            href="distributors.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Distributors
+        </a>
+
+        <a
+            href="customer.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Customers
+        </a>
+
+        <a
+            href="map.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Map
+        </a>
+
+        <a
+            href="reports.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/aside-imge/trend-down.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Reports
+        </a>
+
+        <a
+            href="usersPermissions.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Users & Permissions
+        </a>
+
+        <a
+            href="complaints.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+        >
+            <span>
+                <img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 mr-6"
+                    alt=""
+                />
+            </span>
+            Complaints
+        </a>
+    </nav>
+</aside>
+
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 min-h-screen">
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 
+        min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
+          labtop-s:min-w-[100%] labtop-s:max-w-[1040px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] 
+          labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px]"
+      >
+        <div class="flex-1 block lg:hidden">
+          <!-- Top bar mobile -->
+
+          <div
+            class="lg:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl"
+          >
+ 
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <aside
+            id="mobile-menu"
+            class="fixed top-0 left-0 h-full w-80 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 xl:hidden z-50"
+          >
+            <div
+              class="flex items-center justify-between p-4 border-b border-bl"
+            >
+              <img
+                src="src/assets/img/logoen.png"
+                alt="Logo"
+                class="w-32 h-14"
+              />
+
+              <button id="close-btn" class="text-gray-700">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Search -->
+            <div class="block lg:hidden p-2 relative lg:w-[410px] h-[55px]">
+              <input
+                type="text"
+                placeholder="Find an order, distributor, customer..."
+                class="w-full pl-10 pr-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+              />
+              <span class="absolute left-3 inset-y-0 flex items-center">
+                <img
+                  src="src/assets/img/search-normal.png"
+                  class="w-5 h-5"
+                  alt="Search"
+                />
+              </span>
+            </div>
+
+            <div class="relative">
+              <button
+                id="notifBtn"
+                class="relative flex items-center w-[90%] mx-auto justify-center bg-sky h-14 xl:w-14 rounded-lg focus:outline-none"
+              >
+                <img
+                  src="src/assets/img/icon/notification.png"
+                  class="w-6 h-6"
+                  alt="Notifications"
+                />
+              </button>
+
+              <div
+                id="notifDropdown"
+                class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+              >
+                <ul class="py-2">
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span
+                      class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                    ></span>
+                  </li>
+                </ul>
+
+                <div
+                  class="text-center flex items-center justify-center py-2 border-t border-bl"
+                >
+                  <a
+                    href="notifications.en.html"
+                    class="text-sky font-bold hover:underline"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <nav class="space-y-3 font-semibold p-4 pl-10">
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-active/chart-2.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Overview
+              </a>
+
+              <a
+                href="requests.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Requests
+              </a>
+
+              <a
+                href="distributors.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Distributors
+              </a>
+
+              <a
+                href="customer.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Customers
+              </a>
+
+              <a
+                href="map.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Map
+              </a>
+
+              <a
+                href="reports.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/trend-down.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Reports
+              </a>
+
+              <a
+                href="usersPermissions.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Users & Permissions
+              </a>
+
+              <a
+                href="complaints.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Complaints
+              </a>
+            </nav>
+          </aside>
+        </div>
+
+        <!-- Search -->
+        <div class="hidden lg:block relative w-[410px] h-[55px]">
+          <input
+            type="text"
+            placeholder="Find an order, distributor, customer..."
+            class="w-full pl-10 pr-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+          />
+          <span class="absolute left-3 inset-y-0 flex items-center">
+            <img
+              src="src/assets/img/search-normal.png"
+              class="w-5 h-5"
+              alt="بحث"
+            />
+          </span>
+        </div>
+
+        <!-- User Section -->
+        <div class="relative flex items-center gap-4">
+          <!-- Notification Icon -->
+          <div class="relative hidden xl:block">
+            <!-- Notification Icon -->
+            <button
+              id="notifBtn"
+              class="relative flex items-center justify-center bg-sky h-14 w-14 rounded-full focus:outline-none"
+            >
+              <img
+                src="src/assets/img/icon/notification.png"
+                class="w-6 h-6"
+                alt="Notifications"
+              />
+            </button>
+
+            <div
+              id="notifDropdown"
+              class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+            >
+              <ul class="py-2">
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+              </ul>
+
+              <div
+                class="text-center flex items-center justify-center py-2 border-t border-bl"
+              >
+                <a
+                  href="notifications.en.html"
+                  class="text-sky font-bold hover:underline"
+                  >View all notifications</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- User Dropdown -->
+          <div class="relative bg-backNav py-2 px-6 rounded-lg">
+            <button
+              id="userMenuBtn"
+              class="flex items-center lg:gap-2 focus:outline-none"
+            >
+              <img
+                src="src/assets/img/Imag.png"
+                alt="User"
+                class="w-12 h-12 rounded-full border"
+              />
+
+              <div class="text-left ml-2">
+                <span
+                  class="hidden lg:block font-extrabold text-[20px] text-[#3C3C3C]"
+                  >Mohamed Ali</span
+                >
+                <span
+                  class="hidden lg:block text-sm font-extrabold text-[#6D6D6D]"
+                  >General Manager</span
+                >
+              </div>
+
+              <svg
+                class="w-6 h-6 text-black ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="userDropdown"
+              class="hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-[95625]"
+            >
+              <ul class="py-2">
+                <li>
+                  <a
+                    href="profile.en.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/frame.png"
+                      class="w-5 h-5"
+                      alt="Profile"
+                    />
+                    <span>Profile</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="setting.en.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/setting-2.png"
+                      class="w-5 h-5"
+                      alt="Settings"
+                    />
+                    <span>Settings</span>
+                  </a>
+                </li>
+                <a
+                  href="#"
+                  onclick="openModal()"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                >
+                  <img
+                    src="src/assets/img/icon/logout.png"
+                    class="w-5 h-5"
+                    alt="Logout"
+                  />
+                  <span>Logout</span>
+                </a>
+
+                <div
+                  id="logoutModal"
+                  class="hidden fixed inset-0 items-center justify-center bg-blue-200/40 z-50"
+                >
+                  <div
+                    class="bg-white rounded-lg shadow-lg p-5 w-[680px] h-[260px] relative flex flex-col"
+                  >
+                    <button
+                      onclick="closeModal()"
+                      class="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-backNav text-white"
+                    >
+                      ✕
+                    </button>
+
+                    <div class="p-4 flex justify-center mt-5">
+                      <h2 class="text-lg font-bold">Logout</h2>
+                    </div>
+
+                    <div class="flex-1 flex items-center justify-center">
+                      <p class="text-center text-gray-700 text-lg">
+                        Are you sure you want to log out?
+                      </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        onclick="logout()"
+                        class="w-full py-3 bg-red-600 text-white rounded-lg font-medium"
+                      >
+                        Logout
+                      </button>
+                      <button
+                        onclick="closeModal()"
+                        class="w-full py-3 bg-gray-300 rounded-lg font-medium"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-sky w-full h-full">
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
+          labtop-s:min-w-[100%] labtop-s:max-w-[1020px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] 
+          labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px]"
+        >
+          <section class="bg-sky w-full min-h-screen  xl:pt-6 xl:pl-6">
+            <div class="bg-white xl:rounded-tl-lg xl:rounded-bl-lg shadow-md p-4 ">
+          
+<div class="flex items-center justify-between mb-4">
+  <h2 class="text-lg font-bold flex items-center gap-2">Reports
+  </h2>
+
+  <div class="flex items-center gap-3 mr-12">
+    <button class="flex items-center gap-2">
+      <img src="src/assets/img/requests/document-text.png" class="min-w-5 w-5 h-5" alt="Excel"/>
+      Excel File
+    </button>
+    <button class="flex items-center gap-2">
+      <img src="src/assets/img/requests/bi_file-pdf.png" class="min-w-5 w-5 h-5" alt="PDF"/>
+      PDF File
+    </button>
+  </div>
+</div>
+
+
+           <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
+  <div class="flex items-center gap-2 lg:gap-8 filter-buttons">
+  
+    <button data-state="distributors" class="active-filter-reports px-10 py-1.5">Distributors Reports</button>
+    <button data-state="clients" class="text-black font-medium px-10 py-1.5">Clients Reports</button>
+    <button data-state="sales" class="text-black font-medium px-10 py-1.5">Sales Reports</button>
+
+  </div>
+</div>
+
+
+              <div data-content="distributors" class="hidden">
+                <!-- Cards section 1-->
+                <section class="flex flex-col lg:flex-row pt-5 lg:pl-5 gap-6 mb-6 text-white  xl:mx-auto max-w-full lg:max-w-[975px] lg:min-w-[975px]">
+                  <!-- card 1 -->
+                  <div dir="ltr"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1 max-w-full lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[340px]"
+                  >
+                    <div class="flex items-start p-6">
+                      <div
+                        class="flex items-center justify-center bg-sun/20 h-[90px] w-[90px] rounded-full"
+                      >
+                        <img
+                          src="src/assets/img/icon-active/truck-sun.png"
+                          class="w-[42px] h-[42px]"
+                          alt=""
+                        />
+                      </div>
+
+<div class="flex flex-col items-start">
+  <p class="text-3xl font-semibold pl-5">
+    <span class="text-3xl font-semibold text-sun">12</span>&nbsp;Distributors
+  </p>
+  <span class="text-3xl font-medium pl-5 mt-3">
+    New Distributors
+  </span>
+</div>
+
+                    </div>
+<ul class="space-y-3 p-4 pb-0">
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-sun font-semibold">5</span>&nbsp;Orders
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis City</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-sun font-semibold">2</span>&nbsp;Orders
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Rafah City</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-sun font-semibold">1</span>&nbsp;Orders
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Northern City</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-sun font-semibold">0</span>&nbsp;Orders
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Central City</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-sun font-semibold">4</span>&nbsp;Orders
+    </p>
+  </li>
+</ul>
+
+                  </div>
+
+                  <!-- card 2 -->
+                  <div dir="ltr"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1  lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[350px]"
+                  >
+                    <div class="flex items-start p-6">
+                      <div
+                        class="flex items-center justify-center bg-mint/20 h-[90px] w-[90px] rounded-full"
+                      >
+                        <img
+                          src="src/assets/img/icon-active/truck.png"
+                          class="w-[42px] h-[42px]"
+                          alt=""
+                        />
+                      </div>
+
+<div class="flex flex-col items-start">
+  <p class="text-3xl font-semibold pl-5">
+    <span class="text-3xl font-semibold text-mint">24</span>&nbsp;Distributors
+  </p>
+  <span class="text-3xl font-medium pl-5 mt-3">Certified Distributors</span>
+</div>
+
+                    </div>
+
+<ul class="space-y-3 p-4 pb-0">
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-mint font-semibold">5</span>&nbsp;Clients
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Khan Younis</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-mint font-semibold">2</span>&nbsp;Clients
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-mint font-semibold">1</span>&nbsp;Clients
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-mint font-semibold">0</span>&nbsp;Clients
+    </p>
+  </li>
+
+  <li class="flex justify-between items-center">
+    <span class="text-[16px] font-semibold" style="color: #616161">Central Gaza</span>
+    <p class="text-[16px] font-semibold">
+      <span class="text-mint font-semibold">4</span>&nbsp;Clients
+    </p>
+  </li>
+</ul>
+
+                  </div>
+                </section>
+
+<div class="flex items-center justify-between mb-4">
+  <h2 class="text-lg font-bold flex items-center gap-2">Distributors
+    <span class="text-sky">(24)</span>
+  </h2>
+
+  <div class="flex items-center gap-3 mr-12">
+    <button class="flex items-center gap-2">
+      <img src="src/assets/img/requests/document-text.png" class="min-w-5 w-5 h-5" alt="Excel"/>
+      Excel File
+    </button>
+    <button class="flex items-center gap-2">
+      <img src="src/assets/img/requests/bi_file-pdf.png" class="min-w-5 w-5 h-5" alt="PDF"/>
+      PDF File
+    </button>
+  </div>
+</div>
+
+
+<div class="flex flex-wrap gap-4 mb-6">
+  <!-- City -->
+  <div class="relative">
+    <select
+      id="cityFilter"
+      class="appearance-none border border-gray-300 rounded-lg py-2 pl-3 pr-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+    >
+      <option value="">City</option>
+      <option value="غزة">Gaza</option>
+      <option value="الوسطى">Central</option>
+      <option value="خانيونس">Khan Yunis</option>
+      <option value="رفح">Rafah</option>
+      <option value="الشمال">North</option>
+    </select>
+    <span class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+      <svg class="min-w-5 w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+  </div>
+
+  <!-- District -->
+  <div class="relative">
+    <select
+      id="districtFilter"
+      class="appearance-none border border-gray-300 rounded-lg py-2 pl-3 pr-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+    >
+      <option value="">District</option>
+      <option value="الرمال">Al-Rimal</option>
+      <option value="تل الهوا">Tel Al-Hawa</option>
+      <option value="الشجاعية">Al-Shuja'iyya</option>
+      <option value="الزيتون">Al-Zaytoun</option>
+    </select>
+    <span class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+      <svg class="min-w-5 w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+  </div>
+
+  <!-- Distributor Type -->
+  <div class="relative">
+    <select
+      id="typeFilter"
+      class="appearance-none border border-gray-300 rounded-lg py-2 pl-3 pr-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+    >
+      <option value="">Distributors</option>
+      <option value="معتمدين">Approved</option>
+      <option value="جدد">New</option>
+    </select>
+    <span class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+      <svg class="min-w-5 w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+  </div>
+
+  <!-- Number of Orders -->
+  <div class="relative">
+    <select
+      id="ordersFilter"
+      class="appearance-none border border-gray-300 rounded-lg py-2 pl-3 pr-8 text-gray-700 bg-white cursor-pointer focus:ring-2 focus:ring-sky-400"
+    >
+      <option value="">Number of Orders</option>
+      <option value="high">Most Ordered</option>
+      <option value="low">Least Ordered</option>
+    </select>
+    <span class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+      <svg class="min-w-5 w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+  </div>
+</div>
+
+
+<div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
+  <div class="flex items-center gap-4 lg:gap-8 date-filter-buttons">
+    <button class="active-filter" data-date="today">
+      Today
+    </button>
+    <button class="text-base" data-date="this-week">
+      This Week
+    </button>
+    <button class="text-base" data-date="this-month">
+      This Month
+    </button>
+    <button class="text-base" data-date="this-year">
+      This Year
+    </button>
+    <button class="text-base" data-date="custom">
+      Custom
+    </button>
+  </div>
+</div>
+
+
+<div class="overflow-x-auto display">
+  <table id="myTableDistributors" class="w-full text-left labtop-xl:border-collapse labtop-xl:table-fixed">
+    <thead class="text-left">
+      <tr>
+        <th class="p-2 pl-0 pb-4">
+          <input id="selectAll" type="checkbox" class="w-4 h-4 lg:mr-2 rounded appearance-none
+           bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"/>
+        </th>
+
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">Distributor ID</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">Distributor Name</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">Trade Name</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">City</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">District</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium min-w-[120px] ">Mobile Number</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">Orders Count</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium min-w-[120px]">Start Date</th>
+      </tr>
+    </thead>
+
+    <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+      <tr data-type="new">
+        <th class="p-2 pl-0 text-left">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">#001</td>
+        <td class="p-2 pl-0">Tayeb</td>
+        <td class="p-2 pl-0">Gaz Al-Nada</td>
+        <td class="p-2 pl-0"><span class="px-2 py-1 rounded">Gaza</span></td>
+        <td class="p-2 pl-0">Shuja'iyya</td>
+        <td class="p-2 pl-0 text-end" dir="ltr">972 59945678</td>
+        <td class="p-2 pl-0">15 Orders</td>
+        <td class="p-2 pl-0">3 October 2025</td>
+      </tr>
+
+      <tr data-type="approved">
+        <th class="p-2 pl-0 text-left">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">#001</td>
+        <td class="p-2 pl-0">Tayeb</td>
+        <td class="p-2 pl-0">Gaz Al-Nada</td>
+        <td class="p-2 pl-0"><span class="px-2 py-1 rounded">Gaza</span></td>
+        <td class="p-2 pl-0">Shuja'iyya</td>
+        <td class="p-2 pl-0 text-end" dir="ltr">972 59945678</td>
+        <td class="p-2 pl-0">15 Orders</td>
+        <td class="p-2 pl-0">3 October 2025</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+              </div>
+
+              <div data-content="sales" class="hidden">
+                <!-- Cards section 1-->
+                <section class=" flex flex-col lg:flex-row pt-5 lg:pl-5 gap-6 mb-6 text-white lg:max-w-[975px] lg:min-w-[975px] xl:mx-auto">
+                  <!-- card 1 -->
+<div
+  dir="ltr"
+  class="bg-white text-gray-800 rounded-lg shadow flex-1 lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[340px]"
+>
+  <div class="flex items-start p-6">
+    <div
+      class="flex items-center justify-center bg-mint/20 h-[90px] w-[90px] rounded-full"
+    >
+      <img
+        src="src/assets/img/icon/grid-2.png"
+        class="w-[42px] h-[42px]"
+        alt=""
+      />
+    </div>
+
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold pl-5">
+        <span class="text-3xl font-semibold text-mint">240</span>&nbsp;Orders
+      </p>
+      <span class="text-3xl font-medium pl-5 mt-3">Orders</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">5 </span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">2 </span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">1 </span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Northern City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">0 </span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">4 </span>&nbsp;Orders
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+                  <!-- card 2 -->
+ <div dir="ltr"
+     class="bg-white text-gray-800 rounded-lg shadow flex-1
+            max-w-[95%] min-w-[95%] lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[350px]"
+>
+  <div class="flex items-start p-6">
+    <div
+      class="flex items-center justify-center bg-abys/20 h-[90px] w-[90px] rounded-full"
+    >
+      <img
+        src="src/assets/img/icon-active/grid-2.png"
+        class="w-[42px] h-[42px]"
+        alt=""
+      />
+    </div>
+
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold pl-5">
+        <span class="text-3xl font-semibold text-abys">16,000</span>&nbsp;Distributors
+      </p>
+      <span class="text-3xl font-medium pl-5 mt-3">Approved Distributors</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Clients
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Clients
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Clients
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Northern City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Clients
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Clients
+      </p>
+    </li>
+  </ul>
+</div>
+
+                </section>
+
+               <div class="flex items-center border-2 border-bl p-4 rounded-tr-lg justify-between mb-1 mr-5">
+  <div class="flex items-center gap-4 lg:gap-8 filter-buttons">
+    <button class="active-filter">Today</button>
+    <button class="text-[#7E7E7E] font-medium">This Week</button>
+    <button class="text-[#7E7E7E] font-medium">This Month</button>
+    <button class="text-[#7E7E7E] font-medium">This Year</button>
+    <button class="text-[#7E7E7E] font-medium">Custom</button>
+  </div>
+</div>
+
+
+                <!-- Cards section 1-->
+                <section
+                  class="flex flex-col gap-6 text-white lg:max-w-[975px] lg:min-w-[975px] mx-auto mt-8"
+                >
+                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                    <!-- card 1 -->
+<div class="bg-white text-gray-800 rounded-lg shadow min-h-[350px]">
+  <div class="flex items-start p-6">
+    <div class="flex items-center justify-center bg-mint/20 h-[90px] w-[90px] rounded-full">
+      <img src="src/assets/img/icon/grid-2.png" class="w-[42px] h-[42px]" alt=""/>
+    </div>
+
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold pl-5">
+        <span class="text-3xl font-semibold text-mint">20</span>&nbsp;Orders
+      </p>
+      <span class="text-3xl font-medium pl-5 mt-3">Orders</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-mint font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+                    <!-- card 2 -->
+   <div class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]">
+  <div class="flex items-start p-6">
+    <div class="flex items-center justify-center bg-abys/20 h-[90px] w-[90px] rounded-full">
+      <img src="src/assets/img/icon-active/grid-2.png" class="w-[42px] h-[42px]" alt=""/>
+    </div>
+
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold pl-5">
+        <span class="text-3xl font-semibold text-abys">2,200</span>&nbsp;ILS
+      </p>
+      <span class="text-3xl font-medium pl-5 mt-3">Sales</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-abys font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+  </ul>
+</div>
+
+                  </div>
+
+                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                    <!-- card 3 -->
+<div class="bg-white text-gray-800 rounded-lg shadow min-h-[350px] max-h-[350px]">
+  <div class="flex items-start p-6">
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold">Orders</p>
+      <span class="text-3xl font-medium mt-3">By City</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">5</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">2</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">1</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">0</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">4</span>&nbsp;Orders
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+               <!-- card 4 -->
+<div class="bg-white text-gray-800 rounded-lg shadow min-h-[391px] max-h-[391px] mt-[-40px]">
+  <div class="flex items-start p-6">
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold">Orders</p>
+      <span class="text-3xl font-medium mt-3">By District</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">560</span>&nbsp;Customers
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+<!-- card 5 -->
+<div class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]">
+  <div class="flex items-start p-6">
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold">Orders</p>
+      <span class="text-3xl font-medium mt-3">By Cylinder</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza City</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">5</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">2</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">0</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">4</span>&nbsp;Orders
+      </p>
+    </li>
+  </ul>
+</div>
+
+<!-- card 6 -->
+<div class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]">
+  <div class="flex items-start p-6">
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold">Orders</p>
+      <span class="text-3xl font-medium mt-3">Top Selling Distributors</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">2</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">1</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">0</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">4</span>&nbsp;Orders
+      </p>
+    </li>
+  </ul>
+</div>
+
+<!-- card 7 -->
+<div class="bg-white text-gray-800 rounded-lg shadow min-h-[309px] max-h-[309px]">
+  <div class="flex items-start p-6">
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold">Orders</p>
+      <span class="text-3xl font-medium mt-3">Top Customers</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">2</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">1</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">0</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-sky font-semibold">4</span>&nbsp;Orders
+      </p>
+    </li>
+  </ul>
+</div>
+
+                  </div>
+                </section>
+              </div>
+
+              <div data-content="clients" class="hidden">
+                <!-- Cards section 1-->
+                <section
+                  class="flex flex-col lg:flex-row pt-5 lg:pl-5 gap-6 mb-6  text-white lg:max-w-[975px] lg:min-w-[975px]"
+                >
+             <!-- card 1 -->
+<div
+  dir="ltr"
+  class="bg-white text-gray-800 rounded-lg shadow flex-1 max-w-[95%] min-w-[95%] lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[340px]"
+>
+  <div class="flex items-start p-6">
+    <div
+      class="flex items-center justify-center bg-iris/20 h-[90px] w-[90px] rounded-full"
+    >
+      <img
+        src="src/assets/img/icon/profile-2user.png"
+        class="w-[42px] h-[42px]"
+        alt=""
+      />
+    </div>
+
+    <div class="flex flex-col items-start">
+      <p class="text-3xl font-semibold pl-5">
+        <span class="text-3xl font-semibold text-iris">160</span>&nbsp;Customers
+      </p>
+      <span class="text-3xl font-medium pl-5 mt-3">Customers</span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 p-4 pb-0">
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-iris font-semibold">5</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Khan Yunis</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-iris font-semibold">2</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Rafah</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-iris font-semibold">1</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">North Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-iris font-semibold">0</span>&nbsp;Orders
+      </p>
+    </li>
+
+    <li class="flex justify-between items-center">
+      <span class="text-[16px] font-semibold" style="color: #616161">Central Gaza</span>
+      <p class="text-[16px] font-semibold">
+        <span class="text-iris font-semibold">4</span>&nbsp;Orders
+      </p>
+    </li>
+  </ul>
+</div>
+
+                </section>
+
+  <div
+  class="flex items-center justify-between mb-4 border border-bl rounded-tr-lg p-4"
+>
+  <h2 class="text-lg font-bold flex items-center gap-2">
+    Distributors
+    <span class="text-sky">(24)</span>
+  </h2>
+
+  <div class="flex items-center gap-3 mr-12">
+    <button class="flex items-center gap-2">
+      <img
+        src="src/assets/img/requests/document-text.png"
+        class="min-w-5 w-5 h-5"
+        alt="Excel"
+      />
+      Excel File
+    </button>
+    <button class="flex items-center gap-2">
+      <img
+        src="src/assets/img/requests/bi_file-pdf.png"
+        class="min-w-5 w-5 h-5"
+        alt="PDF"
+      />
+      PDF File
+    </button>
+  </div>
+</div>
+
+
+<div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
+  <div class="flex items-center gap-4 lg:gap-8 date-filter-buttons">
+    <button class="active-filter">Today</button>
+    <button class="text-base">This Week</button>
+    <button class="text-base">This Month</button>
+    <button class="text-base">This Year</button>
+    <button class="text-base">Custom</button>
+  </div>
+</div>
+
+
+
+
+<div class="overflow-x-auto display">
+  <table id="myTableClients" class="w-full text-left labtop-xl:border-collapse labtop-xl:table-fixed">
+    <thead class="text-left">
+      <tr>
+        <th class="p-2 pl-0 pb-4">
+          <input id="selectAll" type="checkbox" class="w-4 h-4 mr-2 rounded appearance-none
+           bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"/>
+        </th>
+
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">Distributor ID</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium min-w-[120px] ">Phone Number</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">Orders</th>
+        <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
+      <tr>
+        <th class="p-2 pl-0 text-left">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">vcvcvcv</td>
+        <td class="p-2 pl-0 text-end" dir="ltr">972 59945678</td>
+        <td class="p-2 pl-0">15 orders</td>
+        <td class="p-2 pl-0 flex items-center justify-start gap-3">
+          <button onclick="viewOrder(this)">
+            <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5"/>
+          </button>
+          <button>
+            <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5"/>
+          </button>
+          <button onclick="viewOrderAction(this, 'delete')">
+            <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5"/>
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <th class="p-2 pl-0 text-left">
+          <input
+            type="checkbox"
+            class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+          />
+        </th>
+        <td class="p-2 pl-0">Tayeb</td>
+        <td class="p-2 pl-0 text-end" dir="ltr">972 59945678</td>
+        <td class="p-2 pl-0">15 orders</td>
+        <td class="p-2 pl-0 flex items-center justify-start gap-3">
+          <button onclick="viewOrder(this)">
+            <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5"/>
+          </button>
+          <button>
+            <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5"/>
+          </button>
+          <button onclick="viewOrderAction(this, 'delete')">
+            <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5"/>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+              </div>
+
+
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+       <!-- ✅ jQuery  -->
+    <script src="src/assets/js/jquery.min.js"></script>
+    <!-- ✅ JS الأساسي لـ DataTables -->
+    <script src="src/assets/js/dataTables.min.js"></script>
+    <!-- ✅ JS الخاص بإضافة Responsive -->
+    <script src="src/assets/js/dataTables.responsive.min.js"></script>
+    <!-- ✅ سكربت الصفحة أو الأكواد المخصصة -->
+    <script src="src/assets/js/relodePage.js"></script>
+
+    <!-- Script for viewing order details and showing loader before redirect -->
+    <script>
+      function viewOrder(button) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+
+        const parentTableWrapper = button.closest("div[data-status]");
+        const tableStatus = parentTableWrapper.getAttribute("data-status");
+
+        let targetPage =
+          tableStatus === "approved"
+            ? "accreditedDetails.html"
+            : "distributorDetails.html";
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(tableStatus)}`;
+        }, 1200);
+      }
+
+      function viewOrderAction(button, action) {
+        const row = button.closest("tr");
+        const orderId = row
+          .querySelector("td")
+          .textContent.replace("#", "")
+          .trim();
+
+        const parentTableWrapper = button.closest("div[data-status]");
+        const tableStatus = parentTableWrapper.getAttribute("data-status");
+
+        let targetPage =
+          tableStatus === "approved"
+            ? "accreditedDetails.en.html"
+            : "distributorDetails.en.html";
+
+        showLoader(row);
+
+        setTimeout(() => {
+          window.location.href = `${targetPage}?id=${orderId}&status=${encodeURIComponent(
+            tableStatus
+          )}&action=${action}`;
+        }, 1200);
+      }
+
+      function showLoader(row) {
+        const oldLoader = document.querySelector(".loader-row");
+        if (oldLoader) oldLoader.remove();
+
+        const colCount = row.children.length;
+
+        const loaderRow = document.createElement("tr");
+        loaderRow.classList.add("loader-row");
+        loaderRow.innerHTML = `
+<td colspan="${colCount}" class="p-4 text-center">
+  <div class="flex justify-center items-center">
+    <div class="loader border-4 border-sky-400 border-t-transparent rounded-full w-6 h-6 animate-spin"></div>
+    <span class="ml-2">Loading distributor details...</span>
+  </div>
+</td>
+
+    `;
+
+        row.insertAdjacentElement("afterend", loaderRow);
+      }
+    </script>
+
+    <!-- Script for handling mobile sidebar open/close -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+      });
+    </script>
+
+    <!-- Script for toggling user dropdown menu -->
+    <script>
+      const userMenuBtn = document.getElementById("userMenuBtn");
+      const userDropdown = document.getElementById("userDropdown");
+
+      userMenuBtn.addEventListener("click", () => {
+        userDropdown.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Script for handling notification dropdown -->
+    <script>
+      const notifBtns = document.querySelectorAll("#notifBtn");
+      const notifDropdowns = document.querySelectorAll("#notifDropdown");
+
+      notifBtns.forEach((btn, index) => {
+        const dropdown = notifDropdowns[index];
+
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // إغلاق جميع القوائم عند النقر خارجها
+      document.addEventListener("click", (e) => {
+        notifBtns.forEach((btn, index) => {
+          const dropdown = notifDropdowns[index];
+          if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+
+    <!-- Script for handling logout modal -->
+    <script>
+      function openModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("logoutModal");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+    </script>
+
+    <!-- Script for select all checkbox functionality -->
+    <script>
+      const selectAll = document.getElementById("selectAll");
+
+      const checkboxes = document.querySelectorAll(".rowCheckbox");
+
+      selectAll.addEventListener("change", function () {
+        checkboxes.forEach((cb) => (cb.checked = selectAll.checked));
+      });
+
+      checkboxes.forEach((cb) => {
+        cb.addEventListener("change", function () {
+          selectAll.checked = [...checkboxes].every((c) => c.checked);
+        });
+      });
+    </script>
+
+
+    <!-- pop up add -->
+    <script>
+      const distributorModal = document.getElementById("distributorModal");
+      const openDistributorModal = document.getElementById(
+        "openDistributorModal"
+      );
+      const closeDistributorModal = document.getElementById(
+        "closeDistributorModal"
+      );
+
+      openDistributorModal.addEventListener("click", () => {
+        distributorModal.classList.remove("hidden");
+        distributorModal.classList.add("flex");
+      });
+
+      closeDistributorModal.addEventListener("click", () => {
+        distributorModal.classList.remove("flex");
+        distributorModal.classList.add("hidden");
+      });
+
+      distributorModal.addEventListener("click", (e) => {
+        if (e.target === distributorModal) {
+          distributorModal.classList.remove("flex");
+          distributorModal.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <script>
+      function previewFile(event, previewId) {
+        const file = event.target.files[0];
+        const preview = document.getElementById(previewId);
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            preview.src = reader.result;
+            preview.classList.remove("hidden");
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+
+
+
+    <script>
+      const buttons = document.querySelectorAll(".filter-buttons button");
+      const contents = document.querySelectorAll("[data-content]");
+
+      function activateButton(state) {
+        buttons.forEach((btn) => {
+          btn.classList.remove("active-filter-reports");
+          btn.classList.add("text-black", "font-medium");
+        });
+
+        const activeBtn = Array.from(buttons).find(
+          (btn) => btn.getAttribute("data-state") === state
+        );
+        if (activeBtn) {
+          activeBtn.classList.add("active-filter-reports");
+          activeBtn.classList.remove("text-black", "font-medium");
+        }
+
+        contents.forEach((content) => {
+          content.classList.toggle(
+            "hidden",
+            content.getAttribute("data-content") !== state
+          );
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        activateButton("distributors");
+      });
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const state = button.getAttribute("data-state");
+          activateButton(state);
+        });
+      });
+    </script>
+
+      <script>
+        $(document).ready(function () {
+          const table = new DataTable("#myTableDistributors", {
+            responsive: {
+              details: {
+                type: "inline",
+                target: "tr",
+              },
+              breakpoints: [
+                { name: "desktop", width: Infinity },
+                { name: "laptop", width: 1200 },
+                { name: "tablet", width: 992 },
+                { name: "mobile", width: 768 },
+                { name: "smallmobile", width: 480 },
+              ],
+            },
+            info: false,
+            searching: false,
+            paging: true,
+            lengthChange: true,
+
+            columnDefs: [
+              { orderable: false, targets: [0, 1, 4, 5, 6] },
+
+              { responsivePriority: 1, targets: 0 },
+              { responsivePriority: 2, targets: 1 },
+              { responsivePriority: 3, targets: 2 },
+
+              {
+                targets: [ 3, 4, 5, 6],
+                className: "min-desktop",
+              },
+            ],
+
+            language: {
+             lengthMenu: "Rows per page _MENU_",
+            },
+
+            layout: {
+              topStart: null,
+              bottomStart: "paging",
+              bottomEnd: "pageLength",
+            },
+          });
+
+          setTimeout(() => {
+            const disabledCols = [0, 1, 4, 5, 6];
+            disabledCols.forEach((i) => {
+              const th = $(`#myTableDistributors thead th:eq(${i})`);
+              th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+              th.find(".dt-column-order").remove();
+            });
+          }, 1);
+        });
+      </script>
+
+      <script>
+        $(document).ready(function () {
+          const table = new DataTable("#myTableClients", {
+            responsive: {
+              details: {
+                type: "inline",
+                target: "tr",
+              },
+              breakpoints: [
+                { name: "desktop", width: Infinity },
+                { name: "laptop", width: 1200 },
+                { name: "tablet", width: 992 },
+                { name: "mobile", width: 768 },
+                { name: "smallmobile", width: 480 },
+              ],
+            },
+            info: false,
+            searching: false,
+            paging: true,
+            lengthChange: true,
+
+            columnDefs: [
+              { orderable: false, targets: [0, 2, 4] },
+
+              { responsivePriority: 1, targets: 0 },
+              { responsivePriority: 2, targets: 1 },
+              { responsivePriority: 3, targets: 4 },
+
+              {
+                targets: [ 2, 3],
+                className: "min-desktop",
+              },
+            ],
+
+            language: {
+             lengthMenu: "Rows per page _MENU_",
+            },
+
+            layout: {
+              topStart: null,
+              bottomStart: "paging",
+              bottomEnd: "pageLength",
+            },
+          });
+
+          setTimeout(() => {
+            const disabledCols = [0, 2, 4];
+            disabledCols.forEach((i) => {
+              const th = $(`#myTableClients thead th:eq(${i})`);
+              th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+              th.find(".dt-column-order").remove();
+            });
+          }, 1);
+        });
+      </script>
+    
+  </body>
+</html>

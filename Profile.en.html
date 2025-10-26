@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/assets/css/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/img/logo/49.png"
+      type="image/x-icon"
+    />
+    <title>جيتك - الملف الشخصي</title>
+  </head>
+  <body class="bg-white min-h-screen flex">
+  <!-- Wrapper -->
+   <div class="flex">
+      <!-- Sidebar Desktop -->
+      <aside
+        class="hidden xl:flex w-[340px] desktop-2xl:w-[640px] bg-white border-l border-bl flex-col"
+      >
+        <div
+          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
+        >
+          <a href="overview.en.html" class="show-loader"
+            ><img
+              src="src/assets/img/logoen.png"
+              alt="Logo"
+              class="ml-20 w-[152px] h-[67px]"
+          /></a>
+        </div>
+
+        <nav class="space-y-3 font-semibold p-4 pl-10">
+          <a
+            href="overview.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-active/chart-2.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Overview
+          </a>
+
+          <a
+            href="requests.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/grid-2.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Orders
+          </a>
+
+          <a
+            href="agents.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/truck.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Agents
+          </a>
+
+          <a
+            href="customers.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/profile-2user.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Customers
+          </a>
+
+          <a
+            href="map.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/map.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Map
+          </a>
+
+          <a
+            href="reports.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/trend-down.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Reports
+          </a>
+
+          <a
+            href="usersPermissions.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/user-octagon.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Users & Permissions
+          </a>
+
+          <a
+            href="complaints.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span
+              ><img
+                src="src/assets/img/icon-mute/info-circle.png"
+                class="w-9 h-9 ml-6"
+                alt=""
+            /></span>
+            Complaints
+          </a>
+        </nav>
+      </aside>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 min-h-screen">
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between h-[135px] border-b border-bl px-6 lg:max-w-[990px]
+        lg:min-w-[990px] labtop-s:min-w-[1010px] labtop-s:max-w-[1010px] labtop-m:min-w-[1085px]
+        labtop-m:max-w-[1085px]  xl:min-w-[1140px] labtop-xl:min-w-[1560px] desktop-2xl:min-w-[2200px]"
+      >
+        <div class="flex-1 block xl:hidden">
+          <!-- Top bar mobile -->
+          <div
+            class="xl:hidden flex items-center gap-3 bg-white p-4 lg:border-b border-bl"
+          >
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <aside
+            id="mobile-menu"
+            class="fixed top-0 left-0 h-full w-80 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 xl:hidden z-50"
+          >
+            <div
+              class="flex items-center justify-between p-4 border-b border-bl"
+            >
+              <img
+                src="src/assets/img/logoen.png"
+                alt="Logo"
+                class="w-32 h-14"
+              />
+
+              <button id="close-btn" class="text-gray-700">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Search -->
+            <div class="block lg:hidden p-2 relative lg:w-[410px] h-[55px]">
+              <input
+                type="text"
+                placeholder="Find an order, distributor, customer..."
+                class="w-full pl-10 pr-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+              />
+              <span class="absolute left-3 inset-y-0 flex items-center">
+                <img
+                  src="src/assets/img/search-normal.png"
+                  class="w-5 h-5"
+                  alt="Search"
+                />
+              </span>
+            </div>
+
+            <div class="relative">
+              <button
+                id="notifBtn"
+                class="relative flex items-center w-[90%] mx-auto justify-center bg-sky h-14 xl:w-14 rounded-lg focus:outline-none"
+              >
+                <img
+                  src="src/assets/img/icon/notification.png"
+                  class="w-6 h-6"
+                  alt="Notifications"
+                />
+              </button>
+
+              <div
+                id="notifDropdown"
+                class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+              >
+                <ul class="py-2">
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                  </li>
+                  <li class="px-4 py-2 flex items-center justify-between">
+                    <span>Ali Haji placed a new refill request</span>
+                    <span
+                      class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                    ></span>
+                  </li>
+                </ul>
+
+                <div
+                  class="text-center flex items-center justify-center py-2 border-t border-bl"
+                >
+                  <a
+                    href="notifications.en.html"
+                    class="text-sky font-bold hover:underline"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <nav class="space-y-3 font-semibold p-4 pl-10">
+              <a
+                href="overview.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-active/chart-2.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Overview
+              </a>
+
+              <a
+                href="requests.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/grid-2.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Requests
+              </a>
+
+              <a
+                href="distributors.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/truck.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Distributors
+              </a>
+
+              <a
+                href="customer.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/profile-2user.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Customers
+              </a>
+
+              <a
+                href="map.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/map.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Map
+              </a>
+
+              <a
+                href="reports.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/trend-down.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Reports
+              </a>
+
+              <a
+                href="usersPermissions.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/user-octagon.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Users & Permissions
+              </a>
+
+              <a
+                href="complaints.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+              >
+                <span>
+                  <img
+                    src="src/assets/img/icon-mute/info-circle.png"
+                    class="w-9 h-9 ml-6"
+                    alt=""
+                  />
+                </span>
+                Complaints
+              </a>
+            </nav>
+          </aside>
+        </div>
+
+        <!-- Search -->
+        <div class="hidden lg:block relative w-[410px] h-[55px]">
+          <input
+            type="text"
+            placeholder="Find an order, distributor, customer..."
+            class="w-full pl-10 pr-4 py-2 border border-bl rounded-lg focus:outline-sky h-full"
+          />
+          <span class="absolute left-3 inset-y-0 flex items-center">
+            <img
+              src="src/assets/img/search-normal.png"
+              class="w-5 h-5"
+              alt="بحث"
+            />
+          </span>
+        </div>
+
+        <!-- User Section -->
+        <div class="relative flex items-center gap-4">
+          <!-- Notification Icon -->
+          <div class="relative hidden xl:block">
+            <!-- Notification Icon -->
+            <button
+              id="notifBtn"
+              class="relative flex items-center justify-center bg-sky h-14 w-14 rounded-full focus:outline-none"
+            >
+              <img
+                src="src/assets/img/icon/notification.png"
+                class="w-6 h-6"
+                alt="Notifications"
+              />
+            </button>
+
+            <div
+              id="notifDropdown"
+              class="hidden absolute left-4 mt-2 w-[350px] h-[420px] bg-white rounded-lg shadow-lg overflow-y-auto z-50"
+            >
+              <ul class="py-2">
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span class="w-[14px] h-[14px] bg-sky rounded-full"></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+                <li class="px-4 py-2 flex items-center justify-between">
+                  <span>Ali Haji placed a new refill request</span>
+                  <span
+                    class="w-[14px] h-[14px] bg-gray-200 rounded-full"
+                  ></span>
+                </li>
+              </ul>
+
+              <div
+                class="text-center flex items-center justify-center py-2 border-t border-bl"
+              >
+                <a
+                  href="notifications.en.html"
+                  class="text-sky font-bold hover:underline"
+                  >View all notifications</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- User Dropdown -->
+          <div class="relative bg-backNav py-2 px-6 rounded-lg">
+            <button
+              id="userMenuBtn"
+              class="flex items-center lg:gap-2 focus:outline-none"
+            >
+              <img
+                src="src/assets/img/Imag.png"
+                alt="User"
+                class="w-12 h-12 rounded-full border"
+              />
+
+              <div class="text-left ml-2">
+                <span
+                  class="hidden lg:block font-extrabold text-[20px] text-[#3C3C3C]"
+                  >Mohamed Ali</span
+                >
+                <span
+                  class="hidden lg:block text-sm font-extrabold text-[#6D6D6D]"
+                  >General Manager</span
+                >
+              </div>
+
+              <svg
+                class="w-6 h-6 text-black ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="userDropdown"
+              class="hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-[95625]"
+            >
+              <ul class="py-2">
+                <li>
+                  <a
+                    href="profile.en.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/frame.png"
+                      class="w-5 h-5"
+                      alt="Profile"
+                    />
+                    <span>Profile</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="setting.en.html"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src="src/assets/img/icon/setting-2.png"
+                      class="w-5 h-5"
+                      alt="Settings"
+                    />
+                    <span>Settings</span>
+                  </a>
+                </li>
+                <a
+                  href="#"
+                  onclick="openModal()"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                >
+                  <img
+                    src="src/assets/img/icon/logout.png"
+                    class="w-5 h-5"
+                    alt="Logout"
+                  />
+                  <span>Logout</span>
+                </a>
+
+                <div
+                  id="logoutModal"
+                  class="hidden fixed inset-0 items-center justify-center bg-blue-200/40 z-50"
+                >
+                  <div
+                    class="bg-white rounded-lg shadow-lg p-5 w-[680px] h-[260px] relative flex flex-col"
+                  >
+                    <button
+                      onclick="closeModal()"
+                      class="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-backNav text-white"
+                    >
+                      ✕
+                    </button>
+
+                    <div class="p-4 flex justify-center mt-5">
+                      <h2 class="text-lg font-bold">Logout</h2>
+                    </div>
+
+                    <div class="flex-1 flex items-center justify-center">
+                      <p class="text-center text-gray-700 text-lg">
+                        Are you sure you want to log out?
+                      </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        onclick="logout()"
+                        class="w-full py-3 bg-red-600 text-white rounded-lg font-medium"
+                      >
+                        Logout
+                      </button>
+                      <button
+                        onclick="closeModal()"
+                        class="w-full py-3 bg-gray-300 rounded-lg font-medium"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-sky w-full h-full">
+        <div
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1000px] lg:max-w-[1000px] labtop-s:min-w-[850px] labtop-s:max-w-[850px]
+          2xl:min-w-[1120px] 2xl:max-w-[1120px] labtop-m:min-w-[1085px] labtop-m:max-w-[1085px] 
+          labtop-xl:min-w-[1540px] labtop-xl:max-w-[1540px] desktop-2xl:min-w-[2200px] desktop-2xl:max-w-[2200px] xl:pl-6 xl:pt-6 "
+        >
+        
+          <!-- Main Profile Content -->
+          <section class="bg-white p-6 mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1024px]
+          lg:max-w-[1024px] labtop-s:min-w-[985px] labtop-s:max-w-[985px]
+          2xl:min-w-[1155px] 2xl:max-w-[1155px] labtop-m:min-w-[1060px] labtop-m:max-w-[1060px] 
+          labtop-xl:min-w-[1540px] labtop-xl:max-w-[1540px] desktop-2xl:min-w-[2180px] desktop-2xl:max-w-[2180px]">
+<div class="rounded-lg p-6">
+  <h2 class="text-2xl font-extrabold mb-6">Personal Information</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-semibold">
+    <div>
+      <p class="text-gray-500">Username</p>
+      <p class="font-bold">Ali Alhajar</p>
+    </div>
+    <div>
+      <p class="text-gray-500">Job Title</p>
+      <p>General Manager</p>
+    </div>
+    <div>
+      <p class="text-gray-500">Email</p>
+      <p>alihagar@gmail.com</p>
+    </div>
+    <div>
+      <p class="text-gray-500">Phone Number</p>
+      <p>972 59913456</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="rounded-lg p-6">
+  <h2 class="text-2xl font-extrabold mb-6">Permissions</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Add Customer
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Edit Customer Data
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Delete Customer
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Add Distributor
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Edit Distributor Data
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Delete Distributor
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Manage Settings
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Orders
+    </button>
+    <button
+      class="border border-sky rounded-xl py-2 hover:bg-sky hover:text-white transition"
+    >
+      Reports
+    </button>
+  </div>
+</div>
+
+
+<div class="rounded-lg p-6 max-w-[600px] bg-white">
+  <h2 class="text-2xl font-extrabold mb-6">Actions</h2>
+
+  <div class="grid grid-cols-3 text-center font-bold text-gray-700 pb-3">
+    <div>Action Date</div>
+    <div>Time</div>
+    <div>Action</div>
+  </div>
+
+  <div>
+    <div class="grid grid-cols-3 text-center py-3">
+      <div>March 15, 2023</div>
+      <div>08:30 PM</div>
+      <a href="somepage.html" class="text-sky font-semibold hover:underline">
+        Distributor Data Approval
+      </a>
+    </div>
+    <div class="grid grid-cols-3 text-center py-3">
+      <div>March 15, 2023</div>
+      <div>08:30 PM</div>
+      <a href="somepage.html" class="text-sky font-semibold hover:underline">
+        Distributor Data Approval
+      </a>
+    </div>
+    <div class="grid grid-cols-3 text-center py-3">
+      <div>March 15, 2023</div>
+      <div>08:30 PM</div>
+      <a href="somepage.html" class="text-sky font-semibold hover:underline">
+        Distributor Data Approval
+      </a>
+    </div>
+    <div class="grid grid-cols-3 text-center py-3">
+      <div>March 15, 2023</div>
+      <div>08:30 PM</div>
+      <a href="somepage.html" class="text-sky font-semibold hover:underline">
+        Distributor Data Approval
+      </a>
+    </div>
+    <div class="grid grid-cols-3 text-center py-3">
+      <div>March 15, 2023</div>
+      <div>08:30 PM</div>
+      <a href="somepage.html" class="text-sky font-semibold hover:underline">
+        Distributor Data Approval
+      </a>
+    </div>
+  </div>
+</div>
+
+
+          </section>
+
+        </div>
+      </section>
+    </main>
+
+    <script src="src/assets/js/relodePage.js"></script>
+
+    <script>
+      const userMenuBtn = document.getElementById("userMenuBtn");
+      const userDropdown = document.getElementById("userDropdown");
+
+      userMenuBtn.addEventListener("click", () => {
+        userDropdown.classList.toggle("hidden");
+      });
+    </script>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+      });
+    </script>
+       <script>
+      const notifBtns = document.querySelectorAll("#notifBtn");
+      const notifDropdowns = document.querySelectorAll("#notifDropdown");
+
+      notifBtns.forEach((btn, index) => {
+        const dropdown = notifDropdowns[index];
+
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // إغلاق جميع القوائم عند النقر خارجها
+      document.addEventListener("click", (e) => {
+        notifBtns.forEach((btn, index) => {
+          const dropdown = notifDropdowns[index];
+          if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

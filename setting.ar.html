@@ -1888,5 +1888,28 @@
         window.location.href = "index.en.html";
       }
     </script>
+       <script>
+      const notifBtns = document.querySelectorAll("#notifBtn");
+      const notifDropdowns = document.querySelectorAll("#notifDropdown");
+
+      notifBtns.forEach((btn, index) => {
+        const dropdown = notifDropdowns[index];
+
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // إغلاق جميع القوائم عند النقر خارجها
+      document.addEventListener("click", (e) => {
+        notifBtns.forEach((btn, index) => {
+          const dropdown = notifDropdowns[index];
+          if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add("hidden");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
