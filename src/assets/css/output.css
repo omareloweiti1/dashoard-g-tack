@@ -2499,6 +2499,11 @@
       max-width: var(--container-sm);
     }
   }
+  .sm\:grid-cols-1 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2964,11 +2969,6 @@
   .lg\:pl-0 {
     @media (width >= 64rem) {
       padding-left: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:pl-2 {
-    @media (width >= 64rem) {
-      padding-left: calc(var(--spacing) * 2);
     }
   }
   .lg\:pl-5 {
@@ -3995,12 +3995,6 @@
       --tw-backdrop-invert: initial;
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
-      --tw-backdrop-sepia: initial;
-      --tw-duration: initial;
-    }
-  }
-}
-te: initial;
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
     }
