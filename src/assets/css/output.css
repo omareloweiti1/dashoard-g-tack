@@ -809,6 +809,9 @@
   .max-h-\[662px\] {
     max-height: 662px;
   }
+  .min-h-\[42px\] {
+    min-height: 42px;
+  }
   .min-h-\[133px\] {
     min-height: 133px;
   }
@@ -1045,6 +1048,9 @@
   }
   .min-w-5 {
     min-width: calc(var(--spacing) * 5);
+  }
+  .min-w-\[42px\] {
+    min-width: 42px;
   }
   .min-w-\[90px\] {
     min-width: 90px;
@@ -2916,9 +2922,19 @@
       padding: calc(var(--spacing) * 0);
     }
   }
+  .lg\:p-4 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 4);
+    }
+  }
   .lg\:p-6 {
     @media (width >= 64rem) {
       padding: calc(var(--spacing) * 6);
+    }
+  }
+  .lg\:px-4 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 4);
     }
   }
   .lg\:px-6 {
