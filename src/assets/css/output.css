@@ -2966,6 +2966,11 @@
       padding-left: calc(var(--spacing) * 0);
     }
   }
+  .lg\:pl-2 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 2);
+    }
+  }
   .lg\:pl-5 {
     @media (width >= 64rem) {
       padding-left: calc(var(--spacing) * 5);
@@ -3990,6 +3995,12 @@
       --tw-backdrop-invert: initial;
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+    }
+  }
+}
+te: initial;
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
     }
