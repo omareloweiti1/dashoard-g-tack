@@ -2971,6 +2971,11 @@
       padding-left: calc(var(--spacing) * 0);
     }
   }
+  .lg\:pl-2 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 2);
+    }
+  }
   .lg\:pl-5 {
     @media (width >= 64rem) {
       padding-left: calc(var(--spacing) * 5);
