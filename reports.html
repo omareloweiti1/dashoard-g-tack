@@ -236,8 +236,8 @@
         border: 2px solid var(--color-sky);
         border-top-color: transparent;
         border-radius: 50%;
-        width: 16px;  
-        height: 16px;  
+        width: 16px;
+        height: 16px;
         animation: spin 0.8s linear infinite;
       }
 
@@ -332,7 +332,7 @@
 
           <a
             href="reports.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside  show-loader"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
           >
             <span
               ><img
@@ -373,10 +373,7 @@
     <main class="flex-1 min-h-screen">
       <!-- Header -->
       <header
-        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 
-        min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
-          labtop-s:min-w-[100%] labtop-s:max-w-[1040px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] 
-          labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px]"
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] labtop-s:min-w-[100%] labtop-s:max-w-[1040px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px]"
       >
         <div class="flex-1 block lg:hidden">
           <!-- Top bar mobile -->
@@ -818,44 +815,71 @@
 
       <section class="bg-sky w-full h-full">
         <div
-          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
-          labtop-s:min-w-[100%] labtop-s:max-w-[1020px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] 
-          labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px]"
+          class="mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] labtop-s:min-w-[100%] labtop-s:max-w-[1020px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] labtop-xl:min-w-[1575px] labtop-xl:max-w-[1575px] desktop-2xl:min-w-[2215px] desktop-2xl:max-w-[2215px]"
         >
-          <section class="bg-sky w-full min-h-screen  xl:pt-6 xl:pr-6">
-            <div class="bg-white xl:rounded-tr-lg xl:rounded-br-lg shadow-md p-4 pl-0">
+          <section class="bg-sky w-full min-h-screen xl:pt-6 xl:pr-6">
+            <div
+              class="bg-white xl:rounded-tr-lg xl:rounded-br-lg shadow-md p-4 pl-0"
+            >
               <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-bold flex items-center gap-2"> التقارير
+                <h2 class="text-lg font-bold flex items-center gap-2">
+                  التقارير
                   <!-- <span class="text-sky">(24)</span> -->
                 </h2>
 
                 <div class="flex items-center gap-3 ml-12">
                   <button class="flex items-center gap-2">
-                    <img src="src/assets/img/requests/document-text.png" class="min-w-5 w-5 h-5" alt="Excel"/>
+                    <img
+                      src="src/assets/img/requests/document-text.png"
+                      class="min-w-5 w-5 h-5"
+                      alt="Excel"
+                    />
                     ملف إكسل
                   </button>
                   <button class="flex items-center gap-2">
-                    <img src="src/assets/img/requests/bi_file-pdf.png" class="min-w-5 w-5 h-5" alt="PDF"/>
+                    <img
+                      src="src/assets/img/requests/bi_file-pdf.png"
+                      class="min-w-5 w-5 h-5"
+                      alt="PDF"
+                    />
                     ملف PDF
                   </button>
                 </div>
               </div>
 
-              <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
+              <div
+                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+              >
                 <div class="flex items-center gap-2 lg:gap-8 filter-buttons">
-                
-                  <button data-state="distributors" class="active-filter-reports px-10 py-1.5">تقارير الموزعين</button>
-                  <button data-state="clients" class="text-black font-medium px-10 py-1.5">تقارير الزباين</button>
-                  <button data-state="sales" class="text-black font-medium px-10 py-1.5">تقارير المبيعات</button>
-
+                  <button
+                    data-state="distributors"
+                    class="active-filter-reports px-10 py-1.5"
+                  >
+                    تقارير الموزعين
+                  </button>
+                  <button
+                    data-state="clients"
+                    class="text-black font-medium px-10 py-1.5"
+                  >
+                    تقارير الزباين
+                  </button>
+                  <button
+                    data-state="sales"
+                    class="text-black font-medium px-10 py-1.5"
+                  >
+                    تقارير المبيعات
+                  </button>
                 </div>
               </div>
 
               <div data-content="distributors" class="hidden">
                 <!-- Cards section 1-->
-                <section class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white  xl:mx-auto max-w-full lg:max-w-[975px] lg:min-w-[975px]">
+                <section
+                  class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white xl:mx-auto max-w-full lg:max-w-[975px] lg:min-w-[975px]"
+                >
                   <!-- card 1 -->
-                  <div dir="rtl"
+                  <div
+                    dir="rtl"
                     class="bg-white text-gray-800 rounded-lg shadow flex-1 max-w-full lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[340px]"
                   >
                     <div class="flex items-start p-6">
@@ -944,8 +968,9 @@
                   </div>
 
                   <!-- card 2 -->
-                  <div dir="rtl"
-                    class="bg-white text-gray-800 rounded-lg shadow flex-1  lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[350px]"
+                  <div
+                    dir="rtl"
+                    class="bg-white text-gray-800 rounded-lg shadow flex-1 lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[350px]"
                   >
                     <div class="flex items-start p-6">
                       <div
@@ -1035,17 +1060,26 @@
                 </section>
 
                 <div class="flex items-center justify-between mb-4">
-                  <h2 class="text-lg font-bold flex items-center gap-2"> الموزعين
+                  <h2 class="text-lg font-bold flex items-center gap-2">
+                    الموزعين
                     <span class="text-sky">(24)</span>
                   </h2>
 
                   <div class="flex items-center gap-3 ml-12">
                     <button class="flex items-center gap-2">
-                      <img src="src/assets/img/requests/document-text.png" class="min-w-5 w-5 h-5" alt="Excel"/>
+                      <img
+                        src="src/assets/img/requests/document-text.png"
+                        class="min-w-5 w-5 h-5"
+                        alt="Excel"
+                      />
                       ملف إكسل
                     </button>
                     <button class="flex items-center gap-2">
-                      <img src="src/assets/img/requests/bi_file-pdf.png" class="min-w-5 w-5 h-5" alt="PDF"/>
+                      <img
+                        src="src/assets/img/requests/bi_file-pdf.png"
+                        class="min-w-5 w-5 h-5"
+                        alt="PDF"
+                      />
                       ملف PDF
                     </button>
                   </div>
@@ -1174,9 +1208,12 @@
                   </div>
                 </div>
 
-                <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+                <div
+                  class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
                 >
-                  <div class="flex items-center gap-4 lg:gap-8 date-filter-buttons">
+                  <div
+                    class="flex items-center gap-4 lg:gap-8 date-filter-buttons"
+                  >
                     <button class="active-filter" data-date="اليوم">
                       اليوم
                     </button>
@@ -1194,22 +1231,48 @@
                 </div>
 
                 <div class="overflow-x-auto display">
-                  <table id="myTableDistributors" class="w-full text-right labtop-xl:border-collapse labtop-xl:table-fixed">
+                  <table
+                    id="myTableDistributors"
+                    class="w-full text-right labtop-xl:border-collapse labtop-xl:table-fixed"
+                  >
                     <thead class="text-right">
                       <tr>
                         <th class="p-2 pb-4">
-                          <input id="selectAll" type="checkbox" class="w-4 h-4 mr-2 rounded appearance-none
-                           bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"/>
+                          <input
+                            id="selectAll"
+                            type="checkbox"
+                            class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
                         </th>
 
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">رقم الموزع</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">اسم الموزع</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">الاسم التجاري</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">المدينة</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">الحي</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium min-w-[120px] ">رقم الجوال</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">عدد الطلبات</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium min-w-[120px]">تاريخ البدا</th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          رقم الموزع
+                        </th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          اسم الموزع
+                        </th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          الاسم التجاري
+                        </th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          المدينة
+                        </th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          الحي
+                        </th>
+                        <th
+                          class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium min-w-[120px]"
+                        >
+                          رقم الجوال
+                        </th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          عدد الطلبات
+                        </th>
+                        <th
+                          class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium min-w-[120px]"
+                        >
+                          تاريخ البدا
+                        </th>
                       </tr>
                     </thead>
 
@@ -1224,7 +1287,9 @@
                         <td class="p-2">#001</td>
                         <td class="p-2">طيب</td>
                         <td class="p-2">غاز الندى</td>
-                        <td class="p-2"><span class="px-2 py-1 rounded">غزة</span></td>
+                        <td class="p-2">
+                          <span class="px-2 py-1 rounded">غزة</span>
+                        </td>
                         <td class="p-2">الشجاعية</td>
                         <td class="p-2 text-end" dir="ltr">972 59945678</td>
                         <td class="p-2">15 طلب</td>
@@ -1241,23 +1306,24 @@
                         <td class="p-2">#001</td>
                         <td class="p-2">طيب</td>
                         <td class="p-2">غاز الندى</td>
-                        <td class="p-2"><span class="px-2 py-1 rounded">غزة</span></td>
+                        <td class="p-2">
+                          <span class="px-2 py-1 rounded">غزة</span>
+                        </td>
                         <td class="p-2">الشجاعية</td>
                         <td class="p-2 text-end" dir="ltr">972 59945678</td>
                         <td class="p-2">15 طلب</td>
                         <td class="p-2">3 اكتوبر 2025</td>
                       </tr>
-
-                   
                     </tbody>
-
                   </table>
                 </div>
               </div>
 
               <div data-content="sales" class="hidden">
                 <!-- Cards section 1-->
-                <section class=" flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white lg:max-w-[975px] lg:min-w-[975px] xl:mx-auto">
+                <section
+                  class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white lg:max-w-[975px] lg:min-w-[975px] xl:mx-auto"
+                >
                   <!-- card 1 -->
                   <div
                     dir="rtl"
@@ -1350,7 +1416,8 @@
                   </div>
 
                   <!-- card 2 -->
-                  <div dir="rtl"
+                  <div
+                    dir="rtl"
                     class="bg-white text-gray-800 rounded-lg shadow flex-1 max-w-[95%] min-w-[95%]lg:min-w-[451px] min-h-[350px] lg:max-w-[451px] max-h-[350px]"
                   >
                     <div class="flex items-start p-6">
@@ -1440,7 +1507,9 @@
                   </div>
                 </section>
 
-                <div class="flex items-center border-2 border-bl p-4 rounded-tr-lg justify-between mb-1 mr-5">
+                <div
+                  class="flex items-center border-2 border-bl p-4 rounded-tr-lg justify-between mb-1 mr-5"
+                >
                   <div class="flex items-center gap-4 lg:gap-8 filter-buttons">
                     <button class="active-filter">اليوم</button>
                     <button class="text-[#7E7E7E] font-medium">
@@ -1988,7 +2057,7 @@
               <div data-content="clients" class="hidden">
                 <!-- Cards section 1-->
                 <section
-                  class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6  text-white lg:max-w-[975px] lg:min-w-[975px]"
+                  class="flex flex-col lg:flex-row pt-5 lg:pr-5 gap-6 mb-6 text-white lg:max-w-[975px] lg:min-w-[975px]"
                 >
                   <!-- card 1 -->
                   <div
@@ -2110,8 +2179,12 @@
                   </div>
                 </div>
 
-                <div class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1">
-                  <div class="flex items-center gap-4 lg:gap-8 date-filter-buttons">
+                <div
+                  class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+                >
+                  <div
+                    class="flex items-center gap-4 lg:gap-8 date-filter-buttons"
+                  >
                     <button class="active-filter">اليوم</button>
                     <button class="text-base">هذا الأسبوع</button>
                     <button class="text-base">هذا الشهر</button>
@@ -2120,26 +2193,40 @@
                   </div>
                 </div>
 
-
-
                 <div class="overflow-x-auto display">
-                  <table id="myTableClients" class="w-full text-right labtop-xl:border-collapse labtop-xl:table-fixed">
+                  <table
+                    id="myTableClients"
+                    class="w-full text-right labtop-xl:border-collapse labtop-xl:table-fixed"
+                  >
                     <thead class="text-right">
                       <tr>
                         <th class="p-2 pb-4">
-                          <input id="selectAll" type="checkbox" class="w-4 h-4 mr-2 rounded appearance-none
-                           bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"/>
+                          <input
+                            id="selectAll"
+                            type="checkbox"
+                            class="w-4 h-4 mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
                         </th>
 
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">رقم الموزع</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium min-w-[120px] ">رقم الجوال</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">عدد لطلبات</th>
-                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">اجرائات</th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          رقم الموزع
+                        </th>
+                        <th
+                          class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium min-w-[120px]"
+                        >
+                          رقم الجوال
+                        </th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          عدد لطلبات
+                        </th>
+                        <th class="py-2 pr-1 pb-4 text-[#7E7E7E] font-medium">
+                          اجرائات
+                        </th>
                       </tr>
                     </thead>
 
                     <tbody class="text-start [&>tr>td]:py-3 [&>tr>th]:py-3">
-                      <tr >
+                      <tr>
                         <th class="p-2 text-right">
                           <input
                             type="checkbox"
@@ -2149,40 +2236,7 @@
                         <td class="p-2">vcvcvcv</td>
                         <td class="p-2 text-end" dir="ltr">972 59945678</td>
                         <td class="p-2">15 طلب</td>
-                         <td class="p-2 flex items-center justify-start  gap-3">
-                          <button onclick="viewOrder(this)">
-                            <img
-                              src="src/assets/img/icon-row/eye.png"
-                              class="min-w-5 w-5 h-5"
-                            />
-                          </button>
-                          <button>
-                            <img
-                              src="src/assets/img/icon-row/edit.png"
-                              class="min-w-5 w-5 h-5"
-                            />
-                          </button>
-                          <button onclick="viewOrderAction(this, 'delete')">
-                            <img
-                              src="src/assets/img/icon-row/trash.png"
-                              class="min-w-5 w-5 h-5"
-                            />
-                          </button>
-                        </td>
-
-                      <tr >
-                        <th class="p-2 text-right">
-                          <input
-                            type="checkbox"
-                            class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-                          />
-                        </th>
-                        <td class="p-2">طيب</td>
-                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
-                        <td class="p-2">15 طلب</td>
-                         <td
-                          class="p-2 flex items-center justify-start  gap-3"
-                        >
+                        <td class="p-2 flex items-center justify-start gap-3">
                           <button onclick="viewOrder(this)">
                             <img
                               src="src/assets/img/icon-row/eye.png"
@@ -2204,22 +2258,48 @@
                         </td>
                       </tr>
 
-                   
+                      <tr>
+                        <th class="p-2 text-right">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4 lg:mr-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                          />
+                        </th>
+                        <td class="p-2">طيب</td>
+                        <td class="p-2 text-end" dir="ltr">972 59945678</td>
+                        <td class="p-2">15 طلب</td>
+                        <td class="p-2 flex items-center justify-start gap-3">
+                          <button onclick="viewOrder(this)">
+                            <img
+                              src="src/assets/img/icon-row/eye.png"
+                              class="min-w-5 w-5 h-5"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="src/assets/img/icon-row/edit.png"
+                              class="min-w-5 w-5 h-5"
+                            />
+                          </button>
+                          <button onclick="viewOrderAction(this, 'delete')">
+                            <img
+                              src="src/assets/img/icon-row/trash.png"
+                              class="min-w-5 w-5 h-5"
+                            />
+                          </button>
+                        </td>
+                      </tr>
                     </tbody>
-
                   </table>
                 </div>
-
               </div>
-
-
             </div>
           </section>
         </div>
       </section>
     </main>
 
-       <!-- ✅ jQuery  -->
+    <!-- ✅ jQuery  -->
     <script src="src/assets/js/jquery.min.js"></script>
     <!-- ✅ JS الأساسي لـ DataTables -->
     <script src="src/assets/js/dataTables.min.js"></script>
@@ -2374,7 +2454,7 @@
     </script>
 
     <!-- Script for handling notification dropdown -->
-     <script>
+    <script>
       const notifBtns = document.querySelectorAll("#notifBtn");
       const notifDropdowns = document.querySelectorAll("#notifDropdown");
 
@@ -2429,7 +2509,6 @@
         });
       });
     </script>
-
 
     <!-- pop up add -->
     <script>
@@ -2685,117 +2764,116 @@
       });
     </script>
 
-      <script>
-        $(document).ready(function () {
-          const table = new DataTable("#myTableDistributors", {
-            responsive: {
-              details: {
-                type: "inline",
-                target: "tr",
-              },
-              breakpoints: [
-                { name: "desktop", width: Infinity },
-                { name: "laptop", width: 1200 },
-                { name: "tablet", width: 992 },
-                { name: "mobile", width: 768 },
-                { name: "smallmobile", width: 480 },
-              ],
+    <script>
+      $(document).ready(function () {
+        const table = new DataTable("#myTableDistributors", {
+          responsive: {
+            details: {
+              type: "inline",
+              target: "tr",
             },
-            info: false,
-            searching: false,
-            paging: true,
-            lengthChange: true,
-
-            columnDefs: [
-              { orderable: false, targets: [0, 1, 4, 5, 6] },
-
-              { responsivePriority: 1, targets: 0 },
-              { responsivePriority: 2, targets: 1 },
-              { responsivePriority: 3, targets: 2 },
-
-              {
-                targets: [ 3, 4, 5, 6],
-                className: "min-desktop",
-              },
+            breakpoints: [
+              { name: "desktop", width: Infinity },
+              { name: "laptop", width: 1200 },
+              { name: "tablet", width: 992 },
+              { name: "mobile", width: 768 },
+              { name: "smallmobile", width: 480 },
             ],
+          },
+          info: false,
+          searching: false,
+          paging: true,
+          lengthChange: true,
 
-            language: {
-              lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+          columnDefs: [
+            { orderable: false, targets: [0, 1, 4, 5, 6] },
+
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: 1 },
+            { responsivePriority: 3, targets: 2 },
+
+            {
+              targets: [3, 4, 5, 6],
+              className: "min-desktop",
             },
+          ],
 
-            layout: {
-              topStart: null,
-              bottomStart: "paging",
-              bottomEnd: "pageLength",
-            },
-          });
+          language: {
+            lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+          },
 
-          setTimeout(() => {
-            const disabledCols = [0, 1, 4, 5, 6];
-            disabledCols.forEach((i) => {
-              const th = $(`#myTableDistributors thead th:eq(${i})`);
-              th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
-              th.find(".dt-column-order").remove();
-            });
-          }, 1);
+          layout: {
+            topStart: null,
+            bottomStart: "paging",
+            bottomEnd: "pageLength",
+          },
         });
-      </script>
 
-      <script>
-        $(document).ready(function () {
-          const table = new DataTable("#myTableClients", {
-            responsive: {
-              details: {
-                type: "inline",
-                target: "tr",
-              },
-              breakpoints: [
-                { name: "desktop", width: Infinity },
-                { name: "laptop", width: 1200 },
-                { name: "tablet", width: 992 },
-                { name: "mobile", width: 768 },
-                { name: "smallmobile", width: 480 },
-              ],
+        setTimeout(() => {
+          const disabledCols = [0, 1, 4, 5, 6];
+          disabledCols.forEach((i) => {
+            const th = $(`#myTableDistributors thead th:eq(${i})`);
+            th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+            th.find(".dt-column-order").remove();
+          });
+        }, 1);
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const table = new DataTable("#myTableClients", {
+          responsive: {
+            details: {
+              type: "inline",
+              target: "tr",
             },
-            info: false,
-            searching: false,
-            paging: true,
-            lengthChange: true,
-
-            columnDefs: [
-              { orderable: false, targets: [0, 2, 4] },
-
-              { responsivePriority: 1, targets: 0 },
-              { responsivePriority: 2, targets: 1 },
-              { responsivePriority: 3, targets: 4 },
-
-              {
-                targets: [ 2, 3],
-                className: "min-desktop",
-              },
+            breakpoints: [
+              { name: "desktop", width: Infinity },
+              { name: "laptop", width: 1200 },
+              { name: "tablet", width: 992 },
+              { name: "mobile", width: 768 },
+              { name: "smallmobile", width: 480 },
             ],
+          },
+          info: false,
+          searching: false,
+          paging: true,
+          lengthChange: true,
 
-            language: {
-              lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+          columnDefs: [
+            { orderable: false, targets: [0, 2, 4] },
+
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: 1 },
+            { responsivePriority: 3, targets: 4 },
+
+            {
+              targets: [2, 3],
+              className: "min-desktop",
             },
+          ],
 
-            layout: {
-              topStart: null,
-              bottomStart: "paging",
-              bottomEnd: "pageLength",
-            },
-          });
+          language: {
+            lengthMenu: "عدد الصفوف في الصفحة _MENU_",
+          },
 
-          setTimeout(() => {
-            const disabledCols = [0, 2, 4];
-            disabledCols.forEach((i) => {
-              const th = $(`#myTableClients thead th:eq(${i})`);
-              th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
-              th.find(".dt-column-order").remove();
-            });
-          }, 1);
+          layout: {
+            topStart: null,
+            bottomStart: "paging",
+            bottomEnd: "pageLength",
+          },
         });
-      </script>
-    
+
+        setTimeout(() => {
+          const disabledCols = [0, 2, 4];
+          disabledCols.forEach((i) => {
+            const th = $(`#myTableClients thead th:eq(${i})`);
+            th.removeClass("dt-orderable dt-ordering-asc dt-ordering-desc");
+            th.find(".dt-column-order").remove();
+          });
+        }, 1);
+      });
+    </script>
   </body>
 </html>

@@ -233,142 +233,147 @@
     </style>
   </head>
   <body class="bg-white min-h-screen flex">
-<!-- Wrapper -->
-<div class="flex">
-  <!-- Sidebar Desktop -->
-  <aside class="hidden lg:flex w-[290px] max-w-[290px] bg-white border-l border-bl flex-col">
-    <div class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl">
-      <a href="overview.html" class="show-loader">
-        <img src="src/assets/img/logo.png" alt="Logo" class="ml-20 w-[152px] h-[67px]" />
-      </a>
+    <!-- Wrapper -->
+    <div class="flex">
+      <!-- Sidebar Desktop -->
+      <aside
+        class="hidden lg:flex w-[290px] max-w-[290px] bg-white border-l border-bl flex-col"
+      >
+        <div
+          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
+        >
+          <a href="overview.html" class="show-loader">
+            <img
+              src="src/assets/img/logo.png"
+              alt="Logo"
+              class="ml-20 w-[152px] h-[67px]"
+            />
+          </a>
+        </div>
+
+        <nav class="space-y-3 font-semibold p-4 pr-10">
+          <a
+            href="overview.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/aside-imge/chart-4.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Overview
+          </a>
+
+          <a
+            href="requests.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/icon-mute/grid-2.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Requests
+          </a>
+
+          <a
+            href="distributors.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/aside-imge/truck.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Distributors
+          </a>
+
+          <a
+            href="customer.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/icon-mute/profile-2user.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Customers
+          </a>
+
+          <a
+            href="map.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/icon-mute/map.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Map
+          </a>
+
+          <a
+            href="reports.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/icon-mute/trend-down.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Reports
+          </a>
+
+          <a
+            href="usersPermissions.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/icon-mute/user-octagon.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Users & Permissions
+          </a>
+
+          <a
+            href="complaints.en.html"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+          >
+            <span>
+              <img
+                src="src/assets/img/icon-mute/info-circle.png"
+                class="w-9 h-9 mr-6"
+                alt=""
+              />
+            </span>
+            Complaints
+          </a>
+        </nav>
+      </aside>
+
+      <!-- <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" /> -->
     </div>
-
-    <nav class="space-y-3 font-semibold p-4 pr-10">
-      <a
-        href="overview.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/aside-imge/chart-4.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Overview
-      </a>
-
-      <a
-        href="requests.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/icon-mute/grid-2.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Requests
-      </a>
-
-      <a
-        href="distributors.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/aside-imge/truck.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Distributors
-      </a>
-
-      <a
-        href="customer.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/icon-mute/profile-2user.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Customers
-      </a>
-
-      <a
-        href="map.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/icon-mute/map.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Map
-      </a>
-
-      <a
-        href="reports.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/icon-mute/trend-down.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Reports
-      </a>
-
-      <a
-        href="usersPermissions.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/icon-mute/user-octagon.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Users & Permissions
-      </a>
-
-      <a
-        href="complaints.en.html"
-        class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
-      >
-        <span>
-          <img
-            src="src/assets/img/icon-mute/info-circle.png"
-            class="w-9 h-9 mr-6"
-            alt=""
-          />
-        </span>
-        Complaints
-      </a>
-    </nav>
-  </aside>
-
-  <!-- <img src="src/assets/img/logo.png" alt="Logo" class="w-32 h-14" /> -->
-</div>
 
     <!-- Main Content -->
     <main class="flex-1 min-h-screen">
       <!-- Header -->
       <header
-        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 
-        mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] 
-          labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] 
-          labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] desktop-2xl:max-w-[2205px]"
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 mx-auto lg:mx-0 min-w-[100%] max-w-[100%] lg:min-w-[1030px] lg:max-w-[1056px] labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] desktop-2xl:max-w-[2205px]"
       >
         <div class="flex-1 block lg:hidden">
           <!-- Top bar mobile -->
@@ -393,7 +398,7 @@
             </button>
           </div>
 
-           <aside
+          <aside
             id="mobile-menu"
             class="fixed top-0 left-0 h-full w-80 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 xl:hidden z-50"
           >
@@ -487,12 +492,12 @@
 
             <nav class="space-y-3 font-semibold p-4 pl-10">
               <a
-                href="overview.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
+                href="overview.en.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span>
                   <img
-                    src="src/assets/img/icon-active/chart-2.png"
+                    src="src/assets/img/aside-imge/chart-4.png"
                     class="w-9 h-9 ml-6"
                     alt=""
                   />
@@ -501,7 +506,7 @@
               </a>
 
               <a
-                href="requests.html"
+                href="requests.en.html"
                 class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span>
@@ -515,12 +520,12 @@
               </a>
 
               <a
-                href="distributors.html"
-                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
+                href="distributors.en.html"
+                class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
               >
                 <span>
                   <img
-                    src="src/assets/img/icon-mute/truck.png"
+                    src="src/assets/img/aside-imge/truck.png"
                     class="w-9 h-9 ml-6"
                     alt=""
                   />
@@ -529,7 +534,7 @@
               </a>
 
               <a
-                href="customer.html"
+                href="customer.en.html"
                 class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span>
@@ -543,7 +548,7 @@
               </a>
 
               <a
-                href="map.html"
+                href="map.en.html"
                 class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span>
@@ -557,7 +562,7 @@
               </a>
 
               <a
-                href="reports.html"
+                href="reports.en.html"
                 class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span>
@@ -571,7 +576,7 @@
               </a>
 
               <a
-                href="usersPermissions.html"
+                href="usersPermissions.en.html"
                 class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav2 show-loader"
               >
                 <span>
@@ -585,7 +590,7 @@
               </a>
 
               <a
-                href="complaints.html"
+                href="complaints.en.html"
                 class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 aside-nav show-loader"
               >
                 <span>
@@ -834,913 +839,1050 @@
                 class="flex justify-between items-center mb-6 border-b border-bl pb-4"
               >
                 <!-- breadcrumb -->
-<div class="flex items-center gap-2 text-gray-500 text-base">
-  <span>Distributors</span>
-  <span class="text-gray-400">&gt;</span>
-  <span class="font-semibold text-black">Distributor Details</span>
-</div>
+                <div class="flex items-center gap-2 text-gray-500 text-base">
+                  <span>Distributors</span>
+                  <span class="text-gray-400">&gt;</span>
+                  <span class="font-semibold text-black"
+                    >Distributor Details</span
+                  >
+                </div>
 
+                <div class="flex items-center gap-2">
+                  <button
+                    onclick="openBanModal(this, 'Ismail Shabat')"
+                    class="bg-red-500 text-white px-4 py-2 rounded-md"
+                  >
+                    Ban
+                  </button>
 
-<div class="flex items-center gap-2">
-  <button
-    onclick="openBanModal(this, 'Ismail Shabat')"
-    class="bg-red-500 text-white px-4 py-2 rounded-md"
-  >
-    Ban
-  </button>
+                  <label
+                    class="hidden lg:flex items-center gap-2 cursor-pointer bg-bordlight px-3 py-2 rounded-lg"
+                  >
+                    <span class="text-black">Activate Distributor</span>
+                    <div class="relative">
+                      <input
+                        type="checkbox"
+                        id="toggle"
+                        class="sr-only peer"
+                        checked
+                      />
+                      <div
+                        class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-sky-500 transition-colors"
+                      ></div>
+                      <div
+                        class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md peer-checked:translate-x-5 transition-transform"
+                      ></div>
+                    </div>
+                  </label>
 
-  <label
-    class="hidden lg:flex items-center gap-2 cursor-pointer bg-bordlight px-3 py-2 rounded-lg"
-  >
-    <span class="text-black">Activate Distributor</span>
-    <div class="relative">
-      <input
-        type="checkbox"
-        id="toggle"
-        class="sr-only peer"
-        checked
-      />
-      <div
-        class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-sky-500 transition-colors"
-      ></div>
-      <div
-        class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md peer-checked:translate-x-5 transition-transform"
-      ></div>
-    </div>
-  </label>
+                  <button
+                    onclick="openPopup('edit')"
+                    class="hidden lg:flex items-center gap-2 text-orange-600 bg-orange-100 py-2 px-4 rounded-lg"
+                  >
+                    <img src="src/assets/img/icon-row/edit.png" alt="" /> Edit
+                  </button>
 
-  <button
-    onclick="openPopup('edit')"
-    class="hidden lg:flex items-center gap-2 text-orange-600 bg-orange-100 py-2 px-4 rounded-lg"
-  >
-    <img src="src/assets/img/icon-row/edit.png" alt="" /> Edit
-  </button>
+                  <button
+                    onclick="openDeleteModal('Ismail Shabat')"
+                    class="hidden lg:flex items-center gap-2 text-rose-600 bg-rose-100 py-2 px-4 rounded-lg"
+                  >
+                    <img src="src/assets/img/icon-row/trash.png" alt="" />
+                    Delete
+                  </button>
+                </div>
 
-  <button
-    onclick="openDeleteModal('Ismail Shabat')"
-    class="hidden lg:flex items-center gap-2 text-rose-600 bg-rose-100 py-2 px-4 rounded-lg"
-  >
-    <img src="src/assets/img/icon-row/trash.png" alt="" /> Delete
-  </button>
-</div>
+                <!-- pop up -->
+                <div
+                  id="ban"
+                  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
+                >
+                  <div
+                    class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
+                  >
+                    <button
+                      onclick="closeBanModal()"
+                      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
 
+                    <h2
+                      id="banTitle"
+                      class="text-lg font-bold mb-2 text-gray-800 text-center py-2"
+                    >
+                      Ban Distributor
+                    </h2>
 
-<!-- pop up -->
-<div
-  id="ban"
-  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
->
-  <div
-    class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
-  >
-    <button
-      onclick="closeBanModal()"
-      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
-    >
-      ✕
-    </button>
+                    <p
+                      id="banMessage"
+                      class="text-gray-700 mb-4 text-center py-2"
+                    >
+                      Are you sure you want to ban
+                      <span id="orderIdText" class="font-semibold text-sky"
+                        >Ismail Shabat</span
+                      >
+                      ?
+                    </p>
 
-    <h2
-      id="banTitle"
-      class="text-lg font-bold mb-2 text-gray-800 text-center py-2"
-    >
-      Ban Distributor
-    </h2>
+                    <div class="flex justify-between gap-3">
+                      <button
+                        id="confirmBanBtn"
+                        onclick="confirmBan()"
+                        class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
+                      >
+                        Ban Distributor
+                      </button>
+                      <button
+                        onclick="closeBanModal()"
+                        class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
 
-    <p
-      id="banMessage"
-      class="text-gray-700 mb-4 text-center py-2"
-    >
-      Are you sure you want to ban
-      <span id="orderIdText" class="font-semibold text-sky"
-        >Ismail Shabat</span
-      >
-      ?
-    </p>
+                <!-- Edit Distributor Popup -->
+                <div
+                  id="editDistributorModal"
+                  class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+                >
+                  <div
+                    class="bg-white rounded-2xl shadow-lg max-w-[674px] p-6 relative w-[674px] max-h-[90vh] overflow-y-auto"
+                  >
+                    <!-- Close Button -->
+                    <button
+                      id="closeEditDistributorModal"
+                      class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
+                    >
+                      ✕
+                    </button>
 
-    <div class="flex justify-between gap-3">
-      <button
-        id="confirmBanBtn"
-        onclick="confirmBan()"
-        class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
-      >
-        Ban Distributor
-      </button>
-      <button
-        onclick="closeBanModal()"
-        class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
-      >
-        Cancel
-      </button>
-    </div>
-  </div>
-</div>
+                    <!-- Title -->
+                    <h2 class="text-center text-lg font-semibold mb-10">
+                      Edit Distributor Information
+                    </h2>
 
-<!-- Edit Distributor Popup -->
-<div
-  id="editDistributorModal"
-  class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
->
-  <div
-    class="bg-white rounded-2xl shadow-lg max-w-[674px] p-6 relative w-[674px] max-h-[90vh] overflow-y-auto"
-  >
-    <!-- Close Button -->
-    <button
-      id="closeEditDistributorModal"
-      class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl"
-    >
-      ✕
-    </button>
+                    <!-- Form -->
+                    <form id="editDistributorForm" class="space-y-4">
+                      <div class="grid grid-cols-2 gap-4">
+                        <div>
+                          <label
+                            class="block text-base font-medium text-black mb-1"
+                            >Distributor Name</label
+                          >
+                          <input
+                            type="text"
+                            id="editName"
+                            placeholder="Distributor Name"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            class="block text-base font-medium text-black mb-1"
+                            >Distributor Trade Name</label
+                          >
+                          <input
+                            type="text"
+                            id="editBusinessName"
+                            placeholder="Distributor Trade Name"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                          />
+                        </div>
+                      </div>
 
-    <!-- Title -->
-    <h2 class="text-center text-lg font-semibold mb-10">
-      Edit Distributor Information
-    </h2>
+                      <div class="grid grid-cols-2 gap-4">
+                        <div class="relative">
+                          <label
+                            class="block text-base font-medium text-black mb-1"
+                            >City</label
+                          >
+                          <select
+                            id="editCity"
+                            class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white"
+                          >
+                            <option value="">Select City</option>
+                            <option value="غزة">Gaza</option>
+                            <option value="خانيونس">Khan Younis</option>
+                            <option value="رفح">Rafah</option>
+                            <option value="الشمال">North</option>
+                            <option value="الوسطى">Central</option>
+                          </select>
+                        </div>
 
-    <!-- Form -->
-    <form id="editDistributorForm" class="space-y-4">
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <label class="block text-base font-medium text-black mb-1"
-            >Distributor Name</label
-          >
-          <input
-            type="text"
-            id="editName"
-            placeholder="Distributor Name"
-            class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
-          />
-        </div>
-        <div>
-          <label class="block text-base font-medium text-black mb-1"
-            >Distributor Trade Name</label
-          >
-          <input
-            type="text"
-            id="editBusinessName"
-            placeholder="Distributor Trade Name"
-            class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
-          />
-        </div>
-      </div>
+                        <div class="relative">
+                          <label
+                            class="block text-base font-medium text-black mb-1"
+                            >District</label
+                          >
+                          <select
+                            id="editDistrict"
+                            class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white"
+                          >
+                            <option value="">Select District</option>
+                            <option value="الرمال">Rimal</option>
+                            <option value="الشجاعية">Shuja'iyya</option>
+                            <option value="الزيتون">Zaytoun</option>
+                            <option value="الشاطئ">Beach Camp</option>
+                            <option value="تل الهوا">Tel al-Hawa</option>
+                          </select>
+                        </div>
+                      </div>
 
-      <div class="grid grid-cols-2 gap-4">
-        <div class="relative">
-          <label class="block text-base font-medium text-black mb-1"
-            >City</label
-          >
-          <select
-            id="editCity"
-            class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white"
-          >
-            <option value="">Select City</option>
-            <option value="غزة">Gaza</option>
-            <option value="خانيونس">Khan Younis</option>
-            <option value="رفح">Rafah</option>
-            <option value="الشمال">North</option>
-            <option value="الوسطى">Central</option>
-          </select>
-        </div>
+                      <div class="grid grid-cols-2 gap-4">
+                        <div>
+                          <label
+                            class="block text-base font-medium text-black mb-1"
+                            >Phone Number</label
+                          >
+                          <input
+                            type="text"
+                            id="editPhone"
+                            placeholder="Phone Number"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            class="block text-base font-medium text-black mb-1"
+                          >
+                            Number of Cylinders per Load
+                          </label>
+                          <div
+                            class="flex items-center border border-gray-300 rounded-lg p-2 focus-within:ring focus-within:ring-sky-200"
+                          >
+                            <input
+                              type="number"
+                              id="editCylinders"
+                              placeholder="0"
+                              class="w-full outline-none text-black font-medium"
+                            />
+                            <span class="ml-2 text-black font-medium"
+                              >Cylinder</span
+                            >
+                          </div>
+                        </div>
+                      </div>
 
-        <div class="relative">
-          <label class="block text-base font-medium text-black mb-1">District</label>
-          <select
-            id="editDistrict"
-            class="w-full border border-gray-300 rounded-lg p-2 pr-8 focus:ring focus:ring-sky-200 bg-white"
-          >
-            <option value="">Select District</option>
-            <option value="الرمال">Rimal</option>
-            <option value="الشجاعية">Shuja'iyya</option>
-            <option value="الزيتون">Zaytoun</option>
-            <option value="الشاطئ">Beach Camp</option>
-            <option value="تل الهوا">Tel al-Hawa</option>
-          </select>
-        </div>
-      </div>
+                      <!-- Identification Documents -->
+                      <h3 class="font-medium text-gray-700 mt-6">
+                        Identification Documents
+                      </h3>
 
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <label class="block text-base font-medium text-black mb-1"
-            >Phone Number</label
-          >
-          <input
-            type="text"
-            id="editPhone"
-            placeholder="Phone Number"
-            class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-sky-200"
-          />
-        </div>
-        <div>
-          <label class="block text-base font-medium text-black mb-1">
-            Number of Cylinders per Load
-          </label>
-          <div
-            class="flex items-center border border-gray-300 rounded-lg p-2 focus-within:ring focus-within:ring-sky-200"
-          >
-            <input
-              type="number"
-              id="editCylinders"
-              placeholder="0"
-              class="w-full outline-none text-black font-medium"
-            />
-            <span class="ml-2 text-black font-medium">Cylinder</span>
-          </div>
-        </div>
-      </div>
+                      <div class="grid grid-cols-2 gap-4">
+                        <!-- ID -->
+                        <div class="w-full">
+                          <label
+                            class="block text-base font-medium text-black mb-2"
+                            >National ID</label
+                          >
+                          <label
+                            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                          >
+                            <input
+                              type="file"
+                              accept="image/*"
+                              class="hidden"
+                              onchange="previewFile(event, 'editIdPreview')"
+                            />
+                            <span class="w-full text-center"
+                              >Upload National ID</span
+                            >
+                            <img
+                              id="editIdPreview"
+                              class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                            />
+                          </label>
+                        </div>
 
-      <!-- Identification Documents -->
-      <h3 class="font-medium text-gray-700 mt-6">Identification Documents</h3>
+                        <!-- Driver’s License -->
+                        <div class="w-full">
+                          <label
+                            class="block text-base font-medium text-black mb-2"
+                            >Driver’s License</label
+                          >
+                          <label
+                            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                          >
+                            <input
+                              type="file"
+                              accept="image/*"
+                              class="hidden"
+                              onchange="previewFile(event, 'editDriverPreview')"
+                            />
+                            <span class="w-full text-center"
+                              >Upload Driver’s License</span
+                            >
+                            <img
+                              id="editDriverPreview"
+                              class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                            />
+                          </label>
+                        </div>
 
-      <div class="grid grid-cols-2 gap-4">
-        <!-- ID -->
-        <div class="w-full">
-          <label class="block text-base font-medium text-black mb-2"
-            >National ID</label
-          >
-          <label
-            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
-          >
-            <input
-              type="file"
-              accept="image/*"
-              class="hidden"
-              onchange="previewFile(event, 'editIdPreview')"
-            />
-            <span class="w-full text-center">Upload National ID</span>
-            <img
-              id="editIdPreview"
-              class="mt-2 hidden w-full h-16 object-cover rounded-md"
-            />
-          </label>
-        </div>
+                        <!-- Work License -->
+                        <div class="w-full">
+                          <label
+                            class="block text-base font-medium text-black mb-2"
+                            >Work License</label
+                          >
+                          <label
+                            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                          >
+                            <input
+                              type="file"
+                              accept="image/*"
+                              class="hidden"
+                              onchange="previewFile(event, 'editWorkPreview')"
+                            />
+                            <span class="w-full text-center"
+                              >Upload Work License</span
+                            >
+                            <img
+                              id="editWorkPreview"
+                              class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                            />
+                          </label>
+                        </div>
 
-        <!-- Driver’s License -->
-        <div class="w-full">
-          <label class="block text-base font-medium text-black mb-2"
-            >Driver’s License</label
-          >
-          <label
-            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
-          >
-            <input
-              type="file"
-              accept="image/*"
-              class="hidden"
-              onchange="previewFile(event, 'editDriverPreview')"
-            />
-            <span class="w-full text-center">Upload Driver’s License</span>
-            <img
-              id="editDriverPreview"
-              class="mt-2 hidden w-full h-16 object-cover rounded-md"
-            />
-          </label>
-        </div>
+                        <!-- Civil Defense License -->
+                        <div class="w-full">
+                          <label
+                            class="block text-base font-medium text-black mb-2"
+                            >Civil Defense License</label
+                          >
+                          <label
+                            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                          >
+                            <input
+                              type="file"
+                              accept="image/*"
+                              class="hidden"
+                              onchange="previewFile(event, 'editCivilPreview')"
+                            />
+                            <span class="w-full text-center"
+                              >Upload Civil Defense License</span
+                            >
+                            <img
+                              id="editCivilPreview"
+                              class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                            />
+                          </label>
+                        </div>
 
-        <!-- Work License -->
-        <div class="w-full">
-          <label class="block text-base font-medium text-black mb-2"
-            >Work License</label
-          >
-          <label
-            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
-          >
-            <input
-              type="file"
-              accept="image/*"
-              class="hidden"
-              onchange="previewFile(event, 'editWorkPreview')"
-            />
-            <span class="w-full text-center">Upload Work License</span>
-            <img
-              id="editWorkPreview"
-              class="mt-2 hidden w-full h-16 object-cover rounded-md"
-            />
-          </label>
-        </div>
+                        <!-- Petroleum Authority License -->
+                        <div class="w-full">
+                          <label
+                            class="block text-base font-medium text-black mb-2"
+                            >Petroleum Authority License</label
+                          >
+                          <label
+                            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
+                          >
+                            <input
+                              type="file"
+                              accept="image/*"
+                              class="hidden"
+                              onchange="previewFile(event, 'editPetrolPreview')"
+                            />
+                            <span class="w-full text-center"
+                              >Upload Petroleum Authority License</span
+                            >
+                            <img
+                              id="editPetrolPreview"
+                              class="mt-2 hidden w-full h-16 object-cover rounded-md"
+                            />
+                          </label>
+                        </div>
+                      </div>
 
-        <!-- Civil Defense License -->
-        <div class="w-full">
-          <label class="block text-base font-medium text-black mb-2"
-            >Civil Defense License</label
-          >
-          <label
-            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
-          >
-            <input
-              type="file"
-              accept="image/*"
-              class="hidden"
-              onchange="previewFile(event, 'editCivilPreview')"
-            />
-            <span class="w-full text-center">Upload Civil Defense License</span>
-            <img
-              id="editCivilPreview"
-              class="mt-2 hidden w-full h-16 object-cover rounded-md"
-            />
-          </label>
-        </div>
+                      <!-- Update Button -->
+                      <button
+                        type="submit"
+                        class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition"
+                      >
+                        Update Information
+                      </button>
+                    </form>
+                  </div>
+                </div>
 
-        <!-- Petroleum Authority License -->
-        <div class="w-full">
-          <label class="block text-base font-medium text-black mb-2"
-            >Petroleum Authority License</label
-          >
-          <label
-            class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-gray-400 cursor-pointer w-full flex flex-col items-center"
-          >
-            <input
-              type="file"
-              accept="image/*"
-              class="hidden"
-              onchange="previewFile(event, 'editPetrolPreview')"
-            />
-            <span class="w-full text-center">Upload Petroleum Authority License</span>
-            <img
-              id="editPetrolPreview"
-              class="mt-2 hidden w-full h-16 object-cover rounded-md"
-            />
-          </label>
-        </div>
-      </div>
+                <!-- Delete Distributor Popup -->
+                <div
+                  id="deleteOrderModal"
+                  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
+                >
+                  <div
+                    class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
+                  >
+                    <!-- Close Button -->
+                    <button
+                      onclick="closeDeleteModal()"
+                      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
 
-      <!-- Update Button -->
-      <button
-        type="submit"
-        class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition"
-      >
-        Update Information
-      </button>
-    </form>
-  </div>
-</div>
+                    <!-- Title -->
+                    <h2
+                      class="text-lg font-bold mb-2 text-gray-800 text-center py-2"
+                    >
+                      Delete Distributor
+                    </h2>
 
-<!-- Delete Distributor Popup -->
-<div
-  id="deleteOrderModal"
-  class="fixed inset-0 bg-black/40 hidden justify-center items-center z-50"
->
-  <div
-    class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 relative"
-  >
-    <!-- Close Button -->
-    <button
-      onclick="closeDeleteModal()"
-      class="absolute top-3 left-3 text-gray-500 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 hover:text-gray-700"
-    >
-      ✕
-    </button>
+                    <!-- Message -->
+                    <p class="text-gray-700 mb-1 text-center py-2">
+                      Are you sure you want to delete the distributor
+                      <span>(</span>
+                      <span id="orderCodeText" class="font-semibold text-sky"
+                        >Ismail Shabat</span
+                      >
+                      <span>)</span>
+                      ?
+                    </p>
 
-    <!-- Title -->
-    <h2 class="text-lg font-bold mb-2 text-gray-800 text-center py-2">
-      Delete Distributor
-    </h2>
+                    <p class="text-sm mb-6 text-center py-2">
+                      Once deleted, you will not be able to recover this
+                      distributor.
+                    </p>
 
-    <!-- Message -->
-    <p class="text-gray-700 mb-1 text-center py-2">
-      Are you sure you want to delete the distributor
-      <span>(</span>
-      <span id="orderCodeText" class="font-semibold text-sky">Ismail Shabat</span>
-      <span>)</span>
-      ?
-    </p>
-
-    <p class="text-sm mb-6 text-center py-2">
-      Once deleted, you will not be able to recover this distributor.
-    </p>
-
-    <!-- Buttons -->
-    <div class="flex justify-between gap-3">
-      <button
-        onclick="confirmDelete()"
-        class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
-      >
-        Delete Distributor
-      </button>
-      <button
-        onclick="closeDeleteModal()"
-        class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
-      >
-        Cancel
-      </button>
-    </div>
-  </div>
-</div>
-
+                    <!-- Buttons -->
+                    <div class="flex justify-between gap-3">
+                      <button
+                        onclick="confirmDelete()"
+                        class="px-4 py-2 w-full rounded-lg bg-red-600 text-white hover:bg-red-700"
+                      >
+                        Delete Distributor
+                      </button>
+                      <button
+                        onclick="closeDeleteModal()"
+                        class="px-4 py-2 w-full rounded-lg text-white bg-gray-300 hover:bg-gray-100"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-<div id="shortContent" class="p-4 bg-backSec">
-  <div class="grid grid-cols-2 gap-8">
-    <div>
-      <h2 class="text-xl font-medium mb-3">Personal Information</h2>
-      <div class="space-y-4 text-right">
-        <div class="flex justify-between">
-          <p class="text-gray-600 font-medium">Distributor Name</p>
-          <p class="text-black font-medium">Ismail Shabat</p>
-        </div>
-        <div class="flex justify-between">
-          <p class="text-gray-700 font-medium">Phone Number</p>
-          <p class="text-black font-medium">972 59913456</p>
-        </div>
-      </div>
-    </div>
+              <div id="shortContent" class="p-4 bg-backSec">
+                <div class="grid grid-cols-2 gap-8">
+                  <div>
+                    <h2 class="text-xl font-medium mb-3">
+                      Personal Information
+                    </h2>
+                    <div class="space-y-4 text-right">
+                      <div class="flex justify-between">
+                        <p class="text-gray-600 font-medium">
+                          Distributor Name
+                        </p>
+                        <p class="text-black font-medium">Ismail Shabat</p>
+                      </div>
+                      <div class="flex justify-between">
+                        <p class="text-gray-700 font-medium">Phone Number</p>
+                        <p class="text-black font-medium">972 59913456</p>
+                      </div>
+                    </div>
+                  </div>
 
-    <div>
-      <h2 class="text-xl font-medium mb-4">Identification Documents</h2>
-      <div class="grid grid-cols-2 gap-6 mb-6">
-        <div>
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-lg text-black font-medium">
-              Personal ID
-            </label>
-          </div>
-          <div
-            class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
-          >
-            Personal ID
-          </div>
-        </div>
+                  <div>
+                    <h2 class="text-xl font-medium mb-4">
+                      Identification Documents
+                    </h2>
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <div class="flex items-center justify-between mb-2">
+                          <label class="text-lg text-black font-medium">
+                            Personal ID
+                          </label>
+                        </div>
+                        <div
+                          class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
+                        >
+                          Personal ID
+                        </div>
+                      </div>
 
-        <div>
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-lg text-black font-medium">
-              Work License
-            </label>
-          </div>
-          <div
-            class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
-          >
-            Work License
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                      <div>
+                        <div class="flex items-center justify-between mb-2">
+                          <label class="text-lg text-black font-medium">
+                            Work License
+                          </label>
+                        </div>
+                        <div
+                          class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
+                        >
+                          Work License
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div id="fullContent" class="hidden p-4 bg-backSec">
+                <div class="p-4">
+                  <div class="grid grid-cols-2 gap-8">
+                    <div>
+                      <h2 class="text-base font-semibold mb-3">
+                        Personal Information
+                      </h2>
 
-<div id="fullContent" class="hidden p-4 bg-backSec">
-  <div class="p-4">
-    <div class="grid grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-base font-semibold mb-3">Personal Information</h2>
+                      <div class="space-y-4 text-right">
+                        <div class="flex">
+                          <p class="text-gray-600 font-medium">
+                            Distributor Name
+                          </p>
+                          <p class="text-black font-medium mr-60">
+                            Ismail Shabat
+                          </p>
+                        </div>
 
-        <div class="space-y-4 text-right">
-          <div class="flex">
-            <p class="text-gray-600 font-medium">Distributor Name</p>
-            <p class="text-black font-medium mr-60">Ismail Shabat</p>
-          </div>
+                        <div class="flex">
+                          <p class="text-gray-700 font-medium">Trade Name</p>
+                          <p class="text-black font-medium mr-[225px]">
+                            Ghar Al Nada
+                          </p>
+                        </div>
 
-          <div class="flex">
-            <p class="text-gray-700 font-medium">Trade Name</p>
-            <p class="text-black font-medium mr-[225px]">Ghar Al Nada</p>
-          </div>
+                        <div class="flex">
+                          <p class="text-gray-700 font-medium">Phone Number</p>
+                          <p class="text-black font-medium mr-[245px]">
+                            972 59913456
+                          </p>
+                        </div>
 
-          <div class="flex">
-            <p class="text-gray-700 font-medium">Phone Number</p>
-            <p class="text-black font-medium mr-[245px]">972 59913456</p>
-          </div>
+                        <div class="flex">
+                          <p class="text-gray-700 font-medium">City</p>
+                          <p class="text-black font-medium mr-[270px]">Gaza</p>
+                        </div>
 
-          <div class="flex">
-            <p class="text-gray-700 font-medium">City</p>
-            <p class="text-black font-medium mr-[270px]">Gaza</p>
-          </div>
+                        <div class="flex">
+                          <p class="text-gray-700 font-medium">Address</p>
+                          <p class="text-black font-medium mr-[265px]">
+                            Al Shati
+                          </p>
+                        </div>
+                      </div>
 
-          <div class="flex">
-            <p class="text-gray-700 font-medium">Address</p>
-            <p class="text-black font-medium mr-[265px]">Al Shati</p>
-          </div>
-        </div>
+                      <div>
+                        <div
+                          class="flex items-center justify-between mb-2 mt-12"
+                        >
+                          <label class="text-lg text-black font-medium">
+                            Number of Cylinders Outside the Store
+                          </label>
+                        </div>
+                        <div
+                          class="border-2 border-bl bg-white rounded-md p-4 text-black text-base font-medium"
+                        >
+                          30 Cylinders
+                        </div>
+                      </div>
+                    </div>
 
-        <div>
-          <div class="flex items-center justify-between mb-2 mt-12">
-            <label class="text-lg text-black font-medium">
-              Number of Cylinders Outside the Store
-            </label>
-          </div>
-          <div
-            class="border-2 border-bl bg-white rounded-md p-4 text-black text-base font-medium"
-          >
-            30 Cylinders
-          </div>
-        </div>
-      </div>
+                    <div>
+                      <h2 class="text-base font-semibold mb-4">
+                        Identification Documents
+                      </h2>
 
-      <div>
-        <h2 class="text-base font-semibold mb-4">Identification Documents</h2>
+                      <div class="grid grid-cols-2 gap-6 mb-6">
+                        <div>
+                          <div class="flex items-center justify-between mb-2">
+                            <label class="text-lg text-black font-medium">
+                              Personal ID
+                            </label>
+                          </div>
+                          <div
+                            class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
+                          >
+                            Personal ID
+                          </div>
+                        </div>
 
-        <div class="grid grid-cols-2 gap-6 mb-6">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label class="text-lg text-black font-medium">
-                Personal ID
-              </label>
+                        <div>
+                          <div class="flex items-center justify-between mb-2">
+                            <label class="text-lg text-black font-medium">
+                              Driving License
+                            </label>
+                          </div>
+                          <div
+                            class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
+                          >
+                            Driving License
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="flex items-center justify-between mb-2">
+                            <label class="text-lg text-black font-medium">
+                              Work License
+                            </label>
+                          </div>
+                          <div
+                            class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
+                          >
+                            Work License
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="flex items-center justify-between mb-2">
+                            <label class="text-lg text-black font-medium">
+                              Civil Defense License
+                            </label>
+                          </div>
+                          <div
+                            class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
+                          >
+                            Civil Defense License
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="flex items-center justify-between mb-2">
+                            <label class="text-lg text-black font-medium">
+                              Petroleum Authority License
+                            </label>
+                          </div>
+                          <div
+                            class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
+                          >
+                            Petroleum Authority License
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 flex justify-end">
+                <button
+                  id="toggleButton"
+                  class="flex items-center gap-2 bg-sky-100 px-4 py-2 rounded-md"
+                >
+                  More Details
+                  <svg
+                    class="w-5 h-5 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div
-              class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
-            >
-              Personal ID
-            </div>
-          </div>
 
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label class="text-lg text-black font-medium">
-                Driving License
-              </label>
-            </div>
-            <div
-              class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
-            >
-              Driving License
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label class="text-lg text-black font-medium">
-                Work License
-              </label>
-            </div>
-            <div
-              class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
-            >
-              Work License
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label class="text-lg text-black font-medium">
-                Civil Defense License
-              </label>
-            </div>
-            <div
-              class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
-            >
-              Civil Defense License
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label class="text-lg text-black font-medium">
-                Petroleum Authority License
-              </label>
-            </div>
-            <div
-              class="border-2 border-dashed border-bl bg-white rounded-md p-4 text-center text-sky-500 text-sm font-medium"
-            >
-              Petroleum Authority License
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="mt-4 flex justify-end">
-  <button
-    id="toggleButton"
-    class="flex items-center gap-2 bg-sky-100 px-4 py-2 rounded-md"
-  >
-    More Details
-    <svg
-      class="w-5 h-5 text-black"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M19 9l-7 7-7-7"
-      />
-    </svg>
-  </button>
-</div>
-
-            </div>
-
-            <div class="bg-white shadow-md p-4 ">
+            <div class="bg-white shadow-md p-4">
               <div
-  class="flex items-center justify-between mb-4 border border-l-0 border-bl p-4 rounded-tr-lg"
->
-  <div class="flex gap-6">
-    <h2 class="text-lg font-bold flex items-center gap-2">
-      Orders
-      <span class="text-sky">(50)</span>
-    </h2>
-    <h2
-      class="text-base p-3 rounded-lg font-medium hidden lg:flex items-center gap-2 bg-sun/10 text-tep"
-    >
-      Average Processing Time:
-      <span class="text-orang font-bold text-base">4 Hours</span>
-    </h2>
-  </div>
+                class="flex items-center justify-between mb-4 border border-l-0 border-bl p-4 rounded-tr-lg"
+              >
+                <div class="flex gap-6">
+                  <h2 class="text-lg font-bold flex items-center gap-2">
+                    Orders
+                    <span class="text-sky">(50)</span>
+                  </h2>
+                  <h2
+                    class="text-base p-3 rounded-lg font-medium hidden lg:flex items-center gap-2 bg-sun/10 text-tep"
+                  >
+                    Average Processing Time:
+                    <span class="text-orang font-bold text-base">4 Hours</span>
+                  </h2>
+                </div>
 
-  <div class="flex items-center gap-3 ml-12">
-    <button class="hidden lg:flex items-center gap-2">
-      <img
-        src="src/assets/img/requests/document-text.png"
-        class="w-5 h-5"
-        alt="Excel"
-      />Excel File
-    </button>
+                <div class="flex items-center gap-3 ml-12">
+                  <button class="hidden lg:flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/document-text.png"
+                      class="w-5 h-5"
+                      alt="Excel"
+                    />Excel File
+                  </button>
 
-    <button class="hidden lg:flex items-center gap-2">
-      <img
-        src="src/assets/img/requests/bi_file-pdf.png"
-        class="w-5 h-5"
-        alt="PDF"
-      />PDF File
-    </button>
+                  <button class="hidden lg:flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/bi_file-pdf.png"
+                      class="w-5 h-5"
+                      alt="PDF"
+                    />PDF File
+                  </button>
 
-    <div class="relative inline-block">
-      <select
-        class="appearance-none rounded active-stats w-36 px-3 py-1 border
-         border-mint/30 cursor-pointer font-medium focus:outline-none focus:ring-0"
-      >
-        <option class="active-stats">All</option>
-        <option>Pending Approval</option>
-        <option>New Order</option>
-        <option>In Progress</option>
-        <option>Completed</option>
-        <option>Delivered</option>
-        <option>Canceled</option>
-      </select>
+                  <div class="relative inline-block">
+                    <select
+                      class="appearance-none rounded active-stats w-36 px-3 py-1 border border-mint/30 cursor-pointer font-medium focus:outline-none focus:ring-0"
+                    >
+                      <option class="active-stats">All</option>
+                      <option>Pending Approval</option>
+                      <option>New Order</option>
+                      <option>In Progress</option>
+                      <option>Completed</option>
+                      <option>Delivered</option>
+                      <option>Canceled</option>
+                    </select>
 
-      <span
-        class="pointer-events-none absolute inset-y-0 right-2 flex items-center"
-      >
-        <svg
-          class="w-6 h-6 text-[#292D32]"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </span>
-    </div>
-  </div>
-</div>
+                    <span
+                      class="pointer-events-none absolute inset-y-0 right-2 flex items-center"
+                    >
+                      <svg
+                        class="w-6 h-6 text-[#292D32]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
 
-
-      <div
-  class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
->
-  <div class="flex items-center gap-4 lg:gap-8 filter-buttons">
-    <button class="active-filter">Today</button>
-    <button class="text-[#7E7E7E] font-medium">This Week</button>
-    <button class="text-[#7E7E7E] font-medium">This Month</button>
-    <button class="text-[#7E7E7E] font-medium">This Year</button>
-    <button class="text-[#7E7E7E] font-medium">Custom</button>
-  </div>
-</div>
-
+              <div
+                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+              >
+                <div class="flex items-center gap-4 lg:gap-8 filter-buttons">
+                  <button class="active-filter">Today</button>
+                  <button class="text-[#7E7E7E] font-medium">This Week</button>
+                  <button class="text-[#7E7E7E] font-medium">This Month</button>
+                  <button class="text-[#7E7E7E] font-medium">This Year</button>
+                  <button class="text-[#7E7E7E] font-medium">Custom</button>
+                </div>
+              </div>
 
               <div class="overflow-x-auto display">
                 <table
                   id="myTable"
                   class="w-full text-left labtop-xl:border-collapse labtop-xl:table-fixed"
                 >
-<thead class="text-left">
-  <tr>
-    <th class="p-2 pl-0">
-      <input
-        id="selectAll"
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Order Number
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Customer
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Order Status
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Order Price
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Order Date
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Order Time
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Actions
-    </th>
-  </tr>
-</thead>
+                  <thead class="text-left">
+                    <tr>
+                      <th class="p-2 pl-0">
+                        <input
+                          id="selectAll"
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Number
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Customer
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Status
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Price
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Date
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Order Time
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
 
-<tbody class="text-left [&>tr>td]:py-3 [&>tr>th]:py-3">
-  <tr data-status="refill">
-    <th class="p-2 pl-0">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78415</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">
-      <span class="bg-gray-200 px-2 py-1 rounded">Refill Request</span>
-    </td>
-    <td class="p-2 pl-0">100 NIS</td>
-    <td class="p-2 pl-0">October 13, 2025</td>
-    <td class="p-2 pl-0">08:35 AM</td>
-    <td class="p-2 pl-0 flex items-center justify-start gap-3">
-      <button onclick="viewOrder(this)">
-        <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5" />
-      </button>
+                  <tbody class="text-left [&>tr>td]:py-3 [&>tr>th]:py-3">
+                    <tr data-status="refill">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78415</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-gray-200 px-2 py-1 rounded"
+                          >Refill Request</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 13, 2025</td>
+                      <td class="p-2 pl-0">08:35 AM</td>
+                      <td
+                        class="p-2 pl-0 flex items-center justify-start gap-3"
+                      >
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
 
-      <button onclick="viewOrderAction(this, 'edit')">
-        <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5" />
-      </button>
+                        <button onclick="viewOrderAction(this, 'edit')">
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
 
-      <button onclick="viewOrderAction(this, 'delete')">
-        <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5" />
-      </button>
-    </td>
-  </tr>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
 
-  <tr data-status="refill">
-    <th class="p-2 pl-0">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78416</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">
-      <span class="bg-sun/10 text-sun px-2 py-1 rounded">Order Accepted</span>
-    </td>
-    <td class="p-2 pl-0">100 NIS</td>
-    <td class="p-2 pl-0">October 12, 2025</td>
-    <td class="p-2 pl-0">08:40 AM</td>
-    <td class="p-2 pl-0 flex items-center justify-start gap-3">
-      <button onclick="viewOrder(this)">
-        <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button>
-        <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button onclick="viewOrderAction(this, 'delete')">
-        <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5" />
-      </button>
-    </td>
-  </tr>
+                    <tr data-status="refill">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78416</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-sun/10 text-sun px-2 py-1 rounded"
+                          >Order Accepted</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">08:40 AM</td>
+                      <td
+                        class="p-2 pl-0 flex items-center justify-start gap-3"
+                      >
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
 
-  <tr data-status="accepted">
-    <th class="p-2 pl-0">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78417</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">
-      <span class="bg-iris/10 text-iris px-2 py-1 rounded">On the Way</span>
-    </td>
-    <td class="p-2 pl-0">100 NIS</td>
-    <td class="p-2 pl-0">October 12, 2025</td>
-    <td class="p-2 pl-0">08:45 AM</td>
-    <td class="p-2 pl-0 flex items-center justify-start gap-3">
-      <button onclick="viewOrder(this)">
-        <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button>
-        <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button onclick="viewOrderAction(this, 'delete')">
-        <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5" />
-      </button>
-    </td>
-  </tr>
+                    <tr data-status="accepted">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78417</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-iris/10 text-iris px-2 py-1 rounded"
+                          >On the Way</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">08:45 AM</td>
+                      <td
+                        class="p-2 pl-0 flex items-center justify-start gap-3"
+                      >
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
 
-  <tr data-status="rejected">
-    <th class="p-2 pl-0">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78418</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">
-      <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded">Cylinder Pickup</span>
-    </td>
-    <td class="p-2 pl-0">100 NIS</td>
-    <td class="p-2 pl-0">October 12, 2025</td>
-    <td class="p-2 pl-0">08:50 AM</td>
-    <td class="p-2 pl-0 flex items-center justify-start gap-3">
-      <button onclick="viewOrder(this)">
-        <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button>
-        <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button onclick="viewOrderAction(this, 'delete')">
-        <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5" />
-      </button>
-    </td>
-  </tr>
+                    <tr data-status="rejected">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78418</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">
+                        <span
+                          class="bg-orange-100 text-orange-700 px-2 py-1 rounded"
+                          >Cylinder Pickup</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">08:50 AM</td>
+                      <td
+                        class="p-2 pl-0 flex items-center justify-start gap-3"
+                      >
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
 
-  <tr data-status="delivered">
-    <th class="p-2 pl-0">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78419</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">
-      <span class="bg-mint/10 text-mint px-2 py-1 rounded">Cylinders Delivered</span>
-    </td>
-    <td class="p-2 pl-0">100 NIS</td>
-    <td class="p-2 pl-0">March 15, 2025</td>
-    <td class="p-2 pl-0">08:55 AM</td>
-    <td class="p-2 pl-0 flex items-center justify-start gap-3">
-      <button onclick="viewOrder(this)">
-        <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button onclick="viewOrderAction(this, 'delete')">
-        <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5" />
-      </button>
-    </td>
-  </tr>
+                    <tr data-status="delivered">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78419</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-mint/10 text-mint px-2 py-1 rounded"
+                          >Cylinders Delivered</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">March 15, 2025</td>
+                      <td class="p-2 pl-0">08:55 AM</td>
+                      <td
+                        class="p-2 pl-0 flex items-center justify-start gap-3"
+                      >
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
 
-  <tr data-status="canceled">
-    <th class="p-2 pl-0">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78420</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">
-      <span class="bg-red-100 text-red-700 px-2 py-1 rounded">Canceled</span>
-    </td>
-    <td class="p-2 pl-0">100 NIS</td>
-    <td class="p-2 pl-0">October 12, 2025</td>
-    <td class="p-2 pl-0">09:00 AM</td>
-    <td class="p-2 pl-0 flex items-center justify-start gap-3">
-      <button onclick="viewOrder(this)">
-        <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button>
-        <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button onclick="viewOrderAction(this, 'delete')">
-        <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5" />
-      </button>
-    </td>
-  </tr>
+                    <tr data-status="canceled">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78420</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded"
+                          >Canceled</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">October 12, 2025</td>
+                      <td class="p-2 pl-0">09:00 AM</td>
+                      <td
+                        class="p-2 pl-0 flex items-center justify-start gap-3"
+                      >
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
 
-  <tr data-status="rejected">
-    <th class="p-2 pl-0">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78421</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">
-      <span class="bg-pink-100 text-pink-700 px-2 py-1 rounded">Rejected</span>
-    </td>
-    <td class="p-2 pl-0">100 NIS</td>
-    <td class="p-2 pl-0">March 15, 2025</td>
-    <td class="p-2 pl-0">09:05 AM</td>
-    <td class="p-2 pl-0 flex items-center justify-start gap-3">
-      <button onclick="viewOrder(this)">
-        <img src="src/assets/img/icon-row/eye.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button>
-        <img src="src/assets/img/icon-row/edit.png" class="min-w-5 w-5 h-5" />
-      </button>
-      <button onclick="viewOrderAction(this, 'delete')">
-        <img src="src/assets/img/icon-row/trash.png" class="min-w-5 w-5 h-5" />
-      </button>
-    </td>
-  </tr>
-</tbody>
-
-
+                    <tr data-status="rejected">
+                      <th class="p-2 pl-0">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78421</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">
+                        <span
+                          class="bg-pink-100 text-pink-700 px-2 py-1 rounded"
+                          >Rejected</span
+                        >
+                      </td>
+                      <td class="p-2 pl-0">100 NIS</td>
+                      <td class="p-2 pl-0">March 15, 2025</td>
+                      <td class="p-2 pl-0">09:05 AM</td>
+                      <td
+                        class="p-2 pl-0 flex items-center justify-start gap-3"
+                      >
+                        <button onclick="viewOrder(this)">
+                          <img
+                            src="src/assets/img/icon-row/eye.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button>
+                          <img
+                            src="src/assets/img/icon-row/edit.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                        <button onclick="viewOrderAction(this, 'delete')">
+                          <img
+                            src="src/assets/img/icon-row/trash.png"
+                            class="min-w-5 w-5 h-5"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -1750,172 +1892,246 @@
                 class="flex items-center justify-between mb-4 border border-l-0 border-bl p-4 rounded-tr-lg"
               >
                 <div class="flex gap-6">
-  <h2 class="text-lg font-bold flex items-center gap-2">
-    Reviews
-    <span class="text-sky">(30)</span>
-  </h2>
-</div>
+                  <h2 class="text-lg font-bold flex items-center gap-2">
+                    Reviews
+                    <span class="text-sky">(30)</span>
+                  </h2>
+                </div>
 
+                <div class="flex items-center gap-3 mr-12">
+                  <button class="flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/document-text.png"
+                      class="w-5 h-5"
+                      alt="Excel"
+                    />Excel File
+                  </button>
 
-<div class="flex items-center gap-3 mr-12">
-  <button class="flex items-center gap-2">
-    <img
-      src="src/assets/img/requests/document-text.png"
-      class="w-5 h-5"
-      alt="Excel"
-    />Excel File
-  </button>
-
-  <button class="flex items-center gap-2">
-    <img
-      src="src/assets/img/requests/bi_file-pdf.png"
-      class="w-5 h-5"
-      alt="PDF"
-    />PDF File
-  </button>
-</div>
-
+                  <button class="flex items-center gap-2">
+                    <img
+                      src="src/assets/img/requests/bi_file-pdf.png"
+                      class="w-5 h-5"
+                      alt="PDF"
+                    />PDF File
+                  </button>
+                </div>
               </div>
-<div class="mb-4">
-  <select
-    id="ratingFilter"
-    class="border border-bl p-2 px-4 rounded"
-  >
-    <option value="none">None</option>
-    <option value="desc">Highest to Lowest</option>
-    <option value="asc">Lowest to Highest</option>
-  </select>
-</div>
+              <div class="mb-4">
+                <select
+                  id="ratingFilter"
+                  class="border border-bl p-2 px-4 rounded"
+                >
+                  <option value="none">None</option>
+                  <option value="desc">Highest to Lowest</option>
+                  <option value="asc">Lowest to Highest</option>
+                </select>
+              </div>
 
-
-<div
-  class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
->
-  <div
-    class="flex items-center gap-4 lg:gap-8 filter-buttons-rating"
-  >
-    <button class="active-filter">Today</button>
-    <button class="text-[#7E7E7E] font-medium">This Week</button>
-    <button class="text-[#7E7E7E] font-medium">This Month</button>
-    <button class="text-[#7E7E7E] font-medium">This Year</button>
-    <button class="text-[#7E7E7E] font-medium">Custom</button>
-  </div>
-</div>
-
+              <div
+                class="flex items-center border-b-2 border-bl pb-4 justify-between mb-1"
+              >
+                <div
+                  class="flex items-center gap-4 lg:gap-8 filter-buttons-rating"
+                >
+                  <button class="active-filter">Today</button>
+                  <button class="text-[#7E7E7E] font-medium">This Week</button>
+                  <button class="text-[#7E7E7E] font-medium">This Month</button>
+                  <button class="text-[#7E7E7E] font-medium">This Year</button>
+                  <button class="text-[#7E7E7E] font-medium">Custom</button>
+                </div>
+              </div>
 
               <div class="overflow-x-auto display">
                 <table
                   id="myTablerating"
                   class="w-full text-left labtop-xl:border-collapse labtop-xl:table-fixed"
                 >
-<thead class="text-left">
-  <tr>
-    <th class="p-2">
-      <input
-        id="selectAll"
-        type="checkbox"
-        class="w-4 h-4 lg:mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Customer ID
-    </th>
-    <th
-      class="py-2 pl-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium"
-    >
-      Customer
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Rating Date
-    </th>
-    <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
-      Rating
-    </th>
-  </tr>
-</thead>
+                  <thead class="text-left">
+                    <tr>
+                      <th class="p-2">
+                        <input
+                          id="selectAll"
+                          type="checkbox"
+                          class="w-4 h-4 lg:mr-2 rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Customer ID
+                      </th>
+                      <th
+                        class="py-2 pl-0 pb-4 text-[#7E7E7E] min-w-[120px] font-medium"
+                      >
+                        Customer
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Rating Date
+                      </th>
+                      <th class="py-2 pl-0 pb-4 text-[#7E7E7E] font-medium">
+                        Rating
+                      </th>
+                    </tr>
+                  </thead>
 
-<tbody class="text-left [&>tr>td]:py-3 [&>tr>th]:py-3">
-  <tr>
-    <th class="p-2">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78415</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">October 13, 2025</td>
-    <td class="p-2 pl-0 flex rating">
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-    </td>
-  </tr>
+                  <tbody class="text-left [&>tr>td]:py-3 [&>tr>th]:py-3">
+                    <tr>
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78415</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">October 13, 2025</td>
+                      <td class="p-2 pl-0 flex rating">
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                      </td>
+                    </tr>
 
-  <tr>
-    <th class="p-2">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78415</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">October 13, 2025</td>
-    <td class="p-2 pl-0 flex rating">
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-    </td>
-  </tr>
+                    <tr>
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78415</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">October 13, 2025</td>
+                      <td class="p-2 pl-0 flex rating">
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                      </td>
+                    </tr>
 
-  <tr>
-    <th class="p-2">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78415</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">October 13, 2025</td>
-    <td class="p-2 pl-0 flex rating">
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-    </td>
-  </tr>
+                    <tr>
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78415</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">October 13, 2025</td>
+                      <td class="p-2 pl-0 flex rating">
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                      </td>
+                    </tr>
 
-  <tr>
-    <th class="p-2">
-      <input
-        type="checkbox"
-        class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
-      />
-    </th>
-    <td class="p-2 pl-0">#78415</td>
-    <td class="p-2 pl-0">Ali</td>
-    <td class="p-2 pl-0">October 13, 2025</td>
-    <td class="p-2 pl-0 flex rating">
-      <img src="src/assets/img/icon-active/Vector.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-      <img src="src/assets/img/icon-active/star.png" class="w-[16px] h-[16px]" alt="" />
-    </td>
-  </tr>
-</tbody>
-
+                    <tr>
+                      <th class="p-2">
+                        <input
+                          type="checkbox"
+                          class="w-4 h-4 lg:ml-2 rowCheckbox rounded appearance-none bg-[#1C375A29] border border-[#1C375A29] checked:bg-sky checked:border-sky cursor-pointer"
+                        />
+                      </th>
+                      <td class="p-2 pl-0">#78415</td>
+                      <td class="p-2 pl-0">Ali</td>
+                      <td class="p-2 pl-0">October 13, 2025</td>
+                      <td class="p-2 pl-0 flex rating">
+                        <img
+                          src="src/assets/img/icon-active/Vector.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                        <img
+                          src="src/assets/img/icon-active/star.png"
+                          class="w-[16px] h-[16px]"
+                          alt=""
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
-
           </section>
         </div>
       </section>
@@ -2148,20 +2364,19 @@ More Details
         currentButton = button;
         if (name) orderIdText.textContent = name;
 
-if (button.textContent.trim() === "Unblock") {
-  banTitle.textContent = "Unblock";
-  banMessage.innerHTML = `Are you sure you want to <span class="font-semibold text-sky">unblock</span> <span class="font-semibold text-sky">${name}</span>?`;
-  confirmBanBtn.textContent = "Unblock";
-  confirmBanBtn.classList.remove("bg-red-600", "hover:bg-red-700");
-  confirmBanBtn.classList.add("bg-green-600", "hover:bg-green-700");
-} else {
-  banTitle.textContent = "Ban Distributor";
-  banMessage.innerHTML = `Are you sure you want to <span class="font-semibold text-sky">ban</span> <span class="font-semibold text-sky">${name}</span>?`;
-  confirmBanBtn.textContent = "Ban Distributor";
-  confirmBanBtn.classList.remove("bg-green-600", "hover:bg-green-700");
-  confirmBanBtn.classList.add("bg-red-600", "hover:bg-red-700");
-}
-
+        if (button.textContent.trim() === "Unblock") {
+          banTitle.textContent = "Unblock";
+          banMessage.innerHTML = `Are you sure you want to <span class="font-semibold text-sky">unblock</span> <span class="font-semibold text-sky">${name}</span>?`;
+          confirmBanBtn.textContent = "Unblock";
+          confirmBanBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+          confirmBanBtn.classList.add("bg-green-600", "hover:bg-green-700");
+        } else {
+          banTitle.textContent = "Ban Distributor";
+          banMessage.innerHTML = `Are you sure you want to <span class="font-semibold text-sky">ban</span> <span class="font-semibold text-sky">${name}</span>?`;
+          confirmBanBtn.textContent = "Ban Distributor";
+          confirmBanBtn.classList.remove("bg-green-600", "hover:bg-green-700");
+          confirmBanBtn.classList.add("bg-red-600", "hover:bg-red-700");
+        }
 
         banModal.classList.remove("hidden");
         banModal.classList.add("flex");
@@ -2175,16 +2390,15 @@ if (button.textContent.trim() === "Unblock") {
       function confirmBan() {
         if (!currentButton) return;
 
-       if (currentButton.textContent.trim() === "Ban") {
-  currentButton.textContent = "Unblock";
-  currentButton.classList.remove("bg-red-500");
-  currentButton.classList.add("bg-green-500");
-} else {
-  currentButton.textContent = "Ban";
-  currentButton.classList.remove("bg-green-500");
-  currentButton.classList.add("bg-red-500");
-}
-
+        if (currentButton.textContent.trim() === "Ban") {
+          currentButton.textContent = "Unblock";
+          currentButton.classList.remove("bg-red-500");
+          currentButton.classList.add("bg-green-500");
+        } else {
+          currentButton.textContent = "Ban";
+          currentButton.classList.remove("bg-green-500");
+          currentButton.classList.add("bg-red-500");
+        }
 
         closeBanModal();
       }
@@ -2261,7 +2475,7 @@ if (button.textContent.trim() === "Unblock") {
             { responsivePriority: 3, targets: 4 },
             { targets: [2, 3], className: "min-desktop" },
           ],
-         language: { lengthMenu: "Rows per page _MENU_" },
+          language: { lengthMenu: "Rows per page _MENU_" },
 
           layout: {
             topStart: null,
@@ -2282,62 +2496,66 @@ if (button.textContent.trim() === "Unblock") {
     </script>
 
     <!-- Script: Edit Distributor Modal -->
-<script>
-  // Get elements
-  const editDistributorModal = document.getElementById("editDistributorModal");
-  const closeEditDistributorModal = document.getElementById("closeEditDistributorModal");
+    <script>
+      // Get elements
+      const editDistributorModal = document.getElementById(
+        "editDistributorModal"
+      );
+      const closeEditDistributorModal = document.getElementById(
+        "closeEditDistributorModal"
+      );
 
-  // Function to open modal
-  function openPopup(type) {
-    if (type === "edit") {
-      editDistributorModal.classList.remove("hidden");
-      editDistributorModal.classList.add("flex");
-      document.body.style.overflow = "hidden"; // disable scroll
-    }
-  }
+      // Function to open modal
+      function openPopup(type) {
+        if (type === "edit") {
+          editDistributorModal.classList.remove("hidden");
+          editDistributorModal.classList.add("flex");
+          document.body.style.overflow = "hidden"; // disable scroll
+        }
+      }
 
-  // Function to close modal
-  function closeEditModal() {
-    editDistributorModal.classList.add("hidden");
-    editDistributorModal.classList.remove("flex");
-    document.body.style.overflow = ""; // enable scroll again
-  }
+      // Function to close modal
+      function closeEditModal() {
+        editDistributorModal.classList.add("hidden");
+        editDistributorModal.classList.remove("flex");
+        document.body.style.overflow = ""; // enable scroll again
+      }
 
-  // Attach close button event
-  closeEditDistributorModal.addEventListener("click", closeEditModal);
+      // Attach close button event
+      closeEditDistributorModal.addEventListener("click", closeEditModal);
 
-  // Close when clicking outside the modal box
-  editDistributorModal.addEventListener("click", (e) => {
-    if (e.target === editDistributorModal) closeEditModal();
-  });
-</script>
+      // Close when clicking outside the modal box
+      editDistributorModal.addEventListener("click", (e) => {
+        if (e.target === editDistributorModal) closeEditModal();
+      });
+    </script>
 
-<script>
-  const deleteOrderModal = document.getElementById("deleteOrderModal");
-  const orderCodeText = document.getElementById("orderCodeText");
+    <script>
+      const deleteOrderModal = document.getElementById("deleteOrderModal");
+      const orderCodeText = document.getElementById("orderCodeText");
 
-  function openDeleteModal(orderCode) {
-    orderCodeText.textContent = orderCode;
-    deleteOrderModal.classList.remove("hidden");
-    deleteOrderModal.classList.add("flex");
-    document.body.style.overflow = "hidden";
-  }
+      function openDeleteModal(orderCode) {
+        orderCodeText.textContent = orderCode;
+        deleteOrderModal.classList.remove("hidden");
+        deleteOrderModal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
 
-  function closeDeleteModal() {
-    deleteOrderModal.classList.remove("flex");
-    deleteOrderModal.classList.add("hidden");
-    document.body.style.overflow = "auto";
-  }
+      function closeDeleteModal() {
+        deleteOrderModal.classList.remove("flex");
+        deleteOrderModal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
 
-  function confirmDelete() {
-    const orderCode = orderCodeText.textContent;
-    console.log("تم حذف الطلب:", orderCode);
-    closeDeleteModal();
-  }
+      function confirmDelete() {
+        const orderCode = orderCodeText.textContent;
+        console.log("تم حذف الطلب:", orderCode);
+        closeDeleteModal();
+      }
 
-  deleteOrderModal.addEventListener("click", (e) => {
-    if (e.target === deleteOrderModal) closeDeleteModal();
-  });
-</script>
+      deleteOrderModal.addEventListener("click", (e) => {
+        if (e.target === deleteOrderModal) closeDeleteModal();
+      });
+    </script>
   </body>
 </html>

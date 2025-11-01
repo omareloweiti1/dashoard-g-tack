@@ -33,14 +33,14 @@
     </style>
   </head>
   <body class="bg-white min-h-screen flex">
- <!-- Wrapper -->
+    <!-- Wrapper -->
     <div class="flex">
       <!-- Sidebar Desktop -->
       <aside
         class="hidden xl:flex w-[340px] bg-white border-l border-bl flex-col"
       >
         <div
-          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl  "
+          class="flex items-center justify-between mb-8 w-[385px] h-[135px] border-b border-bl"
         >
           <a href="overview.html" class="show-loader"
             ><img
@@ -101,7 +101,7 @@
 
           <a
             href="map.html"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside  show-loader"
+            class="flex items-center gap-2 p-2 rounded-lg hover:bg-sky/10 active-nav-aside show-loader"
           >
             <span
               ><img
@@ -154,10 +154,7 @@
     <main class="flex-1 min-h-screen">
       <!-- Header -->
       <header
-        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 
-        min-w-[100%] max-w-[100%] lg:min-w-[1024px] lg:max-w-[1024px] 
-          labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] 
-          labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] desktop-2xl:max-w-[2205px]"
+        class="flex items-center justify-between h-[135px] lg:border-b border-bl px-3 lg:px-6 min-w-[100%] max-w-[100%] lg:min-w-[1024px] lg:max-w-[1024px] labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] desktop-2xl:max-w-[2205px]"
       >
         <div class="flex-1 block lg:hidden">
           <!-- Top bar mobile -->
@@ -598,11 +595,11 @@
       </header>
 
       <section class="bg-sky w-full h-full">
-        <div class="min-w-[100%] max-w-[100%] lg:min-w-[1024px] lg:max-w-[1024px] 
-          labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] 
-          labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] desktop-2xl:max-w-[2205px] xl:pr-6 xl:pt-6 ">
+        <div
+          class="min-w-[100%] max-w-[100%] lg:min-w-[1024px] lg:max-w-[1024px] labtop-s:min-w-[100%] labtop-s:max-w-[1056px] 2xl:min-w-[1180px] 2xl:max-w-[1180px] labtop-xl:min-w-[1565px] labtop-xl:max-w-[1565px] desktop-2xl:min-w-[2205px] desktop-2xl:max-w-[2205px] xl:pr-6 xl:pt-6"
+        >
           <section
-            class="w-full h-[700px] labtop-xl:h-[900px] desktop-2xl:h-[1100px] bg-white  xl:pr-6 xl:pt-6 xl:rounded-tr-lg xl:rounded-br-lg"
+            class="w-full h-[700px] labtop-xl:h-[900px] desktop-2xl:h-[1100px] bg-white xl:pr-6 xl:pt-6 xl:rounded-tr-lg xl:rounded-br-lg"
           >
             <!-- Header -->
             <div class="border-b-2 border-bl flex items-center gap-6 px-6 py-4">
@@ -610,32 +607,50 @@
             </div>
 
             <!-- Buttons -->
-            <div class="grid grid-cols-2 gap-4 mt-4 min-w-[95%] max-w-[95%] lg:min-w-[900px] lg:max-w-[900px] 
-          labtop-s:min-w-[900px] labtop-s:max-w-[900px] 2xl:min-w-[1100px] 2xl:max-w-[1100px] mx-auto xl:mx-0
-          labtop-xl:min-w-[1400px] labtop-xl:max-w-[1400px] desktop-2xl:min-w-[2005px] desktop-2xl:max-w-[2005px]  ">
-              <button id="ordersBtn" onclick="setSearchMode('orders')"
-                class="w-full px-6 py-4 text-lg rounded-lg font-semibold text-white bg-sky-500 border border-sky-500">
+            <div
+              class="grid grid-cols-2 gap-4 mt-4 min-w-[95%] max-w-[95%] lg:min-w-[900px] lg:max-w-[900px] labtop-s:min-w-[900px] labtop-s:max-w-[900px] 2xl:min-w-[1100px] 2xl:max-w-[1100px] mx-auto xl:mx-0 labtop-xl:min-w-[1400px] labtop-xl:max-w-[1400px] desktop-2xl:min-w-[2005px] desktop-2xl:max-w-[2005px]"
+            >
+              <button
+                id="ordersBtn"
+                onclick="setSearchMode('orders')"
+                class="w-full px-6 py-4 text-lg rounded-lg font-semibold text-white bg-sky-500 border border-sky-500"
+              >
                 الطلبات
               </button>
-              <button id="distributorsBtn" onclick="setSearchMode('distributors')"
-                class="w-full px-6 py-4 text-lg rounded-lg font-semibold text-gray-700 bg-white border border-gray-300">
+              <button
+                id="distributorsBtn"
+                onclick="setSearchMode('distributors')"
+                class="w-full px-6 py-4 text-lg rounded-lg font-semibold text-gray-700 bg-white border border-gray-300"
+              >
                 الموزعين
               </button>
             </div>
             <!-- Map -->
-            <div id="map" class="w-full h-[500px] labtop-xl:h-[700px] desktop-2xl:h-[900px]  mt-4 rounded-lg border border-bl 
-             min-w-[95%] max-w-[95%] lg:min-w-[900px] 
-            lg:max-w-[900px]  mx-auto xl:mx-0
-          labtop-s:min-w-[900px] labtop-s:max-w-[900px] 2xl:min-w-[1100px] 2xl:max-w-[1100px] 
-          labtop-xl:min-w-[1400px] labtop-xl:max-w-[1400px] desktop-2xl:min-w-[2005px] desktop-2xl:max-w-[2005px] "></div>
+            <div
+              id="map"
+              class="w-full h-[500px] labtop-xl:h-[700px] desktop-2xl:h-[900px] mt-4 rounded-lg border border-bl min-w-[95%] max-w-[95%] lg:min-w-[900px] lg:max-w-[900px] mx-auto xl:mx-0 labtop-s:min-w-[900px] labtop-s:max-w-[900px] 2xl:min-w-[1100px] 2xl:max-w-[1100px] labtop-xl:min-w-[1400px] labtop-xl:max-w-[1400px] desktop-2xl:min-w-[2005px] desktop-2xl:max-w-[2005px]"
+            ></div>
 
             <!-- Search box -->
-            <div class="absolute bg-white z-[1000]  top-[320px] left-[90px] md:top-[320px] md:left-[180px] lg:top-[320px] lg:left-[341px] labtop-s:top-[358px] labtop-s:left-[341px] " >
+            <div
+              class="absolute bg-white z-[1000] top-[320px] left-[90px] md:top-[320px] md:left-[180px] lg:top-[320px] lg:left-[341px] labtop-s:top-[358px] labtop-s:left-[341px]"
+            >
               <div class="relative w-[270px] h-[43px] md:w-[409px] md:h-[43px]">
-                <input id="searchInput" type="text" placeholder="رقم الطلب"
-                  class="w-full h-full border border-gray-300 rounded-lg pr-12 pl-4 py-[6px] text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"/>
-                <button id="searchBtn" class="absolute inset-y-0 right-0 flex items-center pr-3">
-                  <img src="src/assets/img/search-normal.png" alt="بحث" class="w-5 h-5"/>
+                <input
+                  id="searchInput"
+                  type="text"
+                  placeholder="رقم الطلب"
+                  class="w-full h-full border border-gray-300 rounded-lg pr-12 pl-4 py-[6px] text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+                />
+                <button
+                  id="searchBtn"
+                  class="absolute inset-y-0 right-0 flex items-center pr-3"
+                >
+                  <img
+                    src="src/assets/img/search-normal.png"
+                    alt="بحث"
+                    class="w-5 h-5"
+                  />
                 </button>
               </div>
             </div>
@@ -893,7 +908,6 @@
         attribution: "&copy; OpenStreetMap contributors",
       }).addTo(map);
 
-
       const orders = [
         {
           id: "#78415",
@@ -928,7 +942,6 @@
         },
       ];
 
-
       const distributors = [
         {
           id: "D001",
@@ -950,7 +963,6 @@
       let orderDetailsControl;
       let currentMode = "orders";
 
-
       function ensureBanner() {
         if (!orderDetailsControl) {
           orderDetailsControl = L.control({ position: "bottomleft" });
@@ -968,7 +980,6 @@
           orderDetailsControl.addTo(map);
         }
       }
-
 
       function showDetails(item, type = "order") {
         ensureBanner();
@@ -1051,7 +1062,6 @@
         orderDetailsControl._div.innerHTML = mainHtml;
       }
 
-
       function createOrderMarker(order) {
         const icon = L.divIcon({
           className: "",
@@ -1099,7 +1109,6 @@
         distributors.forEach((d) => createDistributorMarker(d));
       }
 
-
       function setSearchMode(mode) {
         currentMode = mode;
         const searchInput = document.getElementById("searchInput");
@@ -1123,7 +1132,6 @@
         }
       }
 
-   
       document.getElementById("searchBtn").addEventListener("click", () => {
         const query = document.getElementById("searchInput").value.trim();
         if (!query) return;
@@ -1146,7 +1154,6 @@
           }
         }
       });
-
 
       setSearchMode("orders");
     </script>
